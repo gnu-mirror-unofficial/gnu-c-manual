@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<!-- Created by texi2html 1.57 from gnu-c-manual.texi on April, 8  2004 -->
+<!-- Created by texi2html 1.57 from gnu-c-manual.texi on April, 13  2004 -->
 
 <TITLE>The GNU C Reference Manual</TITLE>
 </HEAD>
@@ -42,7 +42,7 @@
 </LI></UL>
 <LI><A NAME="TOC22" HREF="gnu-c-manual.html#SEC22">Arrays</A>
 </LI><UL>
-<LI><A NAME="TOC23" HREF="gnu-c-manual.html#SEC23">Defining Arrays</A>
+<LI><A NAME="TOC23" HREF="gnu-c-manual.html#SEC23">Declaring Arrays</A>
 </LI><LI><A NAME="TOC24" HREF="gnu-c-manual.html#SEC24">Initializing Arrays</A>
 </LI><LI><A NAME="TOC25" HREF="gnu-c-manual.html#SEC25">Accessing Array Elements</A>
 </LI><LI><A NAME="TOC26" HREF="gnu-c-manual.html#SEC26">Multidimensional Arrays</A>
@@ -110,7 +110,7 @@
 </LI><LI><A NAME="TOC69" HREF="gnu-c-manual.html#SEC69">The Address Operator</A>
 </LI><LI><A NAME="TOC70" HREF="gnu-c-manual.html#SEC70">The Indirection Operator</A>
 </LI><LI><A NAME="TOC71" HREF="gnu-c-manual.html#SEC71">The Complex Conjugation Operator</A>
-</LI><LI><A NAME="TOC72" HREF="gnu-c-manual.html#SEC72">The <SAMP>`sizeof'</SAMP> Operator</A>
+</LI><LI><A NAME="TOC72" HREF="gnu-c-manual.html#SEC72">The <CODE>sizeof</CODE> Operator</A>
 </LI><LI><A NAME="TOC73" HREF="gnu-c-manual.html#SEC73">Type Casts</A>
 </LI><LI><A NAME="TOC74" HREF="gnu-c-manual.html#SEC74">Array Subscripts</A>
 </LI><LI><A NAME="TOC75" HREF="gnu-c-manual.html#SEC75">Function Calls as Expressions</A>
@@ -1367,23 +1367,22 @@ initialized, but <CODE>b</CODE> is only declared, and not initialized.
 
 
 <P>
-An <EM>array</EM> is a custom data structure that consists of zero or more
-elements stored consecutively in memory. 
+An array is a data structure that lets you store zero or more elements
+consecutively in memory.
 
 
 
 
-<H2><A NAME="SEC23">Defining Arrays</A></H2>
+<H2><A NAME="SEC23">Declaring Arrays</A></H2>
 <P>
 <A NAME="IDX56"></A>
 <A NAME="IDX57"></A>
 
 
 <P>
-You define an array by specifying the data type for its elements, its name,
-and the number of elements it can hold.  You put the number of elements
-inside a set of square brackets.  Here is an example that defines an array
-of integers named <SAMP>`my_array'</SAMP>, which holds 10 elements:
+You declare an array by specifying the data type for its elements, its name,
+and the number of elements it can store.  Here is an example that declares
+an array that can store ten integers:
 
 
 
@@ -1413,8 +1412,8 @@ struct line
 </PRE>
 
 <P>
-You do not have to specify the number of elements using a constant value.
-For example, here is a function definition that defines an array using its
+You can also declare an array size using a variable instead of a constant.
+For example, here is a function definition that declares an array using its
 parameter as the number of elements:
 
 
@@ -1437,7 +1436,7 @@ my_function (int number)
 
 
 <P>
-You can initialize the elements in an array when you define it by listing
+You can initialize the elements in an array when you declare it by listing
 the initializing values, separated by commas, in a set of braces.  Here
 is an example:
 
@@ -1554,7 +1553,8 @@ you start counting array elements with zero, not one.)
 
 <P>
 You can access the elements of an array by specifying the array name,
-followed by the element index, enclosed in brackets.  Here is an example:
+followed by the element index, enclosed in brackets.  In C, the array
+elements are numbered starting with zero, not one.  Here is an example:
 
 
 
@@ -1590,10 +1590,10 @@ point_array[0].x = 3;
 
 
 <P>
-In GNU C, you can define multidimensional arrays, or "arrays of arrays".
+You can make multidimensional arrays, or "arrays of arrays".
 You do this by adding an extra set of brackets and array lengths for every
 additional dimension you want your array to have.  For example, here is
-a definition for a two-dimensional array that holds five elements in
+a declaration for a two-dimensional array that holds five elements in
 both dimensions:
 
 
@@ -1601,11 +1601,6 @@ both dimensions:
 <PRE>
 int two_dimensions[5][5];
 </PRE>
-
-<P>
-You can think of a two-dimensional array as a two-dimensional coordinate
-space, or a set of rows and columns, among other things.
-
 
 
 
@@ -2917,7 +2912,7 @@ ternary operators, respectively.
 
 
 <P>
-The increment operator <SAMP>`++'</SAMP> adds 1 to its operand.  The operand must
+The increment operator <CODE>++</CODE> adds 1 to its operand.  The operand must
 be a either a variable of one of the primitive data types, a pointer, or an
 enumeration variable.  Here are some examples:
 
@@ -2972,7 +2967,7 @@ The output of the above example is:
 
 
 <P>
-The decrement operator <SAMP>`--'</SAMP> subtracts 1 from its operand.  The operand
+The decrement operator <CODE>--</CODE> subtracts 1 from its operand.  The operand
 must be a either a variable of one of the primitive data types, a pointer, or
 an enumeration variable.  Here are some examples:
 
@@ -3027,7 +3022,7 @@ The output of the above example is:
 
 
 <P>
-You can use the positive operator <SAMP>`+'</SAMP> on numeric variables and constants
+You can use the positive operator <CODE>+</CODE> on numeric variables and constants
 to indicate that their value is positive.  By default, values are positive
 unless explicitly stated to be negative, so there is no need to use the
 positive operator.  However, you can use it to visually enforce the fact
@@ -3048,7 +3043,7 @@ float y = +3.14159;
 
 
 <P>
-You can use the negative operator <SAMP>`-'</SAMP> on numeric variables and constants
+You can use the negative operator <CODE>-</CODE> on numeric variables and constants
 to indicate that their value is negative.  Here are some examples:
 
 
@@ -3072,7 +3067,7 @@ maximum value of the unsigned data type, minus the value of the operand.
 
 
 <P>
-You can use the logical negation operator <SAMP>`!'</SAMP> to get the logical
+You can use the logical negation operator <CODE>!</CODE> to get the logical
 opposite of its operand.  If its operand is 0 (or null if the operand is
 a pointer), then the result of the logical negation operator is 1.  If its
 operand is anything other than 0 (or null), then the result of the logical
@@ -3096,7 +3091,7 @@ if (!x)
 
 
 <P>
-You can use the bitwise complement operator <SAMP>`~'</SAMP> to find the one's
+You can use the bitwise complement operator <CODE>~</CODE> to find the one's
 complement of its operand.  The operand must be an integer or character type.
 The bitwise complement operator examines its operand's bits, and
 changes all 0 bits to 1 and all 1 bits to 0.  Here is an example:
@@ -3124,7 +3119,7 @@ portability.
 
 
 <P>
-You can use the address operator <SAMP>`&#38;'</SAMP> to obtain the memory address
+You can use the address operator <CODE>&#38;</CODE> to obtain the memory address
 of its operand.  You can use this operator both with variables of any data type
 (including arrays and structures) and with functions, but you can't
 use it with literal values.  You should only store the result of the
@@ -3147,7 +3142,7 @@ ptr = &#38;x;
 
 
 <P>
-You can use the indirection operator <SAMP>`*'</SAMP> to obtain the value stored
+You can use the indirection operator <CODE>*</CODE> to obtain the value stored
 at the address stored in its operand.  This is also known as
 <EM>dereferencing</EM> its operand.  Its operand must be a pointer.
 
@@ -3179,7 +3174,7 @@ won't be anything you want to use.
 
 
 <P>
-You can use the complex conjugation operator <SAMP>`~'</SAMP> to perform complex
+You can use the complex conjugation operator <CODE>~</CODE> to perform complex
 conjugation on its operand -- that is, it reverses the sign of its
 imaginary component.   The operand must be an expression of a complex number
 type.  Here is an example:
@@ -3200,13 +3195,13 @@ is equal to <EM>25 + 289</EM>.
 
 
 
-<H3><A NAME="SEC72">The <SAMP>`sizeof'</SAMP> Operator</A></H3>
+<H3><A NAME="SEC72">The <CODE>sizeof</CODE> Operator</A></H3>
 <P>
 <A NAME="IDX140"></A>
 
 
 <P>
-You can use the <SAMP>`sizeof'</SAMP> operator to obtain the size (in bytes)
+You can use the <CODE>sizeof</CODE> operator to obtain the size (in bytes)
 of the data type of its operand.  The operand may be an actual type
 specifier (such as <CODE>int</CODE> or <CODE>float</CODE>), as well as any valid
 expression.  You must enclose the operand in parentheses after the
@@ -3222,7 +3217,7 @@ printf ("%d \n", sizeof (5.1) );
 </PRE>
 
 <P>
-The result of the <SAMP>`sizeof'</SAMP> operator is of a type called <CODE>size_t</CODE>,
+The result of the <CODE>sizeof</CODE> operator is of a type called <CODE>size_t</CODE>,
 which is defined in the header file <CODE>stddef.h</CODE>.  <CODE>size_t</CODE> is
 an unsigned integer type, perhaps identical to <CODE>unsigned int</CODE> or
 <CODE>unsigned long int</CODE>.  This can vary from system to system.
@@ -3314,7 +3309,7 @@ a = 10 + function();
 
 
 <P>
-You use the addition operator <SAMP>`+'</SAMP> to add two operands.  You put the
+You use the addition operator <CODE>+</CODE> to add two operands.  You put the
 operands on either side of the operator, and it does not matter which operand
 is goes on which side:  <CODE>3 + 5</CODE> and <CODE>5 + 3</CODE> both result in 8.
 The operands must be either expressions of a primitive data type or pointers.
@@ -3340,7 +3335,7 @@ such as in the last example, the expression is evaluated from left to right.
 
 
 <P>
-You use the subtraction operator <SAMP>`-'</SAMP> to subtract its second operand
+You use the subtraction operator <CODE>-</CODE> to subtract its second operand
 from its first operand.  You put the operands on either side of the operator,
 and it does matter which operand goes on which side:  <CODE>3 - 5</CODE> and
 <CODE>5 - 3</CODE> do not both have the same result.  The operands must be either
@@ -3368,7 +3363,7 @@ right.
 
 
 <P>
-You use the multiplication operator <SAMP>`*'</SAMP> to multiply two operands
+You use the multiplication operator <CODE>*</CODE> to multiply two operands
 together.  You put the operands on either side of the operator, and it does
 not matter which operand goes on which side:  <CODE>3 * 5</CODE> and <CODE>5 * 3</CODE>
 both result in 15.  The operands must be expressions of a primitive
@@ -3396,7 +3391,7 @@ left to right.
 
 
 <P>
-You use the division operator <SAMP>`/'</SAMP> to divide its first operand
+You use the division operator <CODE>/</CODE> to divide its first operand
 by its second operand.  You put the operands on either side of the
 operator, and it does matter which operand goes on which side:  <CODE>3 / 5</CODE>
 and <CODE>5 / 3</CODE> do not both have the same result.  The operands must be
@@ -3423,7 +3418,7 @@ such as in the last example, the expression is evaluated from left to right.
 
 
 <P>
-You use the modulus operator <SAMP>`%'</SAMP> to obtain the remainder produced
+You use the modulus operator <CODE>%</CODE> to obtain the remainder produced
 by dividing its two operands.  You put the operands on either side of
 the operator, and it does matter which operand goes on which
 side:  <CODE>3 % 5</CODE> and <CODE>5 \% 3</CODE> do not both have the same result.
@@ -3471,7 +3466,7 @@ That prints all of the integers from 0 to 100 that are divisible by 5.
 
 
 <P>
-You use the left-shift operator <SAMP>`&#60;&#60;'</SAMP> to shift its first operand's bits
+You use the left-shift operator <CODE>&#60;&#60;</CODE> to shift its first operand's bits
 to the left.  You specify the number of bit-places shifted with the second
 operand.  If there is a 1 bit in the leftmost bit position, it will be
 discarded.  New bits that are added to the rightmost bit position will all
@@ -3487,7 +3482,7 @@ x &#60;&#60; 1;    /* 00101111 &#60;&#60; 1 is 01011110. */
 </PRE>
 
 <P>
-You use the right-shift operator <SAMP>`&#62;&#62;'</SAMP> to shift its first operand's bits
+You use the right-shift operator <CODE>&#62;&#62;</CODE> to shift its first operand's bits
 to the right.  You specify the number of bit-places shifted with the second
 operand.  If there is a 1 bit in the rightmost bit position, it will be
 discarded.  New bits that are added to the leftmost bit position
@@ -3511,7 +3506,7 @@ x &#62;&#62; 1;   /* 00101111 &#62;&#62; 1 is 00010111. */
 
 
 <P>
-The bitwise AND operator <SAMP>`&#38;'</SAMP> examines each bit in its two
+The bitwise AND operator <CODE>&#38;</CODE> examines each bit in its two
 operands, and when two corresponding bits are both 1, the resulting bit
 is 1.  In every other case the result is 0.  Here is an example of
 how this operator works, using binary numbers:
@@ -3543,7 +3538,7 @@ z = x &#38; y;
 
 
 <P>
-The bitwise inclusive OR operator <SAMP>`|'</SAMP> examines each bit
+The bitwise inclusive OR operator <CODE>|</CODE> examines each bit
 in its two operands, and when two corresponding bits are both
 0, the resulting bit is 0.  In every other case the resulting
 bit is 1.  Here is an example of how this operator works, using
@@ -3574,7 +3569,7 @@ z = x | y;
 
 
 <P>
-The bitwise exclusive OR operator <SAMP>`^'</SAMP> (also known as XOR) examines
+The bitwise exclusive OR operator <CODE>^</CODE> (also known as XOR) examines
 each bit in its two operands, and when two corresponding bits are different,
 the resulting bit is 1.  When they are the same, the resulting bit is 0.
 Here is an example of how this operator works, using binary numbers:
@@ -3624,7 +3619,7 @@ for any two expressions of primitive types, or pointers.
 
 
 <P>
-Use the equal-to operator <SAMP>`=='</SAMP> to test two operands for
+Use the equal-to operator <CODE>==</CODE> to test two operands for
 equality.  It evaluates to 1 if the two operands are equal, and 0 if the
 two operands are not equal.
 
@@ -3645,7 +3640,7 @@ else
 
 
 <P>
-Use the not-equal-to operator <SAMP>`!='</SAMP> to test two operands for
+Use the not-equal-to operator <CODE>!=</CODE> to test two operands for
 inequality.  If the two operands are not equal, the result is 1.  Otherwise,
 if the two operands <EM>are</EM> equal, the result is 0.
 
@@ -3666,7 +3661,7 @@ else
 
 
 <P>
-Use the less-than operator <SAMP>`&#60;'</SAMP> to determine if the first operand
+Use the less-than operator <CODE>&#60;</CODE> to determine if the first operand
 is less than the second operand.  If it is, the result is 1.  Otherwise, the
 result is 0.
 
@@ -3687,7 +3682,7 @@ else
 
 
 <P>
-Use the less-than-or-equal-to operator <SAMP>`&#60;='</SAMP> to determine if the first
+Use the less-than-or-equal-to operator <CODE>&#60;=</CODE> to determine if the first
 operand is less than or equal to the second operand.  If it is, the result
 is 1.  Otherwise, the result is 0.
 
@@ -3708,7 +3703,7 @@ else
 
 
 <P>
-Use the  greater-than operator <SAMP>`&#62;'</SAMP> to determine if the first operand
+Use the  greater-than operator <CODE>&#62;</CODE> to determine if the first operand
 is greater than the second operand.  If it is, the result is 1. Otherwise,
 the result is 0.
 
@@ -3729,7 +3724,7 @@ else
 
 
 <P>
-Use the greater-than-or-equal-to operator <SAMP>`&#62;='</SAMP> to determine if the
+Use the greater-than-or-equal-to operator <CODE>&#62;=</CODE> to determine if the
 first operand is greater than or equal to the second operand.  If it is, the
 result is 1.  Otherwise, the result is 0.
 
@@ -3768,7 +3763,7 @@ expression, any nonzero expression is considered true in C.
 
 
 <P>
-Use the logical AND operator <SAMP>`&#38;&#38;'</SAMP> to test if two expressions are
+Use the logical AND operator <CODE>&#38;&#38;</CODE> to test if two expressions are
 both true.  If the first one is not true, then the second one is not
 evaluated. 
 
@@ -3798,7 +3793,7 @@ if ((x == 5) &#38;&#38; (y == 10) &#38;&#38; (z == 15))
 
 
 <P>
-Use the logical OR operator <SAMP>`||'</SAMP> to test if at least one of two
+Use the logical OR operator <CODE>||</CODE> to test if at least one of two
 expressions is true.  If the first expression is true, then the
 second expression is not evaluated.
 
@@ -3844,7 +3839,7 @@ pointer.
 
 
 <P>
-Use the standard assignment operator <SAMP>`='</SAMP> to assign the value of its
+Use the standard assignment operator <CODE>=</CODE> to assign the value of its
 right operand to its left operand.  Unlike the other assignment operators,
 you can use this operator with variables of a structure type, in addition
 to primitive types and pointers.
@@ -3877,42 +3872,42 @@ assignment operators, and a brief description of what they do:
 
 <LI>
 
-<SAMP>`+='</SAMP>
+<CODE>+=</CODE>
 
 This operator adds its two operands together, and then assigns the result of
 the addition to the left operand.
 
 <LI>
 
-<SAMP>`-='</SAMP>
+<CODE>-=</CODE>
 
 This operator subtracts its right operand from its left operand, and
 assigns the result of the subtraction to the left operand.
 
 <LI>
 
-<SAMP>`*='</SAMP>
+<CODE>*=</CODE>
 
 This operator multiplies its two operands together, and then assigns the
 result of the multiplication to the left operand.
 
 <LI>
 
-<SAMP>`/='</SAMP>
+<CODE>/=</CODE>
 
 This operator divides its left operand by its right operand, and assigns
 the result of the division to the left operand.
 
 <LI>
 
-<SAMP>`%='</SAMP>
+<CODE>%=</CODE>
 
 This operator performs modular division on its operands, and assigns the
 result of the division to the left operand.
 
 <LI>
 
-<SAMP>`&#60;&#60;='</SAMP>
+<CODE>&#60;&#60;=</CODE>
 
 This operator performs a left shift operation on its left operand, shifting
 by the number of bits specified by the right operand, and assigns the
@@ -3920,7 +3915,7 @@ result of the shift to the left operand.
 
 <LI>
 
-<SAMP>`&#62;&#62;='</SAMP>
+<CODE>&#62;&#62;=</CODE>
 
 This operator performs a right shift operation on its left operand,
 shifting by the number of bits specified by the right operand, and assigns
@@ -3928,21 +3923,21 @@ the result of the shift to the left operand.
 
 <LI>
 
-<SAMP>`&#38;='</SAMP>
+<CODE>&#38;=</CODE>
 
 This operator performs a bitwise AND operation on its two operands, and
 assigns the result of the operation to the left operand.
 
 <LI>
 
-<SAMP>`^='</SAMP>
+<CODE>^=</CODE>
 
 This operator performs a bitwise exclusive OR operation on its two operands,
 and assigns the result of the operation to the left operand.
 
 <LI>
 
-<SAMP>`|='</SAMP>
+<CODE>|=</CODE>
 
 This operator performs a bitwise inclusive OR operation on its two
 operands, and assigns the result of the operation to the left operand.
@@ -4040,7 +4035,7 @@ expressions are equivalent:
 </PRE>
 
 <P>
-An assignment-with-arithmetic operation such as <SAMP>`+='</SAMP> applied to a cast
+An assignment-with-arithmetic operation such as <CODE>+=</CODE> applied to a cast
 performs the arithmetic using the type resulting from the cast, and then
 continues as in the previous case.  Therefore, these two expressions are
 equivalent:
@@ -4068,7 +4063,7 @@ point number belongs:
 <P>
 This is quite different from what <CODE>(int)f = 1</CODE> would do--that
 would convert 1 to floating point and store it.  Rather than cause this
-inconsistency, we think it is better to prohibit use of <SAMP>`&#38;'</SAMP> on a cast.
+inconsistency, we think it is better to prohibit use of <CODE>&#38;</CODE> on a cast.
 
 
 <P>
@@ -4084,7 +4079,7 @@ If you really do want an <CODE>int *</CODE> pointer with the address of
 
 
 <P>
-You use the comma operator <SAMP>`,'</SAMP> to separate two expressions.  These
+You use the comma operator <CODE>,</CODE> to separate two expressions.  These
 expressions don't have to be related at all, but often the first expression
 produces a value that is used by the second expression.
 
@@ -4152,7 +4147,7 @@ That will call <CODE>function</CODE> with the parameters <CODE>x</CODE>,
 
 
 <P>
-You can use the member access operator <SAMP>`.'</SAMP> to access the members
+You can use the member access operator <CODE>.</CODE> to access the members
 of a structure or union variable.  You put the name of the structure
 variable on the left side of the operator, and the name of the
 member on the right side.
@@ -4174,7 +4169,7 @@ first_point.y = 5;
 <P>
 <A NAME="IDX181"></A>
 You can also access the members of a structure or union variable via
-a pointer by using the indirect member access operator <SAMP>`-&#62;'</SAMP>.
+a pointer by using the indirect member access operator <CODE>-&#62;</CODE>.
 
 
 
@@ -4206,7 +4201,7 @@ See section <A HREF="gnu-c-manual.html#SEC30">Pointers</A>.
 
 
 <P>
-GNU C has only one ternary operator -- the conditional operator <SAMP>`? :'</SAMP>.
+GNU C has only one ternary operator -- the conditional operator <CODE>? :</CODE>.
 
 
 <P>
@@ -4451,7 +4446,7 @@ Logical OR expressions.
 
 <LI>
 
-Conditional operator expressions (using <SAMP>`?:'</SAMP>).  When used as
+Conditional operator expressions (using <CODE>?:</CODE>).  When used as
 subexpressions, these are evaluated right to left.
 
 <LI>
@@ -6450,7 +6445,7 @@ Jump to:
 <LI><A HREF="gnu-c-manual.html#IDX64">arrays as strings</A>
 <LI><A HREF="gnu-c-manual.html#IDX93">arrays of structures</A>
 <LI><A HREF="gnu-c-manual.html#IDX114">arrays of unions</A>
-<LI><A HREF="gnu-c-manual.html#IDX57">arrays, defining</A>
+<LI><A HREF="gnu-c-manual.html#IDX57">arrays, declaring</A>
 <LI><A HREF="gnu-c-manual.html#IDX59">arrays, initializing</A>
 <LI><A HREF="gnu-c-manual.html#IDX63">arrays, multidimensional</A>
 <LI><A HREF="gnu-c-manual.html#IDX79">arrays, pointers and</A>
@@ -6502,6 +6497,7 @@ Jump to:
 <LI><A HREF="gnu-c-manual.html#IDX26">data types, primitive</A>
 <LI><A HREF="gnu-c-manual.html#IDX186">declarations inside expressions</A>
 <LI><A HREF="gnu-c-manual.html#IDX215">declarations, function</A>
+<LI><A HREF="gnu-c-manual.html#IDX56">declaring arrays</A>
 <LI><A HREF="gnu-c-manual.html#IDX123">declaring enumerations</A>
 <LI><A HREF="gnu-c-manual.html#IDX74">declaring pointers</A>
 <LI><A HREF="gnu-c-manual.html#IDX50">declaring primitive variables</A>
@@ -6513,7 +6509,6 @@ Jump to:
 <LI><A HREF="gnu-c-manual.html#IDX108">declaring union variables after definition</A>
 <LI><A HREF="gnu-c-manual.html#IDX106">declaring union variables at definition</A>
 <LI><A HREF="gnu-c-manual.html#IDX131">decrement operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX56">defining arrays</A>
 <LI><A HREF="gnu-c-manual.html#IDX121">defining enumerations</A>
 <LI><A HREF="gnu-c-manual.html#IDX81">defining structures</A>
 <LI><A HREF="gnu-c-manual.html#IDX102">defining unions</A>
@@ -6672,7 +6667,7 @@ Jump to:
 <LI><A HREF="gnu-c-manual.html#IDX30"><CODE>signed char</CODE> data type</A>
 <LI><A HREF="gnu-c-manual.html#IDX99">size of structures</A>
 <LI><A HREF="gnu-c-manual.html#IDX118">size of unions</A>
-<LI><A HREF="gnu-c-manual.html#IDX140"><SAMP>`sizeof'</SAMP> operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX140"><CODE>sizeof</CODE> operator</A>
 <LI><A HREF="gnu-c-manual.html#IDX208">statement, null</A>
 <LI><A HREF="gnu-c-manual.html#IDX194">statements</A>
 <LI><A HREF="gnu-c-manual.html#IDX185">statements inside expressions</A>
@@ -6747,7 +6742,7 @@ identical to that of the <CODE>long long int</CODE> data type.
 system, this data type might be 64-bit, in which case its range is
 identical to that of the <CODE>unsigned long long int</CODE> data type.
 <P><HR><P>
-This document was generated on April, 8  2004 using
+This document was generated on April, 13  2004 using
 <A HREF="http://www.mathematik.uni-kl.de/~obachman/Texi2html">texi2html</A>&nbsp;1.57.
 
 </BODY>

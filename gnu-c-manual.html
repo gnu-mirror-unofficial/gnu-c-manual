@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<!-- Created by texi2html 1.57 from gnu-c-manual.texi on April, 13  2004 -->
+<!-- Created by texi2html 1.57 from gnu-c-manual.texi on April, 14  2004 -->
 
 <TITLE>The GNU C Reference Manual</TITLE>
 </HEAD>
@@ -12,183 +12,184 @@
 <H1>Table of Contents</H1>
 <UL>
 <LI><A NAME="TOC1" HREF="gnu-c-manual.html#SEC1">Preface</A>
-</LI><LI><A NAME="TOC2" HREF="gnu-c-manual.html#SEC2">Lexical Elements</A>
+</LI><LI><A NAME="TOC2" HREF="gnu-c-manual.html#SEC2">Overview of C Programming</A>
+</LI><LI><A NAME="TOC3" HREF="gnu-c-manual.html#SEC3">Lexical Elements</A>
 </LI><UL>
-<LI><A NAME="TOC3" HREF="gnu-c-manual.html#SEC3">Tokens</A>
+<LI><A NAME="TOC4" HREF="gnu-c-manual.html#SEC4">Tokens</A>
 </LI><UL>
-<LI><A NAME="TOC4" HREF="gnu-c-manual.html#SEC4">Identifiers</A>
-</LI><LI><A NAME="TOC5" HREF="gnu-c-manual.html#SEC5">Keywords</A>
-</LI><LI><A NAME="TOC6" HREF="gnu-c-manual.html#SEC6">Constants</A>
+<LI><A NAME="TOC5" HREF="gnu-c-manual.html#SEC5">Identifiers</A>
+</LI><LI><A NAME="TOC6" HREF="gnu-c-manual.html#SEC6">Keywords</A>
+</LI><LI><A NAME="TOC7" HREF="gnu-c-manual.html#SEC7">Constants</A>
 </LI><UL>
-<LI><A NAME="TOC7" HREF="gnu-c-manual.html#SEC7">Integer Constants</A>
-</LI><LI><A NAME="TOC8" HREF="gnu-c-manual.html#SEC8">Character Constants</A>
-</LI><LI><A NAME="TOC9" HREF="gnu-c-manual.html#SEC9">Floating Point Constants</A>
+<LI><A NAME="TOC8" HREF="gnu-c-manual.html#SEC8">Integer Constants</A>
+</LI><LI><A NAME="TOC9" HREF="gnu-c-manual.html#SEC9">Character Constants</A>
+</LI><LI><A NAME="TOC10" HREF="gnu-c-manual.html#SEC10">Floating Point Constants</A>
 </LI></UL>
-<LI><A NAME="TOC10" HREF="gnu-c-manual.html#SEC10">String Literals</A>
-</LI><LI><A NAME="TOC11" HREF="gnu-c-manual.html#SEC11">Operators</A>
-</LI><LI><A NAME="TOC12" HREF="gnu-c-manual.html#SEC12">Separators</A>
+<LI><A NAME="TOC11" HREF="gnu-c-manual.html#SEC11">String Literals</A>
+</LI><LI><A NAME="TOC12" HREF="gnu-c-manual.html#SEC12">Operators</A>
+</LI><LI><A NAME="TOC13" HREF="gnu-c-manual.html#SEC13">Separators</A>
 </LI></UL>
-<LI><A NAME="TOC13" HREF="gnu-c-manual.html#SEC13">Comments</A>
-</LI><LI><A NAME="TOC14" HREF="gnu-c-manual.html#SEC14">White Space</A>
+<LI><A NAME="TOC14" HREF="gnu-c-manual.html#SEC14">Comments</A>
+</LI><LI><A NAME="TOC15" HREF="gnu-c-manual.html#SEC15">White Space</A>
 </LI></UL>
-<LI><A NAME="TOC15" HREF="gnu-c-manual.html#SEC15">Primitive Data Types</A>
+<LI><A NAME="TOC16" HREF="gnu-c-manual.html#SEC16">Data Types</A>
 </LI><UL>
-<LI><A NAME="TOC16" HREF="gnu-c-manual.html#SEC16">Integer Data Types</A>
-</LI><LI><A NAME="TOC17" HREF="gnu-c-manual.html#SEC17">Floating Point Data Types</A>
-</LI><LI><A NAME="TOC18" HREF="gnu-c-manual.html#SEC18">Complex Number Data Types</A>
-</LI><LI><A NAME="TOC19" HREF="gnu-c-manual.html#SEC19">The <CODE>void</CODE> Type</A>
-</LI><LI><A NAME="TOC20" HREF="gnu-c-manual.html#SEC20">Declaring Primitive Variables</A>
-</LI><LI><A NAME="TOC21" HREF="gnu-c-manual.html#SEC21">Initializing Primitive Variables</A>
+<LI><A NAME="TOC17" HREF="gnu-c-manual.html#SEC17">Integer Data Types</A>
+</LI><LI><A NAME="TOC18" HREF="gnu-c-manual.html#SEC18">Floating Point Data Types</A>
+</LI><LI><A NAME="TOC19" HREF="gnu-c-manual.html#SEC19">Complex Number Data Types</A>
+</LI><LI><A NAME="TOC20" HREF="gnu-c-manual.html#SEC20">The <CODE>void</CODE> Type</A>
+</LI><LI><A NAME="TOC21" HREF="gnu-c-manual.html#SEC21">Declaring Primitive Variables</A>
+</LI><LI><A NAME="TOC22" HREF="gnu-c-manual.html#SEC22">Initializing Primitive Variables</A>
 </LI></UL>
-<LI><A NAME="TOC22" HREF="gnu-c-manual.html#SEC22">Arrays</A>
+<LI><A NAME="TOC23" HREF="gnu-c-manual.html#SEC23">Arrays</A>
 </LI><UL>
-<LI><A NAME="TOC23" HREF="gnu-c-manual.html#SEC23">Declaring Arrays</A>
-</LI><LI><A NAME="TOC24" HREF="gnu-c-manual.html#SEC24">Initializing Arrays</A>
-</LI><LI><A NAME="TOC25" HREF="gnu-c-manual.html#SEC25">Accessing Array Elements</A>
-</LI><LI><A NAME="TOC26" HREF="gnu-c-manual.html#SEC26">Multidimensional Arrays</A>
-</LI><LI><A NAME="TOC27" HREF="gnu-c-manual.html#SEC27">Arrays as Strings</A>
+<LI><A NAME="TOC24" HREF="gnu-c-manual.html#SEC24">Declaring Arrays</A>
+</LI><LI><A NAME="TOC25" HREF="gnu-c-manual.html#SEC25">Initializing Arrays</A>
+</LI><LI><A NAME="TOC26" HREF="gnu-c-manual.html#SEC26">Accessing Array Elements</A>
+</LI><LI><A NAME="TOC27" HREF="gnu-c-manual.html#SEC27">Multidimensional Arrays</A>
+</LI><LI><A NAME="TOC28" HREF="gnu-c-manual.html#SEC28">Arrays as Strings</A>
 </LI><UL>
-<LI><A NAME="TOC28" HREF="gnu-c-manual.html#SEC28">Declaring and Initializing String Arrays</A>
-</LI><LI><A NAME="TOC29" HREF="gnu-c-manual.html#SEC29">A String Length Caution</A>
+<LI><A NAME="TOC29" HREF="gnu-c-manual.html#SEC29">Declaring and Initializing String Arrays</A>
+</LI><LI><A NAME="TOC30" HREF="gnu-c-manual.html#SEC30">A String Length Caution</A>
 </LI></UL>
 </UL>
-<LI><A NAME="TOC30" HREF="gnu-c-manual.html#SEC30">Pointers</A>
+<LI><A NAME="TOC31" HREF="gnu-c-manual.html#SEC31">Pointers</A>
 </LI><UL>
-<LI><A NAME="TOC31" HREF="gnu-c-manual.html#SEC31">Declaring Pointers</A>
-</LI><LI><A NAME="TOC32" HREF="gnu-c-manual.html#SEC32">Initializing Pointers</A>
-</LI><LI><A NAME="TOC33" HREF="gnu-c-manual.html#SEC33">Pointers and Arrays</A>
+<LI><A NAME="TOC32" HREF="gnu-c-manual.html#SEC32">Declaring Pointers</A>
+</LI><LI><A NAME="TOC33" HREF="gnu-c-manual.html#SEC33">Initializing Pointers</A>
+</LI><LI><A NAME="TOC34" HREF="gnu-c-manual.html#SEC34">Pointers and Arrays</A>
 </LI></UL>
-<LI><A NAME="TOC34" HREF="gnu-c-manual.html#SEC34">Structures, Unions, and Enumerations</A>
+<LI><A NAME="TOC35" HREF="gnu-c-manual.html#SEC35">Structures, Unions, and Enumerations</A>
 </LI><UL>
-<LI><A NAME="TOC35" HREF="gnu-c-manual.html#SEC35">Structures</A>
+<LI><A NAME="TOC36" HREF="gnu-c-manual.html#SEC36">Structures</A>
 </LI><UL>
-<LI><A NAME="TOC36" HREF="gnu-c-manual.html#SEC36">Defining Structures</A>
-</LI><LI><A NAME="TOC37" HREF="gnu-c-manual.html#SEC37">Declaring Structure Variables</A>
+<LI><A NAME="TOC37" HREF="gnu-c-manual.html#SEC37">Defining Structures</A>
+</LI><LI><A NAME="TOC38" HREF="gnu-c-manual.html#SEC38">Declaring Structure Variables</A>
 </LI><UL>
-<LI><A NAME="TOC38" HREF="gnu-c-manual.html#SEC38">Declaring Structure Variables at Definition</A>
-</LI><LI><A NAME="TOC39" HREF="gnu-c-manual.html#SEC39">Declaring Structure Variables After Definition</A>
-</LI><LI><A NAME="TOC40" HREF="gnu-c-manual.html#SEC40">Initializing Structure Members</A>
+<LI><A NAME="TOC39" HREF="gnu-c-manual.html#SEC39">Declaring Structure Variables at Definition</A>
+</LI><LI><A NAME="TOC40" HREF="gnu-c-manual.html#SEC40">Declaring Structure Variables After Definition</A>
+</LI><LI><A NAME="TOC41" HREF="gnu-c-manual.html#SEC41">Initializing Structure Members</A>
 </LI></UL>
-<LI><A NAME="TOC41" HREF="gnu-c-manual.html#SEC41">Accessing Structure Members</A>
-</LI><LI><A NAME="TOC42" HREF="gnu-c-manual.html#SEC42">Arrays of Structures</A>
-</LI><LI><A NAME="TOC43" HREF="gnu-c-manual.html#SEC43">Pointers to Structures</A>
-</LI><LI><A NAME="TOC44" HREF="gnu-c-manual.html#SEC44">Bit Fields</A>
-</LI><LI><A NAME="TOC45" HREF="gnu-c-manual.html#SEC45">Size of Structures</A>
+<LI><A NAME="TOC42" HREF="gnu-c-manual.html#SEC42">Accessing Structure Members</A>
+</LI><LI><A NAME="TOC43" HREF="gnu-c-manual.html#SEC43">Arrays of Structures</A>
+</LI><LI><A NAME="TOC44" HREF="gnu-c-manual.html#SEC44">Pointers to Structures</A>
+</LI><LI><A NAME="TOC45" HREF="gnu-c-manual.html#SEC45">Bit Fields</A>
+</LI><LI><A NAME="TOC46" HREF="gnu-c-manual.html#SEC46">Size of Structures</A>
 </LI></UL>
-<LI><A NAME="TOC46" HREF="gnu-c-manual.html#SEC46">Unions</A>
+<LI><A NAME="TOC47" HREF="gnu-c-manual.html#SEC47">Unions</A>
 </LI><UL>
-<LI><A NAME="TOC47" HREF="gnu-c-manual.html#SEC47">Defining Unions</A>
-</LI><LI><A NAME="TOC48" HREF="gnu-c-manual.html#SEC48">Declaring Union Variables</A>
+<LI><A NAME="TOC48" HREF="gnu-c-manual.html#SEC48">Defining Unions</A>
+</LI><LI><A NAME="TOC49" HREF="gnu-c-manual.html#SEC49">Declaring Union Variables</A>
 </LI><UL>
-<LI><A NAME="TOC49" HREF="gnu-c-manual.html#SEC49">Declaring Union Variables at Definition</A>
-</LI><LI><A NAME="TOC50" HREF="gnu-c-manual.html#SEC50">Declaring Union Variables After Definition</A>
-</LI><LI><A NAME="TOC51" HREF="gnu-c-manual.html#SEC51">Initializing Union Members</A>
+<LI><A NAME="TOC50" HREF="gnu-c-manual.html#SEC50">Declaring Union Variables at Definition</A>
+</LI><LI><A NAME="TOC51" HREF="gnu-c-manual.html#SEC51">Declaring Union Variables After Definition</A>
+</LI><LI><A NAME="TOC52" HREF="gnu-c-manual.html#SEC52">Initializing Union Members</A>
 </LI></UL>
-<LI><A NAME="TOC52" HREF="gnu-c-manual.html#SEC52">Accessing Union Members</A>
-</LI><LI><A NAME="TOC53" HREF="gnu-c-manual.html#SEC53">Arrays of Unions</A>
-</LI><LI><A NAME="TOC54" HREF="gnu-c-manual.html#SEC54">Pointers to Unions</A>
-</LI><LI><A NAME="TOC55" HREF="gnu-c-manual.html#SEC55">Size of Unions</A>
+<LI><A NAME="TOC53" HREF="gnu-c-manual.html#SEC53">Accessing Union Members</A>
+</LI><LI><A NAME="TOC54" HREF="gnu-c-manual.html#SEC54">Arrays of Unions</A>
+</LI><LI><A NAME="TOC55" HREF="gnu-c-manual.html#SEC55">Pointers to Unions</A>
+</LI><LI><A NAME="TOC56" HREF="gnu-c-manual.html#SEC56">Size of Unions</A>
 </LI></UL>
-<LI><A NAME="TOC56" HREF="gnu-c-manual.html#SEC56">Enumerations</A>
+<LI><A NAME="TOC57" HREF="gnu-c-manual.html#SEC57">Enumerations</A>
 </LI><UL>
-<LI><A NAME="TOC57" HREF="gnu-c-manual.html#SEC57">Defining Enumerations</A>
-</LI><LI><A NAME="TOC58" HREF="gnu-c-manual.html#SEC58">Declaring Enumerations</A>
+<LI><A NAME="TOC58" HREF="gnu-c-manual.html#SEC58">Defining Enumerations</A>
+</LI><LI><A NAME="TOC59" HREF="gnu-c-manual.html#SEC59">Declaring Enumerations</A>
 </LI></UL>
-<LI><A NAME="TOC59" HREF="gnu-c-manual.html#SEC59">Incomplete Types</A>
+<LI><A NAME="TOC60" HREF="gnu-c-manual.html#SEC60">Incomplete Types</A>
 </LI></UL>
-<LI><A NAME="TOC60" HREF="gnu-c-manual.html#SEC60">Expressions and Operators</A>
+<LI><A NAME="TOC61" HREF="gnu-c-manual.html#SEC61">Expressions and Operators</A>
 </LI><UL>
-<LI><A NAME="TOC61" HREF="gnu-c-manual.html#SEC61">Expressions</A>
-</LI><LI><A NAME="TOC62" HREF="gnu-c-manual.html#SEC62">Unary Operators</A>
+<LI><A NAME="TOC62" HREF="gnu-c-manual.html#SEC62">Expressions</A>
+</LI><LI><A NAME="TOC63" HREF="gnu-c-manual.html#SEC63">Unary Operators</A>
 </LI><UL>
-<LI><A NAME="TOC63" HREF="gnu-c-manual.html#SEC63">The Increment Operator</A>
-</LI><LI><A NAME="TOC64" HREF="gnu-c-manual.html#SEC64">The Decrement Operator</A>
-</LI><LI><A NAME="TOC65" HREF="gnu-c-manual.html#SEC65">The Positive Operator</A>
-</LI><LI><A NAME="TOC66" HREF="gnu-c-manual.html#SEC66">The Negative Operator</A>
-</LI><LI><A NAME="TOC67" HREF="gnu-c-manual.html#SEC67">The Logical Negation Operator</A>
-</LI><LI><A NAME="TOC68" HREF="gnu-c-manual.html#SEC68">The Bitwise Complement Operator</A>
-</LI><LI><A NAME="TOC69" HREF="gnu-c-manual.html#SEC69">The Address Operator</A>
-</LI><LI><A NAME="TOC70" HREF="gnu-c-manual.html#SEC70">The Indirection Operator</A>
-</LI><LI><A NAME="TOC71" HREF="gnu-c-manual.html#SEC71">The Complex Conjugation Operator</A>
-</LI><LI><A NAME="TOC72" HREF="gnu-c-manual.html#SEC72">The <CODE>sizeof</CODE> Operator</A>
-</LI><LI><A NAME="TOC73" HREF="gnu-c-manual.html#SEC73">Type Casts</A>
-</LI><LI><A NAME="TOC74" HREF="gnu-c-manual.html#SEC74">Array Subscripts</A>
-</LI><LI><A NAME="TOC75" HREF="gnu-c-manual.html#SEC75">Function Calls as Expressions</A>
+<LI><A NAME="TOC64" HREF="gnu-c-manual.html#SEC64">The Increment Operator</A>
+</LI><LI><A NAME="TOC65" HREF="gnu-c-manual.html#SEC65">The Decrement Operator</A>
+</LI><LI><A NAME="TOC66" HREF="gnu-c-manual.html#SEC66">The Positive Operator</A>
+</LI><LI><A NAME="TOC67" HREF="gnu-c-manual.html#SEC67">The Negative Operator</A>
+</LI><LI><A NAME="TOC68" HREF="gnu-c-manual.html#SEC68">The Logical Negation Operator</A>
+</LI><LI><A NAME="TOC69" HREF="gnu-c-manual.html#SEC69">The Bitwise Complement Operator</A>
+</LI><LI><A NAME="TOC70" HREF="gnu-c-manual.html#SEC70">The Address Operator</A>
+</LI><LI><A NAME="TOC71" HREF="gnu-c-manual.html#SEC71">The Indirection Operator</A>
+</LI><LI><A NAME="TOC72" HREF="gnu-c-manual.html#SEC72">The Complex Conjugation Operator</A>
+</LI><LI><A NAME="TOC73" HREF="gnu-c-manual.html#SEC73">The <CODE>sizeof</CODE> Operator</A>
+</LI><LI><A NAME="TOC74" HREF="gnu-c-manual.html#SEC74">Type Casts</A>
+</LI><LI><A NAME="TOC75" HREF="gnu-c-manual.html#SEC75">Array Subscripts</A>
+</LI><LI><A NAME="TOC76" HREF="gnu-c-manual.html#SEC76">Function Calls as Expressions</A>
 </LI></UL>
-<LI><A NAME="TOC76" HREF="gnu-c-manual.html#SEC76">Binary Operators</A>
+<LI><A NAME="TOC77" HREF="gnu-c-manual.html#SEC77">Binary Operators</A>
 </LI><UL>
-<LI><A NAME="TOC77" HREF="gnu-c-manual.html#SEC77">The Addition Operator</A>
-</LI><LI><A NAME="TOC78" HREF="gnu-c-manual.html#SEC78">The Subtraction Operator</A>
-</LI><LI><A NAME="TOC79" HREF="gnu-c-manual.html#SEC79">The Multiplication Operator</A>
-</LI><LI><A NAME="TOC80" HREF="gnu-c-manual.html#SEC80">The Division Operator</A>
-</LI><LI><A NAME="TOC81" HREF="gnu-c-manual.html#SEC81">The Modulus Operator</A>
-</LI><LI><A NAME="TOC82" HREF="gnu-c-manual.html#SEC82">The Shift Operators</A>
-</LI><LI><A NAME="TOC83" HREF="gnu-c-manual.html#SEC83">The Bitwise AND Operator</A>
-</LI><LI><A NAME="TOC84" HREF="gnu-c-manual.html#SEC84">The Bitwise Inclusive OR Operator</A>
-</LI><LI><A NAME="TOC85" HREF="gnu-c-manual.html#SEC85">The Bitwise Exclusive OR Operator</A>
-</LI><LI><A NAME="TOC86" HREF="gnu-c-manual.html#SEC86">The Comparison Operators</A>
+<LI><A NAME="TOC78" HREF="gnu-c-manual.html#SEC78">The Addition Operator</A>
+</LI><LI><A NAME="TOC79" HREF="gnu-c-manual.html#SEC79">The Subtraction Operator</A>
+</LI><LI><A NAME="TOC80" HREF="gnu-c-manual.html#SEC80">The Multiplication Operator</A>
+</LI><LI><A NAME="TOC81" HREF="gnu-c-manual.html#SEC81">The Division Operator</A>
+</LI><LI><A NAME="TOC82" HREF="gnu-c-manual.html#SEC82">The Modulus Operator</A>
+</LI><LI><A NAME="TOC83" HREF="gnu-c-manual.html#SEC83">The Shift Operators</A>
+</LI><LI><A NAME="TOC84" HREF="gnu-c-manual.html#SEC84">The Bitwise AND Operator</A>
+</LI><LI><A NAME="TOC85" HREF="gnu-c-manual.html#SEC85">The Bitwise Inclusive OR Operator</A>
+</LI><LI><A NAME="TOC86" HREF="gnu-c-manual.html#SEC86">The Bitwise Exclusive OR Operator</A>
+</LI><LI><A NAME="TOC87" HREF="gnu-c-manual.html#SEC87">The Comparison Operators</A>
 </LI><UL>
-<LI><A NAME="TOC87" HREF="gnu-c-manual.html#SEC87">The Equal-to Operator</A>
-</LI><LI><A NAME="TOC88" HREF="gnu-c-manual.html#SEC88">The Not-Equal-to Operator</A>
-</LI><LI><A NAME="TOC89" HREF="gnu-c-manual.html#SEC89">The Less-Than Operator</A>
-</LI><LI><A NAME="TOC90" HREF="gnu-c-manual.html#SEC90">The Less-Than-or-Equal-to Operator</A>
-</LI><LI><A NAME="TOC91" HREF="gnu-c-manual.html#SEC91">The Greater-Than Operator</A>
-</LI><LI><A NAME="TOC92" HREF="gnu-c-manual.html#SEC92">The Greater-Than-or-Equal-to Operator</A>
+<LI><A NAME="TOC88" HREF="gnu-c-manual.html#SEC88">The Equal-to Operator</A>
+</LI><LI><A NAME="TOC89" HREF="gnu-c-manual.html#SEC89">The Not-Equal-to Operator</A>
+</LI><LI><A NAME="TOC90" HREF="gnu-c-manual.html#SEC90">The Less-Than Operator</A>
+</LI><LI><A NAME="TOC91" HREF="gnu-c-manual.html#SEC91">The Less-Than-or-Equal-to Operator</A>
+</LI><LI><A NAME="TOC92" HREF="gnu-c-manual.html#SEC92">The Greater-Than Operator</A>
+</LI><LI><A NAME="TOC93" HREF="gnu-c-manual.html#SEC93">The Greater-Than-or-Equal-to Operator</A>
 </LI></UL>
-<LI><A NAME="TOC93" HREF="gnu-c-manual.html#SEC93">Logical Operators</A>
+<LI><A NAME="TOC94" HREF="gnu-c-manual.html#SEC94">Logical Operators</A>
 </LI><UL>
-<LI><A NAME="TOC94" HREF="gnu-c-manual.html#SEC94">The Logical AND Operator</A>
-</LI><LI><A NAME="TOC95" HREF="gnu-c-manual.html#SEC95">The Logical OR Operator</A>
+<LI><A NAME="TOC95" HREF="gnu-c-manual.html#SEC95">The Logical AND Operator</A>
+</LI><LI><A NAME="TOC96" HREF="gnu-c-manual.html#SEC96">The Logical OR Operator</A>
 </LI></UL>
-<LI><A NAME="TOC96" HREF="gnu-c-manual.html#SEC96">Assignment Operators</A>
+<LI><A NAME="TOC97" HREF="gnu-c-manual.html#SEC97">Assignment Operators</A>
 </LI><UL>
-<LI><A NAME="TOC97" HREF="gnu-c-manual.html#SEC97">The Assignment Operator</A>
-</LI><LI><A NAME="TOC98" HREF="gnu-c-manual.html#SEC98">The Compound Assignment Operators</A>
-</LI><LI><A NAME="TOC99" HREF="gnu-c-manual.html#SEC99">Generalized Lvalues</A>
+<LI><A NAME="TOC98" HREF="gnu-c-manual.html#SEC98">The Assignment Operator</A>
+</LI><LI><A NAME="TOC99" HREF="gnu-c-manual.html#SEC99">The Compound Assignment Operators</A>
+</LI><LI><A NAME="TOC100" HREF="gnu-c-manual.html#SEC100">Generalized Lvalues</A>
 </LI></UL>
-<LI><A NAME="TOC100" HREF="gnu-c-manual.html#SEC100">The Comma Operator</A>
-</LI><LI><A NAME="TOC101" HREF="gnu-c-manual.html#SEC101">Member Access Operators</A>
+<LI><A NAME="TOC101" HREF="gnu-c-manual.html#SEC101">The Comma Operator</A>
+</LI><LI><A NAME="TOC102" HREF="gnu-c-manual.html#SEC102">Member Access Operators</A>
 </LI></UL>
-<LI><A NAME="TOC102" HREF="gnu-c-manual.html#SEC102">The Ternary Operator</A>
-</LI><LI><A NAME="TOC103" HREF="gnu-c-manual.html#SEC103">Statements and Declarations in Expressions</A>
-</LI><LI><A NAME="TOC104" HREF="gnu-c-manual.html#SEC104">Order of Evaluation</A>
+<LI><A NAME="TOC103" HREF="gnu-c-manual.html#SEC103">The Ternary Operator</A>
+</LI><LI><A NAME="TOC104" HREF="gnu-c-manual.html#SEC104">Statements and Declarations in Expressions</A>
+</LI><LI><A NAME="TOC105" HREF="gnu-c-manual.html#SEC105">Order of Evaluation</A>
 </LI></UL>
-<LI><A NAME="TOC105" HREF="gnu-c-manual.html#SEC105">Statements</A>
+<LI><A NAME="TOC106" HREF="gnu-c-manual.html#SEC106">Statements</A>
 </LI><UL>
-<LI><A NAME="TOC106" HREF="gnu-c-manual.html#SEC106">Expression Statements</A>
-</LI><LI><A NAME="TOC107" HREF="gnu-c-manual.html#SEC107">Labels</A>
-</LI><LI><A NAME="TOC108" HREF="gnu-c-manual.html#SEC108">The <CODE>if</CODE> Statement</A>
-</LI><LI><A NAME="TOC109" HREF="gnu-c-manual.html#SEC109">The <CODE>switch</CODE> Statement</A>
-</LI><LI><A NAME="TOC110" HREF="gnu-c-manual.html#SEC110">The <CODE>while</CODE> Statement</A>
-</LI><LI><A NAME="TOC111" HREF="gnu-c-manual.html#SEC111">The <CODE>do</CODE> Statement</A>
-</LI><LI><A NAME="TOC112" HREF="gnu-c-manual.html#SEC112">The <CODE>for</CODE> Statement</A>
-</LI><LI><A NAME="TOC113" HREF="gnu-c-manual.html#SEC113">Blocks</A>
-</LI><LI><A NAME="TOC114" HREF="gnu-c-manual.html#SEC114">The Null Statement</A>
-</LI><LI><A NAME="TOC115" HREF="gnu-c-manual.html#SEC115">The <CODE>goto</CODE> Statement</A>
-</LI><LI><A NAME="TOC116" HREF="gnu-c-manual.html#SEC116">The <CODE>break</CODE> Statement</A>
-</LI><LI><A NAME="TOC117" HREF="gnu-c-manual.html#SEC117">The <CODE>continue</CODE> Statement</A>
-</LI><LI><A NAME="TOC118" HREF="gnu-c-manual.html#SEC118">The <CODE>return</CODE> Statement</A>
+<LI><A NAME="TOC107" HREF="gnu-c-manual.html#SEC107">Expression Statements</A>
+</LI><LI><A NAME="TOC108" HREF="gnu-c-manual.html#SEC108">Labels</A>
+</LI><LI><A NAME="TOC109" HREF="gnu-c-manual.html#SEC109">The <CODE>if</CODE> Statement</A>
+</LI><LI><A NAME="TOC110" HREF="gnu-c-manual.html#SEC110">The <CODE>switch</CODE> Statement</A>
+</LI><LI><A NAME="TOC111" HREF="gnu-c-manual.html#SEC111">The <CODE>while</CODE> Statement</A>
+</LI><LI><A NAME="TOC112" HREF="gnu-c-manual.html#SEC112">The <CODE>do</CODE> Statement</A>
+</LI><LI><A NAME="TOC113" HREF="gnu-c-manual.html#SEC113">The <CODE>for</CODE> Statement</A>
+</LI><LI><A NAME="TOC114" HREF="gnu-c-manual.html#SEC114">Blocks</A>
+</LI><LI><A NAME="TOC115" HREF="gnu-c-manual.html#SEC115">The Null Statement</A>
+</LI><LI><A NAME="TOC116" HREF="gnu-c-manual.html#SEC116">The <CODE>goto</CODE> Statement</A>
+</LI><LI><A NAME="TOC117" HREF="gnu-c-manual.html#SEC117">The <CODE>break</CODE> Statement</A>
+</LI><LI><A NAME="TOC118" HREF="gnu-c-manual.html#SEC118">The <CODE>continue</CODE> Statement</A>
+</LI><LI><A NAME="TOC119" HREF="gnu-c-manual.html#SEC119">The <CODE>return</CODE> Statement</A>
 </LI></UL>
-<LI><A NAME="TOC119" HREF="gnu-c-manual.html#SEC119">Functions</A>
+<LI><A NAME="TOC120" HREF="gnu-c-manual.html#SEC120">Functions</A>
 </LI><UL>
-<LI><A NAME="TOC120" HREF="gnu-c-manual.html#SEC120">Function Declarations</A>
-</LI><LI><A NAME="TOC121" HREF="gnu-c-manual.html#SEC121">Function Prototypes</A>
-</LI><LI><A NAME="TOC122" HREF="gnu-c-manual.html#SEC122">Function Definitions</A>
-</LI><LI><A NAME="TOC123" HREF="gnu-c-manual.html#SEC123">Calling Functions</A>
-</LI><LI><A NAME="TOC124" HREF="gnu-c-manual.html#SEC124">Function Parameters</A>
+<LI><A NAME="TOC121" HREF="gnu-c-manual.html#SEC121">Function Declarations</A>
+</LI><LI><A NAME="TOC122" HREF="gnu-c-manual.html#SEC122">Function Prototypes</A>
+</LI><LI><A NAME="TOC123" HREF="gnu-c-manual.html#SEC123">Function Definitions</A>
+</LI><LI><A NAME="TOC124" HREF="gnu-c-manual.html#SEC124">Calling Functions</A>
+</LI><LI><A NAME="TOC125" HREF="gnu-c-manual.html#SEC125">Function Parameters</A>
 </LI><UL>
-<LI><A NAME="TOC125" HREF="gnu-c-manual.html#SEC125">Pass By Value Parameters</A>
-</LI><LI><A NAME="TOC126" HREF="gnu-c-manual.html#SEC126">Pass By Reference Parameters</A>
-</LI><LI><A NAME="TOC127" HREF="gnu-c-manual.html#SEC127">Variable Length Parameter Lists</A>
+<LI><A NAME="TOC126" HREF="gnu-c-manual.html#SEC126">Pass By Value Parameters</A>
+</LI><LI><A NAME="TOC127" HREF="gnu-c-manual.html#SEC127">Pass By Reference Parameters</A>
+</LI><LI><A NAME="TOC128" HREF="gnu-c-manual.html#SEC128">Variable Length Parameter Lists</A>
 </LI></UL>
-<LI><A NAME="TOC128" HREF="gnu-c-manual.html#SEC128">The <CODE>main</CODE> Function</A>
-</LI><LI><A NAME="TOC129" HREF="gnu-c-manual.html#SEC129">Recursive Functions</A>
+<LI><A NAME="TOC129" HREF="gnu-c-manual.html#SEC129">The <CODE>main</CODE> Function</A>
+</LI><LI><A NAME="TOC130" HREF="gnu-c-manual.html#SEC130">Recursive Functions</A>
 </LI></UL>
-<LI><A NAME="TOC130" HREF="gnu-c-manual.html#SEC130">GNU Free Documentation License</A>
+<LI><A NAME="TOC131" HREF="gnu-c-manual.html#SEC131">GNU Free Documentation License</A>
 </LI><UL>
-<LI><A NAME="TOC131" HREF="gnu-c-manual.html#SEC131">ADDENDUM: How to use this License for your documents</A>
+<LI><A NAME="TOC132" HREF="gnu-c-manual.html#SEC132">ADDENDUM: How to use this License for your documents</A>
 </LI></UL>
-<LI><A NAME="TOC132" HREF="gnu-c-manual.html#SEC132">Index</A>
+<LI><A NAME="TOC133" HREF="gnu-c-manual.html#SEC133">Index</A>
 </LI></UL>
 <P><HR><P>
 
@@ -212,9 +213,103 @@ by Richard Stallman.
 
 
 
-<H1><A NAME="SEC2">Lexical Elements</A></H1>
+<H1><A NAME="SEC2">Overview of C Programming</A></H1>
 <P>
 <A NAME="IDX2"></A>
+<A NAME="IDX3"></A>
+
+
+<P>
+For those that are new to C, let's take a quick look at C programming
+before jumping right into the reference material.  This is by no means
+a comprehensive tutorial, but it should serve to orient you to some key
+concepts.
+
+
+<P>
+In general, C is a compiled programming language.  This means that you
+write your source code files using a text editor, and then compile them
+into an executable program.  The classic example C program prints the
+phrase "hello, world" on the system console.  Here is the source code
+for a program that does just that:
+
+
+
+<PRE>
+/* hello.c */
+
+#include &#60;stdio.h&#62;
+
+int
+main (void)
+  {
+    printf ("hello, world!");
+    return 0;
+  }
+</PRE>
+
+<P>
+This is a pretty humble beginning, but it illustrates several important
+concepts in C programming.
+
+
+<P>
+First, notice the line that reads <CODE>/* hello.c */</CODE>.  This is a comment
+in the C program.  All comments are replaced by a single space by the
+C preprocessor, which is run by default when you compile your program.  So
+comments have no effect on what the program actually does.
+
+
+<P>
+The second line, <CODE>#include &#60;stdio.h&#62;</CODE>, is also handled by the
+preprocessor.  In this case, though, that one line is replaced by the
+contents of an entire file, namely <CODE>stdio.h</CODE>.  Inclusions like this
+allow you to make use of source code stored in other files.  In this case,
+including <CODE>stdio.h</CODE> gives our program access to a number of input and
+output functions.
+
+
+<P>
+All C programs need to have at least one function, called <CODE>main</CODE>.  This
+is where a program's execution begins.  In our sample program, the <CODE>main</CODE>
+function receives no parameters (indicated by the word <CODE>void</CODE>) and returns
+an integer value (indicated by the word <CODE>int</CODE>).
+
+
+<P>
+Our <CODE>main</CODE> function only does two things:  it prints the phrase
+"hello, world" to the console, and returns the integer 0.  To print the
+phrase, we use the output function <CODE>printf</CODE>, which is declared in the
+<CODE>stdio.h</CODE> file that we included earlier in the program.
+
+
+<P>
+The integer 0 is returned to the operating system, indicating that the
+program completed successfully.
+
+
+<P>
+Once you have this program typed into a text editor and saved as a file
+(such as <CODE>hello.c</CODE>), you can compile it into an executable file.  The
+GNU C compiler is called <CODE>gcc</CODE>, and you can use it to compile the
+program like this:
+
+
+
+<PRE>
+gcc hello.c -o hello
+</PRE>
+
+<P>
+This produces the output file <CODE>hello</CODE>, which you can run from the
+console, and from it receive a classic computer greeting!
+
+
+
+
+<H1><A NAME="SEC3">Lexical Elements</A></H1>
+<P>
+<A NAME="IDX4"></A>
 
 
 <P>
@@ -228,9 +323,9 @@ using the ASCII character set.
 
 
 
-<H2><A NAME="SEC3">Tokens</A></H2>
+<H2><A NAME="SEC4">Tokens</A></H2>
 <P>
-<A NAME="IDX3"></A>
+<A NAME="IDX5"></A>
 
 
 <P>
@@ -242,9 +337,9 @@ following sections.
 
 
 
-<H3><A NAME="SEC4">Identifiers</A></H3>
+<H3><A NAME="SEC5">Identifiers</A></H3>
 <P>
-<A NAME="IDX4"></A>
+<A NAME="IDX6"></A>
 
 
 <P>
@@ -259,9 +354,9 @@ identifiers.
 
 
 
-<H3><A NAME="SEC5">Keywords</A></H3>
+<H3><A NAME="SEC6">Keywords</A></H3>
 <P>
-<A NAME="IDX5"></A>
+<A NAME="IDX7"></A>
 
 
 <P>
@@ -361,9 +456,9 @@ of GNU C keywords:
 
 
 
-<H3><A NAME="SEC6">Constants</A></H3>
+<H3><A NAME="SEC7">Constants</A></H3>
 <P>
-<A NAME="IDX6"></A>
+<A NAME="IDX8"></A>
 
 
 <P>
@@ -375,10 +470,10 @@ use the default type based on the value of the constant.
 
 
 
-<H4><A NAME="SEC7">Integer Constants</A></H4>
+<H4><A NAME="SEC8">Integer Constants</A></H4>
 <P>
-<A NAME="IDX7"></A>
-<A NAME="IDX8"></A>
+<A NAME="IDX9"></A>
+<A NAME="IDX10"></A>
 
 
 <P>
@@ -468,10 +563,10 @@ small enough to be represented as one.
 
 
 
-<H4><A NAME="SEC8">Character Constants</A></H4>
+<H4><A NAME="SEC9">Character Constants</A></H4>
 <P>
-<A NAME="IDX9"></A>
-<A NAME="IDX10"></A>
+<A NAME="IDX11"></A>
+<A NAME="IDX12"></A>
 
 
 <P>
@@ -586,10 +681,10 @@ the letter L to it, outside of the quotation marks.  For example,
 
 
 
-<H4><A NAME="SEC9">Floating Point Constants</A></H4>
+<H4><A NAME="SEC10">Floating Point Constants</A></H4>
 <P>
-<A NAME="IDX11"></A>
-<A NAME="IDX12"></A>
+<A NAME="IDX13"></A>
+<A NAME="IDX14"></A>
 
 
 <P>
@@ -650,9 +745,9 @@ If you do not append any letters, then its type is <CODE>double</CODE>.
 
 
 
-<H3><A NAME="SEC10">String Literals</A></H3>
+<H3><A NAME="SEC11">String Literals</A></H3>
 <P>
-<A NAME="IDX13"></A>
+<A NAME="IDX15"></A>
 
 
 <P>
@@ -681,10 +776,10 @@ of string literals:
 
 
 <P>
-<A NAME="IDX14"></A>
-<A NAME="IDX15"></A>
 <A NAME="IDX16"></A>
 <A NAME="IDX17"></A>
+<A NAME="IDX18"></A>
+<A NAME="IDX19"></A>
 
 
 
@@ -709,9 +804,9 @@ string is a wide string.
 
 
 
-<H3><A NAME="SEC11">Operators</A></H3>
+<H3><A NAME="SEC12">Operators</A></H3>
 <P>
-<A NAME="IDX18"></A>
+<A NAME="IDX20"></A>
 
 
 <P>
@@ -720,14 +815,14 @@ addition or subtraction, on either one, two, or three operands.
 Many operators are one character long, but some are more than
 that.  Full coverage of operators can be found in a separate
 chapter, but here are some examples: <SAMP>`+'</SAMP>, <SAMP>`-'</SAMP>, <SAMP>`&#62;='</SAMP>,
-and <SAMP>`||'</SAMP>.  See section <A HREF="gnu-c-manual.html#SEC60">Expressions and Operators</A>.
+and <SAMP>`||'</SAMP>.  See section <A HREF="gnu-c-manual.html#SEC61">Expressions and Operators</A>.
 
 
 
 
-<H3><A NAME="SEC12">Separators</A></H3>
+<H3><A NAME="SEC13">Separators</A></H3>
 <P>
-<A NAME="IDX19"></A>
+<A NAME="IDX21"></A>
 
 
 <P>
@@ -743,9 +838,9 @@ The other separators are:
 
 
 
-<H2><A NAME="SEC13">Comments</A></H2>
+<H2><A NAME="SEC14">Comments</A></H2>
 <P>
-<A NAME="IDX20"></A>
+<A NAME="IDX22"></A>
 
 
 <P>
@@ -777,8 +872,8 @@ x = 47;    // <SAMP>`x'</SAMP> is now 47.
 </PRE>
 
 <P>
-<A NAME="IDX21"></A>
-<A NAME="IDX22"></A>
+<A NAME="IDX23"></A>
+<A NAME="IDX24"></A>
 Regular (non C++-style) comments cannot be nested; that is, one comment
 cannot exist within another comment.  For example, this won't work:
 
@@ -802,9 +897,9 @@ comments inside regular comments, though:
 
 
 
-<H2><A NAME="SEC14">White Space</A></H2>
+<H2><A NAME="SEC15">White Space</A></H2>
 <P>
-<A NAME="IDX23"></A>
+<A NAME="IDX25"></A>
 
 
 <P>
@@ -886,8 +981,8 @@ part of the string.  Therefore,
 
 
 <P>
-<A NAME="IDX24"></A>
-<A NAME="IDX25"></A>
+<A NAME="IDX26"></A>
+<A NAME="IDX27"></A>
 
 
 
@@ -966,30 +1061,34 @@ knish
 
 
 
-<H1><A NAME="SEC15">Primitive Data Types</A></H1>
-<P>
-<A NAME="IDX26"></A>
-<A NAME="IDX27"></A>
-
-
-<P>
-GNU C provides several categories of primitive data types: integers,
-floating point numbers, and complex numbers.  You can create custom data
-types, such as structures and arrays, using the primitive data types.
-
-
-
-
-<H2><A NAME="SEC16">Integer Data Types</A></H2>
+<H1><A NAME="SEC16">Data Types</A></H1>
 <P>
 <A NAME="IDX28"></A>
 <A NAME="IDX29"></A>
 
 
 <P>
-The integer data types range in size from 8 bits to 64 bits.  You should
-use them for storing whole number values (and the <CODE>char</CODE> data type
-for storing characters).
+There are various data types that you can use in C, including primitive
+data types for numbers and characters, and more complex data types for
+arrays and structures.  This chapter describes the primitive data types,
+along with some key concepts about C data types in general, but defers
+descriptions of complex data types to later chapters.
+
+
+
+
+<H2><A NAME="SEC17">Integer Data Types</A></H2>
+<P>
+<A NAME="IDX30"></A>
+<A NAME="IDX31"></A>
+
+
+<P>
+The integer data types range in size from at least 8 bits to at least 64 bits.
+You should use them for storing whole number values (and the <CODE>char</CODE>
+data type for storing characters).  (Note that the sizes and ranges listed
+for these types are minimums; your particular compiler may allow for larger
+values.)
 
 
 
@@ -997,7 +1096,7 @@ for storing characters).
 
 <LI><CODE>signed char</CODE>
 
-<A NAME="IDX30"></A>
+<A NAME="IDX32"></A>
 
 <UL>
 <LI>The 8-bit <CODE>signed char</CODE> data type can hold integer values in
@@ -1007,7 +1106,7 @@ the range of -128 to 127.
 
 <LI><CODE>unsigned char</CODE>
 
-<A NAME="IDX31"></A>
+<A NAME="IDX33"></A>
 
 <UL>
 <LI>The 8-bit <CODE>unsigned char</CODE> data type can hold integer values in
@@ -1017,7 +1116,7 @@ the range of 0 to 255.
 
 <LI><CODE>char</CODE>
 
-<A NAME="IDX32"></A>
+<A NAME="IDX34"></A>
 
 <UL>
 <LI>Depending on your system, the <CODE>char</CODE> data type is defined as
@@ -1030,7 +1129,7 @@ sequences (such as `\n').
 
 <LI><CODE>int</CODE>
 
-<A NAME="IDX33"></A>
+<A NAME="IDX35"></A>
 
 <UL>
 <LI>The 32-bit <CODE>int</CODE> data type can hold integer values in the range
@@ -1041,41 +1140,45 @@ as <CODE>signed int</CODE> or <CODE>signed</CODE>.
 
 <LI><CODE>unsigned int</CODE>
 
-<A NAME="IDX34"></A>
+<A NAME="IDX36"></A>
 
 <UL>
 <LI>The 32-bit <CODE>unsigned int</CODE> data type can hold integer values in
 
 the range of 0 to 4,294,967,295.  You may also refer to this data type
-as <CODE>unsigned</CODE>.
+simply as <CODE>unsigned</CODE>.
 </UL>
 
 <LI><CODE>long int</CODE>
 
-<A NAME="IDX35"></A>
+<A NAME="IDX37"></A>
 
 <UL>
 <LI>The 32-bit <CODE>long int</CODE> data type can hold integer values in
 
-the range of at least -2,147,483,648 to 2,147,483,647 <A NAME="DOCF1" HREF="gnu-c-manual.html#FOOT1">(1)</A>.  You may also
+the range of at least -2,147,483,648 to 2,147,483,647.  (Depending on
+your system, this data type might be 64-bit, in which case its range is
+identical to that of the <CODE>long long int</CODE> data type.)  You may also
 refer to this data type as <CODE>long</CODE>, <CODE>signed long int</CODE>,
 or <CODE>signed long</CODE>.
 </UL>
 
 <LI><CODE>unsigned long int</CODE>
 
-<A NAME="IDX36"></A>
+<A NAME="IDX38"></A>
 
 <UL>
 <LI>The 32-bit <CODE>unsigned long int</CODE> data type can hold integer values
 
-in the range of at least 0 to 4,294,967,295 <A NAME="DOCF2" HREF="gnu-c-manual.html#FOOT2">(2)</A>.  You may
+in the range of at least 0 to 4,294,967,295.  (Depending on your
+system, this data type might be 64-bit, in which case its range is
+identical to that of the <CODE>unsigned long long int</CODE> data type.)  You may
 also refer to this data type as <CODE>unsigned long</CODE>.
 </UL>
 
 <LI><CODE>short int</CODE>
 
-<A NAME="IDX37"></A>
+<A NAME="IDX39"></A>
 
 <UL>
 <LI>The 16-bit <CODE>short int</CODE> data type can hold integer values in the
@@ -1086,7 +1189,7 @@ range of -32,768 to 32,767.  You may also refer to this data type as
 
 <LI><CODE>unsigned short int</CODE>
 
-<A NAME="IDX38"></A>
+<A NAME="IDX40"></A>
 
 <UL>
 <LI>The 16-bit <CODE>unsigned short int</CODE> data type can hold integer values
@@ -1097,7 +1200,7 @@ as <CODE>unsigned short</CODE>.
 
 <LI><CODE>long long int</CODE>
 
-<A NAME="IDX39"></A>
+<A NAME="IDX41"></A>
 
 <UL>
 <LI>The 64-bit <CODE>long int</CODE> data type can hold integer values in
@@ -1109,7 +1212,7 @@ may also refer to this data type as <CODE>long long</CODE>,
 
 <LI><CODE>unsigned long long int</CODE>
 
-<A NAME="IDX40"></A>
+<A NAME="IDX42"></A>
 
 <UL>
 <LI>The 64-bit <CODE>unsigned long long int</CODE> data type can hold integer
@@ -1122,19 +1225,19 @@ also refer to this data type as <CODE>unsigned long long</CODE>.
 
 
 
-<H2><A NAME="SEC17">Floating Point Data Types</A></H2>
+<H2><A NAME="SEC18">Floating Point Data Types</A></H2>
 <P>
-<A NAME="IDX41"></A>
-<A NAME="IDX42"></A>
+<A NAME="IDX43"></A>
+<A NAME="IDX44"></A>
 
 
 <P>
-To work with fractional numbers, GNU C provides several floating point
-data types that can hold numbers such as 3.14159, 2.83, and 5.00.  The
-exact sizes and value ranges for the floating point data types can
-vary from system to system; these values are stored in macros in the header
-file <CODE>float.h</CODE>, which you can access on your system.  Here we provide
-the names of the macros that contain these values:
+There are several data types that represent fractional numbers, such as
+3.14159 and 2.83.  The exact sizes and ranges for the floating point data
+types can vary from system to system; these values are stored in macro
+definitions in the library header file <CODE>float.h</CODE>.  In this section,
+we include the names of the macro definitions in place of their possible
+values:
 
 
 
@@ -1142,7 +1245,7 @@ the names of the macros that contain these values:
 
 <LI><CODE>float</CODE>
 
-<A NAME="IDX43"></A>
+<A NAME="IDX45"></A>
 
 <UL>
 <LI>The <CODE>float</CODE> data type is the smallest of the three floating point
@@ -1155,7 +1258,7 @@ less than 1e37.
 
 <LI><CODE>double</CODE>
 
-<A NAME="IDX44"></A>
+<A NAME="IDX46"></A>
 
 <UL>
 <LI>The <CODE>double</CODE> data type is at least as large as the <CODE>float</CODE>
@@ -1166,7 +1269,7 @@ type, and it may be larger.  Its minimum value is stored in
 
 <LI><CODE>long double</CODE>
 
-<A NAME="IDX45"></A>
+<A NAME="IDX47"></A>
 
 <UL>
 <LI>The <CODE>long double</CODE> data type is at least as large as the
@@ -1184,10 +1287,10 @@ All floating point data types are signed; if you attempt to use
 
 
 
-<H2><A NAME="SEC18">Complex Number Data Types</A></H2>
+<H2><A NAME="SEC19">Complex Number Data Types</A></H2>
 <P>
-<A NAME="IDX46"></A>
-<A NAME="IDX47"></A>
+<A NAME="IDX48"></A>
+<A NAME="IDX49"></A>
 
 
 <P>
@@ -1246,9 +1349,9 @@ imaginary part is assigned to the floating point variable <CODE>c</CODE>.
 
 
 
-<H2><A NAME="SEC19">The <CODE>void</CODE> Type</A></H2>
+<H2><A NAME="SEC20">The <CODE>void</CODE> Type</A></H2>
 <P>
-<A NAME="IDX48"></A>
+<A NAME="IDX50"></A>
 
 
 <P>
@@ -1273,17 +1376,17 @@ void go_fishing (void);
 
 <P>
 These are both trivial examples; more detailed explanation of the
-<CODE>void</CODE> type is in the chapters about pointers (see section <A HREF="gnu-c-manual.html#SEC30">Pointers</A>) and
-about functions (see section <A HREF="gnu-c-manual.html#SEC119">Functions</A>).
+<CODE>void</CODE> type is in the chapters about pointers (see section <A HREF="gnu-c-manual.html#SEC31">Pointers</A>) and
+about functions (see section <A HREF="gnu-c-manual.html#SEC120">Functions</A>).
 
 
 
 
-<H2><A NAME="SEC20">Declaring Primitive Variables</A></H2>
+<H2><A NAME="SEC21">Declaring Primitive Variables</A></H2>
 <P>
-<A NAME="IDX49"></A>
-<A NAME="IDX50"></A>
 <A NAME="IDX51"></A>
+<A NAME="IDX52"></A>
+<A NAME="IDX53"></A>
 
 
 <P>
@@ -1320,11 +1423,11 @@ its name and type.
 
 
 
-<H2><A NAME="SEC21">Initializing Primitive Variables</A></H2>
+<H2><A NAME="SEC22">Initializing Primitive Variables</A></H2>
 <P>
-<A NAME="IDX52"></A>
-<A NAME="IDX53"></A>
 <A NAME="IDX54"></A>
+<A NAME="IDX55"></A>
+<A NAME="IDX56"></A>
 
 
 <P>
@@ -1361,9 +1464,9 @@ initialized, but <CODE>b</CODE> is only declared, and not initialized.
 
 
 
-<H1><A NAME="SEC22">Arrays</A></H1>
+<H1><A NAME="SEC23">Arrays</A></H1>
 <P>
-<A NAME="IDX55"></A>
+<A NAME="IDX57"></A>
 
 
 <P>
@@ -1373,10 +1476,10 @@ consecutively in memory.
 
 
 
-<H2><A NAME="SEC23">Declaring Arrays</A></H2>
+<H2><A NAME="SEC24">Declaring Arrays</A></H2>
 <P>
-<A NAME="IDX56"></A>
-<A NAME="IDX57"></A>
+<A NAME="IDX58"></A>
+<A NAME="IDX59"></A>
 
 
 <P>
@@ -1429,10 +1532,10 @@ my_function (int number)
 
 
 
-<H2><A NAME="SEC24">Initializing Arrays</A></H2>
+<H2><A NAME="SEC25">Initializing Arrays</A></H2>
 <P>
-<A NAME="IDX58"></A>
-<A NAME="IDX59"></A>
+<A NAME="IDX60"></A>
+<A NAME="IDX61"></A>
 
 
 <P>
@@ -1545,10 +1648,10 @@ you start counting array elements with zero, not one.)
 
 
 
-<H2><A NAME="SEC25">Accessing Array Elements</A></H2>
+<H2><A NAME="SEC26">Accessing Array Elements</A></H2>
 <P>
-<A NAME="IDX60"></A>
-<A NAME="IDX61"></A>
+<A NAME="IDX62"></A>
+<A NAME="IDX63"></A>
 
 
 <P>
@@ -1583,10 +1686,10 @@ point_array[0].x = 3;
 
 
 
-<H2><A NAME="SEC26">Multidimensional Arrays</A></H2>
+<H2><A NAME="SEC27">Multidimensional Arrays</A></H2>
 <P>
-<A NAME="IDX62"></A>
-<A NAME="IDX63"></A>
+<A NAME="IDX64"></A>
+<A NAME="IDX65"></A>
 
 
 <P>
@@ -1604,19 +1707,19 @@ int two_dimensions[5][5];
 
 
 
-<H2><A NAME="SEC27">Arrays as Strings</A></H2>
+<H2><A NAME="SEC28">Arrays as Strings</A></H2>
 <P>
-<A NAME="IDX64"></A>
-<A NAME="IDX65"></A>
+<A NAME="IDX66"></A>
+<A NAME="IDX67"></A>
 
 
 <P>
-You can use an array to hold a string (see section <A HREF="gnu-c-manual.html#SEC10">String Literals</A>).
+You can use an array to hold a string (see section <A HREF="gnu-c-manual.html#SEC11">String Literals</A>).
 
 
 
 
-<H3><A NAME="SEC28">Declaring and Initializing String Arrays</A></H3>
+<H3><A NAME="SEC29">Declaring and Initializing String Arrays</A></H3>
 
 <P>
 To use an array to hold a string, you create a character array.  You can use
@@ -1624,8 +1727,8 @@ either signed or unsigned characters.
 
 
 <P>
-<A NAME="IDX66"></A>
-<A NAME="IDX67"></A>
+<A NAME="IDX68"></A>
+<A NAME="IDX69"></A>
 When you declare the array, you can specify the number of elements it will
 have.  That number will be the maximum number of characters that should be
 in the string, including the null character used to end the string.  If you
@@ -1637,8 +1740,8 @@ used to initialize it.
 
 
 <P>
-<A NAME="IDX68"></A>
-<A NAME="IDX69"></A>
+<A NAME="IDX70"></A>
+<A NAME="IDX71"></A>
 There are two different ways to initialize the array.  You can specify of
 comma-delimited list of characters enclosed in braces, or you can specify a
 string literal enclosed in double quotation marks.
@@ -1699,11 +1802,11 @@ on string arrays.
 
 
 
-<H3><A NAME="SEC29">A String Length Caution</A></H3>
+<H3><A NAME="SEC30">A String Length Caution</A></H3>
 <P>
-<A NAME="IDX70"></A>
-<A NAME="IDX71"></A>
 <A NAME="IDX72"></A>
+<A NAME="IDX73"></A>
+<A NAME="IDX74"></A>
 
 
 <P>
@@ -1723,9 +1826,9 @@ a comma-delimited sequence of characters or a string literal.
 
 
 
-<H1><A NAME="SEC30">Pointers</A></H1>
+<H1><A NAME="SEC31">Pointers</A></H1>
 <P>
-<A NAME="IDX73"></A>
+<A NAME="IDX75"></A>
 
 
 <P>
@@ -1737,10 +1840,10 @@ of a variable of that type.
 
 
 
-<H2><A NAME="SEC31">Declaring Pointers</A></H2>
+<H2><A NAME="SEC32">Declaring Pointers</A></H2>
 <P>
-<A NAME="IDX74"></A>
-<A NAME="IDX75"></A>
+<A NAME="IDX76"></A>
+<A NAME="IDX77"></A>
 
 
 <P>
@@ -1751,7 +1854,7 @@ hold memory addresses.
 
 <P>
 When you declare a pointer, you must include the indirection
-operator (see section <A HREF="gnu-c-manual.html#SEC70">The Indirection Operator</A>) in between the data type
+operator (see section <A HREF="gnu-c-manual.html#SEC71">The Indirection Operator</A>) in between the data type
 and the name.  Here is the general form of a pointer declaration:
 
 
@@ -1794,10 +1897,10 @@ int *rob, laura;   // A pointer and an integer variable.
 
 
 
-<H2><A NAME="SEC32">Initializing Pointers</A></H2>
+<H2><A NAME="SEC33">Initializing Pointers</A></H2>
 <P>
-<A NAME="IDX76"></A>
-<A NAME="IDX77"></A>
+<A NAME="IDX78"></A>
+<A NAME="IDX79"></A>
 
 
 <P>
@@ -1814,7 +1917,7 @@ int *ip = &#38;i;
 </PRE>
 
 <P>
-Notice the use of the address operator (see section <A HREF="gnu-c-manual.html#SEC69">The Address Operator</A>).  You
+Notice the use of the address operator (see section <A HREF="gnu-c-manual.html#SEC70">The Address Operator</A>).  You
 use that to get the memory address of a variable.  <EM>Be careful</EM>, though:
 after you declare a pointer, you do <EM>not</EM> use the indirection
 operator with the pointer's name when assigning it a new address to point
@@ -1834,15 +1937,15 @@ ip = &#38;j;         // <SAMP>`ip'</SAMP> now holds the address of <SAMP>`j'</SA
 
 
 
-<H2><A NAME="SEC33">Pointers and Arrays</A></H2>
+<H2><A NAME="SEC34">Pointers and Arrays</A></H2>
 <P>
-<A NAME="IDX78"></A>
-<A NAME="IDX79"></A>
+<A NAME="IDX80"></A>
+<A NAME="IDX81"></A>
 
 
 
 
-<H1><A NAME="SEC34">Structures, Unions, and Enumerations</A></H1>
+<H1><A NAME="SEC35">Structures, Unions, and Enumerations</A></H1>
 
 <P>
 Structures, unions, and enumerations are all programmer-defined data
@@ -1851,9 +1954,9 @@ types.
 
 
 
-<H2><A NAME="SEC35">Structures</A></H2>
+<H2><A NAME="SEC36">Structures</A></H2>
 <P>
-<A NAME="IDX80"></A>
+<A NAME="IDX82"></A>
 
 
 <P>
@@ -1863,10 +1966,10 @@ variables of other data types (even other structure types).
 
 
 
-<H3><A NAME="SEC36">Defining Structures</A></H3>
+<H3><A NAME="SEC37">Defining Structures</A></H3>
 <P>
-<A NAME="IDX81"></A>
-<A NAME="IDX82"></A>
+<A NAME="IDX83"></A>
+<A NAME="IDX84"></A>
 
 
 <P>
@@ -1906,10 +2009,10 @@ members, <CODE>x</CODE> and <CODE>y</CODE>, both of which are of type <CODE>int<
 
 
 
-<H3><A NAME="SEC37">Declaring Structure Variables</A></H3>
+<H3><A NAME="SEC38">Declaring Structure Variables</A></H3>
 <P>
-<A NAME="IDX83"></A>
-<A NAME="IDX84"></A>
+<A NAME="IDX85"></A>
+<A NAME="IDX86"></A>
 
 
 <P>
@@ -1920,10 +2023,10 @@ structure type a name.
 
 
 
-<H4><A NAME="SEC38">Declaring Structure Variables at Definition</A></H4>
+<H4><A NAME="SEC39">Declaring Structure Variables at Definition</A></H4>
 <P>
-<A NAME="IDX85"></A>
-<A NAME="IDX86"></A>
+<A NAME="IDX87"></A>
+<A NAME="IDX88"></A>
 
 
 <P>
@@ -1949,10 +2052,10 @@ That example declares two variables of type <CODE>struct point</CODE>,
 
 
 
-<H4><A NAME="SEC39">Declaring Structure Variables After Definition</A></H4>
+<H4><A NAME="SEC40">Declaring Structure Variables After Definition</A></H4>
 <P>
-<A NAME="IDX87"></A>
-<A NAME="IDX88"></A>
+<A NAME="IDX89"></A>
+<A NAME="IDX90"></A>
 
 
 <P>
@@ -1979,10 +2082,10 @@ That example declares two variables of type <CODE>struct point</CODE>,
 
 
 
-<H4><A NAME="SEC40">Initializing Structure Members</A></H4>
+<H4><A NAME="SEC41">Initializing Structure Members</A></H4>
 <P>
-<A NAME="IDX89"></A>
-<A NAME="IDX90"></A>
+<A NAME="IDX91"></A>
+<A NAME="IDX92"></A>
 
 
 <P>
@@ -2096,10 +2199,10 @@ make the code easier to read.
 
 
 
-<H3><A NAME="SEC41">Accessing Structure Members</A></H3>
+<H3><A NAME="SEC42">Accessing Structure Members</A></H3>
 <P>
-<A NAME="IDX91"></A>
-<A NAME="IDX92"></A>
+<A NAME="IDX93"></A>
+<A NAME="IDX94"></A>
 
 
 <P>
@@ -2145,10 +2248,10 @@ my_rectangle.bottom_right.y = 0;
 
 
 
-<H3><A NAME="SEC42">Arrays of Structures</A></H3>
+<H3><A NAME="SEC43">Arrays of Structures</A></H3>
 <P>
-<A NAME="IDX93"></A>
-<A NAME="IDX94"></A>
+<A NAME="IDX95"></A>
+<A NAME="IDX96"></A>
 
 
 <P>
@@ -2214,10 +2317,10 @@ point_array[0].y = 3;
 
 
 
-<H3><A NAME="SEC43">Pointers to Structures</A></H3>
+<H3><A NAME="SEC44">Pointers to Structures</A></H3>
 <P>
-<A NAME="IDX95"></A>
-<A NAME="IDX96"></A>
+<A NAME="IDX97"></A>
+<A NAME="IDX98"></A>
 
 
 <P>
@@ -2265,10 +2368,10 @@ Now the <CODE>length</CODE> and <CODE>width</CODE> members in <CODE>salmon</CODE
 
 
 
-<H3><A NAME="SEC44">Bit Fields</A></H3>
+<H3><A NAME="SEC45">Bit Fields</A></H3>
 <P>
-<A NAME="IDX97"></A>
-<A NAME="IDX98"></A>
+<A NAME="IDX99"></A>
+<A NAME="IDX100"></A>
 
 
 <P>
@@ -2305,10 +2408,10 @@ More generally, the range of an unsigned bit field of N bits is from
 
 
 
-<H3><A NAME="SEC45">Size of Structures</A></H3>
+<H3><A NAME="SEC46">Size of Structures</A></H3>
 <P>
-<A NAME="IDX99"></A>
-<A NAME="IDX100"></A>
+<A NAME="IDX101"></A>
+<A NAME="IDX102"></A>
 
 
 <P>
@@ -2318,9 +2421,9 @@ members, possibly plus some padding.
 
 
 
-<H2><A NAME="SEC46">Unions</A></H2>
+<H2><A NAME="SEC47">Unions</A></H2>
 <P>
-<A NAME="IDX101"></A>
+<A NAME="IDX103"></A>
 
 
 <P>
@@ -2332,10 +2435,10 @@ one of them overwrites the values in the others.
 
 
 
-<H3><A NAME="SEC47">Defining Unions</A></H3>
+<H3><A NAME="SEC48">Defining Unions</A></H3>
 <P>
-<A NAME="IDX102"></A>
-<A NAME="IDX103"></A>
+<A NAME="IDX104"></A>
+<A NAME="IDX105"></A>
 
 
 <P>
@@ -2377,10 +2480,10 @@ members, <CODE>i</CODE> and <CODE>f</CODE>, which are of type <CODE>int</CODE> a
 
 
 
-<H3><A NAME="SEC48">Declaring Union Variables</A></H3>
+<H3><A NAME="SEC49">Declaring Union Variables</A></H3>
 <P>
-<A NAME="IDX104"></A>
-<A NAME="IDX105"></A>
+<A NAME="IDX106"></A>
+<A NAME="IDX107"></A>
 
 
 <P>
@@ -2391,10 +2494,10 @@ union type a name.
 
 
 
-<H4><A NAME="SEC49">Declaring Union Variables at Definition</A></H4>
+<H4><A NAME="SEC50">Declaring Union Variables at Definition</A></H4>
 <P>
-<A NAME="IDX106"></A>
-<A NAME="IDX107"></A>
+<A NAME="IDX108"></A>
+<A NAME="IDX109"></A>
 
 
 <P>
@@ -2421,10 +2524,10 @@ That example declares two variables of type <CODE>union numbers</CODE>,
 
 
 
-<H4><A NAME="SEC50">Declaring Union Variables After Definition</A></H4>
+<H4><A NAME="SEC51">Declaring Union Variables After Definition</A></H4>
 <P>
-<A NAME="IDX108"></A>
-<A NAME="IDX109"></A>
+<A NAME="IDX110"></A>
+<A NAME="IDX111"></A>
 
 
 <P>
@@ -2452,10 +2555,10 @@ That example declares two variables of type <CODE>union numbers</CODE>,
 
 
 
-<H4><A NAME="SEC51">Initializing Union Members</A></H4>
+<H4><A NAME="SEC52">Initializing Union Members</A></H4>
 <P>
-<A NAME="IDX110"></A>
-<A NAME="IDX111"></A>
+<A NAME="IDX112"></A>
+<A NAME="IDX113"></A>
 
 
 <P>
@@ -2518,10 +2621,10 @@ union numbers
 
 
 
-<H3><A NAME="SEC52">Accessing Union Members</A></H3>
+<H3><A NAME="SEC53">Accessing Union Members</A></H3>
 <P>
-<A NAME="IDX112"></A>
-<A NAME="IDX113"></A>
+<A NAME="IDX114"></A>
+<A NAME="IDX115"></A>
 
 
 <P>
@@ -2553,10 +2656,10 @@ the value stored in the <CODE>i</CODE> member.
 
 
 
-<H3><A NAME="SEC53">Arrays of Unions</A></H3>
+<H3><A NAME="SEC54">Arrays of Unions</A></H3>
 <P>
-<A NAME="IDX114"></A>
-<A NAME="IDX115"></A>
+<A NAME="IDX116"></A>
+<A NAME="IDX117"></A>
 
 
 <P>
@@ -2606,10 +2709,10 @@ number_array[0].i = 2;
 
 
 
-<H3><A NAME="SEC54">Pointers to Unions</A></H3>
+<H3><A NAME="SEC55">Pointers to Unions</A></H3>
 <P>
-<A NAME="IDX116"></A>
-<A NAME="IDX117"></A>
+<A NAME="IDX118"></A>
+<A NAME="IDX119"></A>
 
 
 <P>
@@ -2656,10 +2759,10 @@ Now the <CODE>i</CODE> member in <CODE>first_number</CODE> is 450.
 
 
 
-<H3><A NAME="SEC55">Size of Unions</A></H3>
+<H3><A NAME="SEC56">Size of Unions</A></H3>
 <P>
-<A NAME="IDX118"></A>
-<A NAME="IDX119"></A>
+<A NAME="IDX120"></A>
+<A NAME="IDX121"></A>
 
 
 <P>
@@ -2686,9 +2789,9 @@ just needs to be large enough to hold the largest member.
 
 
 
-<H2><A NAME="SEC56">Enumerations</A></H2>
+<H2><A NAME="SEC57">Enumerations</A></H2>
 <P>
-<A NAME="IDX120"></A>
+<A NAME="IDX122"></A>
 
 
 <P>
@@ -2698,10 +2801,10 @@ values and referring to them by names.
 
 
 
-<H3><A NAME="SEC57">Defining Enumerations</A></H3>
+<H3><A NAME="SEC58">Defining Enumerations</A></H3>
 <P>
-<A NAME="IDX121"></A>
-<A NAME="IDX122"></A>
+<A NAME="IDX123"></A>
+<A NAME="IDX124"></A>
 
 
 <P>
@@ -2753,10 +2856,10 @@ In that example, <CODE>kumquat</CODE> is 0, <CODE>raspberry</CODE> is 1,
 
 
 
-<H3><A NAME="SEC58">Declaring Enumerations</A></H3>
+<H3><A NAME="SEC59">Declaring Enumerations</A></H3>
 <P>
-<A NAME="IDX123"></A>
-<A NAME="IDX124"></A>
+<A NAME="IDX125"></A>
+<A NAME="IDX126"></A>
 
 
 <P>
@@ -2808,9 +2911,9 @@ banana = 15;  /* You can't do this! */
 
 
 
-<H2><A NAME="SEC59">Incomplete Types</A></H2>
+<H2><A NAME="SEC60">Incomplete Types</A></H2>
 <P>
-<A NAME="IDX125"></A>
+<A NAME="IDX127"></A>
 
 
 <P>
@@ -2840,13 +2943,13 @@ struct point
 
 
 
-<H1><A NAME="SEC60">Expressions and Operators</A></H1>
+<H1><A NAME="SEC61">Expressions and Operators</A></H1>
 
 
 
-<H2><A NAME="SEC61">Expressions</A></H2>
+<H2><A NAME="SEC62">Expressions</A></H2>
 <P>
-<A NAME="IDX126"></A>
+<A NAME="IDX128"></A>
 
 
 <P>
@@ -2886,7 +2989,7 @@ optional.
 
 
 <P>
-<A NAME="IDX127"></A>
+<A NAME="IDX129"></A>
 
 
 <P>
@@ -2898,17 +3001,17 @@ ternary operators, respectively.
 
 
 
-<H2><A NAME="SEC62">Unary Operators</A></H2>
-<P>
-<A NAME="IDX128"></A>
-<A NAME="IDX129"></A>
-
-
-
-
-<H3><A NAME="SEC63">The Increment Operator</A></H3>
+<H2><A NAME="SEC63">Unary Operators</A></H2>
 <P>
 <A NAME="IDX130"></A>
+<A NAME="IDX131"></A>
+
+
+
+
+<H3><A NAME="SEC64">The Increment Operator</A></H3>
+<P>
+<A NAME="IDX132"></A>
 
 
 <P>
@@ -2961,9 +3064,9 @@ The output of the above example is:
 
 
 
-<H3><A NAME="SEC64">The Decrement Operator</A></H3>
+<H3><A NAME="SEC65">The Decrement Operator</A></H3>
 <P>
-<A NAME="IDX131"></A>
+<A NAME="IDX133"></A>
 
 
 <P>
@@ -3016,9 +3119,9 @@ The output of the above example is:
 
 
 
-<H3><A NAME="SEC65">The Positive Operator</A></H3>
+<H3><A NAME="SEC66">The Positive Operator</A></H3>
 <P>
-<A NAME="IDX132"></A>
+<A NAME="IDX134"></A>
 
 
 <P>
@@ -3037,9 +3140,9 @@ float y = +3.14159;
 
 
 
-<H3><A NAME="SEC66">The Negative Operator</A></H3>
+<H3><A NAME="SEC67">The Negative Operator</A></H3>
 <P>
-<A NAME="IDX133"></A>
+<A NAME="IDX135"></A>
 
 
 <P>
@@ -3061,9 +3164,9 @@ maximum value of the unsigned data type, minus the value of the operand.
 
 
 
-<H3><A NAME="SEC67">The Logical Negation Operator</A></H3>
+<H3><A NAME="SEC68">The Logical Negation Operator</A></H3>
 <P>
-<A NAME="IDX134"></A>
+<A NAME="IDX136"></A>
 
 
 <P>
@@ -3085,9 +3188,9 @@ if (!x)
 
 
 
-<H3><A NAME="SEC68">The Bitwise Complement Operator</A></H3>
+<H3><A NAME="SEC69">The Bitwise Complement Operator</A></H3>
 <P>
-<A NAME="IDX135"></A>
+<A NAME="IDX137"></A>
 
 
 <P>
@@ -3113,9 +3216,9 @@ portability.
 
 
 
-<H3><A NAME="SEC69">The Address Operator</A></H3>
+<H3><A NAME="SEC70">The Address Operator</A></H3>
 <P>
-<A NAME="IDX136"></A>
+<A NAME="IDX138"></A>
 
 
 <P>
@@ -3136,9 +3239,9 @@ ptr = &#38;x;
 
 
 
-<H3><A NAME="SEC70">The Indirection Operator</A></H3>
+<H3><A NAME="SEC71">The Indirection Operator</A></H3>
 <P>
-<A NAME="IDX137"></A>
+<A NAME="IDX139"></A>
 
 
 <P>
@@ -3167,10 +3270,10 @@ won't be anything you want to use.
 
 
 
-<H3><A NAME="SEC71">The Complex Conjugation Operator</A></H3>
+<H3><A NAME="SEC72">The Complex Conjugation Operator</A></H3>
 <P>
-<A NAME="IDX138"></A>
-<A NAME="IDX139"></A>
+<A NAME="IDX140"></A>
+<A NAME="IDX141"></A>
 
 
 <P>
@@ -3195,9 +3298,9 @@ is equal to <EM>25 + 289</EM>.
 
 
 
-<H3><A NAME="SEC72">The <CODE>sizeof</CODE> Operator</A></H3>
+<H3><A NAME="SEC73">The <CODE>sizeof</CODE> Operator</A></H3>
 <P>
-<A NAME="IDX140"></A>
+<A NAME="IDX142"></A>
 
 
 <P>
@@ -3225,10 +3328,10 @@ an unsigned integer type, perhaps identical to <CODE>unsigned int</CODE> or
 
 
 
-<H3><A NAME="SEC73">Type Casts</A></H3>
+<H3><A NAME="SEC74">Type Casts</A></H3>
 <P>
-<A NAME="IDX141"></A>
-<A NAME="IDX142"></A>
+<A NAME="IDX143"></A>
+<A NAME="IDX144"></A>
 
 
 <P>
@@ -3258,9 +3361,9 @@ can be retained and assigned to <CODE>x</CODE>.
 
 
 
-<H3><A NAME="SEC74">Array Subscripts</A></H3>
+<H3><A NAME="SEC75">Array Subscripts</A></H3>
 <P>
-<A NAME="IDX143"></A>
+<A NAME="IDX145"></A>
 
 
 <P>
@@ -3276,9 +3379,9 @@ my_array[0] = 5;
 
 
 
-<H3><A NAME="SEC75">Function Calls as Expressions</A></H3>
+<H3><A NAME="SEC76">Function Calls as Expressions</A></H3>
 <P>
-<A NAME="IDX144"></A>
+<A NAME="IDX146"></A>
 
 
 <P>
@@ -3295,17 +3398,17 @@ a = 10 + function();
 
 
 
-<H2><A NAME="SEC76">Binary Operators</A></H2>
-<P>
-<A NAME="IDX145"></A>
-<A NAME="IDX146"></A>
-
-
-
-
-<H3><A NAME="SEC77">The Addition Operator</A></H3>
+<H2><A NAME="SEC77">Binary Operators</A></H2>
 <P>
 <A NAME="IDX147"></A>
+<A NAME="IDX148"></A>
+
+
+
+
+<H3><A NAME="SEC78">The Addition Operator</A></H3>
+<P>
+<A NAME="IDX149"></A>
 
 
 <P>
@@ -3329,9 +3432,9 @@ such as in the last example, the expression is evaluated from left to right.
 
 
 
-<H3><A NAME="SEC78">The Subtraction Operator</A></H3>
+<H3><A NAME="SEC79">The Subtraction Operator</A></H3>
 <P>
-<A NAME="IDX148"></A>
+<A NAME="IDX150"></A>
 
 
 <P>
@@ -3357,9 +3460,9 @@ right.
 
 
 
-<H3><A NAME="SEC79">The Multiplication Operator</A></H3>
+<H3><A NAME="SEC80">The Multiplication Operator</A></H3>
 <P>
-<A NAME="IDX149"></A>
+<A NAME="IDX151"></A>
 
 
 <P>
@@ -3385,9 +3488,9 @@ left to right.
 
 
 
-<H3><A NAME="SEC80">The Division Operator</A></H3>
+<H3><A NAME="SEC81">The Division Operator</A></H3>
 <P>
-<A NAME="IDX150"></A>
+<A NAME="IDX152"></A>
 
 
 <P>
@@ -3412,9 +3515,9 @@ such as in the last example, the expression is evaluated from left to right.
 
 
 
-<H3><A NAME="SEC81">The Modulus Operator</A></H3>
+<H3><A NAME="SEC82">The Modulus Operator</A></H3>
 <P>
-<A NAME="IDX151"></A>
+<A NAME="IDX153"></A>
 
 
 <P>
@@ -3460,9 +3563,9 @@ That prints all of the integers from 0 to 100 that are divisible by 5.
 
 
 
-<H3><A NAME="SEC82">The Shift Operators</A></H3>
+<H3><A NAME="SEC83">The Shift Operators</A></H3>
 <P>
-<A NAME="IDX152"></A>
+<A NAME="IDX154"></A>
 
 
 <P>
@@ -3500,9 +3603,9 @@ x &#62;&#62; 1;   /* 00101111 &#62;&#62; 1 is 00010111. */
 
 
 
-<H3><A NAME="SEC83">The Bitwise AND Operator</A></H3>
+<H3><A NAME="SEC84">The Bitwise AND Operator</A></H3>
 <P>
-<A NAME="IDX153"></A>
+<A NAME="IDX155"></A>
 
 
 <P>
@@ -3532,9 +3635,9 @@ z = x &#38; y;
 
 
 
-<H3><A NAME="SEC84">The Bitwise Inclusive OR Operator</A></H3>
+<H3><A NAME="SEC85">The Bitwise Inclusive OR Operator</A></H3>
 <P>
-<A NAME="IDX154"></A>
+<A NAME="IDX156"></A>
 
 
 <P>
@@ -3563,9 +3666,9 @@ z = x | y;
 
 
 
-<H3><A NAME="SEC85">The Bitwise Exclusive OR Operator</A></H3>
+<H3><A NAME="SEC86">The Bitwise Exclusive OR Operator</A></H3>
 <P>
-<A NAME="IDX155"></A>
+<A NAME="IDX157"></A>
 
 
 <P>
@@ -3593,9 +3696,9 @@ z = x ^ y;
 
 
 
-<H3><A NAME="SEC86">The Comparison Operators</A></H3>
+<H3><A NAME="SEC87">The Comparison Operators</A></H3>
 <P>
-<A NAME="IDX156"></A>
+<A NAME="IDX158"></A>
 
 
 <P>
@@ -3613,9 +3716,9 @@ for any two expressions of primitive types, or pointers.
 
 
 
-<H4><A NAME="SEC87">The Equal-to Operator</A></H4>
+<H4><A NAME="SEC88">The Equal-to Operator</A></H4>
 <P>
-<A NAME="IDX157"></A>
+<A NAME="IDX159"></A>
 
 
 <P>
@@ -3634,9 +3737,9 @@ else
 
 
 
-<H4><A NAME="SEC88">The Not-Equal-to Operator</A></H4>
+<H4><A NAME="SEC89">The Not-Equal-to Operator</A></H4>
 <P>
-<A NAME="IDX158"></A>
+<A NAME="IDX160"></A>
 
 
 <P>
@@ -3655,9 +3758,9 @@ else
 
 
 
-<H4><A NAME="SEC89">The Less-Than Operator</A></H4>
+<H4><A NAME="SEC90">The Less-Than Operator</A></H4>
 <P>
-<A NAME="IDX159"></A>
+<A NAME="IDX161"></A>
 
 
 <P>
@@ -3676,9 +3779,9 @@ else
 
 
 
-<H4><A NAME="SEC90">The Less-Than-or-Equal-to Operator</A></H4>
+<H4><A NAME="SEC91">The Less-Than-or-Equal-to Operator</A></H4>
 <P>
-<A NAME="IDX160"></A>
+<A NAME="IDX162"></A>
 
 
 <P>
@@ -3697,9 +3800,9 @@ else
 
 
 
-<H4><A NAME="SEC91">The Greater-Than Operator</A></H4>
+<H4><A NAME="SEC92">The Greater-Than Operator</A></H4>
 <P>
-<A NAME="IDX161"></A>
+<A NAME="IDX163"></A>
 
 
 <P>
@@ -3718,9 +3821,9 @@ else
 
 
 
-<H4><A NAME="SEC92">The Greater-Than-or-Equal-to Operator</A></H4>
+<H4><A NAME="SEC93">The Greater-Than-or-Equal-to Operator</A></H4>
 <P>
-<A NAME="IDX162"></A>
+<A NAME="IDX164"></A>
 
 
 <P>
@@ -3739,9 +3842,9 @@ else
 
 
 
-<H3><A NAME="SEC93">Logical Operators</A></H3>
+<H3><A NAME="SEC94">Logical Operators</A></H3>
 <P>
-<A NAME="IDX163"></A>
+<A NAME="IDX165"></A>
 
 
 <P>
@@ -3757,9 +3860,9 @@ expression, any nonzero expression is considered true in C.
 
 
 
-<H4><A NAME="SEC94">The Logical AND Operator</A></H4>
+<H4><A NAME="SEC95">The Logical AND Operator</A></H4>
 <P>
-<A NAME="IDX164"></A>
+<A NAME="IDX166"></A>
 
 
 <P>
@@ -3787,9 +3890,9 @@ if ((x == 5) &#38;&#38; (y == 10) &#38;&#38; (z == 15))
 
 
 
-<H4><A NAME="SEC95">The Logical OR Operator</A></H4>
+<H4><A NAME="SEC96">The Logical OR Operator</A></H4>
 <P>
-<A NAME="IDX165"></A>
+<A NAME="IDX167"></A>
 
 
 <P>
@@ -3817,9 +3920,9 @@ if ((x == 5) || (y == 10) || (z == 15))
 
 
 
-<H3><A NAME="SEC96">Assignment Operators</A></H3>
+<H3><A NAME="SEC97">Assignment Operators</A></H3>
 <P>
-<A NAME="IDX166"></A>
+<A NAME="IDX168"></A>
 
 
 <P>
@@ -3833,9 +3936,9 @@ pointer.
 
 
 
-<H4><A NAME="SEC97">The Assignment Operator</A></H4>
+<H4><A NAME="SEC98">The Assignment Operator</A></H4>
 <P>
-<A NAME="IDX167"></A>
+<A NAME="IDX169"></A>
 
 
 <P>
@@ -3854,10 +3957,10 @@ z = (2 * (3 + function () ));
 
 
 
-<H4><A NAME="SEC98">The Compound Assignment Operators</A></H4>
+<H4><A NAME="SEC99">The Compound Assignment Operators</A></H4>
 <P>
-<A NAME="IDX168"></A>
-<A NAME="IDX169"></A>
+<A NAME="IDX170"></A>
+<A NAME="IDX171"></A>
 
 
 <P>
@@ -3964,10 +4067,8 @@ x = x + y;
 
 
 
-<H4><A NAME="SEC99">Generalized Lvalues</A></H4>
+<H4><A NAME="SEC100">Generalized Lvalues</A></H4>
 <P>
-<A NAME="IDX170"></A>
-<A NAME="IDX171"></A>
 <A NAME="IDX172"></A>
 <A NAME="IDX173"></A>
 <A NAME="IDX174"></A>
@@ -3975,6 +4076,8 @@ x = x + y;
 <A NAME="IDX176"></A>
 <A NAME="IDX177"></A>
 <A NAME="IDX178"></A>
+<A NAME="IDX179"></A>
+<A NAME="IDX180"></A>
 
 
 <P>
@@ -4073,9 +4176,9 @@ If you really do want an <CODE>int *</CODE> pointer with the address of
 
 
 
-<H3><A NAME="SEC100">The Comma Operator</A></H3>
+<H3><A NAME="SEC101">The Comma Operator</A></H3>
 <P>
-<A NAME="IDX179"></A>
+<A NAME="IDX181"></A>
 
 
 <P>
@@ -4141,9 +4244,9 @@ That will call <CODE>function</CODE> with the parameters <CODE>x</CODE>,
 
 
 
-<H3><A NAME="SEC101">Member Access Operators</A></H3>
+<H3><A NAME="SEC102">Member Access Operators</A></H3>
 <P>
-<A NAME="IDX180"></A>
+<A NAME="IDX182"></A>
 
 
 <P>
@@ -4167,7 +4270,7 @@ first_point.y = 5;
 </PRE>
 
 <P>
-<A NAME="IDX181"></A>
+<A NAME="IDX183"></A>
 You can also access the members of a structure or union variable via
 a pointer by using the indirect member access operator <CODE>-&#62;</CODE>.
 
@@ -4188,16 +4291,16 @@ fish_pointer -&#62; weight = 9;
 </PRE>
 
 <P>
-See section <A HREF="gnu-c-manual.html#SEC30">Pointers</A>.
+See section <A HREF="gnu-c-manual.html#SEC31">Pointers</A>.
 
 
 
 
-<H2><A NAME="SEC102">The Ternary Operator</A></H2>
+<H2><A NAME="SEC103">The Ternary Operator</A></H2>
 <P>
-<A NAME="IDX182"></A>
-<A NAME="IDX183"></A>
 <A NAME="IDX184"></A>
+<A NAME="IDX185"></A>
+<A NAME="IDX186"></A>
 
 
 <P>
@@ -4279,12 +4382,12 @@ operands.
 
 
 
-<H2><A NAME="SEC103">Statements and Declarations in Expressions</A></H2>
+<H2><A NAME="SEC104">Statements and Declarations in Expressions</A></H2>
 <P>
-<A NAME="IDX185"></A>
-<A NAME="IDX186"></A>
 <A NAME="IDX187"></A>
 <A NAME="IDX188"></A>
+<A NAME="IDX189"></A>
+<A NAME="IDX190"></A>
 
 
 <P>
@@ -4333,7 +4436,7 @@ follows:
 </PRE>
 
 <P>
-<A NAME="IDX189"></A>
+<A NAME="IDX191"></A>
 But this definition computes either <CODE>a</CODE> or <CODE>b</CODE> twice, with bad
 results if the operand has side effects.  In GNU C, if you know the
 type of the operands (here let's assume <CODE>int</CODE>), you can define
@@ -4359,12 +4462,12 @@ must use <CODE>typeof</CODE> expressions or type naming.
 
 
 
-<H2><A NAME="SEC104">Order of Evaluation</A></H2>
+<H2><A NAME="SEC105">Order of Evaluation</A></H2>
 <P>
-<A NAME="IDX190"></A>
-<A NAME="IDX191"></A>
 <A NAME="IDX192"></A>
 <A NAME="IDX193"></A>
+<A NAME="IDX194"></A>
+<A NAME="IDX195"></A>
 
 
 <P>
@@ -4462,9 +4565,9 @@ Comma operator expressions.
 
 
 
-<H1><A NAME="SEC105">Statements</A></H1>
+<H1><A NAME="SEC106">Statements</A></H1>
 <P>
-<A NAME="IDX194"></A>
+<A NAME="IDX196"></A>
 
 
 <P>
@@ -4474,10 +4577,10 @@ storing a value into a variable or cycling through loops.
 
 
 
-<H2><A NAME="SEC106">Expression Statements</A></H2>
+<H2><A NAME="SEC107">Expression Statements</A></H2>
 <P>
-<A NAME="IDX195"></A>
-<A NAME="IDX196"></A>
+<A NAME="IDX197"></A>
+<A NAME="IDX198"></A>
 
 
 <P>
@@ -4523,11 +4626,11 @@ not a valid pointer and has been declared as <CODE>volatile</CODE>.
 
 
 
-<H2><A NAME="SEC107">Labels</A></H2>
+<H2><A NAME="SEC108">Labels</A></H2>
 <P>
-<A NAME="IDX197"></A>
-<A NAME="IDX198"></A>
 <A NAME="IDX199"></A>
+<A NAME="IDX200"></A>
+<A NAME="IDX201"></A>
 
 
 <P>
@@ -4562,10 +4665,10 @@ code.
 
 
 
-<H2><A NAME="SEC108">The <CODE>if</CODE> Statement</A></H2>
+<H2><A NAME="SEC109">The <CODE>if</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX200"></A>
-<A NAME="IDX201"></A>
+<A NAME="IDX202"></A>
+<A NAME="IDX203"></A>
 
 
 <P>
@@ -4641,9 +4744,9 @@ else
 
 
 
-<H2><A NAME="SEC109">The <CODE>switch</CODE> Statement</A></H2>
+<H2><A NAME="SEC110">The <CODE>switch</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX202"></A>
+<A NAME="IDX204"></A>
 
 
 <P>
@@ -4779,9 +4882,9 @@ case 1...5:
 
 
 
-<H2><A NAME="SEC110">The <CODE>while</CODE> Statement</A></H2>
+<H2><A NAME="SEC111">The <CODE>while</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX203"></A>
+<A NAME="IDX205"></A>
 
 
 <P>
@@ -4813,9 +4916,9 @@ while (counter &#60; 10)
 
 
 
-<H2><A NAME="SEC111">The <CODE>do</CODE> Statement</A></H2>
+<H2><A NAME="SEC112">The <CODE>do</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX204"></A>
+<A NAME="IDX206"></A>
 
 
 <P>
@@ -4848,9 +4951,9 @@ while (x &#60; 10);
 
 
 
-<H2><A NAME="SEC112">The <CODE>for</CODE> Statement</A></H2>
+<H2><A NAME="SEC113">The <CODE>for</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX205"></A>
+<A NAME="IDX207"></A>
 
 
 <P>
@@ -4970,9 +5073,9 @@ than or equal to 1, and increments <CODE>x</CODE> and decrements <CODE>y</CODE>.
 
 
 
-<H2><A NAME="SEC113">Blocks</A></H2>
+<H2><A NAME="SEC114">Blocks</A></H2>
 <P>
-<A NAME="IDX206"></A>
+<A NAME="IDX208"></A>
 
 
 <P>
@@ -5034,10 +5137,10 @@ printf ("%d", x);   /* You can't do this! <CODE>x</CODE> exists only
 
 
 
-<H2><A NAME="SEC114">The Null Statement</A></H2>
+<H2><A NAME="SEC115">The Null Statement</A></H2>
 <P>
-<A NAME="IDX207"></A>
-<A NAME="IDX208"></A>
+<A NAME="IDX209"></A>
+<A NAME="IDX210"></A>
 
 
 <P>
@@ -5083,9 +5186,9 @@ for (x = 1; x &#60;= 5; printf ("x is now %d\n", x), x++)
 
 
 
-<H2><A NAME="SEC115">The <CODE>goto</CODE> Statement</A></H2>
+<H2><A NAME="SEC116">The <CODE>goto</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX209"></A>
+<A NAME="IDX211"></A>
 
 
 <P>
@@ -5100,7 +5203,7 @@ goto <VAR>label</VAR>;
 
 <P>
 You have to specify a label to jump to; when the <CODE>goto</CODE> statement
-is executed, program control jumps to that label.  See section <A HREF="gnu-c-manual.html#SEC107">Labels</A>.  Here
+is executed, program control jumps to that label.  See section <A HREF="gnu-c-manual.html#SEC108">Labels</A>.  Here
 is an example:
 
 
@@ -5127,9 +5230,9 @@ when possible.
 
 
 
-<H2><A NAME="SEC116">The <CODE>break</CODE> Statement</A></H2>
+<H2><A NAME="SEC117">The <CODE>break</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX210"></A>
+<A NAME="IDX212"></A>
 
 
 <P>
@@ -5164,9 +5267,9 @@ statement which itself is inside of a loop or <CODE>switch</CODE> statement, the
 
 
 
-<H2><A NAME="SEC117">The <CODE>continue</CODE> Statement</A></H2>
+<H2><A NAME="SEC118">The <CODE>continue</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX211"></A>
+<A NAME="IDX213"></A>
 
 
 <P>
@@ -5197,9 +5300,9 @@ inside a loop, then it affects only the innermost loop.
 
 
 
-<H2><A NAME="SEC118">The <CODE>return</CODE> Statement</A></H2>
+<H2><A NAME="SEC119">The <CODE>return</CODE> Statement</A></H2>
 <P>
-<A NAME="IDX212"></A>
+<A NAME="IDX214"></A>
 
 
 <P>
@@ -5276,9 +5379,9 @@ square_value (int x)
 
 
 
-<H1><A NAME="SEC119">Functions</A></H1>
+<H1><A NAME="SEC120">Functions</A></H1>
 <P>
-<A NAME="IDX213"></A>
+<A NAME="IDX215"></A>
 
 
 <P>
@@ -5297,10 +5400,10 @@ That is where the program's execution begins.
 
 
 
-<H2><A NAME="SEC120">Function Declarations</A></H2>
+<H2><A NAME="SEC121">Function Declarations</A></H2>
 <P>
-<A NAME="IDX214"></A>
-<A NAME="IDX215"></A>
+<A NAME="IDX216"></A>
+<A NAME="IDX217"></A>
 
 
 <P>
@@ -5316,14 +5419,14 @@ the general form:
 
 <P>
 <VAR>return-type</VAR> can be any of the primitive data
-types (see section <A HREF="gnu-c-manual.html#SEC15">Primitive Data Types</A>), a structure type (see section <A HREF="gnu-c-manual.html#SEC35">Structures</A>),
-a union type (see section <A HREF="gnu-c-manual.html#SEC46">Unions</A>), an enumeration type (see section <A HREF="gnu-c-manual.html#SEC56">Enumerations</A>),
-a pointer type (see section <A HREF="gnu-c-manual.html#SEC30">Pointers</A>), or <CODE>void</CODE>.  A return type of
+types (@xref{Primitive Data Types}), a structure type (see section <A HREF="gnu-c-manual.html#SEC36">Structures</A>),
+a union type (see section <A HREF="gnu-c-manual.html#SEC47">Unions</A>), an enumeration type (see section <A HREF="gnu-c-manual.html#SEC57">Enumerations</A>),
+a pointer type (see section <A HREF="gnu-c-manual.html#SEC31">Pointers</A>), or <CODE>void</CODE>.  A return type of
 <CODE>void</CODE> indicates that the function does not return a value at all.
 
 
 <P>
-<VAR>function-name</VAR> can be any valid identifier (see section <A HREF="gnu-c-manual.html#SEC4">Identifiers</A>).
+<VAR>function-name</VAR> can be any valid identifier (see section <A HREF="gnu-c-manual.html#SEC5">Identifiers</A>).
 
 
 <P>
@@ -5345,10 +5448,10 @@ use the function.
 
 
 
-<H2><A NAME="SEC121">Function Prototypes</A></H2>
+<H2><A NAME="SEC122">Function Prototypes</A></H2>
 <P>
-<A NAME="IDX216"></A>
-<A NAME="IDX217"></A>
+<A NAME="IDX218"></A>
+<A NAME="IDX219"></A>
 
 
 <P>
@@ -5365,18 +5468,18 @@ parameters.  Here is the general form:
 <VAR>parameter-list</VAR> consists of zero or more parameters, separated by commas.
 Usually, each parameter consists of a data type, and optionally a name for the
 parameter.  The data type can be any of the primitive data
-types (see section <A HREF="gnu-c-manual.html#SEC15">Primitive Data Types</A>), a structure type (see section <A HREF="gnu-c-manual.html#SEC35">Structures</A>),
-a union type (see section <A HREF="gnu-c-manual.html#SEC46">Unions</A>), an enumeration type (see section <A HREF="gnu-c-manual.html#SEC56">Enumerations</A>),
-an array type (see section <A HREF="gnu-c-manual.html#SEC22">Arrays</A>), or a pointer type (see section <A HREF="gnu-c-manual.html#SEC30">Pointers</A>).  You
+types (@xref{Primitive Data Types}), a structure type (see section <A HREF="gnu-c-manual.html#SEC36">Structures</A>),
+a union type (see section <A HREF="gnu-c-manual.html#SEC47">Unions</A>), an enumeration type (see section <A HREF="gnu-c-manual.html#SEC57">Enumerations</A>),
+an array type (see section <A HREF="gnu-c-manual.html#SEC23">Arrays</A>), or a pointer type (see section <A HREF="gnu-c-manual.html#SEC31">Pointers</A>).  You
 can also specify that a function have a variable number of parameters
-(see section <A HREF="gnu-c-manual.html#SEC127">Variable Length Parameter Lists</A>), or no parameters.  If it has no
+(see section <A HREF="gnu-c-manual.html#SEC128">Variable Length Parameter Lists</A>), or no parameters.  If it has no
 parameters, either use <CODE>void</CODE> for the parameter list, or do not have a
 parameter list at all.  
 
 
 <P>
 <VAR>return-type</VAR> and <VAR>function-name</VAR> are described in the function
-declaration section.  See section <A HREF="gnu-c-manual.html#SEC120">Function Declarations</A>.
+declaration section.  See section <A HREF="gnu-c-manual.html#SEC121">Function Declarations</A>.
 
 
 <P>
@@ -5399,7 +5502,7 @@ int add_values (int x, int y);
 </PRE>
 
 <P>
-The parameter names can be any identifier (see section <A HREF="gnu-c-manual.html#SEC4">Identifiers</A>), and if you
+The parameter names can be any identifier (see section <A HREF="gnu-c-manual.html#SEC5">Identifiers</A>), and if you
 have more than one parameter, you can't use the same name more than
 once within a single prototype.
 
@@ -5413,10 +5516,10 @@ use the function.
 
 
 
-<H2><A NAME="SEC122">Function Definitions</A></H2>
+<H2><A NAME="SEC123">Function Definitions</A></H2>
 <P>
-<A NAME="IDX218"></A>
-<A NAME="IDX219"></A>
+<A NAME="IDX220"></A>
+<A NAME="IDX221"></A>
 
 
 <P>
@@ -5438,14 +5541,14 @@ enclosed in braces.  Here is the general form of a function definition:
 
 <P>
 <VAR>return-type</VAR> and <VAR>function-name</VAR> are described in the section
-about function declarations (see section <A HREF="gnu-c-manual.html#SEC120">Function Declarations</A>), and you
+about function declarations (see section <A HREF="gnu-c-manual.html#SEC121">Function Declarations</A>), and you
 should use the same return types and function names in a function
 definition that you used in that function's declaration or prototype.
 
 
 <P>
 <VAR>parameter-list</VAR> is similar to the parameter list described in
-the function prototype section (see section <A HREF="gnu-c-manual.html#SEC121">Function Prototypes</A>), except you
+the function prototype section (see section <A HREF="gnu-c-manual.html#SEC122">Function Prototypes</A>), except you
 <EM>must</EM> include names for the parameters in a function definition.
 
 
@@ -5480,10 +5583,10 @@ add_values (x, y)
 
 
 
-<H2><A NAME="SEC123">Calling Functions</A></H2>
+<H2><A NAME="SEC124">Calling Functions</A></H2>
 <P>
-<A NAME="IDX220"></A>
-<A NAME="IDX221"></A>
+<A NAME="IDX222"></A>
+<A NAME="IDX223"></A>
 
 
 <P>
@@ -5540,10 +5643,10 @@ a = sum_of_integers ( 5, 10 );
 
 
 
-<H2><A NAME="SEC124">Function Parameters</A></H2>
+<H2><A NAME="SEC125">Function Parameters</A></H2>
 <P>
-<A NAME="IDX222"></A>
-<A NAME="IDX223"></A>
+<A NAME="IDX224"></A>
+<A NAME="IDX225"></A>
 
 
 <P>
@@ -5562,11 +5665,11 @@ indefinite number of parameters.
 
 
 
-<H3><A NAME="SEC125">Pass By Value Parameters</A></H3>
+<H3><A NAME="SEC126">Pass By Value Parameters</A></H3>
 <P>
-<A NAME="IDX224"></A>
-<A NAME="IDX225"></A>
 <A NAME="IDX226"></A>
+<A NAME="IDX227"></A>
+<A NAME="IDX228"></A>
 
 
 <P>
@@ -5625,12 +5728,12 @@ x = double_value ( x );
 
 
 
-<H3><A NAME="SEC126">Pass By Reference Parameters</A></H3>
+<H3><A NAME="SEC127">Pass By Reference Parameters</A></H3>
 <P>
-<A NAME="IDX227"></A>
-<A NAME="IDX228"></A>
 <A NAME="IDX229"></A>
 <A NAME="IDX230"></A>
+<A NAME="IDX231"></A>
+<A NAME="IDX232"></A>
 
 
 <P>
@@ -5688,11 +5791,11 @@ swap_integers (int *a, int *b)
 
 
 
-<H3><A NAME="SEC127">Variable Length Parameter Lists</A></H3>
+<H3><A NAME="SEC128">Variable Length Parameter Lists</A></H3>
 <P>
-<A NAME="IDX231"></A>
-<A NAME="IDX232"></A>
 <A NAME="IDX233"></A>
+<A NAME="IDX234"></A>
+<A NAME="IDX235"></A>
 
 
 <P>
@@ -5773,10 +5876,10 @@ to include it for portability to other compilers.
 
 
 
-<H2><A NAME="SEC128">The <CODE>main</CODE> Function</A></H2>
+<H2><A NAME="SEC129">The <CODE>main</CODE> Function</A></H2>
 <P>
-<A NAME="IDX234"></A>
-<A NAME="IDX235"></A>
+<A NAME="IDX236"></A>
+<A NAME="IDX237"></A>
 
 
 <P>
@@ -5850,10 +5953,10 @@ main (int argc, char *argv[])
 
 
 
-<H2><A NAME="SEC129">Recursive Functions</A></H2>
+<H2><A NAME="SEC130">Recursive Functions</A></H2>
 <P>
-<A NAME="IDX236"></A>
-<A NAME="IDX237"></A>
+<A NAME="IDX238"></A>
+<A NAME="IDX239"></A>
 
 
 <P>
@@ -5894,10 +5997,10 @@ watermelon (int x)
 
 
 
-<H1><A NAME="SEC130">GNU Free Documentation License</A></H1>
+<H1><A NAME="SEC131">GNU Free Documentation License</A></H1>
 
 <P>
-<A NAME="IDX238"></A>
+<A NAME="IDX240"></A>
 <center>
  Version 1.2, November 2002
 </center>
@@ -6336,7 +6439,7 @@ as a draft) by the Free Software Foundation.
 
 
 
-<H2><A NAME="SEC131">ADDENDUM: How to use this License for your documents</A></H2>
+<H2><A NAME="SEC132">ADDENDUM: How to use this License for your documents</A></H2>
 
 <P>
 To use this License in a document you have written, include a copy of
@@ -6382,7 +6485,7 @@ to permit their use in free software.
 
 
 
-<H1><A NAME="SEC132">Index</A></H1>
+<H1><A NAME="SEC133">Index</A></H1>
 
 <P>
 Jump to:
@@ -6430,319 +6533,311 @@ Jump to:
 <P>
 <H2><A NAME="cindex_?">?</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX178"><CODE>?:</CODE> extensions</A>
+<LI><A HREF="gnu-c-manual.html#IDX180"><CODE>?:</CODE> extensions</A>
 </DIR>
 <H2><A NAME="cindex_a">a</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX60">accessing array elements</A>
-<LI><A HREF="gnu-c-manual.html#IDX91">accessing structure members</A>
-<LI><A HREF="gnu-c-manual.html#IDX112">accessing union members</A>
-<LI><A HREF="gnu-c-manual.html#IDX147">addition operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX136">address operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX61">array elements, accessing</A>
-<LI><A HREF="gnu-c-manual.html#IDX143">array subscripts</A>
-<LI><A HREF="gnu-c-manual.html#IDX55">arrays</A>
-<LI><A HREF="gnu-c-manual.html#IDX64">arrays as strings</A>
-<LI><A HREF="gnu-c-manual.html#IDX93">arrays of structures</A>
-<LI><A HREF="gnu-c-manual.html#IDX114">arrays of unions</A>
-<LI><A HREF="gnu-c-manual.html#IDX57">arrays, declaring</A>
-<LI><A HREF="gnu-c-manual.html#IDX59">arrays, initializing</A>
-<LI><A HREF="gnu-c-manual.html#IDX63">arrays, multidimensional</A>
-<LI><A HREF="gnu-c-manual.html#IDX79">arrays, pointers and</A>
-<LI><A HREF="gnu-c-manual.html#IDX167">assignment operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX166">assignment operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX169">assignment operators, compound</A>
+<LI><A HREF="gnu-c-manual.html#IDX62">accessing array elements</A>
+<LI><A HREF="gnu-c-manual.html#IDX93">accessing structure members</A>
+<LI><A HREF="gnu-c-manual.html#IDX114">accessing union members</A>
+<LI><A HREF="gnu-c-manual.html#IDX149">addition operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX138">address operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX63">array elements, accessing</A>
+<LI><A HREF="gnu-c-manual.html#IDX145">array subscripts</A>
+<LI><A HREF="gnu-c-manual.html#IDX57">arrays</A>
+<LI><A HREF="gnu-c-manual.html#IDX66">arrays as strings</A>
+<LI><A HREF="gnu-c-manual.html#IDX95">arrays of structures</A>
+<LI><A HREF="gnu-c-manual.html#IDX116">arrays of unions</A>
+<LI><A HREF="gnu-c-manual.html#IDX59">arrays, declaring</A>
+<LI><A HREF="gnu-c-manual.html#IDX61">arrays, initializing</A>
+<LI><A HREF="gnu-c-manual.html#IDX65">arrays, multidimensional</A>
+<LI><A HREF="gnu-c-manual.html#IDX81">arrays, pointers and</A>
+<LI><A HREF="gnu-c-manual.html#IDX169">assignment operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX168">assignment operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX171">assignment operators, compound</A>
 </DIR>
 <H2><A NAME="cindex_b">b</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX145">binary operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX97">bit fields</A>
-<LI><A HREF="gnu-c-manual.html#IDX153">bitwise AND operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX135">bitwise complement operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX155">bitwise exclusive OR operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX154">bitwise inclusive OR operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX206">blocks</A>
-<LI><A HREF="gnu-c-manual.html#IDX210"><CODE>break</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX147">binary operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX99">bit fields</A>
+<LI><A HREF="gnu-c-manual.html#IDX155">bitwise AND operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX137">bitwise complement operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX157">bitwise exclusive OR operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX156">bitwise inclusive OR operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX208">blocks</A>
+<LI><A HREF="gnu-c-manual.html#IDX212"><CODE>break</CODE> statement</A>
 </DIR>
 <H2><A NAME="cindex_c">c</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX220">calling functions</A>
-<LI><A HREF="gnu-c-manual.html#IDX142">casts</A>
-<LI><A HREF="gnu-c-manual.html#IDX174">casts as lvalues</A>
-<LI><A HREF="gnu-c-manual.html#IDX72">caution, a string length</A>
-<LI><A HREF="gnu-c-manual.html#IDX32"><CODE>char</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX9">character constants</A>
-<LI><A HREF="gnu-c-manual.html#IDX179">comma operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX20">comments</A>
-<LI><A HREF="gnu-c-manual.html#IDX22">comments, nester</A>
-<LI><A HREF="gnu-c-manual.html#IDX156">comparison operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX138">complex conjugation operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX46">complex number data types</A>
-<LI><A HREF="gnu-c-manual.html#IDX168">compound assignment operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX170">compound expressions as lvalues</A>
-<LI><A HREF="gnu-c-manual.html#IDX172">conditional expressions as lvalues</A>
-<LI><A HREF="gnu-c-manual.html#IDX184">conditional operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX139">conjugation operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX6">constants</A>
-<LI><A HREF="gnu-c-manual.html#IDX10">constants, character</A>
-<LI><A HREF="gnu-c-manual.html#IDX12">constants, floating point</A>
-<LI><A HREF="gnu-c-manual.html#IDX8">constants, integer</A>
-<LI><A HREF="gnu-c-manual.html#IDX211"><CODE>continue</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX3">C programming overview</A>
+<LI><A HREF="gnu-c-manual.html#IDX222">calling functions</A>
+<LI><A HREF="gnu-c-manual.html#IDX144">casts</A>
+<LI><A HREF="gnu-c-manual.html#IDX176">casts as lvalues</A>
+<LI><A HREF="gnu-c-manual.html#IDX74">caution, a string length</A>
+<LI><A HREF="gnu-c-manual.html#IDX34"><CODE>char</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX11">character constants</A>
+<LI><A HREF="gnu-c-manual.html#IDX181">comma operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX22">comments</A>
+<LI><A HREF="gnu-c-manual.html#IDX24">comments, nester</A>
+<LI><A HREF="gnu-c-manual.html#IDX158">comparison operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX140">complex conjugation operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX48">complex number data types</A>
+<LI><A HREF="gnu-c-manual.html#IDX170">compound assignment operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX172">compound expressions as lvalues</A>
+<LI><A HREF="gnu-c-manual.html#IDX174">conditional expressions as lvalues</A>
+<LI><A HREF="gnu-c-manual.html#IDX186">conditional operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX141">conjugation operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX8">constants</A>
+<LI><A HREF="gnu-c-manual.html#IDX12">constants, character</A>
+<LI><A HREF="gnu-c-manual.html#IDX14">constants, floating point</A>
+<LI><A HREF="gnu-c-manual.html#IDX10">constants, integer</A>
+<LI><A HREF="gnu-c-manual.html#IDX213"><CODE>continue</CODE> statement</A>
 </DIR>
 <H2><A NAME="cindex_d">d</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX47">data types, complex number</A>
-<LI><A HREF="gnu-c-manual.html#IDX42">data types, floating point</A>
-<LI><A HREF="gnu-c-manual.html#IDX29">data types, integer</A>
-<LI><A HREF="gnu-c-manual.html#IDX26">data types, primitive</A>
-<LI><A HREF="gnu-c-manual.html#IDX186">declarations inside expressions</A>
-<LI><A HREF="gnu-c-manual.html#IDX215">declarations, function</A>
-<LI><A HREF="gnu-c-manual.html#IDX56">declaring arrays</A>
-<LI><A HREF="gnu-c-manual.html#IDX123">declaring enumerations</A>
-<LI><A HREF="gnu-c-manual.html#IDX74">declaring pointers</A>
-<LI><A HREF="gnu-c-manual.html#IDX50">declaring primitive variables</A>
-<LI><A HREF="gnu-c-manual.html#IDX67">declaring string arrays</A>
-<LI><A HREF="gnu-c-manual.html#IDX83">declaring structure variables</A>
-<LI><A HREF="gnu-c-manual.html#IDX87">declaring structure variables after definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX85">declaring structure variables at definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX104">declaring union variables</A>
-<LI><A HREF="gnu-c-manual.html#IDX108">declaring union variables after definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX106">declaring union variables at definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX131">decrement operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX121">defining enumerations</A>
-<LI><A HREF="gnu-c-manual.html#IDX81">defining structures</A>
-<LI><A HREF="gnu-c-manual.html#IDX102">defining unions</A>
-<LI><A HREF="gnu-c-manual.html#IDX219">definitions, function</A>
-<LI><A HREF="gnu-c-manual.html#IDX150">division operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX204"><CODE>do</CODE> statement</A>
-<LI><A HREF="gnu-c-manual.html#IDX44"><CODE>double</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX28">data types</A>
+<LI><A HREF="gnu-c-manual.html#IDX49">data types, complex number</A>
+<LI><A HREF="gnu-c-manual.html#IDX44">data types, floating point</A>
+<LI><A HREF="gnu-c-manual.html#IDX31">data types, integer</A>
+<LI><A HREF="gnu-c-manual.html#IDX188">declarations inside expressions</A>
+<LI><A HREF="gnu-c-manual.html#IDX217">declarations, function</A>
+<LI><A HREF="gnu-c-manual.html#IDX58">declaring arrays</A>
+<LI><A HREF="gnu-c-manual.html#IDX125">declaring enumerations</A>
+<LI><A HREF="gnu-c-manual.html#IDX76">declaring pointers</A>
+<LI><A HREF="gnu-c-manual.html#IDX52">declaring primitive variables</A>
+<LI><A HREF="gnu-c-manual.html#IDX69">declaring string arrays</A>
+<LI><A HREF="gnu-c-manual.html#IDX85">declaring structure variables</A>
+<LI><A HREF="gnu-c-manual.html#IDX89">declaring structure variables after definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX87">declaring structure variables at definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX106">declaring union variables</A>
+<LI><A HREF="gnu-c-manual.html#IDX110">declaring union variables after definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX108">declaring union variables at definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX133">decrement operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX123">defining enumerations</A>
+<LI><A HREF="gnu-c-manual.html#IDX83">defining structures</A>
+<LI><A HREF="gnu-c-manual.html#IDX104">defining unions</A>
+<LI><A HREF="gnu-c-manual.html#IDX221">definitions, function</A>
+<LI><A HREF="gnu-c-manual.html#IDX152">division operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX206"><CODE>do</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX46"><CODE>double</CODE> data type</A>
 </DIR>
 <H2><A NAME="cindex_e">e</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX201"><CODE>else</CODE> statements</A>
-<LI><A HREF="gnu-c-manual.html#IDX120">enumerations</A>
-<LI><A HREF="gnu-c-manual.html#IDX124">enumerations, declaring</A>
-<LI><A HREF="gnu-c-manual.html#IDX122">enumerations, defining</A>
-<LI><A HREF="gnu-c-manual.html#IDX157">equal-to operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX191">evaluation, order of</A>
-<LI><A HREF="gnu-c-manual.html#IDX195">expression statements</A>
-<LI><A HREF="gnu-c-manual.html#IDX126">expressions</A>
-<LI><A HREF="gnu-c-manual.html#IDX187">expressions containing statements</A>
-<LI><A HREF="gnu-c-manual.html#IDX171">expressions, compound, as lvalues</A>
-<LI><A HREF="gnu-c-manual.html#IDX173">expressions, conditional, as lvalues</A>
-<LI><A HREF="gnu-c-manual.html#IDX177">extensions, <CODE>?:</CODE></A>
+<LI><A HREF="gnu-c-manual.html#IDX203"><CODE>else</CODE> statements</A>
+<LI><A HREF="gnu-c-manual.html#IDX122">enumerations</A>
+<LI><A HREF="gnu-c-manual.html#IDX126">enumerations, declaring</A>
+<LI><A HREF="gnu-c-manual.html#IDX124">enumerations, defining</A>
+<LI><A HREF="gnu-c-manual.html#IDX159">equal-to operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX193">evaluation, order of</A>
+<LI><A HREF="gnu-c-manual.html#IDX197">expression statements</A>
+<LI><A HREF="gnu-c-manual.html#IDX128">expressions</A>
+<LI><A HREF="gnu-c-manual.html#IDX189">expressions containing statements</A>
+<LI><A HREF="gnu-c-manual.html#IDX173">expressions, compound, as lvalues</A>
+<LI><A HREF="gnu-c-manual.html#IDX175">expressions, conditional, as lvalues</A>
+<LI><A HREF="gnu-c-manual.html#IDX179">extensions, <CODE>?:</CODE></A>
 </DIR>
 <H2><A NAME="cindex_f">f</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX238">FDL, GNU Free Documentation License</A>
-<LI><A HREF="gnu-c-manual.html#IDX98">fields, bit</A>
-<LI><A HREF="gnu-c-manual.html#IDX43"><CODE>float</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX11">floating point constants</A>
-<LI><A HREF="gnu-c-manual.html#IDX41">floating point data types</A>
-<LI><A HREF="gnu-c-manual.html#IDX205"><CODE>for</CODE> statement</A>
-<LI><A HREF="gnu-c-manual.html#IDX144">function calls, as expressions</A>
-<LI><A HREF="gnu-c-manual.html#IDX214">function declarations</A>
-<LI><A HREF="gnu-c-manual.html#IDX218">function definitions</A>
-<LI><A HREF="gnu-c-manual.html#IDX233">function parameter lists, variable length</A>
-<LI><A HREF="gnu-c-manual.html#IDX222">function parameters</A>
-<LI><A HREF="gnu-c-manual.html#IDX229">function parameters, pass by reference</A>
-<LI><A HREF="gnu-c-manual.html#IDX226">function parameters, pass by value</A>
-<LI><A HREF="gnu-c-manual.html#IDX216">function prototypes</A>
-<LI><A HREF="gnu-c-manual.html#IDX235">function, <CODE>main</CODE></A>
-<LI><A HREF="gnu-c-manual.html#IDX213">functions</A>
-<LI><A HREF="gnu-c-manual.html#IDX221">functions, calling</A>
-<LI><A HREF="gnu-c-manual.html#IDX237">functions, recursive</A>
+<LI><A HREF="gnu-c-manual.html#IDX240">FDL, GNU Free Documentation License</A>
+<LI><A HREF="gnu-c-manual.html#IDX100">fields, bit</A>
+<LI><A HREF="gnu-c-manual.html#IDX45"><CODE>float</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX13">floating point constants</A>
+<LI><A HREF="gnu-c-manual.html#IDX43">floating point data types</A>
+<LI><A HREF="gnu-c-manual.html#IDX207"><CODE>for</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX146">function calls, as expressions</A>
+<LI><A HREF="gnu-c-manual.html#IDX216">function declarations</A>
+<LI><A HREF="gnu-c-manual.html#IDX220">function definitions</A>
+<LI><A HREF="gnu-c-manual.html#IDX235">function parameter lists, variable length</A>
+<LI><A HREF="gnu-c-manual.html#IDX224">function parameters</A>
+<LI><A HREF="gnu-c-manual.html#IDX231">function parameters, pass by reference</A>
+<LI><A HREF="gnu-c-manual.html#IDX228">function parameters, pass by value</A>
+<LI><A HREF="gnu-c-manual.html#IDX218">function prototypes</A>
+<LI><A HREF="gnu-c-manual.html#IDX237">function, <CODE>main</CODE></A>
+<LI><A HREF="gnu-c-manual.html#IDX215">functions</A>
+<LI><A HREF="gnu-c-manual.html#IDX223">functions, calling</A>
+<LI><A HREF="gnu-c-manual.html#IDX239">functions, recursive</A>
 </DIR>
 <H2><A NAME="cindex_g">g</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX175">generalized lvalues</A>
-<LI><A HREF="gnu-c-manual.html#IDX209"><CODE>goto</CODE> statement</A>
-<LI><A HREF="gnu-c-manual.html#IDX161">greater-than operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX162">greater-than-or-equal-to operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX177">generalized lvalues</A>
+<LI><A HREF="gnu-c-manual.html#IDX211"><CODE>goto</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX163">greater-than operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX164">greater-than-or-equal-to operator</A>
 </DIR>
 <H2><A NAME="cindex_i">i</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX17">ice cream, pistachio</A>
-<LI><A HREF="gnu-c-manual.html#IDX15">ice cream, tutti frutti</A>
-<LI><A HREF="gnu-c-manual.html#IDX4">identifiers</A>
-<LI><A HREF="gnu-c-manual.html#IDX200"><CODE>if</CODE> statements</A>
-<LI><A HREF="gnu-c-manual.html#IDX125">incomplete types</A>
-<LI><A HREF="gnu-c-manual.html#IDX130">increment operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX181">indirect member access operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX137">indirection operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX58">initializing arrays</A>
-<LI><A HREF="gnu-c-manual.html#IDX76">initializing pointers</A>
-<LI><A HREF="gnu-c-manual.html#IDX52">initializing primitive variables</A>
-<LI><A HREF="gnu-c-manual.html#IDX69">initializing string arrays</A>
-<LI><A HREF="gnu-c-manual.html#IDX89">initializing structure members</A>
-<LI><A HREF="gnu-c-manual.html#IDX110">initializing union members</A>
-<LI><A HREF="gnu-c-manual.html#IDX33"><CODE>int</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX7">integer constants</A>
-<LI><A HREF="gnu-c-manual.html#IDX28">integer data types</A>
+<LI><A HREF="gnu-c-manual.html#IDX19">ice cream, pistachio</A>
+<LI><A HREF="gnu-c-manual.html#IDX17">ice cream, tutti frutti</A>
+<LI><A HREF="gnu-c-manual.html#IDX6">identifiers</A>
+<LI><A HREF="gnu-c-manual.html#IDX202"><CODE>if</CODE> statements</A>
+<LI><A HREF="gnu-c-manual.html#IDX127">incomplete types</A>
+<LI><A HREF="gnu-c-manual.html#IDX132">increment operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX183">indirect member access operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX139">indirection operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX60">initializing arrays</A>
+<LI><A HREF="gnu-c-manual.html#IDX78">initializing pointers</A>
+<LI><A HREF="gnu-c-manual.html#IDX54">initializing primitive variables</A>
+<LI><A HREF="gnu-c-manual.html#IDX71">initializing string arrays</A>
+<LI><A HREF="gnu-c-manual.html#IDX91">initializing structure members</A>
+<LI><A HREF="gnu-c-manual.html#IDX112">initializing union members</A>
+<LI><A HREF="gnu-c-manual.html#IDX35"><CODE>int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX9">integer constants</A>
+<LI><A HREF="gnu-c-manual.html#IDX30">integer data types</A>
 </DIR>
 <H2><A NAME="cindex_k">k</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX5">keywords</A>
-<LI><A HREF="gnu-c-manual.html#IDX25">knishes, potato</A>
+<LI><A HREF="gnu-c-manual.html#IDX7">keywords</A>
+<LI><A HREF="gnu-c-manual.html#IDX27">knishes, potato</A>
 </DIR>
 <H2><A NAME="cindex_l">l</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX198">labeled statements</A>
-<LI><A HREF="gnu-c-manual.html#IDX197">labels</A>
-<LI><A HREF="gnu-c-manual.html#IDX71">length of string caution, a</A>
-<LI><A HREF="gnu-c-manual.html#IDX159">less-than operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX160">less-than-or-equal-to operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX2">lexical elements</A>
-<LI><A HREF="gnu-c-manual.html#IDX164">logical AND operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX134">logical negation operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX163">logical operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX165">logical OR operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX45"><CODE>long double</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX35"><CODE>long int</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX39"><CODE>long long int</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX176">lvalues, generalized</A>
+<LI><A HREF="gnu-c-manual.html#IDX200">labeled statements</A>
+<LI><A HREF="gnu-c-manual.html#IDX199">labels</A>
+<LI><A HREF="gnu-c-manual.html#IDX73">length of string caution, a</A>
+<LI><A HREF="gnu-c-manual.html#IDX161">less-than operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX162">less-than-or-equal-to operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX4">lexical elements</A>
+<LI><A HREF="gnu-c-manual.html#IDX166">logical AND operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX136">logical negation operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX165">logical operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX167">logical OR operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX47"><CODE>long double</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX37"><CODE>long int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX41"><CODE>long long int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX178">lvalues, generalized</A>
 </DIR>
 <H2><A NAME="cindex_m">m</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX188">macros, statements in expressions</A>
-<LI><A HREF="gnu-c-manual.html#IDX234"><CODE>main</CODE> function</A>
-<LI><A HREF="gnu-c-manual.html#IDX180">member access operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX151">modulus operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX62">multidimensional arrays</A>
-<LI><A HREF="gnu-c-manual.html#IDX149">multiplication operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX190">macros, statements in expressions</A>
+<LI><A HREF="gnu-c-manual.html#IDX236"><CODE>main</CODE> function</A>
+<LI><A HREF="gnu-c-manual.html#IDX182">member access operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX153">modulus operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX64">multidimensional arrays</A>
+<LI><A HREF="gnu-c-manual.html#IDX151">multiplication operator</A>
 </DIR>
 <H2><A NAME="cindex_n">n</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX133">negative operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX21">nested comments</A>
-<LI><A HREF="gnu-c-manual.html#IDX158">not-equal-to operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX207">null statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX135">negative operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX23">nested comments</A>
+<LI><A HREF="gnu-c-manual.html#IDX160">not-equal-to operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX209">null statement</A>
 </DIR>
 <H2><A NAME="cindex_o">o</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX192">operator precedence</A>
-<LI><A HREF="gnu-c-manual.html#IDX183">operator, ternary</A>
-<LI><A HREF="gnu-c-manual.html#IDX127">operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX18">operators as lexical elements</A>
-<LI><A HREF="gnu-c-manual.html#IDX146">operators, binary</A>
-<LI><A HREF="gnu-c-manual.html#IDX129">operators, unary</A>
-<LI><A HREF="gnu-c-manual.html#IDX190">order of evaluation</A>
+<LI><A HREF="gnu-c-manual.html#IDX194">operator precedence</A>
+<LI><A HREF="gnu-c-manual.html#IDX185">operator, ternary</A>
+<LI><A HREF="gnu-c-manual.html#IDX129">operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX20">operators as lexical elements</A>
+<LI><A HREF="gnu-c-manual.html#IDX148">operators, binary</A>
+<LI><A HREF="gnu-c-manual.html#IDX131">operators, unary</A>
+<LI><A HREF="gnu-c-manual.html#IDX192">order of evaluation</A>
+<LI><A HREF="gnu-c-manual.html#IDX2">overview of C programming</A>
 </DIR>
 <H2><A NAME="cindex_p">p</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX232">parameters lists, variable length</A>
-<LI><A HREF="gnu-c-manual.html#IDX223">parameters, function</A>
-<LI><A HREF="gnu-c-manual.html#IDX228">parameters, pass by reference</A>
-<LI><A HREF="gnu-c-manual.html#IDX225">parameters, pass by value</A>
-<LI><A HREF="gnu-c-manual.html#IDX227">pass by reference parameters</A>
-<LI><A HREF="gnu-c-manual.html#IDX224">pass by value parameters</A>
-<LI><A HREF="gnu-c-manual.html#IDX16">pistachio ice cream</A>
-<LI><A HREF="gnu-c-manual.html#IDX73">pointers</A>
-<LI><A HREF="gnu-c-manual.html#IDX78">pointers and arrays</A>
-<LI><A HREF="gnu-c-manual.html#IDX230">pointers as function parameters</A>
-<LI><A HREF="gnu-c-manual.html#IDX95">pointers to structures</A>
-<LI><A HREF="gnu-c-manual.html#IDX116">pointers to unions</A>
-<LI><A HREF="gnu-c-manual.html#IDX75">pointers, declaring</A>
-<LI><A HREF="gnu-c-manual.html#IDX77">pointers, initializing</A>
-<LI><A HREF="gnu-c-manual.html#IDX132">positive operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX24">potato knishes</A>
-<LI><A HREF="gnu-c-manual.html#IDX193">precedence, operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX234">parameters lists, variable length</A>
+<LI><A HREF="gnu-c-manual.html#IDX225">parameters, function</A>
+<LI><A HREF="gnu-c-manual.html#IDX230">parameters, pass by reference</A>
+<LI><A HREF="gnu-c-manual.html#IDX227">parameters, pass by value</A>
+<LI><A HREF="gnu-c-manual.html#IDX229">pass by reference parameters</A>
+<LI><A HREF="gnu-c-manual.html#IDX226">pass by value parameters</A>
+<LI><A HREF="gnu-c-manual.html#IDX18">pistachio ice cream</A>
+<LI><A HREF="gnu-c-manual.html#IDX75">pointers</A>
+<LI><A HREF="gnu-c-manual.html#IDX80">pointers and arrays</A>
+<LI><A HREF="gnu-c-manual.html#IDX232">pointers as function parameters</A>
+<LI><A HREF="gnu-c-manual.html#IDX97">pointers to structures</A>
+<LI><A HREF="gnu-c-manual.html#IDX118">pointers to unions</A>
+<LI><A HREF="gnu-c-manual.html#IDX77">pointers, declaring</A>
+<LI><A HREF="gnu-c-manual.html#IDX79">pointers, initializing</A>
+<LI><A HREF="gnu-c-manual.html#IDX134">positive operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX26">potato knishes</A>
+<LI><A HREF="gnu-c-manual.html#IDX195">precedence, operator</A>
 <LI><A HREF="gnu-c-manual.html#IDX1">preface</A>
-<LI><A HREF="gnu-c-manual.html#IDX27">primitive data types</A>
-<LI><A HREF="gnu-c-manual.html#IDX49">primitive variables, declaring</A>
-<LI><A HREF="gnu-c-manual.html#IDX53">primitive variables, initializing</A>
-<LI><A HREF="gnu-c-manual.html#IDX217">prototypes, function</A>
+<LI><A HREF="gnu-c-manual.html#IDX51">primitive variables, declaring</A>
+<LI><A HREF="gnu-c-manual.html#IDX55">primitive variables, initializing</A>
+<LI><A HREF="gnu-c-manual.html#IDX219">prototypes, function</A>
 </DIR>
 <H2><A NAME="cindex_r">r</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX236">recursive functions</A>
-<LI><A HREF="gnu-c-manual.html#IDX212"><CODE>return</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX238">recursive functions</A>
+<LI><A HREF="gnu-c-manual.html#IDX214"><CODE>return</CODE> statement</A>
 </DIR>
 <H2><A NAME="cindex_s">s</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX19">separators</A>
-<LI><A HREF="gnu-c-manual.html#IDX152">shift operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX37"><CODE>short int</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX189">side effects, macro argument</A>
-<LI><A HREF="gnu-c-manual.html#IDX30"><CODE>signed char</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX99">size of structures</A>
-<LI><A HREF="gnu-c-manual.html#IDX118">size of unions</A>
-<LI><A HREF="gnu-c-manual.html#IDX140"><CODE>sizeof</CODE> operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX208">statement, null</A>
-<LI><A HREF="gnu-c-manual.html#IDX194">statements</A>
-<LI><A HREF="gnu-c-manual.html#IDX185">statements inside expressions</A>
-<LI><A HREF="gnu-c-manual.html#IDX196">statements, expression</A>
-<LI><A HREF="gnu-c-manual.html#IDX199">statements, labeled</A>
-<LI><A HREF="gnu-c-manual.html#IDX66">string arrays, declaring</A>
-<LI><A HREF="gnu-c-manual.html#IDX68">string arrays, initializing</A>
-<LI><A HREF="gnu-c-manual.html#IDX70">string length caution, a</A>
-<LI><A HREF="gnu-c-manual.html#IDX13">string literals</A>
-<LI><A HREF="gnu-c-manual.html#IDX65">strings, arrays as</A>
-<LI><A HREF="gnu-c-manual.html#IDX92">structure members, accessing</A>
-<LI><A HREF="gnu-c-manual.html#IDX90">structure members, initializing</A>
-<LI><A HREF="gnu-c-manual.html#IDX84">structure variables, declaring</A>
-<LI><A HREF="gnu-c-manual.html#IDX88">structure variables, declaring after definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX86">structure variables, declaring at definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX80">structures</A>
-<LI><A HREF="gnu-c-manual.html#IDX94">structures, arrays of</A>
-<LI><A HREF="gnu-c-manual.html#IDX82">structures, defining</A>
-<LI><A HREF="gnu-c-manual.html#IDX96">structures, pointers to</A>
-<LI><A HREF="gnu-c-manual.html#IDX100">structures, size of</A>
-<LI><A HREF="gnu-c-manual.html#IDX148">subtraction operator</A>
-<LI><A HREF="gnu-c-manual.html#IDX202"><CODE>switch</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX21">separators</A>
+<LI><A HREF="gnu-c-manual.html#IDX154">shift operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX39"><CODE>short int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX191">side effects, macro argument</A>
+<LI><A HREF="gnu-c-manual.html#IDX32"><CODE>signed char</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX101">size of structures</A>
+<LI><A HREF="gnu-c-manual.html#IDX120">size of unions</A>
+<LI><A HREF="gnu-c-manual.html#IDX142"><CODE>sizeof</CODE> operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX210">statement, null</A>
+<LI><A HREF="gnu-c-manual.html#IDX196">statements</A>
+<LI><A HREF="gnu-c-manual.html#IDX187">statements inside expressions</A>
+<LI><A HREF="gnu-c-manual.html#IDX198">statements, expression</A>
+<LI><A HREF="gnu-c-manual.html#IDX201">statements, labeled</A>
+<LI><A HREF="gnu-c-manual.html#IDX68">string arrays, declaring</A>
+<LI><A HREF="gnu-c-manual.html#IDX70">string arrays, initializing</A>
+<LI><A HREF="gnu-c-manual.html#IDX72">string length caution, a</A>
+<LI><A HREF="gnu-c-manual.html#IDX15">string literals</A>
+<LI><A HREF="gnu-c-manual.html#IDX67">strings, arrays as</A>
+<LI><A HREF="gnu-c-manual.html#IDX94">structure members, accessing</A>
+<LI><A HREF="gnu-c-manual.html#IDX92">structure members, initializing</A>
+<LI><A HREF="gnu-c-manual.html#IDX86">structure variables, declaring</A>
+<LI><A HREF="gnu-c-manual.html#IDX90">structure variables, declaring after definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX88">structure variables, declaring at definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX82">structures</A>
+<LI><A HREF="gnu-c-manual.html#IDX96">structures, arrays of</A>
+<LI><A HREF="gnu-c-manual.html#IDX84">structures, defining</A>
+<LI><A HREF="gnu-c-manual.html#IDX98">structures, pointers to</A>
+<LI><A HREF="gnu-c-manual.html#IDX102">structures, size of</A>
+<LI><A HREF="gnu-c-manual.html#IDX150">subtraction operator</A>
+<LI><A HREF="gnu-c-manual.html#IDX204"><CODE>switch</CODE> statement</A>
 </DIR>
 <H2><A NAME="cindex_t">t</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX182">ternary operator, the</A>
-<LI><A HREF="gnu-c-manual.html#IDX3">tokens</A>
-<LI><A HREF="gnu-c-manual.html#IDX14">tutti frutti ice cream</A>
-<LI><A HREF="gnu-c-manual.html#IDX141">type casts</A>
+<LI><A HREF="gnu-c-manual.html#IDX184">ternary operator, the</A>
+<LI><A HREF="gnu-c-manual.html#IDX5">tokens</A>
+<LI><A HREF="gnu-c-manual.html#IDX16">tutti frutti ice cream</A>
+<LI><A HREF="gnu-c-manual.html#IDX143">type casts</A>
+<LI><A HREF="gnu-c-manual.html#IDX29">types</A>
 </DIR>
 <H2><A NAME="cindex_u">u</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX128">unary operators</A>
-<LI><A HREF="gnu-c-manual.html#IDX113">union members, accessing</A>
-<LI><A HREF="gnu-c-manual.html#IDX111">union members, initializing</A>
-<LI><A HREF="gnu-c-manual.html#IDX105">union variables, declaring</A>
-<LI><A HREF="gnu-c-manual.html#IDX109">union variables, declaring after definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX107">union variables, declaring at definition</A>
-<LI><A HREF="gnu-c-manual.html#IDX101">unions</A>
-<LI><A HREF="gnu-c-manual.html#IDX115">unions, arrays of</A>
-<LI><A HREF="gnu-c-manual.html#IDX103">unions, defining</A>
-<LI><A HREF="gnu-c-manual.html#IDX117">unions, pointers to</A>
-<LI><A HREF="gnu-c-manual.html#IDX119">unions, size of</A>
-<LI><A HREF="gnu-c-manual.html#IDX31"><CODE>unsigned char</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX34"><CODE>unsigned int</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX36"><CODE>unsigned long int</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX40"><CODE>unsigned long long int</CODE> data type</A>
-<LI><A HREF="gnu-c-manual.html#IDX38"><CODE>unsigned short int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX130">unary operators</A>
+<LI><A HREF="gnu-c-manual.html#IDX115">union members, accessing</A>
+<LI><A HREF="gnu-c-manual.html#IDX113">union members, initializing</A>
+<LI><A HREF="gnu-c-manual.html#IDX107">union variables, declaring</A>
+<LI><A HREF="gnu-c-manual.html#IDX111">union variables, declaring after definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX109">union variables, declaring at definition</A>
+<LI><A HREF="gnu-c-manual.html#IDX103">unions</A>
+<LI><A HREF="gnu-c-manual.html#IDX117">unions, arrays of</A>
+<LI><A HREF="gnu-c-manual.html#IDX105">unions, defining</A>
+<LI><A HREF="gnu-c-manual.html#IDX119">unions, pointers to</A>
+<LI><A HREF="gnu-c-manual.html#IDX121">unions, size of</A>
+<LI><A HREF="gnu-c-manual.html#IDX33"><CODE>unsigned char</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX36"><CODE>unsigned int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX38"><CODE>unsigned long int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX42"><CODE>unsigned long long int</CODE> data type</A>
+<LI><A HREF="gnu-c-manual.html#IDX40"><CODE>unsigned short int</CODE> data type</A>
 </DIR>
 <H2><A NAME="cindex_v">v</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX231">variable length parameter lists</A>
-<LI><A HREF="gnu-c-manual.html#IDX51">variables, declaring primitive</A>
-<LI><A HREF="gnu-c-manual.html#IDX54">variables, initializing primitive</A>
-<LI><A HREF="gnu-c-manual.html#IDX48"><CODE>void</CODE> type</A>
+<LI><A HREF="gnu-c-manual.html#IDX233">variable length parameter lists</A>
+<LI><A HREF="gnu-c-manual.html#IDX53">variables, declaring primitive</A>
+<LI><A HREF="gnu-c-manual.html#IDX56">variables, initializing primitive</A>
+<LI><A HREF="gnu-c-manual.html#IDX50"><CODE>void</CODE> type</A>
 </DIR>
 <H2><A NAME="cindex_w">w</A></H2>
 <DIR>
-<LI><A HREF="gnu-c-manual.html#IDX203"><CODE>while</CODE> statement</A>
-<LI><A HREF="gnu-c-manual.html#IDX23">white space</A>
+<LI><A HREF="gnu-c-manual.html#IDX205"><CODE>while</CODE> statement</A>
+<LI><A HREF="gnu-c-manual.html#IDX25">white space</A>
 </DIR>
 
 
 <P><HR><P>
-<H1>Footnotes</H1>
-<H3><A NAME="FOOT1" HREF="gnu-c-manual.html#DOCF1">(1)</A></H3>
-<P>Depending on
-your system, this data type might be 64-bit, in which case its range is
-identical to that of the <CODE>long long int</CODE> data type.
-<H3><A NAME="FOOT2" HREF="gnu-c-manual.html#DOCF2">(2)</A></H3>
-<P>Depending on your
-system, this data type might be 64-bit, in which case its range is
-identical to that of the <CODE>unsigned long long int</CODE> data type.
-<P><HR><P>
-This document was generated on April, 13  2004 using
+This document was generated on April, 14  2004 using
 <A HREF="http://www.mathematik.uni-kl.de/~obachman/Texi2html">texi2html</A>&nbsp;1.57.
 
 </BODY>

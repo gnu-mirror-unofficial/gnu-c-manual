@@ -154,7 +154,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<h2 class="unnumbered">The C Preprocessor</h2>
+<h2 class="chapter">2 The C Preprocessor</h2>
 
 <p><a name="index-preprocessor-4"></a><a name="index-C-preprocessor-5"></a>
 The first stage of building an executable program out of C source code
@@ -186,7 +186,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Overview</h3>
+<h3 class="section">2.1 Overview</h3>
 
 <!-- man begin DESCRIPTION -->
 <p>The C preprocessor, often known as <dfn>cpp</dfn>, is a <dfn>macro processor</dfn>
@@ -250,7 +250,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Overview">Overview</a>
 <br>
 </div>
 
-<h4 class="subsection">Initial processing</h4>
+<h4 class="subsection">2.1.1 Initial processing</h4>
 
 <p>The preprocessor performs a series of textual transformations on its
 input.  These happen before all other processing.  Conceptually, they
@@ -401,7 +401,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Overview">Overview</a>
 <br>
 </div>
 
-<h4 class="subsection">Tokenization</h4>
+<h4 class="subsection">2.1.2 Tokenization</h4>
 
 <p><a name="index-tokens-14"></a><a name="index-preprocessing-tokens-15"></a>After the textual transformations are finished, the input file is
 converted into a sequence of <dfn>preprocessing tokens</dfn>.  These mostly
@@ -546,7 +546,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Overview">Overview</a>
 <br>
 </div>
 
-<h4 class="subsection">The preprocessing language</h4>
+<h4 class="subsection">2.1.3 The preprocessing language</h4>
 
 <p><a name="index-directives-27"></a><a name="index-preprocessing-directives-28"></a><a name="index-directive-line-29"></a><a name="index-directive-name-30"></a>
 After tokenization, the stream of tokens may simply be passed straight
@@ -617,7 +617,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Header Files</h3>
+<h3 class="section">2.2 Header Files</h3>
 
 <p><a name="index-header-file-31"></a>A header file is a file containing C declarations and macro definitions
 (see <a href="#Macros">Macros</a>) to be shared between several source files.  You request
@@ -669,7 +669,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Header-Files">Header Files</a>
 <br>
 </div>
 
-<h4 class="subsection">Include Syntax</h4>
+<h4 class="subsection">2.2.1 Include Syntax</h4>
 
 <p><a name="index-_0023include-33"></a>Both user and system header files are included using the preprocessing
 directive <span class="samp">#include</span>.  It has two variants:
@@ -707,7 +707,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Header-Files">Header Files</a>
 <br>
 </div>
 
-<h4 class="subsection">Include Operation</h4>
+<h4 class="subsection">2.2.2 Include Operation</h4>
 
 <p>The <span class="samp">#include</span> directive works by directing the C preprocessor to
 scan the specified file as input before continuing with the rest of the
@@ -769,7 +769,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Header-Files">Header Files</a>
 <br>
 </div>
 
-<h4 class="subsection">Search Path</h4>
+<h4 class="subsection">2.2.3 Search Path</h4>
 
 <p>GCC looks in several different places for headers.  On a normal Unix
 system, if you do not instruct it otherwise, it will look for headers
@@ -843,7 +843,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Header-Files">Header Files</a>
 <br>
 </div>
 
-<h4 class="subsection">Once-Only Headers</h4>
+<h4 class="subsection">2.2.4 Once-Only Headers</h4>
 
 <p><a name="index-repeated-inclusion-34"></a><a name="index-including-just-once-35"></a><a name="index-wrapper-_0040code_007b_0023ifndef_007d-36"></a>
 If a header file happens to be included twice, the compiler will process
@@ -891,7 +891,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Header-Files">Header Files</a>
 <br>
 </div>
 
-<h4 class="subsection">Computed Includes</h4>
+<h4 class="subsection">2.2.5 Computed Includes</h4>
 
 <p><a name="index-computed-includes-39"></a><a name="index-macros-in-include-40"></a>
 Sometimes it is necessary to select one of several different header
@@ -971,7 +971,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Header-Files">Header Files</a>
 <br>
 </div>
 
-<h4 class="subsection">Wrapper Headers</h4>
+<h4 class="subsection">2.2.6 Wrapper Headers</h4>
 
 <p><a name="index-wrapper-headers-41"></a><a name="index-overriding-a-header-file-42"></a><a name="index-_0023include_005fnext-43"></a>
 Sometimes it is necessary to adjust the contents of a system-provided
@@ -1024,7 +1024,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Header-Files">Header Files</a>
 <br>
 </div>
 
-<h4 class="subsection">System Headers</h4>
+<h4 class="subsection">2.2.7 System Headers</h4>
 
 <p><a name="index-system-header-files-44"></a>
 The header files declaring interfaces to the operating system and
@@ -1070,7 +1070,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Macros</h3>
+<h3 class="section">2.3 Macros</h3>
 
 <p>A <dfn>macro</dfn> is a fragment of code which has been given a name. 
 Whenever the name is used, it is replaced by the contents of the macro. 
@@ -1106,7 +1106,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Object-like Macros</h4>
+<h4 class="subsection">2.3.1 Object-like Macros</h4>
 
 <p><a name="index-object_002dlike-macro-46"></a><a name="index-symbolic-constants-47"></a><a name="index-manifest-constants-48"></a>
 An <dfn>object-like macro</dfn> is a simple identifier which will be replaced
@@ -1214,7 +1214,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Function-like Macros</h4>
+<h4 class="subsection">2.3.2 Function-like Macros</h4>
 
 <p><a name="index-function_002dlike-macros-50"></a>
 You can also define macros whose use looks like a function call.  These
@@ -1263,7 +1263,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Macro Arguments</h4>
+<h4 class="subsection">2.3.3 Macro Arguments</h4>
 
 <p><a name="index-arguments-51"></a><a name="index-macros-with-arguments-52"></a><a name="index-arguments-in-macro-definitions-53"></a>
 Function-like macros can take <dfn>arguments</dfn>, just like true functions. 
@@ -1361,7 +1361,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Stringification</h4>
+<h4 class="subsection">2.3.4 Stringification</h4>
 
 <p><a name="index-stringification-55"></a><a name="index-_0040samp_007b_0023_007d-operator-56"></a>
 Sometimes you may want to convert a macro argument into a string
@@ -1443,7 +1443,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Concatenation</h4>
+<h4 class="subsection">2.3.5 Concatenation</h4>
 
 <p><a name="index-concatenation-57"></a><a name="index-token-pasting-58"></a><a name="index-token-concatenation-59"></a><a name="index-_0040samp_007b_0023_0023_007d-operator-60"></a>
 It is often useful to merge two tokens into one while expanding macros. 
@@ -1524,7 +1524,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Variadic Macros</h4>
+<h4 class="subsection">2.3.6 Variadic Macros</h4>
 
 <p><a name="index-variable-number-of-arguments-61"></a><a name="index-macros-with-variable-arguments-62"></a><a name="index-variadic-macros-63"></a>
 A macro can be declared to accept a variable number of arguments much as
@@ -1636,7 +1636,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Predefined Macros</h4>
+<h4 class="subsection">2.3.7 Predefined Macros</h4>
 
 <p><a name="index-predefined-macros-64"></a>Several object-like macros are predefined; you use them without
 supplying their definitions.  They fall into three classes: standard,
@@ -1659,7 +1659,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Predefined-Macros">Predefined Macros</
 <br>
 </div>
 
-<h5 class="subsubsection">Standard Predefined Macros</h5>
+<h5 class="subsubsection">2.3.7.1 Standard Predefined Macros</h5>
 
 <p><a name="index-standard-predefined-macros_002e-65"></a>
 The standard predefined macros are specified by the relevant
@@ -1787,7 +1787,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Predefined-Macros">Predefined Macros</
 <br>
 </div>
 
-<h5 class="subsubsection">Common Predefined Macros</h5>
+<h5 class="subsubsection">2.3.7.2 Common Predefined Macros</h5>
 
 <p><a name="index-common-predefined-macros-66"></a>
 The common predefined macros are GNU C extensions.  They are available
@@ -1941,7 +1941,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Predefined-Macros">Predefined Macros</
 <br>
 </div>
 
-<h5 class="subsubsection">System-specific Predefined Macros</h5>
+<h5 class="subsubsection">2.3.7.3 System-specific Predefined Macros</h5>
 
 <p><a name="index-system_002dspecific-predefined-macros-67"></a><a name="index-predefined-macros_002c-system_002dspecific-68"></a><a name="index-reserved-namespace-69"></a>
 The C preprocessor normally predefines several macros that indicate what
@@ -1984,7 +1984,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Predefined-Macros">Predefined Macros</
 <br>
 </div>
 
-<h5 class="subsubsection">C++ Named Operators</h5>
+<h5 class="subsubsection">2.3.7.4 C++ Named Operators</h5>
 
 <p><a name="index-named-operators-70"></a><a name="index-C_002b_002b-named-operators-71"></a><a name="index-iso646_002eh-72"></a>
 In C++, there are eleven keywords which are simply alternate spellings
@@ -2019,7 +2019,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Undefining and Redefining Macros</h4>
+<h4 class="subsection">2.3.8 Undefining and Redefining Macros</h4>
 
 <p><a name="index-undefining-macros-73"></a><a name="index-redefining-macros-74"></a><a name="index-_0023undef-75"></a>
 If a macro ceases to be useful, it may be <dfn>undefined</dfn> with the
@@ -2076,7 +2076,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Directives Within Macro Arguments</h4>
+<h4 class="subsection">2.3.9 Directives Within Macro Arguments</h4>
 
 <p><a name="index-macro-arguments-and-directives-76"></a>
 Occasionally it is convenient to use preprocessor directives within
@@ -2120,7 +2120,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macros">Macros</a>
 <br>
 </div>
 
-<h4 class="subsection">Macro Pitfalls</h4>
+<h4 class="subsection">2.3.10 Macro Pitfalls</h4>
 
 <p><a name="index-problems-with-macros-77"></a><a name="index-pitfalls-of-macros-78"></a>
 In this section we describe some special rules that apply to macros and
@@ -2144,7 +2144,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macro-Pitfalls">Macro Pitfalls</a>
 <br>
 </div>
 
-<h5 class="subsubsection">Misnesting</h5>
+<h5 class="subsubsection">2.3.10.1 Misnesting</h5>
 
 <p>When a macro is called with arguments, the arguments are substituted
 into the macro body and the result is checked, together with the rest of
@@ -2180,7 +2180,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macro-Pitfalls">Macro Pitfalls</a>
 <br>
 </div>
 
-<h5 class="subsubsection">Operator Precedence Problems</h5>
+<h5 class="subsubsection">2.3.10.2 Operator Precedence Problems</h5>
 
 <p><a name="index-parentheses-in-macro-bodies-79"></a>
 You may have noticed that in most of the macro definition examples shown
@@ -2239,7 +2239,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macro-Pitfalls">Macro Pitfalls</a>
 <br>
 </div>
 
-<h5 class="subsubsection">Swallowing the Semicolon</h5>
+<h5 class="subsubsection">2.3.10.3 Swallowing the Semicolon</h5>
 
 <p><a name="index-semicolons-_0028after-macro-calls_0029-80"></a>
 Often it is desirable to define a macro that expands into a compound
@@ -2300,7 +2300,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macro-Pitfalls">Macro Pitfalls</a>
 <br>
 </div>
 
-<h5 class="subsubsection">Duplication of Side Effects</h5>
+<h5 class="subsubsection">2.3.10.4 Duplication of Side Effects</h5>
 
 <p><a name="index-side-effects-_0028in-macro-arguments_0029-81"></a><a name="index-unsafe-macros-82"></a>Many C programs define a macro <code>min</code>, for &ldquo;minimum&rdquo;, like this:
 
@@ -2364,7 +2364,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macro-Pitfalls">Macro Pitfalls</a>
 <br>
 </div>
 
-<h5 class="subsubsection">Self-Referential Macros</h5>
+<h5 class="subsubsection">2.3.10.5 Self-Referential Macros</h5>
 
 <p><a name="index-self_002dreference-83"></a>
 A <dfn>self-referential</dfn> macro is one whose name appears in its
@@ -2431,7 +2431,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macro-Pitfalls">Macro Pitfalls</a>
 <br>
 </div>
 
-<h5 class="subsubsection">Argument Prescan</h5>
+<h5 class="subsubsection">2.3.10.6 Argument Prescan</h5>
 
 <p><a name="index-expansion-of-arguments-84"></a><a name="index-macro-argument-expansion-85"></a><a name="index-prescan-of-macro-arguments-86"></a>
 Macro arguments are completely macro-expanded before they are
@@ -2522,7 +2522,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Macro-Pitfalls">Macro Pitfalls</a>
 <br>
 </div>
 
-<h5 class="subsubsection">Newlines in Arguments</h5>
+<h5 class="subsubsection">2.3.10.7 Newlines in Arguments</h5>
 
 <p><a name="index-newlines-in-macro-arguments-87"></a>
 The invocation of a function-like macro can extend over many logical
@@ -2553,7 +2553,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Conditionals</h3>
+<h3 class="section">2.4 Conditionals</h3>
 
 <p><a name="index-conditionals-88"></a>
 A <dfn>conditional</dfn> is a directive that instructs the preprocessor to
@@ -2598,7 +2598,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditionals">Conditionals</a>
 <br>
 </div>
 
-<h4 class="subsection">Conditional Uses</h4>
+<h4 class="subsection">2.4.1 Conditional Uses</h4>
 
 <p>There are three general reasons to use a conditional.
 
@@ -2633,7 +2633,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditionals">Conditionals</a>
 <br>
 </div>
 
-<h4 class="subsection">Conditional Syntax</h4>
+<h4 class="subsection">2.4.2 Conditional Syntax</h4>
 
 <p><a name="index-_0023if-89"></a>A conditional in the C preprocessor begins with a <dfn>conditional
 directive</dfn>: <span class="samp">#if</span>, <span class="samp">#ifdef</span> or <span class="samp">#ifndef</span>.
@@ -2653,7 +2653,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditional-Syntax">Conditional Syntax
 <br>
 </div>
 
-<h5 class="subsubsection">Ifdef</h5>
+<h5 class="subsubsection">2.4.2.1 Ifdef</h5>
 
 <p><a name="index-_0023ifdef-90"></a><a name="index-_0023endif-91"></a>
 The simplest sort of conditional is
@@ -2731,7 +2731,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditional-Syntax">Conditional Syntax
 <br>
 </div>
 
-<h5 class="subsubsection">If</h5>
+<h5 class="subsubsection">2.4.2.2 If</h5>
 
 <p>The <span class="samp">#if</span> directive allows you to test the value of an arithmetic
 expression, rather than the mere existence of one macro.  Its syntax is
@@ -2798,7 +2798,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditional-Syntax">Conditional Syntax
 <br>
 </div>
 
-<h5 class="subsubsection">Defined</h5>
+<h5 class="subsubsection">2.4.2.3 Defined</h5>
 
 <p><a name="index-_0040code_007bdefined_007d-94"></a>The special operator <code>defined</code> is used in <span class="samp">#if</span> and
 <span class="samp">#elif</span> expressions to test whether a certain name is defined as a
@@ -2836,7 +2836,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditional-Syntax">Conditional Syntax
 <br>
 </div>
 
-<h5 class="subsubsection">Else</h5>
+<h5 class="subsubsection">2.4.2.4 Else</h5>
 
 <p><a name="index-_0023else-95"></a>The <span class="samp">#else</span> directive can be added to a conditional to provide
 alternative text to be used if the condition fails.  This is what it
@@ -2861,7 +2861,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditional-Syntax">Conditional Syntax
 <br>
 </div>
 
-<h5 class="subsubsection">Elif</h5>
+<h5 class="subsubsection">2.4.2.5 Elif</h5>
 
 <p><a name="index-_0023elif-96"></a>One common case of nested conditionals is used to check for more than two
 possible alternatives.  For example, you might have
@@ -2909,7 +2909,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Conditionals">Conditionals</a>
 <br>
 </div>
 
-<h4 class="subsection">Deleted Code</h4>
+<h4 class="subsection">2.4.3 Deleted Code</h4>
 
 <p><a name="index-commenting-out-code-97"></a>
 If you replace or delete a part of the program but want to keep the old
@@ -2943,7 +2943,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Diagnostics</h3>
+<h3 class="section">2.5 Diagnostics</h3>
 
 <p><a name="index-diagnostic-98"></a><a name="index-reporting-errors-99"></a><a name="index-reporting-warnings-100"></a>
 <a name="index-_0023error-101"></a>The directive <span class="samp">#error</span> causes the preprocessor to report a fatal
@@ -2988,7 +2988,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Line Control</h3>
+<h3 class="section">2.6 Line Control</h3>
 
 <p><a name="index-line-control-103"></a>
 The C preprocessor informs the C compiler of the location in your source
@@ -3070,7 +3070,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Pragmas</h3>
+<h3 class="section">2.7 Pragmas</h3>
 
 <p>The <span class="samp">#pragma</span> directive is the method specified by the C standard
 for providing additional information to the compiler, beyond what is
@@ -3173,7 +3173,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Other Directives</h3>
+<h3 class="section">2.8 Other Directives</h3>
 
 <p><a name="index-_0023ident-109"></a>The <span class="samp">#ident</span> directive takes one argument, a string constant.  On
 some systems, that string constant is copied into a special segment of
@@ -3203,7 +3203,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Preprocessor Output</h3>
+<h3 class="section">2.9 Preprocessor Output</h3>
 
 <p>When the C preprocessor is used with the C, C++, or Objective-C
 compilers, it is integrated into the compiler and communicates a stream
@@ -3277,7 +3277,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Traditional Mode</h3>
+<h3 class="section">2.10 Traditional Mode</h3>
 
 <p>Traditional (pre-standard) C preprocessing is rather different from
 the preprocessing specified by the standard.  When GCC is given the
@@ -3309,7 +3309,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Traditional-Mode">Traditional Mode</a>
 <br>
 </div>
 
-<h4 class="subsection">Traditional lexical analysis</h4>
+<h4 class="subsection">2.10.1 Traditional lexical analysis</h4>
 
 <p>The traditional preprocessor does not decompose its input into tokens
 the same way a standards-conforming preprocessor does.  The input is
@@ -3376,7 +3376,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Traditional-Mode">Traditional Mode</a>
 <br>
 </div>
 
-<h4 class="subsection">Traditional macros</h4>
+<h4 class="subsection">2.10.2 Traditional macros</h4>
 
 <p>The major difference between traditional and ISO macros is that the
 former expand to text rather than to a token sequence.  CPP removes
@@ -3468,7 +3468,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Traditional-Mode">Traditional Mode</a>
 <br>
 </div>
 
-<h4 class="subsection">Traditional miscellany</h4>
+<h4 class="subsection">2.10.3 Traditional miscellany</h4>
 
 <p>Here are some things to be aware of when using the traditional
 preprocessor.
@@ -3501,7 +3501,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Traditional-Mode">Traditional Mode</a>
 <br>
 </div>
 
-<h4 class="subsection">Traditional warnings</h4>
+<h4 class="subsection">2.10.4 Traditional warnings</h4>
 
 <p>You can request warnings about features that did not exist, or worked
 differently, in traditional C with the <span class="option">-Wtraditional</span> option. 
@@ -3553,7 +3553,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Implementation Details</h3>
+<h3 class="section">2.11 Implementation Details</h3>
 
 <p>Here we document details of how the preprocessor's implementation
 affects its user-visible behavior.  You should try to avoid undue
@@ -3577,7 +3577,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Implementation-Details">Implementation
 <br>
 </div>
 
-<h4 class="subsection">Implementation-defined behavior</h4>
+<h4 class="subsection">2.11.1 Implementation-defined behavior</h4>
 
 <p><a name="index-implementation_002ddefined-behavior-114"></a>
 This is how CPP behaves in all the cases which the C standard
@@ -3649,7 +3649,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Implementation-Details">Implementation
 <br>
 </div>
 
-<h4 class="subsection">Implementation limits</h4>
+<h4 class="subsection">2.11.2 Implementation limits</h4>
 
 <p><a name="index-implementation-limits-115"></a>
 CPP has a small number of internal limits.  This section lists the
@@ -3721,7 +3721,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Implementation-Details">Implementation
 <br>
 </div>
 
-<h4 class="subsection">Obsolete Features</h4>
+<h4 class="subsection">2.11.3 Obsolete Features</h4>
 
 <p>CPP has a number of features which are present mainly for
 compatibility with older programs.  We discourage their use in new code. 
@@ -3739,7 +3739,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Obsolete-Features">Obsolete Features</
 <br>
 </div>
 
-<h5 class="subsubsection">Assertions</h5>
+<h5 class="subsubsection">2.11.3.1 Assertions</h5>
 
 <p><a name="index-assertions-116"></a>
 <dfn>Assertions</dfn> are a deprecated alternative to macros in writing
@@ -3810,7 +3810,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Obsolete-Features">Obsolete Features</
 <br>
 </div>
 
-<h5 class="subsubsection">Obsolete once-only headers</h5>
+<h5 class="subsubsection">2.11.3.2 Obsolete once-only headers</h5>
 
 <p>CPP supports two more ways of indicating that a header file should be
 read only once.  Neither one is as portable as a wrapper <span class="samp">#ifndef</span>,
@@ -3851,7 +3851,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Implementation-Details">Implementation
 <br>
 </div>
 
-<h4 class="subsection">Differences from previous versions</h4>
+<h4 class="subsection">2.11.4 Differences from previous versions</h4>
 
 <p><a name="index-differences-from-previous-versions-123"></a>
 This section details behavior which has changed from previous versions
@@ -3941,7 +3941,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-C-Preprocessor">The C Preprocessor
 <br>
 </div>
 
-<h3 class="section">Invocation</h3>
+<h3 class="section">2.12 Invocation</h3>
 
 <p><a name="index-invocation-124"></a><a name="index-command-line-125"></a>
 Most often when you use the C preprocessor you will not have to invoke it
@@ -3990,7 +3990,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h2 class="chapter">2 Lexical Elements</h2>
+<h2 class="chapter">3 Lexical Elements</h2>
 
 <p><a name="index-lexical-elements-128"></a>
 
@@ -4014,7 +4014,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <br>
 </div>
 
-<h3 class="section">2.1 Tokens</h3>
+<h3 class="section">3.1 Tokens</h3>
 
 <p><a name="index-tokens-129"></a>
 Tokens are the basic lexical elements of a C program.  Anything
@@ -4039,7 +4039,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Tokens">Tokens</a>
 <br>
 </div>
 
-<h4 class="subsection">2.1.1 Identifiers</h4>
+<h4 class="subsection">3.1.1 Identifiers</h4>
 
 <p><a name="index-identifiers-130"></a>
 Identifiers are strings of characters used for naming variables,
@@ -4058,7 +4058,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Tokens">Tokens</a>
 <br>
 </div>
 
-<h4 class="subsection">2.1.2 Keywords</h4>
+<h4 class="subsection">3.1.2 Keywords</h4>
 
 <p><a name="index-keywords-131"></a>
 Keywords are identifiers that are reserved for use by the programming
@@ -4119,7 +4119,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Tokens">Tokens</a>
 <br>
 </div>
 
-<h4 class="subsection">2.1.3 Constants</h4>
+<h4 class="subsection">3.1.3 Constants</h4>
 
 <p><a name="index-constants-132"></a>
 A constant is a literal numeric or character value, such as
@@ -4141,7 +4141,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
 <br>
 </div>
 
-<h5 class="subsubsection">2.1.3.1 Integer Constants</h5>
+<h5 class="subsubsection">3.1.3.1 Integer Constants</h5>
 
 <p><a name="index-integer-constants-133"></a><a name="index-constants_002c-integer-134"></a>
 An integer constant is a sequence of digits.  If the sequence of digits
@@ -4206,7 +4206,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
 <br>
 </div>
 
-<h5 class="subsubsection">2.1.3.2 Character Constants</h5>
+<h5 class="subsubsection">3.1.3.2 Character Constants</h5>
 
 <p><a name="index-character-constants-135"></a><a name="index-constants_002c-character-136"></a>
 A character constant is a sequence of one or more characters enclosed
@@ -4285,7 +4285,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
 <br>
 </div>
 
-<h5 class="subsubsection">2.1.3.3 Floating Point Constants</h5>
+<h5 class="subsubsection">3.1.3.3 Floating Point Constants</h5>
 
 <p><a name="index-floating-point-constants-137"></a><a name="index-constants_002c-floating-point-138"></a>
 A floating point constant is a value that represents a fractional
@@ -4338,7 +4338,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Tokens">Tokens</a>
 <br>
 </div>
 
-<h4 class="subsection">2.1.4 String Literals</h4>
+<h4 class="subsection">3.1.4 String Literals</h4>
 
 <p><a name="index-string-literals-139"></a>
 A string literal, or string constant, is a sequence of
@@ -4385,7 +4385,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Tokens">Tokens</a>
 <br>
 </div>
 
-<h4 class="subsection">2.1.5 Operators</h4>
+<h4 class="subsection">3.1.5 Operators</h4>
 
 <p><a name="index-operators-as-lexical-elements-144"></a>
 An operator is a token that performs an operation, such as
@@ -4402,7 +4402,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Tokens">Tokens</a>
 <br>
 </div>
 
-<h4 class="subsection">2.1.6 Separators</h4>
+<h4 class="subsection">3.1.6 Separators</h4>
 
 <p><a name="index-separators-145"></a>
 A separator is a token that is used to separate parts of
@@ -4419,7 +4419,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <br>
 </div>
 
-<h3 class="section">2.2 Comments</h3>
+<h3 class="section">3.2 Comments</h3>
 
 <p><a name="index-comments-146"></a>
 A comment is a section of a program's source code used to describe
@@ -4459,7 +4459,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <br>
 </div>
 
-<h3 class="section">2.3 White Space</h3>
+<h3 class="section">3.3 White Space</h3>
 
 <p><a name="index-white-space-149"></a>
 <dfn>White space</dfn> is the collective term used for a number of
@@ -4569,7 +4569,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h2 class="chapter">3 Data Types</h2>
+<h2 class="chapter">4 Data Types</h2>
 
 <p><a name="index-data-types-152"></a><a name="index-types-153"></a>
 There are various data types that you can use in C, including primitive
@@ -4594,7 +4594,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<h3 class="section">3.1 Integer Data Types</h3>
+<h3 class="section">4.1 Integer Data Types</h3>
 
 <p><a name="index-integer-data-types-154"></a><a name="index-data-types_002c-integer-155"></a>
 The integer data types range in size from at least 8 bits to at least 64 bits. 
@@ -4709,7 +4709,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<h3 class="section">3.2 Floating Point Data Types</h3>
+<h3 class="section">4.2 Floating Point Data Types</h3>
 
 <p><a name="index-floating-point-data-types-167"></a><a name="index-data-types_002c-floating-point-168"></a>
 There are several data types that represent fractional numbers, such as
@@ -4760,7 +4760,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<h3 class="section">3.3 Complex Number Data Types</h3>
+<h3 class="section">4.3 Complex Number Data Types</h3>
 
 <p><a name="index-complex-number-data-types-172"></a><a name="index-data-types_002c-complex-number-173"></a>
 GNU C provides support for complex data types.  You can declare complex
@@ -4809,7 +4809,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<h3 class="section">3.4 Declaring Variables</h3>
+<h3 class="section">4.4 Declaring Variables</h3>
 
 <p><a name="index-declaring-variables-174"></a><a name="index-variables_002c-declaring-175"></a>
 You must declare variables before you can use them.  To do so, you need
@@ -4837,7 +4837,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<h3 class="section">3.5 Initializing Variables</h3>
+<h3 class="section">4.5 Initializing Variables</h3>
 
 <p><a name="index-initializing-variables-176"></a><a name="index-variables_002c-initializing-177"></a>
 You can initialize a variable to a certain value when you declare by
@@ -4866,7 +4866,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<h2 class="chapter">4 Arrays</h2>
+<h2 class="chapter">5 Arrays</h2>
 
 <p><a name="index-arrays-178"></a>
 An array is a data structure that lets you store zero or more elements
@@ -4888,7 +4888,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
 <br>
 </div>
 
-<h3 class="section">4.1 Declaring Arrays</h3>
+<h3 class="section">5.1 Declaring Arrays</h3>
 
 <p><a name="index-declaring-arrays-179"></a><a name="index-arrays_002c-declaring-180"></a>
 You declare an array by specifying the data type for its elements, its name,
@@ -4932,7 +4932,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
 <br>
 </div>
 
-<h3 class="section">4.2 Initializing Arrays</h3>
+<h3 class="section">5.2 Initializing Arrays</h3>
 
 <p><a name="index-initializing-arrays-181"></a><a name="index-arrays_002c-initializing-182"></a>
 You can initialize the elements in an array when you declare it by listing
@@ -5003,7 +5003,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
 <br>
 </div>
 
-<h3 class="section">4.3 Accessing Array Elements</h3>
+<h3 class="section">5.3 Accessing Array Elements</h3>
 
 <p><a name="index-accessing-array-elements-183"></a><a name="index-array-elements_002c-accessing-184"></a>
 You can access the elements of an array by specifying the array name,
@@ -5034,7 +5034,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
 <br>
 </div>
 
-<h3 class="section">4.4 Multidimensional Arrays</h3>
+<h3 class="section">5.4 Multidimensional Arrays</h3>
 
 <p><a name="index-multidimensional-arrays-185"></a><a name="index-arrays_002c-multidimensional-186"></a>
 You can make multidimensional arrays, or &ldquo;arrays of arrays&rdquo;. 
@@ -5052,7 +5052,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
 <br>
 </div>
 
-<h3 class="section">4.5 Arrays as Strings</h3>
+<h3 class="section">5.5 Arrays as Strings</h3>
 
 <p><a name="index-arrays-as-strings-187"></a><a name="index-strings_002c-arrays-as-188"></a>
 You can use an array to hold a string (see <a href="#String-Literals">String Literals</a>).
@@ -5070,7 +5070,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays-as-Strings">Arrays as Strings</
 <br>
 </div>
 
-<h4 class="subsection">4.5.1 Declaring and Initializing String Arrays</h4>
+<h4 class="subsection">5.5.1 Declaring and Initializing String Arrays</h4>
 
 <p>To use an array to hold a string, you create a character array.  You can use
 either signed or unsigned characters.
@@ -5129,7 +5129,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays-as-Strings">Arrays as Strings</
 <br>
 </div>
 
-<h4 class="subsection">4.5.2 A String Length Caution</h4>
+<h4 class="subsection">5.5.2 A String Length Caution</h4>
 
 <p><a name="index-string-length-caution_002c-a-193"></a><a name="index-length-of-string-caution_002c-a-194"></a><a name="index-caution_002c-a-string-length-195"></a>
 It is possible for you to explicitly state the number of elements in the
@@ -5154,7 +5154,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<h2 class="chapter">5 Pointers</h2>
+<h2 class="chapter">6 Pointers</h2>
 
 <p><a name="index-pointers-196"></a>
 
@@ -5177,7 +5177,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
 <br>
 </div>
 
-<h3 class="section">5.1 Declaring Pointers</h3>
+<h3 class="section">6.1 Declaring Pointers</h3>
 
 <p><a name="index-declaring-pointers-197"></a><a name="index-pointers_002c-declaring-198"></a>
 You declare a pointer by specifying a name for it and a data type. 
@@ -5215,7 +5215,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
 <br>
 </div>
 
-<h3 class="section">5.2 Initializing Pointers</h3>
+<h3 class="section">6.2 Initializing Pointers</h3>
 
 <p><a name="index-initializing-pointers-199"></a><a name="index-pointers_002c-initializing-200"></a>
 You can initialize a pointer when you first declare it by specifying
@@ -5247,7 +5247,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
 <br>
 </div>
 
-<h3 class="section">5.3 Pointers and Arrays</h3>
+<h3 class="section">6.3 Pointers and Arrays</h3>
 
 <p><a name="index-pointers-and-arrays-201"></a><a name="index-arrays_002c-pointers-and-202"></a>
 
@@ -5262,7 +5262,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<h2 class="chapter">6 Structures, Unions, and Enumerations</h2>
+<h2 class="chapter">7 Structures, Unions, and Enumerations</h2>
 
 <p>Structures, unions, and enumerations are all programmer-defined data
 types.
@@ -5282,7 +5282,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures-Unions-and-Enumerations">St
 <br>
 </div>
 
-<h3 class="section">6.1 Structures</h3>
+<h3 class="section">7.1 Structures</h3>
 
 <p><a name="index-structures-203"></a>
 A structure is a programmer-defined data type made up of
@@ -5306,7 +5306,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
 
-<h4 class="subsection">6.1.1 Defining Structures</h4>
+<h4 class="subsection">7.1.1 Defining Structures</h4>
 
 <p><a name="index-defining-structures-204"></a><a name="index-structures_002c-defining-205"></a>
 You define a structure using the <code>struct</code> keyword followed by
@@ -5341,7 +5341,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
 
-<h4 class="subsection">6.1.2 Declaring Structure Variables</h4>
+<h4 class="subsection">7.1.2 Declaring Structure Variables</h4>
 
 <p><a name="index-declaring-structure-variables-206"></a><a name="index-structure-variables_002c-declaring-207"></a>
 You can declare variables of a structure type when both you initially
@@ -5362,7 +5362,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Structure-Variables">Declari
 <br>
 </div>
 
-<h5 class="subsubsection">6.1.2.1 Declaring Structure Variables at Definition</h5>
+<h5 class="subsubsection">7.1.2.1 Declaring Structure Variables at Definition</h5>
 
 <p><a name="index-declaring-structure-variables-at-definition-208"></a><a name="index-structure-variables_002c-declaring-at-definition-209"></a>
 You can declare variables of a structure type when you define the
@@ -5387,7 +5387,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Structure-Variables">Declari
 <br>
 </div>
 
-<h5 class="subsubsection">6.1.2.2 Declaring Structure Variables After Definition</h5>
+<h5 class="subsubsection">7.1.2.2 Declaring Structure Variables After Definition</h5>
 
 <p><a name="index-declaring-structure-variables-after-definition-210"></a><a name="index-structure-variables_002c-declaring-after-definition-211"></a>
 You can declare variables of a structure type after defining the
@@ -5412,7 +5412,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Structure-Variables">Declari
 <br>
 </div>
 
-<h5 class="subsubsection">6.1.2.3 Initializing Structure Members</h5>
+<h5 class="subsubsection">7.1.2.3 Initializing Structure Members</h5>
 
 <p><a name="index-initializing-structure-members-212"></a><a name="index-structure-members_002c-initializing-213"></a>
 
@@ -5497,7 +5497,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
 
-<h4 class="subsection">6.1.3 Accessing Structure Members</h4>
+<h4 class="subsection">7.1.3 Accessing Structure Members</h4>
 
 <p><a name="index-accessing-structure-members-214"></a><a name="index-structure-members_002c-accessing-215"></a>
 You can access the members of a structure variable using the member
@@ -5539,7 +5539,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
 
-<h4 class="subsection">6.1.4 Arrays of Structures</h4>
+<h4 class="subsection">7.1.4 Arrays of Structures</h4>
 
 <p><a name="index-arrays-of-structures-216"></a><a name="index-structures_002c-arrays-of-217"></a>
 You can create an array of a structure type just like you can an array
@@ -5589,7 +5589,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
 
-<h4 class="subsection">6.1.5 Pointers to Structures</h4>
+<h4 class="subsection">7.1.5 Pointers to Structures</h4>
 
 <p><a name="index-pointers-to-structures-218"></a><a name="index-structures_002c-pointers-to-219"></a>
 You can create a pointer to a structure type just like you can a pointer
@@ -5629,7 +5629,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
 
-<h4 class="subsection">6.1.6 Bit Fields</h4>
+<h4 class="subsection">7.1.6 Bit Fields</h4>
 
 <p><a name="index-bit-fields-220"></a><a name="index-fields_002c-bit-221"></a>
 You can create structures with integer members of nonstandard sizes, called
@@ -5662,7 +5662,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
 
-<h4 class="subsection">6.1.7 Size of Structures</h4>
+<h4 class="subsection">7.1.7 Size of Structures</h4>
 
 <p><a name="index-size-of-structures-222"></a><a name="index-structures_002c-size-of-223"></a>
 The size of a structure type is equal to the sum of the size of all of its
@@ -5677,7 +5677,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures-Unions-and-Enumerations">St
 <br>
 </div>
 
-<h3 class="section">6.2 Unions</h3>
+<h3 class="section">7.2 Unions</h3>
 
 <p><a name="index-unions-224"></a>
 A union is a custom data type used for storing several variables in the
@@ -5702,7 +5702,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
 <br>
 </div>
 
-<h4 class="subsection">6.2.1 Defining Unions</h4>
+<h4 class="subsection">7.2.1 Defining Unions</h4>
 
 <p><a name="index-defining-unions-225"></a><a name="index-unions_002c-defining-226"></a>
 You define a union using the <code>union</code> keyword followed by
@@ -5739,7 +5739,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
 <br>
 </div>
 
-<h4 class="subsection">6.2.2 Declaring Union Variables</h4>
+<h4 class="subsection">7.2.2 Declaring Union Variables</h4>
 
 <p><a name="index-declaring-union-variables-227"></a><a name="index-union-variables_002c-declaring-228"></a>
 You can declare variables of a union type when both you initially
@@ -5760,7 +5760,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring U
 <br>
 </div>
 
-<h5 class="subsubsection">6.2.2.1 Declaring Union Variables at Definition</h5>
+<h5 class="subsubsection">7.2.2.1 Declaring Union Variables at Definition</h5>
 
 <p><a name="index-declaring-union-variables-at-definition-229"></a><a name="index-union-variables_002c-declaring-at-definition-230"></a>
 You can declare variables of a union type when you define the
@@ -5786,7 +5786,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring U
 <br>
 </div>
 
-<h5 class="subsubsection">6.2.2.2 Declaring Union Variables After Definition</h5>
+<h5 class="subsubsection">7.2.2.2 Declaring Union Variables After Definition</h5>
 
 <p><a name="index-declaring-union-variables-after-definition-231"></a><a name="index-union-variables_002c-declaring-after-definition-232"></a>
 You can declare variables of a union type after you define the
@@ -5812,7 +5812,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring U
 <br>
 </div>
 
-<h5 class="subsubsection">6.2.2.3 Initializing Union Members</h5>
+<h5 class="subsubsection">7.2.2.3 Initializing Union Members</h5>
 
 <p><a name="index-initializing-union-members-233"></a><a name="index-union-members_002c-initializing-234"></a>
 
@@ -5860,7 +5860,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
 <br>
 </div>
 
-<h4 class="subsection">6.2.3 Accessing Union Members</h4>
+<h4 class="subsection">7.2.3 Accessing Union Members</h4>
 
 <p><a name="index-accessing-union-members-235"></a><a name="index-union-members_002c-accessing-236"></a>
 You can access the members of a union variable using the member
@@ -5891,7 +5891,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
 <br>
 </div>
 
-<h4 class="subsection">6.2.4 Arrays of Unions</h4>
+<h4 class="subsection">7.2.4 Arrays of Unions</h4>
 
 <p><a name="index-arrays-of-unions-237"></a><a name="index-unions_002c-arrays-of-238"></a>
 You can create an array of a union type just like you can an array
@@ -5930,7 +5930,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
 <br>
 </div>
 
-<h4 class="subsection">6.2.5 Pointers to Unions</h4>
+<h4 class="subsection">7.2.5 Pointers to Unions</h4>
 
 <p><a name="index-pointers-to-unions-239"></a><a name="index-unions_002c-pointers-to-240"></a>
 You can create a pointer to a union type just like you can a pointer
@@ -5968,7 +5968,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
 <br>
 </div>
 
-<h4 class="subsection">6.2.6 Size of Unions</h4>
+<h4 class="subsection">7.2.6 Size of Unions</h4>
 
 <p><a name="index-size-of-unions-241"></a><a name="index-unions_002c-size-of-242"></a>
 This size of a union is equal to the size of its largest member.  Consider
@@ -5994,7 +5994,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures-Unions-and-Enumerations">St
 <br>
 </div>
 
-<h3 class="section">6.3 Enumerations</h3>
+<h3 class="section">7.3 Enumerations</h3>
 
 <p><a name="index-enumerations-243"></a>
 An enumeration is a custom data type used for storing constant integer
@@ -6013,7 +6013,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Enumerations">Enumerations</a>
 <br>
 </div>
 
-<h4 class="subsection">6.3.1 Defining Enumerations</h4>
+<h4 class="subsection">7.3.1 Defining Enumerations</h4>
 
 <p><a name="index-defining-enumerations-244"></a><a name="index-enumerations_002c-defining-245"></a>
 You define an enumeration using the <code>enum</code> keyword, followed by
@@ -6051,7 +6051,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Enumerations">Enumerations</a>
 <br>
 </div>
 
-<h4 class="subsection">6.3.2 Declaring Enumerations</h4>
+<h4 class="subsection">7.3.2 Declaring Enumerations</h4>
 
 <p><a name="index-declaring-enumerations-246"></a><a name="index-enumerations_002c-declaring-247"></a>
 You can declare variables of an enumeration type both when the enumeration
@@ -6089,7 +6089,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Structures-Unions-and-Enumerations">St
 <br>
 </div>
 
-<h3 class="section">6.4 Incomplete Types</h3>
+<h3 class="section">7.4 Incomplete Types</h3>
 
 <p><a name="index-incomplete-types-248"></a>
 You can define structures, unions, and enumerations without listing their
@@ -6119,7 +6119,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 </div>
 
 <!-- node-name,  next,  previous,  up -->
-<h2 class="chapter">7 Expressions and Operators</h2>
+<h2 class="chapter">8 Expressions and Operators</h2>
 
 <ul class="menu">
 <li><a accesskey="1" href="#Expressions">Expressions</a>
@@ -6138,7 +6138,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<h3 class="section">7.1 Expressions</h3>
+<h3 class="section">8.1 Expressions</h3>
 
 <p><a name="index-expressions-249"></a>
 An <dfn>expression</dfn> consists of at least one operand and zero or more
@@ -6177,7 +6177,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<h3 class="section">7.2 Unary Operators</h3>
+<h3 class="section">8.2 Unary Operators</h3>
 
 <p><a name="index-unary-operators-251"></a><a name="index-operators_002c-unary-252"></a>
 
@@ -6205,7 +6205,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.1 The Increment Operator</h4>
+<h4 class="subsection">8.2.1 The Increment Operator</h4>
 
 <p><a name="index-increment-operator-253"></a>
 The increment operator <code>++</code> adds 1 to its operand.  The operand must
@@ -6249,7 +6249,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.2 The Decrement Operator</h4>
+<h4 class="subsection">8.2.2 The Decrement Operator</h4>
 
 <p><a name="index-decrement-operator-254"></a>
 The decrement operator <code>--</code> subtracts 1 from its operand.  The operand
@@ -6293,7 +6293,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.3 The Positive Operator</h4>
+<h4 class="subsection">8.2.3 The Positive Operator</h4>
 
 <p><a name="index-positive-operator-255"></a>
 You can use the positive operator <code>+</code> on numeric variables and constants
@@ -6313,7 +6313,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.4 The Negative Operator</h4>
+<h4 class="subsection">8.2.4 The Negative Operator</h4>
 
 <p><a name="index-negative-operator-256"></a>
 You can use the negative operator <code>-</code> on numeric variables and constants
@@ -6334,7 +6334,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.5 The Logical Negation Operator</h4>
+<h4 class="subsection">8.2.5 The Logical Negation Operator</h4>
 
 <p><a name="index-logical-negation-operator-257"></a>
 You can use the logical negation operator <code>!</code> to get the logical
@@ -6357,7 +6357,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.6 The Bitwise Complement Operator</h4>
+<h4 class="subsection">8.2.6 The Bitwise Complement Operator</h4>
 
 <p><a name="index-bitwise-complement-operator-258"></a>
 You can use the bitwise complement operator <code>~</code> to find the one's
@@ -6382,7 +6382,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.7 The Address Operator</h4>
+<h4 class="subsection">8.2.7 The Address Operator</h4>
 
 <p><a name="index-address-operator-259"></a>
 You can use the address operator <code>&amp;</code> to obtain the memory address
@@ -6404,7 +6404,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.8 The Indirection Operator</h4>
+<h4 class="subsection">8.2.8 The Indirection Operator</h4>
 
 <p><a name="index-indirection-operator-260"></a>
 You can use the indirection operator <code>*</code> to obtain the value stored
@@ -6432,7 +6432,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.9 The Complex Conjugation Operator</h4>
+<h4 class="subsection">8.2.9 The Complex Conjugation Operator</h4>
 
 <p><a name="index-complex-conjugation-operator-261"></a><a name="index-conjugation-operator-262"></a>
 You can use the complex conjugation operator <code>~</code> to perform complex
@@ -6456,7 +6456,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.10 The <code>sizeof</code> Operator</h4>
+<h4 class="subsection">8.2.10 The <code>sizeof</code> Operator</h4>
 
 <p><a name="index-_0040code_007bsizeof_007d-operator-263"></a>
 You can use the <code>sizeof</code> operator to obtain the size (in bytes)
@@ -6483,7 +6483,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.11 Type Casts</h4>
+<h4 class="subsection">8.2.11 Type Casts</h4>
 
 <p><a name="index-type-casts-264"></a><a name="index-casts-265"></a>
 You can use a type cast to explicitly declare the data type of an expression. 
@@ -6512,7 +6512,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.12 Array Subscripts</h4>
+<h4 class="subsection">8.2.12 Array Subscripts</h4>
 
 <p><a name="index-array-subscripts-266"></a>
 You can access array elements by specifying the name of the array, and the
@@ -6528,7 +6528,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.2.13 Function Calls as Expressions</h4>
+<h4 class="subsection">8.2.13 Function Calls as Expressions</h4>
 
 <p><a name="index-function-calls_002c-as-expressions-267"></a>
 A function call is an expression if the function returns a
@@ -6546,7 +6546,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<h3 class="section">7.3 Binary Operators</h3>
+<h3 class="section">8.3 Binary Operators</h3>
 
 <p><a name="index-binary-operators-268"></a><a name="index-operators_002c-binary-269"></a>
 
@@ -6575,7 +6575,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.1 The Addition Operator</h4>
+<h4 class="subsection">8.3.1 The Addition Operator</h4>
 
 <p><a name="index-addition-operator-270"></a>
 You use the addition operator <code>+</code> to add two operands.  You put the
@@ -6598,7 +6598,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.2 The Subtraction Operator</h4>
+<h4 class="subsection">8.3.2 The Subtraction Operator</h4>
 
 <p><a name="index-subtraction-operator-271"></a>
 You use the subtraction operator <code>-</code> to subtract its second operand
@@ -6623,7 +6623,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.3 The Multiplication Operator</h4>
+<h4 class="subsection">8.3.3 The Multiplication Operator</h4>
 
 <p><a name="index-multiplication-operator-272"></a>
 You use the multiplication operator <code>*</code> to multiply two operands
@@ -6648,7 +6648,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.4 The Division Operator</h4>
+<h4 class="subsection">8.3.4 The Division Operator</h4>
 
 <p><a name="index-division-operator-273"></a>
 You use the division operator <code>/</code> to divide its first operand
@@ -6672,7 +6672,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.5 The Modulus Operator</h4>
+<h4 class="subsection">8.3.5 The Modulus Operator</h4>
 
 <p><a name="index-modulus-operator-274"></a>
 You use the modulus operator <code>%</code> to obtain the remainder produced
@@ -6710,7 +6710,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.6 The Shift Operators</h4>
+<h4 class="subsection">8.3.6 The Shift Operators</h4>
 
 <p><a name="index-shift-operators-275"></a>
 You use the left-shift operator <code>&lt;&lt;</code> to shift its first operand's bits
@@ -6744,7 +6744,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.7 The Bitwise AND Operator</h4>
+<h4 class="subsection">8.3.7 The Bitwise AND Operator</h4>
 
 <p><a name="index-bitwise-AND-operator-276"></a>
 The bitwise AND operator <code>&amp;</code> examines each bit in its two
@@ -6770,7 +6770,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.8 The Bitwise Inclusive OR Operator</h4>
+<h4 class="subsection">8.3.8 The Bitwise Inclusive OR Operator</h4>
 
 <p><a name="index-bitwise-inclusive-OR-operator-277"></a>
 The bitwise inclusive OR operator <code>|</code> examines each bit
@@ -6795,7 +6795,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.9 The Bitwise Exclusive OR Operator</h4>
+<h4 class="subsection">8.3.9 The Bitwise Exclusive OR Operator</h4>
 
 <p><a name="index-bitwise-exclusive-OR-operator-278"></a>
 The bitwise exclusive OR operator <code>^</code> (also known as XOR) examines
@@ -6819,7 +6819,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.10 The Comparison Operators</h4>
+<h4 class="subsection">8.3.10 The Comparison Operators</h4>
 
 <p><a name="index-comparison-operators-279"></a>
 You use the comparison operators to determine how two operands relate to
@@ -6848,7 +6848,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparis
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.10.1 The Equal-to Operator</h5>
+<h5 class="subsubsection">8.3.10.1 The Equal-to Operator</h5>
 
 <p><a name="index-equal_002dto-operator-280"></a>
 Use the equal-to operator <code>==</code> to test two operands for
@@ -6868,7 +6868,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparis
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.10.2 The Not-Equal-to Operator</h5>
+<h5 class="subsubsection">8.3.10.2 The Not-Equal-to Operator</h5>
 
 <p><a name="index-not_002dequal_002dto-operator-281"></a>
 Use the not-equal-to operator <code>!=</code> to test two operands for
@@ -6888,7 +6888,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparis
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.10.3 The Less-Than Operator</h5>
+<h5 class="subsubsection">8.3.10.3 The Less-Than Operator</h5>
 
 <p><a name="index-less_002dthan-operator-282"></a>
 Use the less-than operator <code>&lt;</code> to determine if the first operand
@@ -6908,7 +6908,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparis
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.10.4 The Less-Than-or-Equal-to Operator</h5>
+<h5 class="subsubsection">8.3.10.4 The Less-Than-or-Equal-to Operator</h5>
 
 <p><a name="index-less_002dthan_002dor_002dequal_002dto-operator-283"></a>
 Use the less-than-or-equal-to operator <code>&lt;=</code> to determine if the first
@@ -6928,7 +6928,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparis
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.10.5 The Greater-Than Operator</h5>
+<h5 class="subsubsection">8.3.10.5 The Greater-Than Operator</h5>
 
 <p><a name="index-greater_002dthan-operator-284"></a>
 Use the  greater-than operator <code>&gt;</code> to determine if the first operand
@@ -6947,7 +6947,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparis
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.10.6 The Greater-Than-or-Equal-to Operator</h5>
+<h5 class="subsubsection">8.3.10.6 The Greater-Than-or-Equal-to Operator</h5>
 
 <p><a name="index-greater_002dthan_002dor_002dequal_002dto-operator-285"></a>
 Use the greater-than-or-equal-to operator <code>&gt;=</code> to determine if the
@@ -6967,7 +6967,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.11 Logical Operators</h4>
+<h4 class="subsection">8.3.11 Logical Operators</h4>
 
 <p><a name="index-logical-operators-286"></a>
 You can use the logical operators to test the truth value of two
@@ -6990,7 +6990,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Logical-Operators">Logical Operators</
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.11.1 The Logical AND Operator</h5>
+<h5 class="subsubsection">8.3.11.1 The Logical AND Operator</h5>
 
 <p><a name="index-logical-AND-operator-287"></a>
 Use the logical AND operator <code>&amp;&amp;</code> to test if two expressions are
@@ -7013,7 +7013,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Logical-Operators">Logical Operators</
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.11.2 The Logical OR Operator</h5>
+<h5 class="subsubsection">8.3.11.2 The Logical OR Operator</h5>
 
 <p><a name="index-logical-OR-operator-288"></a>
 Use the logical OR operator <code>||</code> to test if at least one of two
@@ -7037,7 +7037,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.12 Assignment Operators</h4>
+<h4 class="subsection">8.3.12 Assignment Operators</h4>
 
 <p><a name="index-assignment-operators-289"></a>
 You use the assignment operators to give values to variables.  Regardless
@@ -7061,7 +7061,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Assignment-Operators">Assignment Opera
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.12.1 The Assignment Operator</h5>
+<h5 class="subsubsection">8.3.12.1 The Assignment Operator</h5>
 
 <p><a name="index-assignment-operator-290"></a>
 Use the standard assignment operator <code>=</code> to assign the value of its
@@ -7081,7 +7081,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Assignment-Operators">Assignment Opera
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.12.2 The Compound Assignment Operators</h5>
+<h5 class="subsubsection">8.3.12.2 The Compound Assignment Operators</h5>
 
 <p><a name="index-compound-assignment-operators-291"></a><a name="index-assignment-operators_002c-compound-292"></a>
 
@@ -7161,7 +7161,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Assignment-Operators">Assignment Opera
 <br>
 </div>
 
-<h5 class="subsubsection">7.3.12.3 Generalized Lvalues</h5>
+<h5 class="subsubsection">8.3.12.3 Generalized Lvalues</h5>
 
 <p><a name="index-compound-expressions-as-lvalues-293"></a><a name="index-expressions_002c-compound_002c-as-lvalues-294"></a><a name="index-conditional-expressions-as-lvalues-295"></a><a name="index-expressions_002c-conditional_002c-as-lvalues-296"></a><a name="index-casts-as-lvalues-297"></a><a name="index-generalized-lvalues-298"></a><a name="index-lvalues_002c-generalized-299"></a><a name="index-extensions_002c-_0040code_007b_003f_003a_007d-300"></a><a name="index-_0040code_007b_003f_003a_007d-extensions-301"></a>
 Compound expressions, conditional expressions and casts are allowed as
@@ -7230,7 +7230,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.13 The Comma Operator</h4>
+<h4 class="subsection">8.3.13 The Comma Operator</h4>
 
 <p><a name="index-comma-operator-302"></a>
 You use the comma operator <code>,</code> to separate two expressions.  These
@@ -7279,7 +7279,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
 
-<h4 class="subsection">7.3.14 Member Access Operators</h4>
+<h4 class="subsection">8.3.14 Member Access Operators</h4>
 
 <p><a name="index-member-access-operators-303"></a>
 You can use the member access operator <code>.</code> to access the members
@@ -7322,7 +7322,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<h3 class="section">7.4 The Ternary Operator</h3>
+<h3 class="section">8.4 The Ternary Operator</h3>
 
 <p><a name="index-ternary-operator_002c-the-305"></a><a name="index-operator_002c-ternary-306"></a><a name="index-conditional-operator-307"></a>
 GNU C has only one ternary operator &mdash; the conditional operator <code>? :</code>.
@@ -7382,7 +7382,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<h3 class="section">7.5 Statements and Declarations in Expressions</h3>
+<h3 class="section">8.5 Statements and Declarations in Expressions</h3>
 
 <p><a name="index-statements-inside-expressions-308"></a><a name="index-declarations-inside-expressions-309"></a><a name="index-expressions-containing-statements-310"></a><a name="index-macros_002c-statements-in-expressions-311"></a>
 A compound statement enclosed in parentheses may appear as an expression
@@ -7437,7 +7437,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<h3 class="section">7.6 Order of Evaluation</h3>
+<h3 class="section">8.6 Order of Evaluation</h3>
 
 <p><a name="index-order-of-evaluation-313"></a><a name="index-evaluation_002c-order-of-314"></a><a name="index-operator-precedence-315"></a><a name="index-precedence_002c-operator-316"></a>
 When an expression consists of subexpressions, such as
@@ -7512,7 +7512,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h2 class="chapter">8 Statements</h2>
+<h2 class="chapter">9 Statements</h2>
 
 <p><a name="index-statements-317"></a>
 In general, statements cause action in a computer program, such as
@@ -7543,7 +7543,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.1 Expression Statements</h3>
+<h3 class="section">9.1 Expression Statements</h3>
 
 <p><a name="index-expression-statements-318"></a><a name="index-statements_002c-expression-319"></a>
 You can turn any expression into a statement by adding a semicolon to
@@ -7583,7 +7583,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.2 Labels</h3>
+<h3 class="section">9.2 Labels</h3>
 
 <p><a name="index-labels-320"></a><a name="index-labeled-statements-321"></a><a name="index-statements_002c-labeled-322"></a>
 You can use labels to identify a section of source code.  A label
@@ -7613,7 +7613,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.3 The <code>if</code> Statement</h3>
+<h3 class="section">9.3 The <code>if</code> Statement</h3>
 
 <p><a name="index-_0040code_007bif_007d-statements-323"></a><a name="index-_0040code_007belse_007d-statements-324"></a>
 You can use the <code>if</code> statement to conditionally execute a section
@@ -7670,7 +7670,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.4 The <code>switch</code> Statement</h3>
+<h3 class="section">9.4 The <code>switch</code> Statement</h3>
 
 <p><a name="index-_0040code_007bswitch_007d-statement-325"></a>
 You can use the <code>switch</code> statement to compare one expression with others,
@@ -7767,7 +7767,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.5 The <code>while</code> Statement</h3>
+<h3 class="section">9.5 The <code>while</code> Statement</h3>
 
 <p><a name="index-_0040code_007bwhile_007d-statement-326"></a>
 The <code>while</code> statement is a loop statement with an exit test at
@@ -7796,7 +7796,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.6 The <code>do</code> Statement</h3>
+<h3 class="section">9.6 The <code>do</code> Statement</h3>
 
 <p><a name="index-_0040code_007bdo_007d-statement-327"></a>
 The <code>do</code> statement is a loop statement with an exit test at the end
@@ -7826,7 +7826,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.7 The <code>for</code> Statement</h3>
+<h3 class="section">9.7 The <code>for</code> Statement</h3>
 
 <p><a name="index-_0040code_007bfor_007d-statement-328"></a>
 The <code>for</code> statement is a loop statement whose structure allows
@@ -7912,7 +7912,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.8 Blocks</h3>
+<h3 class="section">9.8 Blocks</h3>
 
 <p><a name="index-blocks-329"></a>
 A <dfn>block</dfn> is a set of zero or more statements enclosed in
@@ -7967,7 +7967,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.9 The Null Statement</h3>
+<h3 class="section">9.9 The Null Statement</h3>
 
 <p><a name="index-null-statement-330"></a><a name="index-statement_002c-null-331"></a>
 The <dfn>null statement</dfn> is merely a semicolon alone.
@@ -8003,7 +8003,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.10 The <code>goto</code> Statement</h3>
+<h3 class="section">9.10 The <code>goto</code> Statement</h3>
 
 <p><a name="index-_0040code_007bgoto_007d-statement-332"></a>
 You can use the <code>goto</code> statement to unconditionally jump to a different
@@ -8038,7 +8038,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.11 The <code>break</code> Statement</h3>
+<h3 class="section">9.11 The <code>break</code> Statement</h3>
 
 <p><a name="index-_0040code_007bbreak_007d-statement-333"></a>
 You can use the <code>break</code> statement to terminate a <code>while</code>, <code>do</code>,
@@ -8071,7 +8071,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.12 The <code>continue</code> Statement</h3>
+<h3 class="section">9.12 The <code>continue</code> Statement</h3>
 
 <p><a name="index-_0040code_007bcontinue_007d-statement-334"></a>
 You can use the <code>continue</code> statement in loops to terminate an
@@ -8101,7 +8101,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 </div>
 
 <!-- node-name, next, previous, up -->
-<h3 class="section">8.13 The <code>return</code> Statement</h3>
+<h3 class="section">9.13 The <code>return</code> Statement</h3>
 
 <p><a name="index-_0040code_007breturn_007d-statement-335"></a>
 You can use the <code>return</code> statement to end the execution of a function
@@ -8162,7 +8162,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<h2 class="chapter">9 Functions</h2>
+<h2 class="chapter">10 Functions</h2>
 
 <p><a name="index-functions-336"></a>
 You can write functions to separate parts of your program into distinct
@@ -8201,7 +8201,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<h3 class="section">9.1 Function Declarations</h3>
+<h3 class="section">10.1 Function Declarations</h3>
 
 <p><a name="index-function-declarations-337"></a><a name="index-declarations_002c-function-338"></a>
 You write a function declaration to specify the name of a function
@@ -8236,7 +8236,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<h3 class="section">9.2 Function Prototypes</h3>
+<h3 class="section">10.2 Function Prototypes</h3>
 
 <p><a name="index-function-prototypes-339"></a><a name="index-prototypes_002c-function-340"></a>
 A function prototype is a function declaration with a list of the function
@@ -8284,7 +8284,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<h3 class="section">9.3 Function Definitions</h3>
+<h3 class="section">10.3 Function Definitions</h3>
 
 <p><a name="index-function-definitions-341"></a><a name="index-definitions_002c-function-342"></a>
 You write a function definition to specify what a function
@@ -8335,7 +8335,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<h3 class="section">9.4 Calling Functions</h3>
+<h3 class="section">10.4 Calling Functions</h3>
 
 <p><a name="index-calling-functions-343"></a><a name="index-functions_002c-calling-344"></a>
 You can call a function by using its name and supplying any needed parameters. 
@@ -8374,7 +8374,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<h3 class="section">9.5 Function Parameters</h3>
+<h3 class="section">10.5 Function Parameters</h3>
 
 <p><a name="index-function-parameters-345"></a><a name="index-parameters_002c-function-346"></a>
 Function parameters can either be a constant value or a copy of variable, or
@@ -8401,7 +8401,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Function-Parameters">Function Paramete
 <br>
 </div>
 
-<h4 class="subsection">9.5.1 Pass By Value Parameters</h4>
+<h4 class="subsection">10.5.1 Pass By Value Parameters</h4>
 
 <p><a name="index-pass-by-value-parameters-347"></a><a name="index-parameters_002c-pass-by-value-348"></a><a name="index-function-parameters_002c-pass-by-value-349"></a>
 There are two different situations in which a parameter is considered to
@@ -8449,7 +8449,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Function-Parameters">Function Paramete
 <br>
 </div>
 
-<h4 class="subsection">9.5.2 Pass By Reference Parameters</h4>
+<h4 class="subsection">10.5.2 Pass By Reference Parameters</h4>
 
 <p><a name="index-pass-by-reference-parameters-350"></a><a name="index-parameters_002c-pass-by-reference-351"></a><a name="index-function-parameters_002c-pass-by-reference-352"></a><a name="index-pointers-as-function-parameters-353"></a>
 You can pass a value to a function &ldquo;by reference&rdquo;, which means that, instead
@@ -8495,7 +8495,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Function-Parameters">Function Paramete
 <br>
 </div>
 
-<h4 class="subsection">9.5.3 Variable Length Parameter Lists</h4>
+<h4 class="subsection">10.5.3 Variable Length Parameter Lists</h4>
 
 <p><a name="index-variable-length-parameter-lists-354"></a><a name="index-parameters-lists_002c-variable-length-355"></a><a name="index-function-parameter-lists_002c-variable-length-356"></a>
 You can write a function that takes a variable number of arguments.  To
@@ -8561,7 +8561,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<h3 class="section">9.6 The <code>main</code> Function</h3>
+<h3 class="section">10.6 The <code>main</code> Function</h3>
 
 <p><a name="index-_0040code_007bmain_007d-function-357"></a><a name="index-function_002c-_0040code_007bmain_007d-358"></a>
 Every program requires at least one function, called <span class="samp">main</span>. 
@@ -8622,7 +8622,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<h3 class="section">9.7 Recursive Functions</h3>
+<h3 class="section">10.7 Recursive Functions</h3>
 
 <p><a name="index-recursive-functions-359"></a><a name="index-functions_002c-recursive-360"></a>
 You can write a function that is recursive&mdash;a function that calls
@@ -9433,260 +9433,260 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <ul>
 <li><a name="toc_Preface" href="#Preface">Preface</a>
 <li><a name="toc_Overview-of-C-Programming" href="#Overview-of-C-Programming">1 Overview of C Programming</a>
-<li><a name="toc_The-C-Preprocessor" href="#The-C-Preprocessor">The C Preprocessor</a>
+<li><a name="toc_The-C-Preprocessor" href="#The-C-Preprocessor">2 The C Preprocessor</a>
 <ul>
-<li><a href="#Overview">Overview</a>
+<li><a href="#Overview">2.1 Overview</a>
 <ul>
-<li><a href="#Initial-processing">Initial processing</a>
-<li><a href="#Tokenization">Tokenization</a>
-<li><a href="#The-preprocessing-language">The preprocessing language</a>
+<li><a href="#Initial-processing">2.1.1 Initial processing</a>
+<li><a href="#Tokenization">2.1.2 Tokenization</a>
+<li><a href="#The-preprocessing-language">2.1.3 The preprocessing language</a>
 </li></ul>
-<li><a href="#Header-Files">Header Files</a>
+<li><a href="#Header-Files">2.2 Header Files</a>
 <ul>
-<li><a href="#Include-Syntax">Include Syntax</a>
-<li><a href="#Include-Operation">Include Operation</a>
-<li><a href="#Search-Path">Search Path</a>
-<li><a href="#Once_002dOnly-Headers">Once-Only Headers</a>
-<li><a href="#Computed-Includes">Computed Includes</a>
-<li><a href="#Wrapper-Headers">Wrapper Headers</a>
-<li><a href="#System-Headers">System Headers</a>
+<li><a href="#Include-Syntax">2.2.1 Include Syntax</a>
+<li><a href="#Include-Operation">2.2.2 Include Operation</a>
+<li><a href="#Search-Path">2.2.3 Search Path</a>
+<li><a href="#Once_002dOnly-Headers">2.2.4 Once-Only Headers</a>
+<li><a href="#Computed-Includes">2.2.5 Computed Includes</a>
+<li><a href="#Wrapper-Headers">2.2.6 Wrapper Headers</a>
+<li><a href="#System-Headers">2.2.7 System Headers</a>
 </li></ul>
-<li><a href="#Macros">Macros</a>
+<li><a href="#Macros">2.3 Macros</a>
 <ul>
-<li><a href="#Object_002dlike-Macros">Object-like Macros</a>
-<li><a href="#Function_002dlike-Macros">Function-like Macros</a>
-<li><a href="#Macro-Arguments">Macro Arguments</a>
-<li><a href="#Stringification">Stringification</a>
-<li><a href="#Concatenation">Concatenation</a>
-<li><a href="#Variadic-Macros">Variadic Macros</a>
-<li><a href="#Predefined-Macros">Predefined Macros</a>
+<li><a href="#Object_002dlike-Macros">2.3.1 Object-like Macros</a>
+<li><a href="#Function_002dlike-Macros">2.3.2 Function-like Macros</a>
+<li><a href="#Macro-Arguments">2.3.3 Macro Arguments</a>
+<li><a href="#Stringification">2.3.4 Stringification</a>
+<li><a href="#Concatenation">2.3.5 Concatenation</a>
+<li><a href="#Variadic-Macros">2.3.6 Variadic Macros</a>
+<li><a href="#Predefined-Macros">2.3.7 Predefined Macros</a>
 <ul>
-<li><a href="#Standard-Predefined-Macros">Standard Predefined Macros</a>
-<li><a href="#Common-Predefined-Macros">Common Predefined Macros</a>
-<li><a href="#System_002dspecific-Predefined-Macros">System-specific Predefined Macros</a>
-<li><a href="#C_002b_002b-Named-Operators">C++ Named Operators</a>
+<li><a href="#Standard-Predefined-Macros">2.3.7.1 Standard Predefined Macros</a>
+<li><a href="#Common-Predefined-Macros">2.3.7.2 Common Predefined Macros</a>
+<li><a href="#System_002dspecific-Predefined-Macros">2.3.7.3 System-specific Predefined Macros</a>
+<li><a href="#C_002b_002b-Named-Operators">2.3.7.4 C++ Named Operators</a>
 </li></ul>
-<li><a href="#Undefining-and-Redefining-Macros">Undefining and Redefining Macros</a>
-<li><a href="#Directives-Within-Macro-Arguments">Directives Within Macro Arguments</a>
-<li><a href="#Macro-Pitfalls">Macro Pitfalls</a>
+<li><a href="#Undefining-and-Redefining-Macros">2.3.8 Undefining and Redefining Macros</a>
+<li><a href="#Directives-Within-Macro-Arguments">2.3.9 Directives Within Macro Arguments</a>
+<li><a href="#Macro-Pitfalls">2.3.10 Macro Pitfalls</a>
 <ul>
-<li><a href="#Misnesting">Misnesting</a>
-<li><a href="#Operator-Precedence-Problems">Operator Precedence Problems</a>
-<li><a href="#Swallowing-the-Semicolon">Swallowing the Semicolon</a>
-<li><a href="#Duplication-of-Side-Effects">Duplication of Side Effects</a>
-<li><a href="#Self_002dReferential-Macros">Self-Referential Macros</a>
-<li><a href="#Argument-Prescan">Argument Prescan</a>
-<li><a href="#Newlines-in-Arguments">Newlines in Arguments</a>
-</li></ul>
-</li></ul>
-<li><a href="#Conditionals">Conditionals</a>
-<ul>
-<li><a href="#Conditional-Uses">Conditional Uses</a>
-<li><a href="#Conditional-Syntax">Conditional Syntax</a>
-<ul>
-<li><a href="#Ifdef">Ifdef</a>
-<li><a href="#If">If</a>
-<li><a href="#Defined">Defined</a>
-<li><a href="#Else">Else</a>
-<li><a href="#Elif">Elif</a>
-</li></ul>
-<li><a href="#Deleted-Code">Deleted Code</a>
-</li></ul>
-<li><a href="#Diagnostics">Diagnostics</a>
-<li><a href="#Line-Control">Line Control</a>
-<li><a href="#Pragmas">Pragmas</a>
-<li><a href="#Other-Directives">Other Directives</a>
-<li><a href="#Preprocessor-Output">Preprocessor Output</a>
-<li><a href="#Traditional-Mode">Traditional Mode</a>
-<ul>
-<li><a href="#Traditional-lexical-analysis">Traditional lexical analysis</a>
-<li><a href="#Traditional-macros">Traditional macros</a>
-<li><a href="#Traditional-miscellany">Traditional miscellany</a>
-<li><a href="#Traditional-warnings">Traditional warnings</a>
-</li></ul>
-<li><a href="#Implementation-Details">Implementation Details</a>
-<ul>
-<li><a href="#Implementation_002ddefined-behavior">Implementation-defined behavior</a>
-<li><a href="#Implementation-limits">Implementation limits</a>
-<li><a href="#Obsolete-Features">Obsolete Features</a>
-<ul>
-<li><a href="#Assertions">Assertions</a>
-<li><a href="#Obsolete-once_002donly-headers">Obsolete once-only headers</a>
-</li></ul>
-<li><a href="#Differences-from-previous-versions">Differences from previous versions</a>
-</li></ul>
-<li><a href="#Invocation">Invocation</a>
-</li></ul>
-<li><a name="toc_Lexical-Elements" href="#Lexical-Elements">2 Lexical Elements</a>
-<ul>
-<li><a href="#Tokens">2.1 Tokens</a>
-<ul>
-<li><a href="#Identifiers">2.1.1 Identifiers</a>
-<li><a href="#Keywords">2.1.2 Keywords</a>
-<li><a href="#Constants">2.1.3 Constants</a>
-<ul>
-<li><a href="#Integer-Constants">2.1.3.1 Integer Constants</a>
-<li><a href="#Character-Constants">2.1.3.2 Character Constants</a>
-<li><a href="#Floating-Point-Constants">2.1.3.3 Floating Point Constants</a>
-</li></ul>
-<li><a href="#String-Literals">2.1.4 String Literals</a>
-<li><a href="#Operators">2.1.5 Operators</a>
-<li><a href="#Separators">2.1.6 Separators</a>
-</li></ul>
-<li><a href="#Comments">2.2 Comments</a>
-<li><a href="#White-Space">2.3 White Space</a>
-</li></ul>
-<li><a name="toc_Data-Types" href="#Data-Types">3 Data Types</a>
-<ul>
-<li><a href="#Integer-Data-Types">3.1 Integer Data Types</a>
-<li><a href="#Floating-Point-Data-Types">3.2 Floating Point Data Types</a>
-<li><a href="#Complex-Number-Data-Types">3.3 Complex Number Data Types</a>
-<li><a href="#Declaring-Variables">3.4 Declaring Variables</a>
-<li><a href="#Initializing-Variables">3.5 Initializing Variables</a>
-</li></ul>
-<li><a name="toc_Arrays" href="#Arrays">4 Arrays</a>
-<ul>
-<li><a href="#Declaring-Arrays">4.1 Declaring Arrays</a>
-<li><a href="#Initializing-Arrays">4.2 Initializing Arrays</a>
-<li><a href="#Accessing-Array-Elements">4.3 Accessing Array Elements</a>
-<li><a href="#Multidimensional-Arrays">4.4 Multidimensional Arrays</a>
-<li><a href="#Arrays-as-Strings">4.5 Arrays as Strings</a>
-<ul>
-<li><a href="#Declaring-and-Initializing-String-Arrays">4.5.1 Declaring and Initializing String Arrays</a>
-<li><a href="#A-String-Length-Caution">4.5.2 A String Length Caution</a>
+<li><a href="#Misnesting">2.3.10.1 Misnesting</a>
+<li><a href="#Operator-Precedence-Problems">2.3.10.2 Operator Precedence Problems</a>
+<li><a href="#Swallowing-the-Semicolon">2.3.10.3 Swallowing the Semicolon</a>
+<li><a href="#Duplication-of-Side-Effects">2.3.10.4 Duplication of Side Effects</a>
+<li><a href="#Self_002dReferential-Macros">2.3.10.5 Self-Referential Macros</a>
+<li><a href="#Argument-Prescan">2.3.10.6 Argument Prescan</a>
+<li><a href="#Newlines-in-Arguments">2.3.10.7 Newlines in Arguments</a>
 </li></ul>
 </li></ul>
-<li><a name="toc_Pointers" href="#Pointers">5 Pointers</a>
+<li><a href="#Conditionals">2.4 Conditionals</a>
 <ul>
-<li><a href="#Declaring-Pointers">5.1 Declaring Pointers</a>
-<li><a href="#Initializing-Pointers">5.2 Initializing Pointers</a>
-<li><a href="#Pointers-and-Arrays">5.3 Pointers and Arrays</a>
+<li><a href="#Conditional-Uses">2.4.1 Conditional Uses</a>
+<li><a href="#Conditional-Syntax">2.4.2 Conditional Syntax</a>
+<ul>
+<li><a href="#Ifdef">2.4.2.1 Ifdef</a>
+<li><a href="#If">2.4.2.2 If</a>
+<li><a href="#Defined">2.4.2.3 Defined</a>
+<li><a href="#Else">2.4.2.4 Else</a>
+<li><a href="#Elif">2.4.2.5 Elif</a>
 </li></ul>
-<li><a name="toc_Structures-Unions-and-Enumerations" href="#Structures-Unions-and-Enumerations">6 Structures, Unions, and Enumerations</a>
-<ul>
-<li><a href="#Structures">6.1 Structures</a>
-<ul>
-<li><a href="#Defining-Structures">6.1.1 Defining Structures</a>
-<li><a href="#Declaring-Structure-Variables">6.1.2 Declaring Structure Variables</a>
-<ul>
-<li><a href="#Declaring-Structure-Variables-at-Definition">6.1.2.1 Declaring Structure Variables at Definition</a>
-<li><a href="#Declaring-Structure-Variables-After-Definition">6.1.2.2 Declaring Structure Variables After Definition</a>
-<li><a href="#Initializing-Structure-Members">6.1.2.3 Initializing Structure Members</a>
+<li><a href="#Deleted-Code">2.4.3 Deleted Code</a>
 </li></ul>
-<li><a href="#Accessing-Structure-Members">6.1.3 Accessing Structure Members</a>
-<li><a href="#Arrays-of-Structures">6.1.4 Arrays of Structures</a>
-<li><a href="#Pointers-to-Structures">6.1.5 Pointers to Structures</a>
-<li><a href="#Bit-Fields">6.1.6 Bit Fields</a>
-<li><a href="#Size-of-Structures">6.1.7 Size of Structures</a>
-</li></ul>
-<li><a href="#Unions">6.2 Unions</a>
+<li><a href="#Diagnostics">2.5 Diagnostics</a>
+<li><a href="#Line-Control">2.6 Line Control</a>
+<li><a href="#Pragmas">2.7 Pragmas</a>
+<li><a href="#Other-Directives">2.8 Other Directives</a>
+<li><a href="#Preprocessor-Output">2.9 Preprocessor Output</a>
+<li><a href="#Traditional-Mode">2.10 Traditional Mode</a>
 <ul>
-<li><a href="#Defining-Unions">6.2.1 Defining Unions</a>
-<li><a href="#Declaring-Union-Variables">6.2.2 Declaring Union Variables</a>
+<li><a href="#Traditional-lexical-analysis">2.10.1 Traditional lexical analysis</a>
+<li><a href="#Traditional-macros">2.10.2 Traditional macros</a>
+<li><a href="#Traditional-miscellany">2.10.3 Traditional miscellany</a>
+<li><a href="#Traditional-warnings">2.10.4 Traditional warnings</a>
+</li></ul>
+<li><a href="#Implementation-Details">2.11 Implementation Details</a>
 <ul>
-<li><a href="#Declaring-Union-Variables-at-Definition">6.2.2.1 Declaring Union Variables at Definition</a>
-<li><a href="#Declaring-Union-Variables-After-Definition">6.2.2.2 Declaring Union Variables After Definition</a>
-<li><a href="#Initializing-Union-Members">6.2.2.3 Initializing Union Members</a>
-</li></ul>
-<li><a href="#Accessing-Union-Members">6.2.3 Accessing Union Members</a>
-<li><a href="#Arrays-of-Unions">6.2.4 Arrays of Unions</a>
-<li><a href="#Pointers-to-Unions">6.2.5 Pointers to Unions</a>
-<li><a href="#Size-of-Unions">6.2.6 Size of Unions</a>
-</li></ul>
-<li><a href="#Enumerations">6.3 Enumerations</a>
+<li><a href="#Implementation_002ddefined-behavior">2.11.1 Implementation-defined behavior</a>
+<li><a href="#Implementation-limits">2.11.2 Implementation limits</a>
+<li><a href="#Obsolete-Features">2.11.3 Obsolete Features</a>
 <ul>
-<li><a href="#Defining-Enumerations">6.3.1 Defining Enumerations</a>
-<li><a href="#Declaring-Enumerations">6.3.2 Declaring Enumerations</a>
+<li><a href="#Assertions">2.11.3.1 Assertions</a>
+<li><a href="#Obsolete-once_002donly-headers">2.11.3.2 Obsolete once-only headers</a>
 </li></ul>
-<li><a href="#Incomplete-Types">6.4 Incomplete Types</a>
+<li><a href="#Differences-from-previous-versions">2.11.4 Differences from previous versions</a>
 </li></ul>
-<li><a name="toc_Expressions-and-Operators" href="#Expressions-and-Operators">7 Expressions and Operators</a>
+<li><a href="#Invocation">2.12 Invocation</a>
+</li></ul>
+<li><a name="toc_Lexical-Elements" href="#Lexical-Elements">3 Lexical Elements</a>
 <ul>
-<li><a href="#Expressions">7.1 Expressions</a>
-<li><a href="#Unary-Operators">7.2 Unary Operators</a>
+<li><a href="#Tokens">3.1 Tokens</a>
 <ul>
-<li><a href="#The-Increment-Operator">7.2.1 The Increment Operator</a>
-<li><a href="#The-Decrement-Operator">7.2.2 The Decrement Operator</a>
-<li><a href="#The-Positive-Operator">7.2.3 The Positive Operator</a>
-<li><a href="#The-Negative-Operator">7.2.4 The Negative Operator</a>
-<li><a href="#The-Logical-Negation-Operator">7.2.5 The Logical Negation Operator</a>
-<li><a href="#The-Bitwise-Complement-Operator">7.2.6 The Bitwise Complement Operator</a>
-<li><a href="#The-Address-Operator">7.2.7 The Address Operator</a>
-<li><a href="#The-Indirection-Operator">7.2.8 The Indirection Operator</a>
-<li><a href="#The-Complex-Conjugation-Operator">7.2.9 The Complex Conjugation Operator</a>
-<li><a href="#The-_003ccode_003esizeof_003c_002fcode_003e-Operator">7.2.10 The <code>sizeof</code> Operator</a>
-<li><a href="#Type-Casts">7.2.11 Type Casts</a>
-<li><a href="#Array-Subscripts">7.2.12 Array Subscripts</a>
-<li><a href="#Function-Calls-as-Expressions">7.2.13 Function Calls as Expressions</a>
-</li></ul>
-<li><a href="#Binary-Operators">7.3 Binary Operators</a>
+<li><a href="#Identifiers">3.1.1 Identifiers</a>
+<li><a href="#Keywords">3.1.2 Keywords</a>
+<li><a href="#Constants">3.1.3 Constants</a>
 <ul>
-<li><a href="#The-Addition-Operator">7.3.1 The Addition Operator</a>
-<li><a href="#The-Subtraction-Operator">7.3.2 The Subtraction Operator</a>
-<li><a href="#The-Multiplication-Operator">7.3.3 The Multiplication Operator</a>
-<li><a href="#The-Division-Operator">7.3.4 The Division Operator</a>
-<li><a href="#The-Modulus-Operator">7.3.5 The Modulus Operator</a>
-<li><a href="#The-Shift-Operators">7.3.6 The Shift Operators</a>
-<li><a href="#The-Bitwise-AND-Operator">7.3.7 The Bitwise AND Operator</a>
-<li><a href="#The-Bitwise-Inclusive-OR-Operator">7.3.8 The Bitwise Inclusive OR Operator</a>
-<li><a href="#The-Bitwise-Exclusive-OR-Operator">7.3.9 The Bitwise Exclusive OR Operator</a>
-<li><a href="#The-Comparison-Operators">7.3.10 The Comparison Operators</a>
+<li><a href="#Integer-Constants">3.1.3.1 Integer Constants</a>
+<li><a href="#Character-Constants">3.1.3.2 Character Constants</a>
+<li><a href="#Floating-Point-Constants">3.1.3.3 Floating Point Constants</a>
+</li></ul>
+<li><a href="#String-Literals">3.1.4 String Literals</a>
+<li><a href="#Operators">3.1.5 Operators</a>
+<li><a href="#Separators">3.1.6 Separators</a>
+</li></ul>
+<li><a href="#Comments">3.2 Comments</a>
+<li><a href="#White-Space">3.3 White Space</a>
+</li></ul>
+<li><a name="toc_Data-Types" href="#Data-Types">4 Data Types</a>
 <ul>
-<li><a href="#The-Equal_002dto-Operator">7.3.10.1 The Equal-to Operator</a>
-<li><a href="#The-Not_002dEqual_002dto-Operator">7.3.10.2 The Not-Equal-to Operator</a>
-<li><a href="#The-Less_002dThan-Operator">7.3.10.3 The Less-Than Operator</a>
-<li><a href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">7.3.10.4 The Less-Than-or-Equal-to Operator</a>
-<li><a href="#The-Greater_002dThan-Operator">7.3.10.5 The Greater-Than Operator</a>
-<li><a href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">7.3.10.6 The Greater-Than-or-Equal-to Operator</a>
+<li><a href="#Integer-Data-Types">4.1 Integer Data Types</a>
+<li><a href="#Floating-Point-Data-Types">4.2 Floating Point Data Types</a>
+<li><a href="#Complex-Number-Data-Types">4.3 Complex Number Data Types</a>
+<li><a href="#Declaring-Variables">4.4 Declaring Variables</a>
+<li><a href="#Initializing-Variables">4.5 Initializing Variables</a>
 </li></ul>
-<li><a href="#Logical-Operators">7.3.11 Logical Operators</a>
+<li><a name="toc_Arrays" href="#Arrays">5 Arrays</a>
 <ul>
-<li><a href="#The-Logical-AND-Operator">7.3.11.1 The Logical AND Operator</a>
-<li><a href="#The-Logical-OR-Operator">7.3.11.2 The Logical OR Operator</a>
-</li></ul>
-<li><a href="#Assignment-Operators">7.3.12 Assignment Operators</a>
+<li><a href="#Declaring-Arrays">5.1 Declaring Arrays</a>
+<li><a href="#Initializing-Arrays">5.2 Initializing Arrays</a>
+<li><a href="#Accessing-Array-Elements">5.3 Accessing Array Elements</a>
+<li><a href="#Multidimensional-Arrays">5.4 Multidimensional Arrays</a>
+<li><a href="#Arrays-as-Strings">5.5 Arrays as Strings</a>
 <ul>
-<li><a href="#The-Assignment-Operator">7.3.12.1 The Assignment Operator</a>
-<li><a href="#The-Compound-Assignment-Operators">7.3.12.2 The Compound Assignment Operators</a>
-<li><a href="#Generalized-Lvalues">7.3.12.3 Generalized Lvalues</a>
+<li><a href="#Declaring-and-Initializing-String-Arrays">5.5.1 Declaring and Initializing String Arrays</a>
+<li><a href="#A-String-Length-Caution">5.5.2 A String Length Caution</a>
 </li></ul>
-<li><a href="#The-Comma-Operator">7.3.13 The Comma Operator</a>
-<li><a href="#Member-Access-Operators">7.3.14 Member Access Operators</a>
 </li></ul>
-<li><a href="#The-Ternary-Operator">7.4 The Ternary Operator</a>
-<li><a href="#Statements-and-Declarations-in-Expressions">7.5 Statements and Declarations in Expressions</a>
-<li><a href="#Order-of-Evaluation">7.6 Order of Evaluation</a>
-</li></ul>
-<li><a name="toc_Statements" href="#Statements">8 Statements</a>
+<li><a name="toc_Pointers" href="#Pointers">6 Pointers</a>
 <ul>
-<li><a href="#Expression-Statements">8.1 Expression Statements</a>
-<li><a href="#Labels">8.2 Labels</a>
-<li><a href="#The-_003ccode_003eif_003c_002fcode_003e-Statement">8.3 The <code>if</code> Statement</a>
-<li><a href="#The-_003ccode_003eswitch_003c_002fcode_003e-Statement">8.4 The <code>switch</code> Statement</a>
-<li><a href="#The-_003ccode_003ewhile_003c_002fcode_003e-Statement">8.5 The <code>while</code> Statement</a>
-<li><a href="#The-_003ccode_003edo_003c_002fcode_003e-Statement">8.6 The <code>do</code> Statement</a>
-<li><a href="#The-_003ccode_003efor_003c_002fcode_003e-Statement">8.7 The <code>for</code> Statement</a>
-<li><a href="#Blocks">8.8 Blocks</a>
-<li><a href="#The-Null-Statement">8.9 The Null Statement</a>
-<li><a href="#The-_003ccode_003egoto_003c_002fcode_003e-Statement">8.10 The <code>goto</code> Statement</a>
-<li><a href="#The-_003ccode_003ebreak_003c_002fcode_003e-Statement">8.11 The <code>break</code> Statement</a>
-<li><a href="#The-_003ccode_003econtinue_003c_002fcode_003e-Statement">8.12 The <code>continue</code> Statement</a>
-<li><a href="#The-_003ccode_003ereturn_003c_002fcode_003e-Statement">8.13 The <code>return</code> Statement</a>
+<li><a href="#Declaring-Pointers">6.1 Declaring Pointers</a>
+<li><a href="#Initializing-Pointers">6.2 Initializing Pointers</a>
+<li><a href="#Pointers-and-Arrays">6.3 Pointers and Arrays</a>
 </li></ul>
-<li><a name="toc_Functions" href="#Functions">9 Functions</a>
+<li><a name="toc_Structures-Unions-and-Enumerations" href="#Structures-Unions-and-Enumerations">7 Structures, Unions, and Enumerations</a>
 <ul>
-<li><a href="#Function-Declarations">9.1 Function Declarations</a>
-<li><a href="#Function-Prototypes">9.2 Function Prototypes</a>
-<li><a href="#Function-Definitions">9.3 Function Definitions</a>
-<li><a href="#Calling-Functions">9.4 Calling Functions</a>
-<li><a href="#Function-Parameters">9.5 Function Parameters</a>
+<li><a href="#Structures">7.1 Structures</a>
 <ul>
-<li><a href="#Pass-By-Value-Parameters">9.5.1 Pass By Value Parameters</a>
-<li><a href="#Pass-By-Reference-Parameters">9.5.2 Pass By Reference Parameters</a>
-<li><a href="#Variable-Length-Parameter-Lists">9.5.3 Variable Length Parameter Lists</a>
+<li><a href="#Defining-Structures">7.1.1 Defining Structures</a>
+<li><a href="#Declaring-Structure-Variables">7.1.2 Declaring Structure Variables</a>
+<ul>
+<li><a href="#Declaring-Structure-Variables-at-Definition">7.1.2.1 Declaring Structure Variables at Definition</a>
+<li><a href="#Declaring-Structure-Variables-After-Definition">7.1.2.2 Declaring Structure Variables After Definition</a>
+<li><a href="#Initializing-Structure-Members">7.1.2.3 Initializing Structure Members</a>
 </li></ul>
-<li><a href="#The-_003ccode_003emain_003c_002fcode_003e-Function">9.6 The <code>main</code> Function</a>
-<li><a href="#Recursive-Functions">9.7 Recursive Functions</a>
+<li><a href="#Accessing-Structure-Members">7.1.3 Accessing Structure Members</a>
+<li><a href="#Arrays-of-Structures">7.1.4 Arrays of Structures</a>
+<li><a href="#Pointers-to-Structures">7.1.5 Pointers to Structures</a>
+<li><a href="#Bit-Fields">7.1.6 Bit Fields</a>
+<li><a href="#Size-of-Structures">7.1.7 Size of Structures</a>
+</li></ul>
+<li><a href="#Unions">7.2 Unions</a>
+<ul>
+<li><a href="#Defining-Unions">7.2.1 Defining Unions</a>
+<li><a href="#Declaring-Union-Variables">7.2.2 Declaring Union Variables</a>
+<ul>
+<li><a href="#Declaring-Union-Variables-at-Definition">7.2.2.1 Declaring Union Variables at Definition</a>
+<li><a href="#Declaring-Union-Variables-After-Definition">7.2.2.2 Declaring Union Variables After Definition</a>
+<li><a href="#Initializing-Union-Members">7.2.2.3 Initializing Union Members</a>
+</li></ul>
+<li><a href="#Accessing-Union-Members">7.2.3 Accessing Union Members</a>
+<li><a href="#Arrays-of-Unions">7.2.4 Arrays of Unions</a>
+<li><a href="#Pointers-to-Unions">7.2.5 Pointers to Unions</a>
+<li><a href="#Size-of-Unions">7.2.6 Size of Unions</a>
+</li></ul>
+<li><a href="#Enumerations">7.3 Enumerations</a>
+<ul>
+<li><a href="#Defining-Enumerations">7.3.1 Defining Enumerations</a>
+<li><a href="#Declaring-Enumerations">7.3.2 Declaring Enumerations</a>
+</li></ul>
+<li><a href="#Incomplete-Types">7.4 Incomplete Types</a>
+</li></ul>
+<li><a name="toc_Expressions-and-Operators" href="#Expressions-and-Operators">8 Expressions and Operators</a>
+<ul>
+<li><a href="#Expressions">8.1 Expressions</a>
+<li><a href="#Unary-Operators">8.2 Unary Operators</a>
+<ul>
+<li><a href="#The-Increment-Operator">8.2.1 The Increment Operator</a>
+<li><a href="#The-Decrement-Operator">8.2.2 The Decrement Operator</a>
+<li><a href="#The-Positive-Operator">8.2.3 The Positive Operator</a>
+<li><a href="#The-Negative-Operator">8.2.4 The Negative Operator</a>
+<li><a href="#The-Logical-Negation-Operator">8.2.5 The Logical Negation Operator</a>
+<li><a href="#The-Bitwise-Complement-Operator">8.2.6 The Bitwise Complement Operator</a>
+<li><a href="#The-Address-Operator">8.2.7 The Address Operator</a>
+<li><a href="#The-Indirection-Operator">8.2.8 The Indirection Operator</a>
+<li><a href="#The-Complex-Conjugation-Operator">8.2.9 The Complex Conjugation Operator</a>
+<li><a href="#The-_003ccode_003esizeof_003c_002fcode_003e-Operator">8.2.10 The <code>sizeof</code> Operator</a>
+<li><a href="#Type-Casts">8.2.11 Type Casts</a>
+<li><a href="#Array-Subscripts">8.2.12 Array Subscripts</a>
+<li><a href="#Function-Calls-as-Expressions">8.2.13 Function Calls as Expressions</a>
+</li></ul>
+<li><a href="#Binary-Operators">8.3 Binary Operators</a>
+<ul>
+<li><a href="#The-Addition-Operator">8.3.1 The Addition Operator</a>
+<li><a href="#The-Subtraction-Operator">8.3.2 The Subtraction Operator</a>
+<li><a href="#The-Multiplication-Operator">8.3.3 The Multiplication Operator</a>
+<li><a href="#The-Division-Operator">8.3.4 The Division Operator</a>
+<li><a href="#The-Modulus-Operator">8.3.5 The Modulus Operator</a>
+<li><a href="#The-Shift-Operators">8.3.6 The Shift Operators</a>
+<li><a href="#The-Bitwise-AND-Operator">8.3.7 The Bitwise AND Operator</a>
+<li><a href="#The-Bitwise-Inclusive-OR-Operator">8.3.8 The Bitwise Inclusive OR Operator</a>
+<li><a href="#The-Bitwise-Exclusive-OR-Operator">8.3.9 The Bitwise Exclusive OR Operator</a>
+<li><a href="#The-Comparison-Operators">8.3.10 The Comparison Operators</a>
+<ul>
+<li><a href="#The-Equal_002dto-Operator">8.3.10.1 The Equal-to Operator</a>
+<li><a href="#The-Not_002dEqual_002dto-Operator">8.3.10.2 The Not-Equal-to Operator</a>
+<li><a href="#The-Less_002dThan-Operator">8.3.10.3 The Less-Than Operator</a>
+<li><a href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">8.3.10.4 The Less-Than-or-Equal-to Operator</a>
+<li><a href="#The-Greater_002dThan-Operator">8.3.10.5 The Greater-Than Operator</a>
+<li><a href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">8.3.10.6 The Greater-Than-or-Equal-to Operator</a>
+</li></ul>
+<li><a href="#Logical-Operators">8.3.11 Logical Operators</a>
+<ul>
+<li><a href="#The-Logical-AND-Operator">8.3.11.1 The Logical AND Operator</a>
+<li><a href="#The-Logical-OR-Operator">8.3.11.2 The Logical OR Operator</a>
+</li></ul>
+<li><a href="#Assignment-Operators">8.3.12 Assignment Operators</a>
+<ul>
+<li><a href="#The-Assignment-Operator">8.3.12.1 The Assignment Operator</a>
+<li><a href="#The-Compound-Assignment-Operators">8.3.12.2 The Compound Assignment Operators</a>
+<li><a href="#Generalized-Lvalues">8.3.12.3 Generalized Lvalues</a>
+</li></ul>
+<li><a href="#The-Comma-Operator">8.3.13 The Comma Operator</a>
+<li><a href="#Member-Access-Operators">8.3.14 Member Access Operators</a>
+</li></ul>
+<li><a href="#The-Ternary-Operator">8.4 The Ternary Operator</a>
+<li><a href="#Statements-and-Declarations-in-Expressions">8.5 Statements and Declarations in Expressions</a>
+<li><a href="#Order-of-Evaluation">8.6 Order of Evaluation</a>
+</li></ul>
+<li><a name="toc_Statements" href="#Statements">9 Statements</a>
+<ul>
+<li><a href="#Expression-Statements">9.1 Expression Statements</a>
+<li><a href="#Labels">9.2 Labels</a>
+<li><a href="#The-_003ccode_003eif_003c_002fcode_003e-Statement">9.3 The <code>if</code> Statement</a>
+<li><a href="#The-_003ccode_003eswitch_003c_002fcode_003e-Statement">9.4 The <code>switch</code> Statement</a>
+<li><a href="#The-_003ccode_003ewhile_003c_002fcode_003e-Statement">9.5 The <code>while</code> Statement</a>
+<li><a href="#The-_003ccode_003edo_003c_002fcode_003e-Statement">9.6 The <code>do</code> Statement</a>
+<li><a href="#The-_003ccode_003efor_003c_002fcode_003e-Statement">9.7 The <code>for</code> Statement</a>
+<li><a href="#Blocks">9.8 Blocks</a>
+<li><a href="#The-Null-Statement">9.9 The Null Statement</a>
+<li><a href="#The-_003ccode_003egoto_003c_002fcode_003e-Statement">9.10 The <code>goto</code> Statement</a>
+<li><a href="#The-_003ccode_003ebreak_003c_002fcode_003e-Statement">9.11 The <code>break</code> Statement</a>
+<li><a href="#The-_003ccode_003econtinue_003c_002fcode_003e-Statement">9.12 The <code>continue</code> Statement</a>
+<li><a href="#The-_003ccode_003ereturn_003c_002fcode_003e-Statement">9.13 The <code>return</code> Statement</a>
+</li></ul>
+<li><a name="toc_Functions" href="#Functions">10 Functions</a>
+<ul>
+<li><a href="#Function-Declarations">10.1 Function Declarations</a>
+<li><a href="#Function-Prototypes">10.2 Function Prototypes</a>
+<li><a href="#Function-Definitions">10.3 Function Definitions</a>
+<li><a href="#Calling-Functions">10.4 Calling Functions</a>
+<li><a href="#Function-Parameters">10.5 Function Parameters</a>
+<ul>
+<li><a href="#Pass-By-Value-Parameters">10.5.1 Pass By Value Parameters</a>
+<li><a href="#Pass-By-Reference-Parameters">10.5.2 Pass By Reference Parameters</a>
+<li><a href="#Variable-Length-Parameter-Lists">10.5.3 Variable Length Parameter Lists</a>
+</li></ul>
+<li><a href="#The-_003ccode_003emain_003c_002fcode_003e-Function">10.6 The <code>main</code> Function</a>
+<li><a href="#Recursive-Functions">10.7 Recursive Functions</a>
 </li></ul>
 <li><a name="toc_GNU-Free-Documentation-License" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>
 <ul>

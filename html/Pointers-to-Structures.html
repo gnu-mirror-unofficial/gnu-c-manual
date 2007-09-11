@@ -3,7 +3,7 @@
 <title>Pointers to Structures - The GNU C Reference Manual</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Reference Manual">
-<meta name="generator" content="makeinfo 4.7">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Pointers.html#Pointers" title="Pointers">
 <link rel="prev" href="Pointers-to-Unions.html#Pointers-to-Unions" title="Pointers to Unions">
@@ -33,16 +33,18 @@ Copyright (C) 2007 Free Software Foundation, Inc.
   pre.smallformat  { font-family:inherit; font-size:smaller }
   pre.smallexample { font-size:smaller }
   pre.smalllisp    { font-size:smaller }
-  span.sc { font-variant:small-caps }
-  span.roman { font-family: serif; font-weight: normal; } 
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
 --></style>
 </head>
 <body>
 <div class="node">
 <p>
-<a name="Pointers-to-Structures"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="Pointers-to-Unions.html#Pointers-to-Unions">Pointers to Unions</a>,
+<a name="Pointers-to-Structures"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Pointers-to-Unions.html#Pointers-to-Unions">Pointers to Unions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="Pointers.html#Pointers">Pointers</a>
-<hr><br>
+<hr>
 </div>
 
 <h4 class="subsection">2.6.4 Pointers to Structures</h4>
@@ -67,7 +69,7 @@ gives it the address of <code>salmon</code>.
 
    <p>You can access the members of a structure variable through a pointer,
 but you can't use the regular member access operator anymore.  Instead,
-you have to use the indirect member access operator <span class="samp">-&gt;</span> .  Continuing
+you have to use the indirect member access operator `<samp><span class="samp">-&gt;</span></samp>' .  Continuing
 with the previous example, the following example will change the values
 of the members of <code>salmon</code>:
 

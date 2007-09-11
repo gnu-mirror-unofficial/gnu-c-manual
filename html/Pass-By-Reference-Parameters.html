@@ -3,7 +3,7 @@
 <title>Pass By Reference Parameters - The GNU C Reference Manual</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Reference Manual">
-<meta name="generator" content="makeinfo 4.7">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Function-Parameters.html#Function-Parameters" title="Function Parameters">
 <link rel="prev" href="Pass-By-Value-Parameters.html#Pass-By-Value-Parameters" title="Pass By Value Parameters">
@@ -34,17 +34,19 @@ Copyright (C) 2007 Free Software Foundation, Inc.
   pre.smallformat  { font-family:inherit; font-size:smaller }
   pre.smallexample { font-size:smaller }
   pre.smalllisp    { font-size:smaller }
-  span.sc { font-variant:small-caps }
-  span.roman { font-family: serif; font-weight: normal; } 
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
 --></style>
 </head>
 <body>
 <div class="node">
 <p>
-<a name="Pass-By-Reference-Parameters"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Variable-Length-Parameter-Lists.html#Variable-Length-Parameter-Lists">Variable Length Parameter Lists</a>,
+<a name="Pass-By-Reference-Parameters"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Variable-Length-Parameter-Lists.html#Variable-Length-Parameter-Lists">Variable Length Parameter Lists</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="Pass-By-Value-Parameters.html#Pass-By-Value-Parameters">Pass By Value Parameters</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="Function-Parameters.html#Function-Parameters">Function Parameters</a>
-<hr><br>
+<hr>
 </div>
 
 <h4 class="subsection">5.5.2 Pass By Reference Parameters</h4>
@@ -61,7 +63,7 @@ one) that the parameter is a pointer, like this:
 
 <pre class="example">     void swap_integers (int *a, int *b);
 </pre>
-   <p>That example has two parameters, <span class="samp">a</span> and <span class="samp">b</span>, both of which are
+   <p>That example has two parameters, `<samp><span class="samp">a</span></samp>' and `<samp><span class="samp">b</span></samp>', both of which are
 pointers to <code>int</code> values.  When you call this function, instead of
 passing it literal values or variables, you pass it the addresses of
 variables, like this:
@@ -71,8 +73,8 @@ variables, like this:
      swap_integers ( &amp;x, &amp;y );
 </pre>
    <p>That way, in the function definition, you can actually change the values of
-<span class="samp">x</span> and <span class="samp">y</span>, because you passed the function the addresses of
-those variables.  Here is the definition of the <span class="samp">swap_integers</span> function,
+`<samp><span class="samp">x</span></samp>' and `<samp><span class="samp">y</span></samp>', because you passed the function the addresses of
+those variables.  Here is the definition of the `<samp><span class="samp">swap_integers</span></samp>' function,
 which swaps the values held in two integer variables:
 
 <pre class="example">     void

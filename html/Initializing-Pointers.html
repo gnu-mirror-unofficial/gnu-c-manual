@@ -3,7 +3,7 @@
 <title>Initializing Pointers - The GNU C Reference Manual</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Reference Manual">
-<meta name="generator" content="makeinfo 4.7">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Pointers.html#Pointers" title="Pointers">
 <link rel="prev" href="Declaring-Pointers.html#Declaring-Pointers" title="Declaring Pointers">
@@ -34,17 +34,19 @@ Copyright (C) 2007 Free Software Foundation, Inc.
   pre.smallformat  { font-family:inherit; font-size:smaller }
   pre.smallexample { font-size:smaller }
   pre.smalllisp    { font-size:smaller }
-  span.sc { font-variant:small-caps }
-  span.roman { font-family: serif; font-weight: normal; } 
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
 --></style>
 </head>
 <body>
 <div class="node">
 <p>
-<a name="Initializing-Pointers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Pointers-to-Unions.html#Pointers-to-Unions">Pointers to Unions</a>,
+<a name="Initializing-Pointers"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Pointers-to-Unions.html#Pointers-to-Unions">Pointers to Unions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="Declaring-Pointers.html#Declaring-Pointers">Declaring Pointers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="Pointers.html#Pointers">Pointers</a>
-<hr><br>
+<hr>
 </div>
 
 <h4 class="subsection">2.6.2 Initializing Pointers</h4>
@@ -52,8 +54,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Pointers.html#Pointers">Pointers</a>
 <p><a name="index-initializing-pointers-118"></a><a name="index-pointers_002c-initializing-119"></a>
 You can initialize a pointer when you first declare it by specifying
 a variable address to store in it.  For example, the following code
-declares an <code>int</code> variable <span class="samp">i</span>, and a pointer which is
-initialized with the address of <span class="samp">i</span>:
+declares an <code>int</code> variable `<samp><span class="samp">i</span></samp>', and a pointer which is
+initialized with the address of `<samp><span class="samp">i</span></samp>':
 
 <pre class="example">     int i;
      int *ip = &amp;i;
@@ -66,11 +68,11 @@ to.  On the contrary, that would change the value of the variable that
 the points to, not the value of the pointer itself.  For example:
 
 <pre class="example">     int i, j;
-     int *ip = &amp;i;    // <span class="roman">ip now holds the address of i.</span>
+     int *ip = &amp;i;    // <span class="roman">`<samp>ip</samp>' now holds the address of `<samp>i</samp>'.</span>
      
-     ip = &amp;j;         // <span class="roman">ip now holds the address of j.</span>
+     ip = &amp;j;         // <span class="roman">`<samp>ip</samp>' now holds the address of `<samp>j</samp>'.</span>
      
-     *ip = &amp;i;        // <span class="roman">j now holds the address of i.</span>
+     *ip = &amp;i;        // <span class="roman">`<samp>j</samp>' now holds the address of `<samp>i</samp>'.</span>
 </pre>
    <p>The value stored in a pointer is an integral number: a location within
 the computer's memory space.  If you are so inclined, you can assign pointer

@@ -3,7 +3,7 @@
 <title>Calling Functions - The GNU C Reference Manual</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Reference Manual">
-<meta name="generator" content="makeinfo 4.7">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Functions.html#Functions" title="Functions">
 <link rel="prev" href="Function-Definitions.html#Function-Definitions" title="Function Definitions">
@@ -34,17 +34,19 @@ Copyright (C) 2007 Free Software Foundation, Inc.
   pre.smallformat  { font-family:inherit; font-size:smaller }
   pre.smallexample { font-size:smaller }
   pre.smalllisp    { font-size:smaller }
-  span.sc { font-variant:small-caps }
-  span.roman { font-family: serif; font-weight: normal; } 
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
 --></style>
 </head>
 <body>
 <div class="node">
 <p>
-<a name="Calling-Functions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Function-Parameters.html#Function-Parameters">Function Parameters</a>,
+<a name="Calling-Functions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Function-Parameters.html#Function-Parameters">Function Parameters</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="Function-Definitions.html#Function-Definitions">Function Definitions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="Functions.html#Functions">Functions</a>
-<hr><br>
+<hr>
 </div>
 
 <h3 class="section">5.4 Calling Functions</h3>
@@ -60,17 +62,17 @@ subexpression.  Here is an example of the former case:
 
 <pre class="example">     print_integer ( 5 );
 </pre>
-   <p>In that example, the function <span class="samp">print_integer</span> is called with the
+   <p>In that example, the function `<samp><span class="samp">print_integer</span></samp>' is called with the
 parameter <code>5</code>.  We can suppose that this function prints out the
 value 5 in some way, perhaps to the terminal.
 
    <p>Here is an example of a function call used as a subexpression; the
-function <span class="samp">square_value</span> returns the square of its parameter:
+function `<samp><span class="samp">square_value</span></samp>' returns the square of its parameter:
 
 <pre class="example">     a = square_integer ( 5 );
 </pre>
-   <p>Supposing that the function <span class="samp">square_integer</span> works correctly, the
-above example assigns the value 25 to <span class="samp">a</span>.
+   <p>Supposing that the function `<samp><span class="samp">square_integer</span></samp>' works correctly, the
+above example assigns the value 25 to `<samp><span class="samp">a</span></samp>'.
 
    <p>If a function takes more than one parameter, then when you call it, you must
 separate parameters with commas.  Here is an example, using a function

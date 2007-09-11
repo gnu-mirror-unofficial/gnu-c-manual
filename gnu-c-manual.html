@@ -6,6 +6,23 @@
 <meta name="generator" content="makeinfo 4.7">
 <link title="Top" rel="top" href="#Top">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being "A GNU Manual," and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     "GNU Free Documentation License."
+
+     (a) The FSF's Back-Cover Text is: "You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom."
+   -->
 <meta http-equiv="Content-Style-Type" content="text/css">
 <style type="text/css"><!--
   pre.display { font-family:inherit }
@@ -20,13 +37,198 @@
 </head>
 <body>
 <h1 class="settitle">The GNU C Reference Manual</h1>
+<div class="contents">
+<h2>Table of Contents</h2>
+<ul>
+<li><a name="toc_Top" href="#Top">The GNU C Reference Manual</a>
+<li><a name="toc_Preface" href="#Preface">Preface</a>
+<li><a name="toc_Lexical-Elements" href="#Lexical-Elements">1 Lexical Elements</a>
+<ul>
+<li><a href="#Identifiers">1.1 Identifiers</a>
+<li><a href="#Keywords">1.2 Keywords</a>
+<li><a href="#Constants">1.3 Constants</a>
+<ul>
+<li><a href="#Integer-Constants">1.3.1 Integer Constants</a>
+<li><a href="#Character-Constants">1.3.2 Character Constants</a>
+<li><a href="#Real-Number-Constants">1.3.3 Real Number Constants</a>
+<li><a href="#String-Constants">1.3.4 String Constants</a>
+</li></ul>
+<li><a href="#Operators">1.4 Operators</a>
+<li><a href="#Separators">1.5 Separators</a>
+<li><a href="#White-Space">1.6 White Space</a>
+</li></ul>
+<li><a name="toc_Data-Types" href="#Data-Types">2 Data Types</a>
+<ul>
+<li><a href="#Primitive-Types">2.1 Primitive Data Types</a>
+<ul>
+<li><a href="#Integer-Types">2.1.1 Integer Types</a>
+<li><a href="#Real-Number-Types">2.1.2 Real Number Types</a>
+</li></ul>
+<li><a href="#Enumerations">2.2 Enumerations</a>
+<ul>
+<li><a href="#Defining-Enumerations">2.2.1 Defining Enumerations</a>
+<li><a href="#Declaring-Enumerations">2.2.2 Declaring Enumerations</a>
+</li></ul>
+<li><a href="#Unions">2.3 Unions</a>
+<ul>
+<li><a href="#Defining-Unions">2.3.1 Defining Unions</a>
+<li><a href="#Declaring-Union-Variables">2.3.2 Declaring Union Variables</a>
+<ul>
+<li><a href="#Declaring-Union-Variables-at-Definition">2.3.2.1 Declaring Union Variables at Definition</a>
+<li><a href="#Declaring-Union-Variables-After-Definition">2.3.2.2 Declaring Union Variables After Definition</a>
+<li><a href="#Initializing-Union-Members">2.3.2.3 Initializing Union Members</a>
+</li></ul>
+<li><a href="#Accessing-Union-Members">2.3.3 Accessing Union Members</a>
+<li><a href="#Size-of-Unions">2.3.4 Size of Unions</a>
+</li></ul>
+<li><a href="#Structures">2.4 Structures</a>
+<ul>
+<li><a href="#Defining-Structures">2.4.1 Defining Structures</a>
+<li><a href="#Declaring-Structure-Variables">2.4.2 Declaring Structure Variables</a>
+<ul>
+<li><a href="#Declaring-Structure-Variables-at-Definition">2.4.2.1 Declaring Structure Variables at Definition</a>
+<li><a href="#Declaring-Structure-Variables-After-Definition">2.4.2.2 Declaring Structure Variables After Definition</a>
+<li><a href="#Initializing-Structure-Members">2.4.2.3 Initializing Structure Members</a>
+</li></ul>
+<li><a href="#Accessing-Structure-Members">2.4.3 Accessing Structure Members</a>
+<li><a href="#Bit-Fields">2.4.4 Bit Fields</a>
+<li><a href="#Size-of-Structures">2.4.5 Size of Structures</a>
+</li></ul>
+<li><a href="#Arrays">2.5 Arrays</a>
+<ul>
+<li><a href="#Declaring-Arrays">2.5.1 Declaring Arrays</a>
+<li><a href="#Initializing-Arrays">2.5.2 Initializing Arrays</a>
+<li><a href="#Accessing-Array-Elements">2.5.3 Accessing Array Elements</a>
+<li><a href="#Multidimensional-Arrays">2.5.4 Multidimensional Arrays</a>
+<li><a href="#Arrays-as-Strings">2.5.5 Arrays as Strings</a>
+<li><a href="#Arrays-of-Unions">2.5.6 Arrays of Unions</a>
+<li><a href="#Arrays-of-Structures">2.5.7 Arrays of Structures</a>
+</li></ul>
+<li><a href="#Pointers">2.6 Pointers</a>
+<ul>
+<li><a href="#Declaring-Pointers">2.6.1 Declaring Pointers</a>
+<li><a href="#Initializing-Pointers">2.6.2 Initializing Pointers</a>
+<li><a href="#Pointers-to-Unions">2.6.3 Pointers to Unions</a>
+<li><a href="#Pointers-to-Structures">2.6.4 Pointers to Structures</a>
+</li></ul>
+<li><a href="#Incomplete-Types">2.7 Incomplete Types</a>
+<li><a href="#Type-Specifiers">2.8 Type Specifiers</a>
+<li><a href="#Storage-Class-Specifiers">2.9 Storage Class Specifiers</a>
+<li><a href="#Renaming-Types">2.10 Renaming Types</a>
+</li></ul>
+<li><a name="toc_Expressions-and-Operators" href="#Expressions-and-Operators">3 Expressions and Operators</a>
+<ul>
+<li><a href="#Expressions">3.1 Expressions</a>
+<li><a href="#Unary-Operators">3.2 Unary Operators</a>
+<ul>
+<li><a href="#The-Increment-Operator">3.2.1 The Increment Operator</a>
+<li><a href="#The-Decrement-Operator">3.2.2 The Decrement Operator</a>
+<li><a href="#The-Positive-Operator">3.2.3 The Positive Operator</a>
+<li><a href="#The-Negative-Operator">3.2.4 The Negative Operator</a>
+<li><a href="#The-Logical-Negation-Operator">3.2.5 The Logical Negation Operator</a>
+<li><a href="#The-Bitwise-Complement-Operator">3.2.6 The Bitwise Complement Operator</a>
+<li><a href="#The-Address-Operator">3.2.7 The Address Operator</a>
+<li><a href="#The-Indirection-Operator">3.2.8 The Indirection Operator</a>
+<li><a href="#The-sizeof-Operator">3.2.9 The sizeof Operator</a>
+<li><a href="#Type-Casts">3.2.10 Type Casts</a>
+<li><a href="#Array-Subscripts">3.2.11 Array Subscripts</a>
+<li><a href="#Function-Calls-as-Expressions">3.2.12 Function Calls as Expressions</a>
+</li></ul>
+<li><a href="#Binary-Operators">3.3 Binary Operators</a>
+<ul>
+<li><a href="#The-Addition-Operator">3.3.1 The Addition Operator</a>
+<li><a href="#The-Subtraction-Operator">3.3.2 The Subtraction Operator</a>
+<li><a href="#The-Multiplication-Operator">3.3.3 The Multiplication Operator</a>
+<li><a href="#The-Division-Operator">3.3.4 The Division Operator</a>
+<li><a href="#The-Modulus-Operator">3.3.5 The Modulus Operator</a>
+<li><a href="#The-Shift-Operators">3.3.6 The Shift Operators</a>
+<li><a href="#The-Bitwise-AND-Operator">3.3.7 The Bitwise AND Operator</a>
+<li><a href="#The-Bitwise-Inclusive-OR-Operator">3.3.8 The Bitwise Inclusive OR Operator</a>
+<li><a href="#The-Bitwise-Exclusive-OR-Operator">3.3.9 The Bitwise Exclusive OR Operator</a>
+<li><a href="#The-Comparison-Operators">3.3.10 The Comparison Operators</a>
+<ul>
+<li><a href="#The-Equal_002dto-Operator">3.3.10.1 The Equal-to Operator</a>
+<li><a href="#The-Not_002dEqual_002dto-Operator">3.3.10.2 The Not-Equal-to Operator</a>
+<li><a href="#The-Less_002dThan-Operator">3.3.10.3 The Less-Than Operator</a>
+<li><a href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">3.3.10.4 The Less-Than-or-Equal-to Operator</a>
+<li><a href="#The-Greater_002dThan-Operator">3.3.10.5 The Greater-Than Operator</a>
+<li><a href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">3.3.10.6 The Greater-Than-or-Equal-to Operator</a>
+</li></ul>
+<li><a href="#Logical-Operators">3.3.11 Logical Operators</a>
+<ul>
+<li><a href="#The-Logical-AND-Operator">3.3.11.1 The Logical AND Operator</a>
+<li><a href="#The-Logical-OR-Operator">3.3.11.2 The Logical OR Operator</a>
+</li></ul>
+<li><a href="#Assignment-Operators">3.3.12 Assignment Operators</a>
+<ul>
+<li><a href="#The-Assignment-Operator">3.3.12.1 The Assignment Operator</a>
+<li><a href="#The-Compound-Assignment-Operators">3.3.12.2 The Compound Assignment Operators</a>
+</li></ul>
+<li><a href="#The-Comma-Operator">3.3.13 The Comma Operator</a>
+<li><a href="#Member-Access-Operators">3.3.14 Member Access Operators</a>
+</li></ul>
+<li><a href="#The-Ternary-Operator">3.4 The Ternary Operator</a>
+<li><a href="#Order-of-Evaluation">3.5 Order of Evaluation</a>
+</li></ul>
+<li><a name="toc_Statements" href="#Statements">4 Statements</a>
+<ul>
+<li><a href="#Expression-Statements">4.1 Expression Statements</a>
+<li><a href="#Labels">4.2 Labels</a>
+<li><a href="#The-if-Statement">4.3 The <code>if</code> Statement</a>
+<li><a href="#The-switch-Statement">4.4 The <code>switch</code> Statement</a>
+<li><a href="#The-while-Statement">4.5 The <code>while</code> Statement</a>
+<li><a href="#The-do-Statement">4.6 The <code>do</code> Statement</a>
+<li><a href="#The-for-Statement">4.7 The <code>for</code> Statement</a>
+<li><a href="#Blocks">4.8 Blocks</a>
+<li><a href="#The-Null-Statement">4.9 The Null Statement</a>
+<li><a href="#The-goto-Statement">4.10 The <code>goto</code> Statement</a>
+<li><a href="#The-break-Statement">4.11 The <code>break</code> Statement</a>
+<li><a href="#The-continue-Statement">4.12 The <code>continue</code> Statement</a>
+<li><a href="#The-return-Statement">4.13 The <code>return</code> Statement</a>
+<li><a href="#The-typedef-Statement">4.14 The <code>typedef</code> Statement</a>
+</li></ul>
+<li><a name="toc_Functions" href="#Functions">5 Functions</a>
+<ul>
+<li><a href="#Function-Declarations">5.1 Function Declarations</a>
+<li><a href="#Function-Prototypes">5.2 Function Prototypes</a>
+<li><a href="#Function-Definitions">5.3 Function Definitions</a>
+<li><a href="#Calling-Functions">5.4 Calling Functions</a>
+<li><a href="#Function-Parameters">5.5 Function Parameters</a>
+<ul>
+<li><a href="#Pass-By-Value-Parameters">5.5.1 Pass By Value Parameters</a>
+<li><a href="#Pass-By-Reference-Parameters">5.5.2 Pass By Reference Parameters</a>
+<li><a href="#Variable-Length-Parameter-Lists">5.5.3 Variable Length Parameter Lists</a>
+</li></ul>
+<li><a href="#The-main-Function">5.6 The main Function</a>
+<li><a href="#Recursive-Functions">5.7 Recursive Functions</a>
+</li></ul>
+<li><a name="toc_Program-Structure-and-Scope" href="#Program-Structure-and-Scope">6 Program Structure and Scope</a>
+<ul>
+<li><a href="#Program-Structure">6.1 Program Structure</a>
+<li><a href="#Scope">6.2 Scope</a>
+</li></ul>
+<li><a name="toc_A-Sample-Program" href="#A-Sample-Program">7 A Sample Program</a>
+<ul>
+<li><a href="#hello_002ec">7.1 hello.c</a>
+<li><a href="#system_002eh">7.2 system.h</a>
+</li></ul>
+<li><a name="toc_GNU-Free-Documentation-License" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>
+<li><a name="toc_Index" href="#Index">Index</a>
+</li></ul>
+</div>
+
+
+
 <div class="node">
 <p><hr>
 <a name="Top"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Preface">Preface</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#dir">(dir)</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#dir">(dir)</a>
 <br>
 </div>
+
+<h2 class="unnumbered">The GNU C Reference Manual</h2>
+
+<p>This is the GNU C reference manual.
 
 <ul class="menu">
 <li><a accesskey="1" href="#Preface">Preface</a>
@@ -106,13 +308,6 @@ J. Wren Hunt, Steve Morningthunder, and Ole J. Tetlie.
    <p>This manual is (still) in progress; please feel free to send comments
 to Trevis Rothwell via email.
 
-<!-- Thanks also to my parents, for their support in this and in everything, -->
-<!-- and most importantly, to my Lord and Savior Jesus Christ, for truly -->
-<!-- blessing me with a life worth living! -->
-<!-- @flushleft -->
-<!-- Trevis J. Rothwell @* -->
-<!-- @code{tjr at gnu dot org} -->
-<!-- @end flushleft -->
 <!-- This is part of The GNU C Reference Manual -->
 <!-- Copyright (C) 2004 Free Software Foundation, Inc. -->
 <!-- See the file gnu-c-manual.texi for copying conditions. -->
@@ -124,7 +319,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h2 class="chapter">1 Lexical Elements</h2>
 
 <p><a name="index-lexical-elements-2"></a>
@@ -146,7 +340,6 @@ to separate tokens, is also described in this chapter.
 <div class="node">
 <p><hr>
 <a name="Identifiers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Keywords">Keywords</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Lexical-Elements">Lexical Elements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <br>
 </div>
@@ -251,7 +444,6 @@ constant.
 <div class="node">
 <p><hr>
 <a name="Integer-Constants"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Character-Constants">Character Constants</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Constants">Constants</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
 <br>
 </div>
@@ -609,7 +801,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h2 class="chapter">2 Data Types</h2>
 
 <p><a name="index-data-types-21"></a><a name="index-types-22"></a>
@@ -631,12 +822,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <div class="node">
 <p><hr>
 <a name="Primitive-Types"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Enumerations">Enumerations</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Data-Types">Data Types</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">2.1 Primitive Data Types</h3>
 
 <p><a name="index-primitive-data-types-23"></a><a name="index-data-types_002c-primitive-24"></a><a name="index-types_002c-primitive-25"></a>
@@ -650,12 +839,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <div class="node">
 <p><hr>
 <a name="Integer-Types"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Real-Number-Types">Real Number Types</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Primitive-Types">Primitive Types</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Primitive-Types">Primitive Types</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h4 class="subsection">2.1.1 Integer Types</h4>
 
 <p><a name="index-integer-types-26"></a><a name="index-data-types_002c-integer-27"></a><a name="index-types_002c-integer-28"></a>
@@ -747,8 +934,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Primitive-Types">Primitive Types</a>
 <br>
 </div>
 
-<!-- @node Real Number Types, Complex Number Types, Integer Types, Primitive Types -->
-<!-- node-name, next, previous, up -->
 <h4 class="subsection">2.1.2 Real Number Types</h4>
 
 <p><a name="index-real-number-types-40"></a><a name="index-floating-point-types-41"></a><a name="index-data-types_002c-real-number-42"></a><a name="index-data-types_002c-floating-point-43"></a><a name="index-types_002c-real-number-44"></a><a name="index-types_002c-floating-point-45"></a>
@@ -786,8 +971,7 @@ The <code>long double</code> data type is at least as large as the
    <p>All floating point data types are signed; trying to use <code>unsigned float</code>,
 for example, will cause a compile-time error.
 
-<!-- @node Complex Number Types, , Real Number Types, Primitive Types -->
-<!-- @comment node-name, next, previous, up -->
+<!-- @node Complex Number Types -->
 <!-- @subsection Complex Number Types -->
 <!-- @cindex complex number types -->
 <!-- @cindex data types, complex number -->
@@ -834,7 +1018,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">2.2 Enumerations</h3>
 
 <p><a name="index-enumerations-49"></a><a name="index-types_002c-enumeration-50"></a><a name="index-data-types_002c-enumeration-51"></a>
@@ -852,7 +1035,6 @@ used instead.
 <div class="node">
 <p><hr>
 <a name="Defining-Enumerations"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Enumerations">Declaring Enumerations</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Enumerations">Enumerations</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Enumerations">Enumerations</a>
 <br>
 </div>
@@ -935,7 +1117,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">2.3 Unions</h3>
 
 <p><a name="index-unions-56"></a><a name="index-types_002c-union-57"></a><a name="index-data-types_002c-union-58"></a>
@@ -954,7 +1135,6 @@ one of them overwrites the values in the others.
 <div class="node">
 <p><hr>
 <a name="Defining-Unions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Union-Variables">Declaring Union Variables</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Unions">Unions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
 <br>
 </div>
@@ -1012,7 +1192,6 @@ union type a name.
 <div class="node">
 <p><hr>
 <a name="Declaring-Union-Variables-at-Definition"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Union-Variables-After-Definition">Declaring Union Variables After Definition</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Union-Variables">Declaring Union Variables</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring Union Variables</a>
 <br>
 </div>
@@ -1072,8 +1251,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring U
 <h5 class="subsubsection">2.3.2.3 Initializing Union Members</h5>
 
 <p><a name="index-initializing-union-members-67"></a><a name="index-union-members_002c-initializing-68"></a>
-
-   <p>You can initialize the first member of a union variable when you
+You can initialize the first member of a union variable when you
 declare it:
 
 <pre class="example">     union numbers
@@ -1174,7 +1352,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">2.4 Structures</h3>
 
 <p><a name="index-structures-73"></a><a name="index-types_002c-structure-74"></a><a name="index-data-types_002c-structure-75"></a>
@@ -1185,16 +1362,13 @@ variables of other data types (possibly including other structure types).
 <li><a accesskey="1" href="#Defining-Structures">Defining Structures</a>
 <li><a accesskey="2" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>
 <li><a accesskey="3" href="#Accessing-Structure-Members">Accessing Structure Members</a>
-<li><a accesskey="4" href="#Arrays-of-Structures">Arrays of Structures</a>
-<li><a accesskey="5" href="#Pointers-to-Structures">Pointers to Structures</a>
-<li><a accesskey="6" href="#Bit-Fields">Bit Fields</a>
-<li><a accesskey="7" href="#Size-of-Structures">Size of Structures</a>
+<li><a accesskey="4" href="#Bit-Fields">Bit Fields</a>
+<li><a accesskey="5" href="#Size-of-Structures">Size of Structures</a>
 </ul>
 
 <div class="node">
 <p><hr>
 <a name="Defining-Structures"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Structures">Structures</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
 <br>
 </div>
@@ -1250,7 +1424,6 @@ structure type a name.
 <div class="node">
 <p><hr>
 <a name="Declaring-Structure-Variables-at-Definition"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Structure-Variables-After-Definition">Declaring Structure Variables After Definition</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>
 <br>
 </div>
@@ -1491,7 +1664,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">2.5 Arrays</h3>
 
 <p><a name="index-arrays-92"></a><a name="index-types_002c-array-93"></a><a name="index-data-types_002c-array-94"></a>
@@ -1514,7 +1686,6 @@ position zero, not one.
 <div class="node">
 <p><hr>
 <a name="Declaring-Arrays"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Arrays">Initializing Arrays</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Arrays">Arrays</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
 <br>
 </div>
@@ -1866,7 +2037,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">2.6 Pointers</h3>
 
 <p><a name="index-pointers-113"></a><a name="index-types_002c-pointer-114"></a><a name="index-data-types_002c-pointer-115"></a>
@@ -1885,7 +2055,6 @@ that type.
 <div class="node">
 <p><hr>
 <a name="Declaring-Pointers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Pointers">Initializing Pointers</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Pointers">Pointers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
 <br>
 </div>
@@ -2185,7 +2354,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<!-- node-name,  next,  previous,  up -->
 <h2 class="chapter">3 Expressions and Operators</h2>
 
 <ul class="menu">
@@ -2200,7 +2368,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <div class="node">
 <p><hr>
 <a name="Expressions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Unary-Operators">Unary Operators</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Expressions-and-Operators">Expressions and Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions and Operators</a>
 <br>
 </div>
@@ -2266,7 +2433,6 @@ Unary operators perform an operation on a single operand.
 <div class="node">
 <p><hr>
 <a name="The-Increment-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Decrement-Operator">The Decrement Operator</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Unary-Operators">Unary Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
@@ -2462,8 +2628,7 @@ address operator in pointer variables.
      
      ptr = &amp;x;
 </pre>
-   <!-- @node The Indirection Operator, The Complex Conjugation Operator, The Address Operator, Unary Operators -->
-<div class="node">
+   <div class="node">
 <p><hr>
 <a name="The-Indirection-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-sizeof-Operator">The sizeof Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Address-Operator">The Address Operator</a>,
@@ -2492,7 +2657,7 @@ been initialized.  Otherwise, the value stored in those pointers probably
 won't be anything you want to use.
 
 <!-- GNU C Extension - temporarily commented out for manual release 0.1, covering ANSI C89 -->
-<!-- @node The Complex Conjugation Operator, The sizeof Operator, The Indirection Operator, Unary Operators -->
+<!-- @node The Complex Conjugation Operator -->
 <!-- @subsection The Complex Conjugation Operator -->
 <!-- @cindex complex conjugation operator -->
 <!-- @cindex conjugation operator -->
@@ -2517,7 +2682,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <br>
 </div>
 
-<!-- @node The sizeof Operator, Type Casts, The Complex Conjugation Operator, Unary Operators -->
 <h4 class="subsection">3.2.9 The sizeof Operator</h4>
 
 <p><a name="index-sizeof-operator-153"></a>
@@ -2649,7 +2813,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <div class="node">
 <p><hr>
 <a name="The-Addition-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Subtraction-Operator">The Subtraction Operator</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Binary-Operators">Binary Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <br>
 </div>
@@ -2922,7 +3085,6 @@ for any two expressions of primitive types, or pointers.
 <div class="node">
 <p><hr>
 <a name="The-Equal_002dto-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Not_002dEqual_002dto-Operator">The Not-Equal-to Operator</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Comparison-Operators">The Comparison Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparison Operators</a>
 <br>
 </div>
@@ -3064,7 +3226,6 @@ expression, any nonzero expression is considered true in C.
 <div class="node">
 <p><hr>
 <a name="The-Logical-AND-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Logical-OR-Operator">The Logical OR Operator</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Logical-Operators">Logical Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Logical-Operators">Logical Operators</a>
 <br>
 </div>
@@ -3134,7 +3295,6 @@ pointer.
 <div class="node">
 <p><hr>
 <a name="The-Assignment-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Compound-Assignment-Operators">The Compound Assignment Operators</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Assignment-Operators">Assignment Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Assignment-Operators">Assignment Operators</a>
 <br>
 </div>
@@ -3158,7 +3318,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Assignment-Operators">Assignment Opera
 <br>
 </div>
 
-<!-- @node The Compound Assignment Operators, Generalized Lvalues, The Assignment Operator, Assignment Operators -->
 <h5 class="subsubsection">3.3.12.2 The Compound Assignment Operators</h5>
 
 <p><a name="index-compound-assignment-operators-181"></a><a name="index-assignment-operators_002c-compound-182"></a>
@@ -3233,7 +3392,7 @@ operands, and assigns the result of the operation to the left operand.
 <pre class="example">     x = x + y;
 </pre>
    <!-- GNU C Extension - temporarily commented out for manual 0.1 -->
-<!-- @node Generalized Lvalues,  , The Compound Assignment Operators, Assignment Operators -->
+<!-- @node Generalized Lvalues -->
 <!-- @subsubsection Generalized Lvalues -->
 <!-- @cindex compound expressions as lvalues -->
 <!-- @cindex expressions, compound, as lvalues -->
@@ -3399,7 +3558,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<!-- @node The Ternary Operator, Statements and Declarations in Expressions, Binary Operators, Expressions and Operators -->
 <h3 class="section">3.4 The Ternary Operator</h3>
 
 <p><a name="index-ternary-operator_002c-the-186"></a><a name="index-operator_002c-ternary-187"></a><a name="index-conditional-operator-188"></a>
@@ -3453,7 +3611,7 @@ happen twice, so you shouldn't include it as both the first and second
 operands.
 
 <!-- GNU C Extension -->
-<!-- @node Statements and Declarations in Expressions, Order of Evaluation, The Ternary Operator, Expressions and Operators -->
+<!-- @node Statements and Declarations in Expressions -->
 <!-- @section Statements and Declarations in Expressions -->
 <!-- @cindex statements inside expressions -->
 <!-- @cindex declarations inside expressions -->
@@ -3510,7 +3668,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 <br>
 </div>
 
-<!-- @node Order of Evaluation, , Statements and Declarations in Expressions, Expressions and Operators -->
 <h3 class="section">3.5 Order of Evaluation</h3>
 
 <p><a name="index-order-of-evaluation-189"></a><a name="index-evaluation_002c-order-of-190"></a><a name="index-operator-precedence-191"></a><a name="index-precedence_002c-operator-192"></a>
@@ -3532,7 +3689,7 @@ are usually evaluated left to right.  If they are <em>not</em> evaluated
 left to right, then that is explicitly stated in the list.
 
 <!-- I do not know where the complex conjugation operator belongs -->
-<!-- in this list.  -TJR -->
+<!-- in this list, though this doesn't matter for the C89 material.  -TJR -->
 <ol type=1 start=1>
 
      <li>Function calls, array subscripting, and membership access operator
@@ -3586,7 +3743,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h2 class="chapter">4 Statements</h2>
 
 <p><a name="index-statements-193"></a>
@@ -3659,7 +3815,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.2 Labels</h3>
 
 <p><a name="index-labels-196"></a><a name="index-labeled-statements-197"></a><a name="index-statements_002c-labeled-198"></a>
@@ -3689,7 +3844,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.3 The <code>if</code> Statement</h3>
 
 <p><a name="index-_0040code_007bif_007d-statements-199"></a><a name="index-_0040code_007belse_007d-statements-200"></a>
@@ -3746,7 +3900,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.4 The <code>switch</code> Statement</h3>
 
 <p><a name="index-_0040code_007bswitch_007d-statement-201"></a>
@@ -3845,7 +3998,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.5 The <code>while</code> Statement</h3>
 
 <p><a name="index-_0040code_007bwhile_007d-statement-202"></a>
@@ -3874,7 +4026,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.6 The <code>do</code> Statement</h3>
 
 <p><a name="index-_0040code_007bdo_007d-statement-203"></a>
@@ -3904,7 +4055,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.7 The <code>for</code> Statement</h3>
 
 <p><a name="index-_0040code_007bfor_007d-statement-204"></a>
@@ -3990,7 +4140,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.8 Blocks</h3>
 
 <p><a name="index-blocks-205"></a>
@@ -4045,7 +4194,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.9 The Null Statement</h3>
 
 <p><a name="index-null-statement-206"></a><a name="index-statement_002c-null-207"></a>
@@ -4079,7 +4227,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.10 The <code>goto</code> Statement</h3>
 
 <p><a name="index-_0040code_007bgoto_007d-statement-208"></a>
@@ -4114,7 +4261,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.11 The <code>break</code> Statement</h3>
 
 <p><a name="index-_0040code_007bbreak_007d-statement-209"></a>
@@ -4147,7 +4293,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.12 The <code>continue</code> Statement</h3>
 
 <p><a name="index-_0040code_007bcontinue_007d-statement-210"></a>
@@ -4178,7 +4323,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.13 The <code>return</code> Statement</h3>
 
 <p><a name="index-_0040code_007breturn_007d-statement-211"></a>
@@ -4236,7 +4380,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
 <h3 class="section">4.14 The <code>typedef</code> Statement</h3>
 
 <p><a name="index-_0040code_007btypedef_007d-statement-212"></a>
@@ -4319,7 +4462,6 @@ That is where the program's execution begins.
 <div class="node">
 <p><hr>
 <a name="Function-Declarations"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Function-Prototypes">Function Prototypes</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Functions">Functions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
@@ -4524,7 +4666,6 @@ indefinite number of parameters.
 <div class="node">
 <p><hr>
 <a name="Pass-By-Value-Parameters"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Pass-By-Reference-Parameters">Pass By Reference Parameters</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Function-Parameters">Function Parameters</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Function-Parameters">Function Parameters</a>
 <br>
 </div>
@@ -4754,7 +4895,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 <br>
 </div>
 
-<!-- @node Recursive Functions, Nested Functions, The main Function, Functions -->
 <h3 class="section">5.7 Recursive Functions</h3>
 
 <p><a name="index-recursive-functions-236"></a><a name="index-functions_002c-recursive-237"></a>
@@ -4789,8 +4929,7 @@ program will end.
 
 <!--  -->
 <!-- GNU C Extension -->
-<!-- @node Nested Functions, , Recursive Functions, Functions -->
-<!-- @comment  node-name,  next,  previous,  up -->
+<!-- @node Nested Functions -->
 <!-- @cindex nested functions -->
 <!-- @cindex functions, nested -->
 <!-- You can define functions within other functions, a technique known -->
@@ -4846,7 +4985,6 @@ to look at the big picture.
 <div class="node">
 <p><hr>
 <a name="Program-Structure"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Scope">Scope</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Program-Structure-and-Scope">Program Structure and Scope</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Program-Structure-and-Scope">Program Structure and Scope</a>
 <br>
 </div>
@@ -4958,7 +5096,6 @@ macros, see <cite>The C Preprocessor</cite>, available as part of the GCC docume
 <div class="node">
 <p><hr>
 <a name="hello_002ec"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#system_002eh">system.h</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#A-Sample-Program">A Sample Program</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
 <br>
 </div>
@@ -5213,13 +5350,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
      
      #endif /* HELLO_SYSTEM_H */
 </pre>
-   <!-- The ``node'' line has been modified for inclusion in -->
-<!-- The GNU C Reference Manual.  I also made this section -->
-<!-- an ``unnumbered'' instead of an ``appendixsec'', and made -->
-<!-- what was an ``appendixsubsec'' (the part on using -->
-<!-- the license) an ``unnumberedsec''.  I'm flexible if -->
-<!-- there's a better way.  :-)  -tjr -->
-<div class="node">
+   <div class="node">
 <p><hr>
 <a name="GNU-Free-Documentation-License"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Index">Index</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#A-Sample-Program">A Sample Program</a>,
@@ -5229,10 +5360,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 
 <h2 class="unnumbered">GNU Free Documentation License</h2>
 
-<p><a name="index-FDL_002c-GNU-Free-Documentation-License-245"></a><div align="center">Version 1.2, November 2002</div>
+<!-- The GNU Free Documentation License. -->
+<div align="center">Version 1.2, November 2002</div>
 
+<!-- This file is intended to be included within another document, -->
+<!-- hence no sectioning command or @node. -->
 <pre class="display">     Copyright &copy; 2000,2001,2002 Free Software Foundation, Inc.
-     59 Temple Place, Suite 330, Boston, MA  02111-1307, USA
+     51 Franklin St, Fifth Floor, Boston, MA  02110-1301, USA
      
      Everyone is permitted to copy and distribute verbatim copies
      of this license document, but changing it is not allowed.
@@ -5605,7 +5739,7 @@ number of this License, you may choose any version ever published (not
 as a draft) by the Free Software Foundation.
         </ol>
 
-<h3 class="unnumberedsec">ADDENDUM: How to use this License for your documents</h3>
+<h3 class="heading">ADDENDUM: How to use this License for your documents</h3>
 
 <p>To use this License in a document you have written, include a copy of
 the License in the document and put the following copyright and
@@ -5620,7 +5754,7 @@ license notices just after the title page:
        Free Documentation License''.
 </pre>
    <p>If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
-replace the &ldquo;with...Texts.&rdquo; line with this:
+replace the &ldquo;with<small class="dots">...</small>Texts.&rdquo; line with this:
 
 <pre class="smallexample">         with the Invariant Sections being <var>list their titles</var>, with
          the Front-Cover Texts being <var>list</var>, and with the Back-Cover Texts
@@ -5638,7 +5772,6 @@ to permit their use in free software.
 <!-- Local Variables: -->
 <!-- ispell-local-pdict: "ispell-dict" -->
 <!-- End: -->
-<!-- Index node -->
 <div class="node">
 <p><hr>
 <a name="Index"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>,
@@ -5729,7 +5862,6 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-expression-statements-194">expression statements</a>: <a href="#Expression-Statements">Expression Statements</a></li>
 <li><a href="#index-expressions-141">expressions</a>: <a href="#Expressions">Expressions</a></li>
 <li><a href="#index-_0040code_007bextern_007d-storage-class-specifier-136"><code>extern</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
-<li><a href="#index-FDL_002c-GNU-Free-Documentation-License-245">FDL, GNU Free Documentation License</a>: <a href="#GNU-Free-Documentation-License">GNU Free Documentation License</a></li>
 <li><a href="#index-fields_002c-bit-89">fields, bit</a>: <a href="#Bit-Fields">Bit Fields</a></li>
 <li><a href="#index-_0040code_007bfloat_007d-data-type-46"><code>float</code> data type</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
 <li><a href="#index-floating-point-constants-10">floating point constants</a>: <a href="#Real-Number-Constants">Real Number Constants</a></li>
@@ -5894,189 +6026,5 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-_0040code_007bvolatile_007d-type-specifier-132"><code>volatile</code> type specifier</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>
 <li><a href="#index-_0040code_007bwhile_007d-statement-202"><code>while</code> statement</a>: <a href="#The-while-Statement">The while Statement</a></li>
 <li><a href="#index-white-space-18">white space</a>: <a href="#White-Space">White Space</a></li>
-</ul><!-- Table of contents -->
-
-<div class="contents">
-<h2>Table of Contents</h2>
-<ul>
-<li><a name="toc_Preface" href="#Preface">Preface</a>
-<li><a name="toc_Lexical-Elements" href="#Lexical-Elements">1 Lexical Elements</a>
-<ul>
-<li><a href="#Identifiers">1.1 Identifiers</a>
-<li><a href="#Keywords">1.2 Keywords</a>
-<li><a href="#Constants">1.3 Constants</a>
-<ul>
-<li><a href="#Integer-Constants">1.3.1 Integer Constants</a>
-<li><a href="#Character-Constants">1.3.2 Character Constants</a>
-<li><a href="#Real-Number-Constants">1.3.3 Real Number Constants</a>
-<li><a href="#String-Constants">1.3.4 String Constants</a>
-</li></ul>
-<li><a href="#Operators">1.4 Operators</a>
-<li><a href="#Separators">1.5 Separators</a>
-<li><a href="#White-Space">1.6 White Space</a>
-</li></ul>
-<li><a name="toc_Data-Types" href="#Data-Types">2 Data Types</a>
-<ul>
-<li><a href="#Primitive-Types">2.1 Primitive Data Types</a>
-<ul>
-<li><a href="#Integer-Types">2.1.1 Integer Types</a>
-<li><a href="#Real-Number-Types">2.1.2 Real Number Types</a>
-</li></ul>
-<li><a href="#Enumerations">2.2 Enumerations</a>
-<ul>
-<li><a href="#Defining-Enumerations">2.2.1 Defining Enumerations</a>
-<li><a href="#Declaring-Enumerations">2.2.2 Declaring Enumerations</a>
-</li></ul>
-<li><a href="#Unions">2.3 Unions</a>
-<ul>
-<li><a href="#Defining-Unions">2.3.1 Defining Unions</a>
-<li><a href="#Declaring-Union-Variables">2.3.2 Declaring Union Variables</a>
-<ul>
-<li><a href="#Declaring-Union-Variables-at-Definition">2.3.2.1 Declaring Union Variables at Definition</a>
-<li><a href="#Declaring-Union-Variables-After-Definition">2.3.2.2 Declaring Union Variables After Definition</a>
-<li><a href="#Initializing-Union-Members">2.3.2.3 Initializing Union Members</a>
-</li></ul>
-<li><a href="#Accessing-Union-Members">2.3.3 Accessing Union Members</a>
-<li><a href="#Size-of-Unions">2.3.4 Size of Unions</a>
-</li></ul>
-<li><a href="#Structures">2.4 Structures</a>
-<ul>
-<li><a href="#Defining-Structures">2.4.1 Defining Structures</a>
-<li><a href="#Declaring-Structure-Variables">2.4.2 Declaring Structure Variables</a>
-<ul>
-<li><a href="#Declaring-Structure-Variables-at-Definition">2.4.2.1 Declaring Structure Variables at Definition</a>
-<li><a href="#Declaring-Structure-Variables-After-Definition">2.4.2.2 Declaring Structure Variables After Definition</a>
-<li><a href="#Initializing-Structure-Members">2.4.2.3 Initializing Structure Members</a>
-</li></ul>
-<li><a href="#Accessing-Structure-Members">2.4.3 Accessing Structure Members</a>
-<li><a href="#Bit-Fields">2.4.4 Bit Fields</a>
-<li><a href="#Size-of-Structures">2.4.5 Size of Structures</a>
-</li></ul>
-<li><a href="#Arrays">2.5 Arrays</a>
-<ul>
-<li><a href="#Declaring-Arrays">2.5.1 Declaring Arrays</a>
-<li><a href="#Initializing-Arrays">2.5.2 Initializing Arrays</a>
-<li><a href="#Accessing-Array-Elements">2.5.3 Accessing Array Elements</a>
-<li><a href="#Multidimensional-Arrays">2.5.4 Multidimensional Arrays</a>
-<li><a href="#Arrays-as-Strings">2.5.5 Arrays as Strings</a>
-<li><a href="#Arrays-of-Unions">2.5.6 Arrays of Unions</a>
-<li><a href="#Arrays-of-Structures">2.5.7 Arrays of Structures</a>
-</li></ul>
-<li><a href="#Pointers">2.6 Pointers</a>
-<ul>
-<li><a href="#Declaring-Pointers">2.6.1 Declaring Pointers</a>
-<li><a href="#Initializing-Pointers">2.6.2 Initializing Pointers</a>
-<li><a href="#Pointers-to-Unions">2.6.3 Pointers to Unions</a>
-<li><a href="#Pointers-to-Structures">2.6.4 Pointers to Structures</a>
-</li></ul>
-<li><a href="#Incomplete-Types">2.7 Incomplete Types</a>
-<li><a href="#Type-Specifiers">2.8 Type Specifiers</a>
-<li><a href="#Storage-Class-Specifiers">2.9 Storage Class Specifiers</a>
-<li><a href="#Renaming-Types">2.10 Renaming Types</a>
-</li></ul>
-<li><a name="toc_Expressions-and-Operators" href="#Expressions-and-Operators">3 Expressions and Operators</a>
-<ul>
-<li><a href="#Expressions">3.1 Expressions</a>
-<li><a href="#Unary-Operators">3.2 Unary Operators</a>
-<ul>
-<li><a href="#The-Increment-Operator">3.2.1 The Increment Operator</a>
-<li><a href="#The-Decrement-Operator">3.2.2 The Decrement Operator</a>
-<li><a href="#The-Positive-Operator">3.2.3 The Positive Operator</a>
-<li><a href="#The-Negative-Operator">3.2.4 The Negative Operator</a>
-<li><a href="#The-Logical-Negation-Operator">3.2.5 The Logical Negation Operator</a>
-<li><a href="#The-Bitwise-Complement-Operator">3.2.6 The Bitwise Complement Operator</a>
-<li><a href="#The-Address-Operator">3.2.7 The Address Operator</a>
-<li><a href="#The-Indirection-Operator">3.2.8 The Indirection Operator</a>
-<li><a href="#The-sizeof-Operator">3.2.9 The sizeof Operator</a>
-<li><a href="#Type-Casts">3.2.10 Type Casts</a>
-<li><a href="#Array-Subscripts">3.2.11 Array Subscripts</a>
-<li><a href="#Function-Calls-as-Expressions">3.2.12 Function Calls as Expressions</a>
-</li></ul>
-<li><a href="#Binary-Operators">3.3 Binary Operators</a>
-<ul>
-<li><a href="#The-Addition-Operator">3.3.1 The Addition Operator</a>
-<li><a href="#The-Subtraction-Operator">3.3.2 The Subtraction Operator</a>
-<li><a href="#The-Multiplication-Operator">3.3.3 The Multiplication Operator</a>
-<li><a href="#The-Division-Operator">3.3.4 The Division Operator</a>
-<li><a href="#The-Modulus-Operator">3.3.5 The Modulus Operator</a>
-<li><a href="#The-Shift-Operators">3.3.6 The Shift Operators</a>
-<li><a href="#The-Bitwise-AND-Operator">3.3.7 The Bitwise AND Operator</a>
-<li><a href="#The-Bitwise-Inclusive-OR-Operator">3.3.8 The Bitwise Inclusive OR Operator</a>
-<li><a href="#The-Bitwise-Exclusive-OR-Operator">3.3.9 The Bitwise Exclusive OR Operator</a>
-<li><a href="#The-Comparison-Operators">3.3.10 The Comparison Operators</a>
-<ul>
-<li><a href="#The-Equal_002dto-Operator">3.3.10.1 The Equal-to Operator</a>
-<li><a href="#The-Not_002dEqual_002dto-Operator">3.3.10.2 The Not-Equal-to Operator</a>
-<li><a href="#The-Less_002dThan-Operator">3.3.10.3 The Less-Than Operator</a>
-<li><a href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">3.3.10.4 The Less-Than-or-Equal-to Operator</a>
-<li><a href="#The-Greater_002dThan-Operator">3.3.10.5 The Greater-Than Operator</a>
-<li><a href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">3.3.10.6 The Greater-Than-or-Equal-to Operator</a>
-</li></ul>
-<li><a href="#Logical-Operators">3.3.11 Logical Operators</a>
-<ul>
-<li><a href="#The-Logical-AND-Operator">3.3.11.1 The Logical AND Operator</a>
-<li><a href="#The-Logical-OR-Operator">3.3.11.2 The Logical OR Operator</a>
-</li></ul>
-<li><a href="#Assignment-Operators">3.3.12 Assignment Operators</a>
-<ul>
-<li><a href="#The-Assignment-Operator">3.3.12.1 The Assignment Operator</a>
-<li><a href="#The-Compound-Assignment-Operators">3.3.12.2 The Compound Assignment Operators</a>
-</li></ul>
-<li><a href="#The-Comma-Operator">3.3.13 The Comma Operator</a>
-<li><a href="#Member-Access-Operators">3.3.14 Member Access Operators</a>
-</li></ul>
-<li><a href="#The-Ternary-Operator">3.4 The Ternary Operator</a>
-<li><a href="#Order-of-Evaluation">3.5 Order of Evaluation</a>
-</li></ul>
-<li><a name="toc_Statements" href="#Statements">4 Statements</a>
-<ul>
-<li><a href="#Expression-Statements">4.1 Expression Statements</a>
-<li><a href="#Labels">4.2 Labels</a>
-<li><a href="#The-if-Statement">4.3 The <code>if</code> Statement</a>
-<li><a href="#The-switch-Statement">4.4 The <code>switch</code> Statement</a>
-<li><a href="#The-while-Statement">4.5 The <code>while</code> Statement</a>
-<li><a href="#The-do-Statement">4.6 The <code>do</code> Statement</a>
-<li><a href="#The-for-Statement">4.7 The <code>for</code> Statement</a>
-<li><a href="#Blocks">4.8 Blocks</a>
-<li><a href="#The-Null-Statement">4.9 The Null Statement</a>
-<li><a href="#The-goto-Statement">4.10 The <code>goto</code> Statement</a>
-<li><a href="#The-break-Statement">4.11 The <code>break</code> Statement</a>
-<li><a href="#The-continue-Statement">4.12 The <code>continue</code> Statement</a>
-<li><a href="#The-return-Statement">4.13 The <code>return</code> Statement</a>
-<li><a href="#The-typedef-Statement">4.14 The <code>typedef</code> Statement</a>
-</li></ul>
-<li><a name="toc_Functions" href="#Functions">5 Functions</a>
-<ul>
-<li><a href="#Function-Declarations">5.1 Function Declarations</a>
-<li><a href="#Function-Prototypes">5.2 Function Prototypes</a>
-<li><a href="#Function-Definitions">5.3 Function Definitions</a>
-<li><a href="#Calling-Functions">5.4 Calling Functions</a>
-<li><a href="#Function-Parameters">5.5 Function Parameters</a>
-<ul>
-<li><a href="#Pass-By-Value-Parameters">5.5.1 Pass By Value Parameters</a>
-<li><a href="#Pass-By-Reference-Parameters">5.5.2 Pass By Reference Parameters</a>
-<li><a href="#Variable-Length-Parameter-Lists">5.5.3 Variable Length Parameter Lists</a>
-</li></ul>
-<li><a href="#The-main-Function">5.6 The main Function</a>
-<li><a href="#Recursive-Functions">5.7 Recursive Functions</a>
-</li></ul>
-<li><a name="toc_Program-Structure-and-Scope" href="#Program-Structure-and-Scope">6 Program Structure and Scope</a>
-<ul>
-<li><a href="#Program-Structure">6.1 Program Structure</a>
-<li><a href="#Scope">6.2 Scope</a>
-</li></ul>
-<li><a name="toc_A-Sample-Program" href="#A-Sample-Program">7 A Sample Program</a>
-<ul>
-<li><a href="#hello_002ec">7.1 hello.c</a>
-<li><a href="#system_002eh">7.2 system.h</a>
-</li></ul>
-<li><a name="toc_GNU-Free-Documentation-License" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>
-<ul>
-<li><a href="#GNU-Free-Documentation-License">ADDENDUM: How to use this License for your documents</a>
-</li></ul>
-<li><a name="toc_Index" href="#Index">Index</a>
-</li></ul>
-</div>
-
-</body></html>
+   </ul></body></html>
 

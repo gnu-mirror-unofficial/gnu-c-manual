@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+<title>Function Calls as Expressions - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Unary-Operators.html#Unary-Operators" title="Unary Operators">
+<link rel="prev" href="Array-Subscripts.html#Array-Subscripts" title="Array Subscripts">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Function-Calls-as-Expressions"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="Array-Subscripts.html#Array-Subscripts">Array Subscripts</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Unary-Operators.html#Unary-Operators">Unary Operators</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">3.2.12 Function Calls as Expressions</h4>
+
+<p><a name="index-function-calls_002c-as-expressions-157"></a>
+A function call is an expression if the function returns a
+value, regardless of if the returned value is used or not.
+
+<pre class="example">     int function( void );
+     ...
+     a = 10 + function();
+</pre>
+   </body></html>
+

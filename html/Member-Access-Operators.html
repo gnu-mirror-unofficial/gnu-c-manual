@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+<title>Member Access Operators - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Binary-Operators.html#Binary-Operators" title="Binary Operators">
+<link rel="prev" href="The-Comma-Operator.html#The-Comma-Operator" title="The Comma Operator">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Member-Access-Operators"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="The-Comma-Operator.html#The-Comma-Operator">The Comma Operator</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Binary-Operators.html#Binary-Operators">Binary Operators</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">3.3.14 Member Access Operators</h4>
+
+<p><a name="index-member-access-operators-184"></a>
+You can use the member access operator <code>.</code> to access the members
+of a structure or union variable.  You put the name of the structure
+variable on the left side of the operator, and the name of the
+member on the right side.
+
+<pre class="example">     struct point
+     {
+       int x, y;
+     };
+     
+     struct point first_point;
+     
+     first_point.x = 0;
+     first_point.y = 5;
+</pre>
+   <p><a name="index-indirect-member-access-operator-185"></a>You can also access the members of a structure or union variable via
+a pointer by using the indirect member access operator <code>-&gt;</code>.
+
+<pre class="example">     struct fish
+       {
+         int length, weight;
+       };
+     
+     struct fish salmon;
+     
+     struct fish *fish_pointer = &amp;salmon;
+     
+     fish_pointer -&gt; length = 3;
+     fish_pointer -&gt; weight = 9;
+</pre>
+   <p>See <a href="Pointers.html#Pointers">Pointers</a>.
+
+   </body></html>
+

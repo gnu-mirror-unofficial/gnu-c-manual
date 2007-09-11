@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+<title>Pointers to Unions - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Pointers.html#Pointers" title="Pointers">
+<link rel="prev" href="Initializing-Pointers.html#Initializing-Pointers" title="Initializing Pointers">
+<link rel="next" href="Pointers-to-Structures.html#Pointers-to-Structures" title="Pointers to Structures">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Pointers-to-Unions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Pointers-to-Structures.html#Pointers-to-Structures">Pointers to Structures</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Initializing-Pointers.html#Initializing-Pointers">Initializing Pointers</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Pointers.html#Pointers">Pointers</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">2.6.3 Pointers to Unions</h4>
+
+<p><a name="index-pointers-to-unions-120"></a><a name="index-unions_002c-pointers-to-121"></a>
+You can create a pointer to a union type just like you can a pointer
+to a primitive data type.
+
+<pre class="example">     union numbers
+       {
+         int i;
+         float f;
+       };
+     
+     union numbers foo = {4};
+     
+     union numbers *number_ptr = &amp;foo;
+</pre>
+   <p>That example creates a new union type, <code>union numbers</code>, and
+declares (and initializes the first member of) a variable of that type
+named <code>foo</code>.  Finally, it declares a pointer to the type
+<code>union numbers</code>, and gives it the address of <code>foo</code>.
+
+   <p>You can access the members of a union variable through a pointer,
+but you can't use the regular member access operator anymore.  Instead,
+you have to use the indirect member access operator <code>-&gt;</code> .  Continuing
+with the previous example, the following example will change the value
+of the first member of <code>foo</code>:
+
+<pre class="example">     number_ptr -&gt; i = 450;
+</pre>
+   <p>Now the <code>i</code> member in <code>foo</code> is 450.
+
+   </body></html>
+

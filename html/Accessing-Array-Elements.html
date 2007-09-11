@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+<title>Accessing Array Elements - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Arrays.html#Arrays" title="Arrays">
+<link rel="prev" href="Initializing-Arrays.html#Initializing-Arrays" title="Initializing Arrays">
+<link rel="next" href="Multidimensional-Arrays.html#Multidimensional-Arrays" title="Multidimensional Arrays">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Accessing-Array-Elements"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Multidimensional-Arrays.html#Multidimensional-Arrays">Multidimensional Arrays</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Initializing-Arrays.html#Initializing-Arrays">Initializing Arrays</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Arrays.html#Arrays">Arrays</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">2.5.3 Accessing Array Elements</h4>
+
+<p><a name="index-accessing-array-elements-99"></a><a name="index-array-elements_002c-accessing-100"></a>
+You can access the elements of an array by specifying the array name,
+followed by the element index, enclosed in brackets.  Remember that the array
+elements are numbered starting with zero.  Here is an example:
+
+<pre class="example">     my_array[0] = 5;
+</pre>
+   <p>That assigns the value 5 to the first element in the array, at position
+zero.  You can treat individual array elements like variables of whatever
+data type the array is made up of.  For example, if you have an array made
+of a structure data type, you can access the structure elements like this:
+
+<pre class="example">     struct point
+     {
+       int x, y;
+     };
+     
+     struct point point_array[2] = { {4, 5}, {8, 9} };
+     
+     point_array[0].x = 3;
+</pre>
+   </body></html>
+

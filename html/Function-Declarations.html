@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+<title>Function Declarations - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Functions.html#Functions" title="Functions">
+<link rel="next" href="Function-Prototypes.html#Function-Prototypes" title="Function Prototypes">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Function-Declarations"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Function-Prototypes.html#Function-Prototypes">Function Prototypes</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Functions.html#Functions">Functions</a>
+<hr><br>
+</div>
+
+<h3 class="section">5.1 Function Declarations</h3>
+
+<p><a name="index-function-declarations-214"></a><a name="index-declarations_002c-function-215"></a>
+You write a function declaration to specify the name of a function
+and its return type.  A function declaration ends with a semicolon.  Here is
+the general form:
+
+<pre class="example">     <var>return-type</var> <var>function-name</var> ( );
+</pre>
+   <p><var>return-type</var> can be any of the primitive data
+types (see <a href="Data-Types.html#Data-Types">Data Types</a>), a structure type (see <a href="Structures.html#Structures">Structures</a>),
+a union type (see <a href="Unions.html#Unions">Unions</a>), an enumeration type (see <a href="Enumerations.html#Enumerations">Enumerations</a>),
+a pointer type (see <a href="Pointers.html#Pointers">Pointers</a>), or <code>void</code>.  A return type of
+<code>void</code> indicates that the function does not return a value at all.
+
+   <p><var>function-name</var> can be any valid identifier (see <a href="Identifiers.html#Identifiers">Identifiers</a>).
+
+   <p>Here is an example of a function declaration for a function named
+<code>double_value</code> which has a return type of <code>int</code>:
+
+<pre class="example">     int double_value ( );
+</pre>
+   <p>You should write the function declaration above the definition or first use of
+the function.  You can put it in a header file and use the <code>#include</code>
+directive to include that function declartion in any source code files that
+use the function.
+
+<!--  -->
+</body></html>
+

@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+<title>The while Statement - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Statements.html#Statements" title="Statements">
+<link rel="prev" href="The-switch-Statement.html#The-switch-Statement" title="The switch Statement">
+<link rel="next" href="The-do-Statement.html#The-do-Statement" title="The do Statement">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-while-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="The-do-Statement.html#The-do-Statement">The do Statement</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="The-switch-Statement.html#The-switch-Statement">The switch Statement</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Statements.html#Statements">Statements</a>
+<hr><br>
+</div>
+
+<h3 class="section">4.5 The <code>while</code> Statement</h3>
+
+<p><a name="index-_0040code_007bwhile_007d-statement-202"></a>
+The <code>while</code> statement is a loop statement with an exit test at
+the beginning of the loop.  Here is the general form of the <code>while</code>
+statement:
+
+<pre class="example">     while (<var>test</var>)
+       <var>statement</var>
+</pre>
+   <p>The <code>while</code> statement first evaluates <var>test</var>.  If <var>test</var>
+evaluates to true, <var>statement</var> is executed, and then <var>test</var> is
+evaluated again.  <var>statement</var> continues to execute repeatedly as long as
+<var>test</var> is true after each execution of <var>statement</var>.
+
+<pre class="example">     int counter = 0;
+     
+     while (counter &lt; 10)
+       printf ("%d ", counter++);
+</pre>
+   </body></html>
+

@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+<title>Function Definitions - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Functions.html#Functions" title="Functions">
+<link rel="prev" href="Function-Prototypes.html#Function-Prototypes" title="Function Prototypes">
+<link rel="next" href="Calling-Functions.html#Calling-Functions" title="Calling Functions">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Function-Definitions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Calling-Functions.html#Calling-Functions">Calling Functions</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Function-Prototypes.html#Function-Prototypes">Function Prototypes</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Functions.html#Functions">Functions</a>
+<hr><br>
+</div>
+
+<h3 class="section">5.3 Function Definitions</h3>
+
+<p><a name="index-function-definitions-218"></a><a name="index-definitions_002c-function-219"></a>
+You write a function definition to specify what a function
+actually does.  A function definition consists of information regarding
+the function's name, return type, and types and names of parameters, along
+with the body of the function.  The function body is a series of statements
+enclosed in braces.  Here is the general form of a function definition:
+
+<pre class="example">     <var>return-type</var>
+     <var>function-name</var> (<var>parameter-list</var>)
+     {
+       <var>function-body</var>
+     }
+</pre>
+   <p><var>return-type</var> and <var>function-name</var> are described in the section
+about function declarations (see <a href="Function-Declarations.html#Function-Declarations">Function Declarations</a>), and you
+should use the same return types and function names in a function
+definition that you used in that function's declaration or prototype.
+
+   <p><var>parameter-list</var> is similar to the parameter list described in
+the function prototype section (see <a href="Function-Prototypes.html#Function-Prototypes">Function Prototypes</a>), except you
+<em>must</em> include names for the parameters in a function definition.
+
+   <p>Here is an simple example of a function definition&mdash;it takes two integers as
+its parameters and returns the sum of them as its return value:
+
+<pre class="example">     int
+     add_values (int x, int y)
+     {
+       return x + y;
+     }
+</pre>
+   <p>You can also specify the type of the function parameters on the <em>after</em>
+the closing parentheses of the parameter list, like this:
+
+<pre class="example">     int
+     add_values (x, y)
+                 int x, int y;
+     {
+       return x + y;
+     }
+</pre>
+   <!--  -->
+</body></html>
+

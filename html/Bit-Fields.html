@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+<title>Bit Fields - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Structures.html#Structures" title="Structures">
+<link rel="prev" href="Accessing-Structure-Members.html#Accessing-Structure-Members" title="Accessing Structure Members">
+<link rel="next" href="Size-of-Structures.html#Size-of-Structures" title="Size of Structures">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Bit-Fields"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Size-of-Structures.html#Size-of-Structures">Size of Structures</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Accessing-Structure-Members.html#Accessing-Structure-Members">Accessing Structure Members</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Structures.html#Structures">Structures</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">2.4.4 Bit Fields</h4>
+
+<p><a name="index-bit-fields-88"></a><a name="index-fields_002c-bit-89"></a>
+You can create structures with integer members of nonstandard sizes, called
+<em>bit fields</em>.  You do this by specifying an integer (<code>int</code>,
+<code>char</code>, <code>long int</code>, etc.) member as usual, and inserting a colon
+and the number of bits that the member should occupy in between the
+member's name and the semicolon.
+
+<pre class="example">     struct card
+       {
+         unsigned int suit : 2;
+         unsigned int face_value : 4;
+       };
+</pre>
+   <p>That example defines a structure type with two bit fields, <code>suit</code> and
+<code>face_value</code>, which take up 2 bits and 4 bits, respectively.  <code>suit</code>
+can hold values from 0 to 3, and <code>face_value</code> can hold values from 0 to
+15.  Notice that these bit fields were declared as <code>unsigned int</code>; had
+they been signed integers, then their ranges would have been from -2 to 1, and
+from -8 to 7, respectively.
+
+   <p>More generally, the range of an unsigned bit field of N bits is from
+0 to 2^N - 1, and the range of a signed bit field of N bits is from
+-(2^N) / 2 to ((2^N) / 2) - 1.
+
+   </body></html>
+

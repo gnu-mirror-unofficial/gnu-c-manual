@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+<title>Variable Length Parameter Lists - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Function-Parameters.html#Function-Parameters" title="Function Parameters">
+<link rel="prev" href="Pass-By-Reference-Parameters.html#Pass-By-Reference-Parameters" title="Pass By Reference Parameters">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Variable-Length-Parameter-Lists"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="Pass-By-Reference-Parameters.html#Pass-By-Reference-Parameters">Pass By Reference Parameters</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Function-Parameters.html#Function-Parameters">Function Parameters</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">5.5.3 Variable Length Parameter Lists</h4>
+
+<p><a name="index-variable-length-parameter-lists-231"></a><a name="index-parameters-lists_002c-variable-length-232"></a><a name="index-function-parameter-lists_002c-variable-length-233"></a>
+You can write a function that takes a variable number of arguments.  To
+do this, the function needs to have at least one parameter of a known
+data type, but the remaining parameters are optional, and can vary in both
+quantity and data type.
+
+   <p>You list the first parameter as normal, but then as the second parameter,
+use an ellipsis: <span class="samp">...</span>.  Here is an example function prototype:
+
+<pre class="example">     int add_multiple_values (int number, ...);
+</pre>
+   <p>To work with the optional parameters in the function definition, you need
+to use macro functions that are defined in the libary header file
+<span class="samp">stdarg.h</span>.  So be sure to <code>include</code> that file.  Those functions
+are described in <cite>The GNU C Library Reference Manual</cite>, but here is
+an example of using them:
+
+<pre class="example">     int
+     add_multiple_values (int number, ...)
+     {
+       int counter, total = 0;
+     
+       /* <span class="roman">Declare a variable of type va_list.</span> */
+       va_list parameters;
+     
+       /* <span class="roman">Call the va_start function.</span> */
+       va_start (parameters, number);
+     
+       for (counter = 0; counter &lt; number; counter++)
+         {
+           /* <span class="roman">Get the values of the optional parameters.</span> */
+           total += va_arg (parameters, int);
+         }
+     
+       /* <span class="roman">End use of the parameters variable.</span> */
+       va_end (parameters);
+     
+       return total;
+     }
+</pre>
+   <p>To use optional parameters, you should have a way to know how many
+there are.  This can vary, so it can't be hard-coded, but if you
+don't know how many optional parameters you have, then you could
+have difficulty knowing when to stop using the <span class="samp">va_arg</span> function. 
+In the above example, the first parameter to the <span class="samp">add_multiple_values</span>
+function, <span class="samp">number</span>, was the number of optional parameters included. 
+So, we might call the function like this:
+
+<pre class="example">     sum = add_multiple_values (3, 12, 34, 190);
+</pre>
+   <p>The first parameter indicates how many optional parameters follow it.
+
+   <p>Also, note that you don't actually need to use <span class="samp">va_end</span> function. 
+In fact, with GCC it doesn't do anything at all.  However, you might want
+to include it to maximumize compatibility with other compilers.
+
+<!--  -->
+</body></html>
+

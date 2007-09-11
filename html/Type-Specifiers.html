@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+<title>Type Specifiers - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Data-Types.html#Data-Types" title="Data Types">
+<link rel="prev" href="Incomplete-Types.html#Incomplete-Types" title="Incomplete Types">
+<link rel="next" href="Storage-Class-Specifiers.html#Storage-Class-Specifiers" title="Storage Class Specifiers">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Type-Specifiers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Storage-Class-Specifiers.html#Storage-Class-Specifiers">Storage Class Specifiers</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Incomplete-Types.html#Incomplete-Types">Incomplete Types</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Data-Types.html#Data-Types">Data Types</a>
+<hr><br>
+</div>
+
+<h3 class="section">2.8 Type Specifiers</h3>
+
+<p><a name="index-type-specifiers-129"></a><a name="index-specifiers_002c-type-130"></a><a name="index-_0040code_007bconst_007d-type-specifier-131"></a><a name="index-_0040code_007bvolatile_007d-type-specifier-132"></a>
+There are two type specifiers that you can prepend to your variable declarations
+which change how the variables may be accessed:  <code>const</code> and <code>volatile</code>.
+
+   <p><code>const</code> causes the variable to be read-only; after initialization, its
+value may not be changed.
+
+<pre class="example">     const float pi = 3.14159;
+</pre>
+   <p class="noindent">In addition to helping to prevent accidental value changes, declaring variables
+with <code>const</code> can aid the compiler in code optimization.
+
+   <p><code>volatile</code> tells the compiler that the variable is explicitly changeable,
+and seemingly useless accesses of the variable (for instance, via pointers) should
+not be optimized away.  You might use <code>volatile</code> variables to store data
+that is updated via callback functions.
+
+<pre class="example">     volatile float currentTemperature = 40.0;
+</pre>
+   <!--  -->
+</body></html>
+

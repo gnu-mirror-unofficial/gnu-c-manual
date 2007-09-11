@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+<title>The Compound Assignment Operators - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Assignment-Operators.html#Assignment-Operators" title="Assignment Operators">
+<link rel="prev" href="The-Assignment-Operator.html#The-Assignment-Operator" title="The Assignment Operator">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-Compound-Assignment-Operators"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="The-Assignment-Operator.html#The-Assignment-Operator">The Assignment Operator</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Assignment-Operators.html#Assignment-Operators">Assignment Operators</a>
+<hr><br>
+</div>
+
+<h5 class="subsubsection">3.3.12.2 The Compound Assignment Operators</h5>
+
+<p><a name="index-compound-assignment-operators-181"></a><a name="index-assignment-operators_002c-compound-182"></a>
+
+   <p>You use the compound assignment operators to perform an operation on
+both the left and right operands, and then assign the resulting
+expression to the left operand.  Here is a list of the compound
+assignment operators, and a brief description of what they do:
+
+     <ul>
+<li><code>+=</code>
+
+     <p>This operator adds its two operands together, and then assigns the result of
+the addition to the left operand.
+
+     <li><code>-=</code>
+
+     <p>This operator subtracts its right operand from its left operand, and
+assigns the result of the subtraction to the left operand.
+
+     <li><code>*=</code>
+
+     <p>This operator multiplies its two operands together, and then assigns the
+result of the multiplication to the left operand.
+
+     <li><code>/=</code>
+
+     <p>This operator divides its left operand by its right operand, and assigns
+the result of the division to the left operand.
+
+     <li><code>%=</code>
+
+     <p>This operator performs modular division on its operands, and assigns the
+result of the division to the left operand.
+
+     <li><code>&lt;&lt;=</code>
+
+     <p>This operator performs a left shift operation on its left operand, shifting
+by the number of bits specified by the right operand, and assigns the
+result of the shift to the left operand.
+
+     <li><code>&gt;&gt;=</code>
+
+     <p>This operator performs a right shift operation on its left operand,
+shifting by the number of bits specified by the right operand, and assigns
+the result of the shift to the left operand.
+
+     <li><code>&amp;=</code>
+
+     <p>This operator performs a bitwise AND operation on its two operands, and
+assigns the result of the operation to the left operand.
+
+     <li><code>^=</code>
+
+     <p>This operator performs a bitwise exclusive OR operation on its two operands,
+and assigns the result of the operation to the left operand.
+
+     <li><code>|=</code>
+
+     <p>This operator performs a bitwise inclusive OR operation on its two
+operands, and assigns the result of the operation to the left operand.
+
+   </ul>
+   <!-- __End of compound assignment operator list -->
+
+   <p>Here is an example of using one of the compound assignment operators:
+
+<pre class="example">     x += y;
+</pre>
+   <p class="noindent">That produces the same result as:
+
+<pre class="example">     x = x + y;
+</pre>
+   <!-- GNU C Extension - temporarily commented out for manual 0.1 -->
+<!-- @node Generalized Lvalues -->
+<!-- @subsubsection Generalized Lvalues -->
+<!-- @cindex compound expressions as lvalues -->
+<!-- @cindex expressions, compound, as lvalues -->
+<!-- @cindex conditional expressions as lvalues -->
+<!-- index expressions, conditional, as lvalues -->
+<!-- @cindex casts as lvalues -->
+<!-- @cindex generalized lvalues -->
+<!-- @cindex lvalues, generalized -->
+<!-- @cindex extensions, @code{?:} -->
+<!-- @cindex @code{?:} extensions -->
+<!-- Compound expressions, conditional expressions and casts are allowed as -->
+<!-- lvalues provided their operands are lvalues.  This means that you can take -->
+<!-- their addresses or store values into them. -->
+<!-- For example, you can assign a value to a compound expression, provided the -->
+<!-- last expression in the sequence is an lvalue.  These two expressions are -->
+<!-- equivalent: -->
+<!-- @example -->
+<!-- (a, b) += 5 -->
+<!-- a, (b += 5) -->
+<!-- @end example -->
+<!-- Similarly, you can take the address of a compound expression.  So, these two -->
+<!-- expressions are equivalent: -->
+<!-- @example -->
+<!-- &(a, b) -->
+<!-- a, &b -->
+<!-- @end example -->
+<!-- A conditional expression is a valid lvalue if its type is not void and if -->
+<!-- both the second and third operands are valid lvalues.  For example, these two -->
+<!-- expressions are equivalent: -->
+<!-- @example -->
+<!-- (a ? b : c) = 5 -->
+<!-- (a ? b = 5 : (c = 5)) -->
+<!-- @end example -->
+<!-- A type cast is a valid lvalue if its operand is an lvalue.  A simple -->
+<!-- assignment whose left-hand side is a cast works by converting the -->
+<!-- right-hand side first to the specified type, then to the type of the -->
+<!-- inner left-hand side expression.  After this is stored, the value is -->
+<!-- converted back to the specified type to become the value of the -->
+<!-- assignment.  Thus, if @code{a} has type @code{char *}, the following two -->
+<!-- expressions are equivalent: -->
+<!-- @example -->
+<!-- (int)a = 5 -->
+<!-- (int)(a = (char *)(int)5) -->
+<!-- @end example -->
+<!-- An assignment-with-arithmetic operation such as @code{+=} applied to a cast -->
+<!-- performs the arithmetic using the type resulting from the cast, and then -->
+<!-- continues as in the previous case.  Therefore, these two expressions are -->
+<!-- equivalent: -->
+<!-- @example -->
+<!-- (int)a += 5 -->
+<!-- (int)(a = (char *)(int) ((int)a + 5)) -->
+<!-- @end example -->
+<!-- You cannot take the address of an lvalue cast, because the use of its -->
+<!-- address would not work out coherently.  Suppose that @code{&(int)f} were -->
+<!-- permitted, where @code{f} has type @code{float}.  Then the following -->
+<!-- statement would try to store an integer bit-pattern where a floating -->
+<!-- point number belongs: -->
+<!-- @example -->
+<!-- *&(int)f = 1; -->
+<!-- @end example -->
+<!-- This is quite different from what @code{(int)f = 1} would do-that -->
+<!-- would convert 1 to floating point and store it.  Rather than cause this -->
+<!-- inconsistency, we think it is better to prohibit use of @code{&} on a cast. -->
+<!-- If you really do want an @code{int *} pointer with the address of -->
+<!-- @code{f}, you can simply write @code{(int *)&f}. -->
+</body></html>
+

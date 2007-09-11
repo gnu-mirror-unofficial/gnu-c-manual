@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+<title>The if Statement - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Statements.html#Statements" title="Statements">
+<link rel="prev" href="Labels.html#Labels" title="Labels">
+<link rel="next" href="The-switch-Statement.html#The-switch-Statement" title="The switch Statement">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-if-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="The-switch-Statement.html#The-switch-Statement">The switch Statement</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Labels.html#Labels">Labels</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Statements.html#Statements">Statements</a>
+<hr><br>
+</div>
+
+<h3 class="section">4.3 The <code>if</code> Statement</h3>
+
+<p><a name="index-_0040code_007bif_007d-statements-199"></a><a name="index-_0040code_007belse_007d-statements-200"></a>
+You can use the <code>if</code> statement to conditionally execute a section
+of your program, based on the truth value of a given expression.
+
+   <p>You can use the <code>if</code> statement to conditionally execute part of your
+program, based on the truth value of a given expression.  Here is the
+general form of an <code>if</code> statement:
+
+<pre class="example">     if (<var>test</var>)
+       <var>then-statement</var>
+     else
+       <var>else-statement</var>
+</pre>
+   <p>If <var>test</var> evaluates to true, then <var>then-statement</var> is executed and
+<var>else-statement</var> is not.  If <var>test</var> evaluates to false, then
+<var>else-statement</var> is executed and <var>then-statement</var> is not.  The
+<code>else</code> clause is optional.
+
+   <p>Here is an actual example:
+
+<pre class="example">     if (x == 10)
+       printf ("x is 10");
+</pre>
+   <p>If <code>x == 10</code> evaluates to true, then the statement
+<code>printf("x is 10");</code> is executed.  If <code>x == 10</code> evaluates to
+false, then the statement <code>printf ("x is 10");</code> is not executed.
+
+   <p>Here is an example using <code>else</code>:
+
+<pre class="example">     if (x == 10)
+       printf("x is 10");
+     else
+       printf("x is not 10");
+</pre>
+   <p>You can use a series of <code>if</code> statements to test for multiple
+conditions:
+
+<pre class="example">     if (x == 1)
+       printf ("x is 1");
+     else if (x == 2)
+       printf ("x is 2");
+     else if (x == 3)
+       printf ("x is 3");
+     else
+       printf ("x is something else");
+</pre>
+   </body></html>
+

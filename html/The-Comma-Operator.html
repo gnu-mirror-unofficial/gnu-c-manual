@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+<title>The Comma Operator - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Binary-Operators.html#Binary-Operators" title="Binary Operators">
+<link rel="prev" href="Assignment-Operators.html#Assignment-Operators" title="Assignment Operators">
+<link rel="next" href="Member-Access-Operators.html#Member-Access-Operators" title="Member Access Operators">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-Comma-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Member-Access-Operators.html#Member-Access-Operators">Member Access Operators</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Assignment-Operators.html#Assignment-Operators">Assignment Operators</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Binary-Operators.html#Binary-Operators">Binary Operators</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">3.3.13 The Comma Operator</h4>
+
+<p><a name="index-comma-operator-183"></a>
+You use the comma operator <code>,</code> to separate two expressions.  These
+expressions don't have to be related at all, but often the first expression
+produces a value that is used by the second expression.
+
+<pre class="example">     int x = 5, y = 10;
+     
+     x++, y = x * x;
+</pre>
+   <p>More commonly, the comma operator is used in <code>for</code> statements, like
+this:
+
+<pre class="example">     /* <span class="roman">Using the comma operator in a </span><code>for</code><span class="roman"> statement.</span> */
+     
+     for (x = 1, y = 10;  x &lt;=10 &amp;&amp; y &gt;=1;  x++, y--)
+       {
+         ...
+       }
+</pre>
+   <p>A comma is also used to separate function parameters; however, this
+is <em>not</em> the comma operator in action.   In fact, if the comma
+operator is used as we have discussed here in a function call (without
+enclosing it in an additional set of parentheses), then the compiler will
+interpret that as calling the function with an extra parameter.
+
+<pre class="example">     function (x,  y=47, y,  z);
+</pre>
+   <p>Even though what may be intended by such a function call is to
+call the function with the parameters <code>x</code>, <code>y</code>, and
+<code>z</code>, with <code>y</code> set to 47, what will happen is that the
+function will be called with the parameters <code>x</code>, <code>y=47</code>,
+<code>y</code>, and <code>z</code>.  So if you want to include expressions that
+use the comma operator in a function call, surround the comma operator
+expression with parentheses.
+
+<pre class="example">     function (x,  (y=47, y),  z);
+</pre>
+   <p>That will call <code>function</code> with the parameters <code>x</code>,
+<code>y</code>, and <code>z</code>, with <code>y</code> set to 47.
+
+   </body></html>
+

@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+<title>Order of Evaluation - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Expressions-and-Operators.html#Expressions-and-Operators" title="Expressions and Operators">
+<link rel="prev" href="The-Ternary-Operator.html#The-Ternary-Operator" title="The Ternary Operator">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Order-of-Evaluation"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="The-Ternary-Operator.html#The-Ternary-Operator">The Ternary Operator</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Expressions-and-Operators.html#Expressions-and-Operators">Expressions and Operators</a>
+<hr><br>
+</div>
+
+<h3 class="section">3.5 Order of Evaluation</h3>
+
+<p><a name="index-order-of-evaluation-189"></a><a name="index-evaluation_002c-order-of-190"></a><a name="index-operator-precedence-191"></a><a name="index-precedence_002c-operator-192"></a>
+When an expression consists of subexpressions, such as
+<code>a + b * f()</code>, the subexpressions are not all evaluated at once,
+nor are they necessarily evaluated left to right as they appear in the
+expression.  In the preceding example, for instance, the function call
+<code>f()</code> will be evaluated first, the result of which will be multiplied
+by <code>b</code>, the result of which will be added to <code>a</code>.  That is not
+intuitive simply by looking at the expression, but there is a definite
+order in which subexpressions are evaluated.
+
+   <p>The following is a list of types of expressions, presented in the same
+order that they are evaluated.  The expressions that are evaluated first
+are said to have the highest precedence, and those that are evaluated last
+the low precedence.  Some types of expressions have the same precedence. 
+If two or more subexpressions have the same precedence, then they
+are usually evaluated left to right.  If they are <em>not</em> evaluated
+left to right, then that is explicitly stated in the list.
+
+<!-- I do not know where the complex conjugation operator belongs -->
+<!-- in this list, though this doesn't matter for the C89 material.  -TJR -->
+<ol type=1 start=1>
+
+     <li>Function calls, array subscripting, and membership access operator
+expressions.
+
+     <li>Logical negation, bitwise complement, increment, decrement, unary positive,
+unary negative, indirection operator, address operator, type casting, and
+<code>sizeof</code> expressions.  When used as subexpressions, these are evaluated
+right to left.
+
+     <li>Multiplication, division, and modular division expressions.
+
+     <li>Addition and subtraction expressions.
+
+     <li>Bitwise shifting expressions.
+
+     <li>Greater-than, less-than, greater-than-or-equal-to, and less-than-or-equal-to
+expressions.
+
+     <li>Equal-to and not-equal-to expressions.
+
+     <li>Bitwise AND expressions.
+
+     <li>Bitwise exclusive OR expressions.
+
+     <li>Bitwise inclusive OR expressions.
+
+     <li>Logical AND expressions.
+
+     <li>Logical OR expressions.
+
+     <li>Conditional operator expressions (using <code>?:</code>).  When used as
+subexpressions, these are evaluated right to left.
+
+     <li>All assignment expressions, including compound assignment.  When multiple
+assignment statements appear as subexpressions in a single larger expression,
+they are evaluated right to left.
+
+     <li>Comma operator expressions.
+
+        </ol>
+
+<!-- This is part of The GNU C Reference Manual -->
+<!-- Copyright (C) 2003, 2004, 2006, 2007 Free Software Foundation, Inc. -->
+<!-- See the file gnu-c-manual.texi for copying conditions. -->
+</body></html>
+

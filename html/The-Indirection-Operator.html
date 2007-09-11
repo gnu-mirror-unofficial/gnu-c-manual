@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+<title>The Indirection Operator - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Unary-Operators.html#Unary-Operators" title="Unary Operators">
+<link rel="prev" href="The-Address-Operator.html#The-Address-Operator" title="The Address Operator">
+<link rel="next" href="The-sizeof-Operator.html#The-sizeof-Operator" title="The sizeof Operator">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-Indirection-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="The-sizeof-Operator.html#The-sizeof-Operator">The sizeof Operator</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="The-Address-Operator.html#The-Address-Operator">The Address Operator</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Unary-Operators.html#Unary-Operators">Unary Operators</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">3.2.8 The Indirection Operator</h4>
+
+<p><a name="index-indirection-operator-152"></a>
+You can use the indirection operator <code>*</code> to obtain the value stored
+at the address specified by its operand.  This is known as
+<dfn>dereferencing</dfn> its operand.  Its operand must be a pointer.
+
+<pre class="example">     int x = 5;
+     int y;
+     int *ptr;
+     
+     ptr = &amp;x;    /* <code>ptr</code><span class="roman"> now holds the address of </span><code>x</code><span class="roman">.</span> */
+     
+     y = *ptr;    /* <code>y</code><span class="roman"> gets the value stored at the address</span>
+                     <span class="roman">stored in </span><code>ptr</code><span class="roman">.</span> */
+</pre>
+   <p>Be sure to only use the indirection operator with pointers that have
+been initialized.  Otherwise, the value stored in those pointers probably
+won't be anything you want to use.
+
+<!-- GNU C Extension - temporarily commented out for manual release 0.1, covering ANSI C89 -->
+<!-- @node The Complex Conjugation Operator -->
+<!-- @subsection The Complex Conjugation Operator -->
+<!-- @cindex complex conjugation operator -->
+<!-- @cindex conjugation operator -->
+<!-- You can use the complex conjugation operator @code{~} to perform complex -->
+<!-- conjugation on its operand - that is, it reverses the sign of its -->
+<!-- imaginary component.   The operand must be an expression of a complex number -->
+<!-- type.  Here is an example: -->
+<!-- @example -->
+<!-- @group -->
+<!-- __complex__ int x = 5 + 17i; -->
+<!-- printf ("%d  \n", (x * ~x)); -->
+<!-- @end group -->
+<!-- @end example -->
+<!-- Since an imaginary number @math{(a + bi)} multiplied by its conjugate is equal -->
+<!-- to @math{a^2 + b^2}, the above @code{printf} statement will print 314, which -->
+<!-- is equal to @math{25 + 289}. -->
+</body></html>
+

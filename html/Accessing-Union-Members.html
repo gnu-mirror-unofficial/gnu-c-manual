@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+<title>Accessing Union Members - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Unions.html#Unions" title="Unions">
+<link rel="prev" href="Declaring-Union-Variables.html#Declaring-Union-Variables" title="Declaring Union Variables">
+<link rel="next" href="Size-of-Unions.html#Size-of-Unions" title="Size of Unions">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Accessing-Union-Members"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Size-of-Unions.html#Size-of-Unions">Size of Unions</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Declaring-Union-Variables.html#Declaring-Union-Variables">Declaring Union Variables</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Unions.html#Unions">Unions</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">2.3.3 Accessing Union Members</h4>
+
+<p><a name="index-accessing-union-members-69"></a><a name="index-union-members_002c-accessing-70"></a>
+You can access the members of a union variable using the member
+access operator <code>.</code> .  You put the name of the union
+variable on the left side of the operator, and the name of the
+member on the right side.
+
+<pre class="example">     union numbers
+       {
+         int i;
+         float f;
+       };
+     
+     union numbers first_number;
+     
+     first_number.i = 5;
+     
+     first_number.f = 3.9;
+</pre>
+   <p>Notice in that example that giving a value to the <code>f</code> member overrides
+the value stored in the <code>i</code> member.
+
+   </body></html>
+

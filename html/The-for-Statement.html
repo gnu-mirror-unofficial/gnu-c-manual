@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+<title>The for Statement - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Statements.html#Statements" title="Statements">
+<link rel="prev" href="The-do-Statement.html#The-do-Statement" title="The do Statement">
+<link rel="next" href="Blocks.html#Blocks" title="Blocks">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-for-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Blocks.html#Blocks">Blocks</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="The-do-Statement.html#The-do-Statement">The do Statement</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Statements.html#Statements">Statements</a>
+<hr><br>
+</div>
+
+<h3 class="section">4.7 The <code>for</code> Statement</h3>
+
+<p><a name="index-_0040code_007bfor_007d-statement-204"></a>
+The <code>for</code> statement is a loop statement whose structure allows
+easy variable initialization, expression testing, and variable
+modification.  It is very convenient for making counter-controlled
+loops.  Here is the general form of the <code>for</code> statement:
+
+<pre class="example">     for (<var>initialize</var>; <var>test</var>; <var>step</var>)
+       <var>statement</var>;
+</pre>
+   <p>The <code>for</code> statement first evaluates the expression <var>initialize</var>. 
+Then it evaluates the expression <var>test</var>.  If <var>test</var> is false, then
+the loop ends and program control resumes after <var>statement</var>.  Otherwise,
+if <var>test</var> is true, then <var>statement</var> is executed.  Finally,
+<var>step</var> is evaluated, and the next iteration of the loop begins with
+evaluating <var>test</var> again.
+
+   <p>Most often, <var>initialize</var> assigns values to one or more variables,
+which are generally used as counters,  <var>test</var> compares those
+variables to a predefined expression, and <var>step</var> modifies those
+variables' values.  Here is an example:
+
+<pre class="example">     int x;
+     
+     for (x = 1; x &lt;= 10; x++)
+       printf ("%d ", x);
+</pre>
+   <p>This example prints the integers from 1 to 10, inclusive.  First, it evaluates
+<var>initialize</var>, which assigns <code>x</code> the value 1.  Then, as long as
+<code>x</code> is less than or equal to 10, the value of <code>x</code> is printed and
+incremented.
+
+   <p>All three of the expressions in a <code>for</code> statement are optional, and any
+combination of the three is valid.  Since the first expression is evaluated
+only once, it is perhaps the most commonly omitted expression.  You could
+also write the above example as:
+
+<pre class="example">     int x = 1;
+     
+     for (; x &lt;= 10; x++)
+       printf ("%d ", x);
+</pre>
+   <p class="noindent">In this example, <code>x</code> receives its value prior to the beginning of the
+<code>for</code> statement.
+
+   <p>If you leave out the <var>test</var> expression, then the <code>for</code> statement
+is an infinite loop (unless you put a <code>break</code> or <code>goto</code> statement
+somewhere in <var>statement</var>).  This is like using <code>1</code> as
+<var>test</var>; it is never false.
+
+<pre class="example">     for (x = 1; ; x++)
+       printf ("%d ", x);
+</pre>
+   <p class="noindent">This <code>for</code> statement starts printing numbers at 1 and then
+continues indefinitely, always printing <code>x</code> incremented by 1.
+
+   <p>If you leave out the <var>step</var> expression, then no progress is made
+toward completing the loop&mdash;at least not as is normally expected with
+a <code>for</code> statement.
+
+<pre class="example">     for (x = 1; x &lt;= 10;)
+       printf ("%d ", x);
+</pre>
+   <p class="noindent">This example prints 1 over and over, indefinitely.
+
+   <p>You can use the comma operator for monitoring and modifying multiple
+variables in a <code>for</code> statement:
+
+<!-- Comma operator reference -->
+<pre class="example">     for (x = 1, y = 10; x &lt;= 10, y &gt;= 1; x++, y--)
+       printf ("%d %d ", x, y);
+</pre>
+   <p>This example assigns values to both <code>x</code> and <code>y</code>, checks that
+<code>x</code> is less than or equal to 10 and that <code>y</code> is greater
+than or equal to 1, and increments <code>x</code> and decrements <code>y</code>.
+
+   </body></html>
+

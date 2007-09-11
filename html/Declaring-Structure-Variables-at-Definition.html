@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+<title>Declaring Structure Variables at Definition - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Declaring-Structure-Variables.html#Declaring-Structure-Variables" title="Declaring Structure Variables">
+<link rel="next" href="Declaring-Structure-Variables-After-Definition.html#Declaring-Structure-Variables-After-Definition" title="Declaring Structure Variables After Definition">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Declaring-Structure-Variables-at-Definition"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Declaring-Structure-Variables-After-Definition.html#Declaring-Structure-Variables-After-Definition">Declaring Structure Variables After Definition</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Declaring-Structure-Variables.html#Declaring-Structure-Variables">Declaring Structure Variables</a>
+<hr><br>
+</div>
+
+<h5 class="subsubsection">2.4.2.1 Declaring Structure Variables at Definition</h5>
+
+<p><a name="index-declaring-structure-variables-at-definition-80"></a><a name="index-structure-variables_002c-declaring-at-definition-81"></a>
+You can declare variables of a structure type when you define the
+structure type by putting the variable names after the closing
+brace of the structure definition, but before the final semicolon. 
+You can declare more than one such variable by separating the names
+with commas.
+
+<pre class="example">     struct point
+       {
+         int x, y;
+       } first_point, second_point;
+</pre>
+   <p>That example declares two variables of type <code>struct point</code>,
+<code>first_point</code> and <code>second_point</code>.
+
+   </body></html>
+

@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+<title>The return Statement - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Statements.html#Statements" title="Statements">
+<link rel="prev" href="The-continue-Statement.html#The-continue-Statement" title="The continue Statement">
+<link rel="next" href="The-typedef-Statement.html#The-typedef-Statement" title="The typedef Statement">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-return-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="The-typedef-Statement.html#The-typedef-Statement">The typedef Statement</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="The-continue-Statement.html#The-continue-Statement">The continue Statement</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Statements.html#Statements">Statements</a>
+<hr><br>
+</div>
+
+<h3 class="section">4.13 The <code>return</code> Statement</h3>
+
+<p><a name="index-_0040code_007breturn_007d-statement-211"></a>
+You can use the <code>return</code> statement to end the execution of a function
+and return program control to the function that called it.  Here is the
+general form of the <code>return</code> statement:
+
+<pre class="example">     return <var>return-value</var>;
+</pre>
+   <p><var>return-value</var> is an optional expression to return.  If the
+function's return type is <code>void</code>, then it is invalid to return
+an expression.  You can, however, use the <code>return</code> statement
+without a return value.
+
+   <p>If the function's return type is not the same as the type of
+<var>return-value</var>, and automatic type conversion cannot be performed,
+then returning <var>return-value</var> is invalid.
+
+<!-- Reference to type conversion -->
+<p>If the function's return type is not <code>void</code> and no return value
+is specified, then the <code>return</code> statement is valid unless the
+function is called in a context that requires a return value.  For
+example:
+
+<pre class="example">     x = cosine (y);
+</pre>
+   <p>In that case, the function <code>cosine</code> was called in a context that
+required a return value, so the value could be assigned to <code>x</code>.
+
+   <p>Even in contexts where a return value is not required, it is a bad idea
+for a non-<code>void</code> function to omit the return value.  With GCC, you
+can use the command line option <code>-Wreturn-type</code> to issue a warning
+if you omit the return value in such functions.
+
+   <p>Here are some examples of using the <code>return</code> statement, in both
+a <code>void</code> and non-<code>void</code> function:
+
+<pre class="example">     void
+     print_plus_five (int x)
+     {
+       printf ("%d ", x + 5);
+       return;
+     }
+</pre>
+   <pre class="example">     int
+     square_value (int x)
+     {
+       return x * x;
+     }
+</pre>
+   </body></html>
+

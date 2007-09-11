@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+<title>Incomplete Types - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Data-Types.html#Data-Types" title="Data Types">
+<link rel="prev" href="Pointers.html#Pointers" title="Pointers">
+<link rel="next" href="Type-Specifiers.html#Type-Specifiers" title="Type Specifiers">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Incomplete-Types"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Type-Specifiers.html#Type-Specifiers">Type Specifiers</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Pointers.html#Pointers">Pointers</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Data-Types.html#Data-Types">Data Types</a>
+<hr><br>
+</div>
+
+<h3 class="section">2.7 Incomplete Types</h3>
+
+<p><a name="index-incomplete-types-124"></a><a name="index-types_002c-incomplete-125"></a><a name="index-structures_002c-incomplete-126"></a><a name="index-enumerations_002c-incomplete-127"></a><a name="index-unions_002c-incomplete-128"></a>
+You can define structures, unions, and enumerations without listing their
+members (or values, in the case of enumerations).  Doing so results in
+an incomplete type.  You can't declare variables of incomplete types, but
+you can work with pointers to those types.
+
+<pre class="example">     struct point;
+</pre>
+   <p>At some time later in your program you will want to complete
+the type.  You do this by defining it as you usually would:
+
+<pre class="example">     struct point
+       {
+         int x, y;
+       };
+</pre>
+   <!--  -->
+</body></html>
+

@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+<title>Declaring Arrays - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Arrays.html#Arrays" title="Arrays">
+<link rel="next" href="Initializing-Arrays.html#Initializing-Arrays" title="Initializing Arrays">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Declaring-Arrays"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Initializing-Arrays.html#Initializing-Arrays">Initializing Arrays</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Arrays.html#Arrays">Arrays</a>
+<hr><br>
+</div>
+
+<h4 class="subsection">2.5.1 Declaring Arrays</h4>
+
+<p><a name="index-declaring-arrays-95"></a><a name="index-arrays_002c-declaring-96"></a>
+You declare an array by specifying the data type for its elements, its name,
+and the number of elements it can store.  Here is an example that declares
+an array that can store ten integers:
+
+<pre class="example">     int my_array[10];
+</pre>
+   <p>The number of elements in an array must be positive.
+
+<!-- GNU C only -->
+<!-- The number of elements can be as small as zero, but it cannot be negative. -->
+<!-- GNU C only - release 0.1 of manual for ANSI C89 -->
+<!-- Zero-length arrays are useful as the last element of a structure which is -->
+<!-- really a header for a variable-length object: -->
+<!-- @example -->
+<!-- @group -->
+<!-- struct line -->
+<!-- @{ -->
+<!-- int length; -->
+<!-- char contents[0]; -->
+<!-- @}; -->
+<!-- @{ -->
+<!-- struct line *this_line = (struct line *) -->
+<!-- malloc (sizeof (struct line) + this_length); -->
+<!-- this_line -> length = this_length; -->
+<!-- @} -->
+<!-- @end group -->
+<!-- @end example -->
+<!-- GNU C extension -->
+<!-- You can also declare an array size using a variable instead of a constant. -->
+<!-- For example, here is a function definition that declares an array using its -->
+<!-- parameter as the number of elements: -->
+<!-- @example -->
+<!-- @group -->
+<!-- int -->
+<!-- my_function (int number) -->
+<!-- @{ -->
+<!-- int my_array[number]; -->
+<!-- @dots{}; -->
+<!-- @} -->
+<!-- @end group -->
+<!-- @end example -->
+</body></html>
+

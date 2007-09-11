@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+<title>Storage Class Specifiers - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Data-Types.html#Data-Types" title="Data Types">
+<link rel="prev" href="Type-Specifiers.html#Type-Specifiers" title="Type Specifiers">
+<link rel="next" href="Renaming-Types.html#Renaming-Types" title="Renaming Types">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Storage-Class-Specifiers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="Renaming-Types.html#Renaming-Types">Renaming Types</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Type-Specifiers.html#Type-Specifiers">Type Specifiers</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Data-Types.html#Data-Types">Data Types</a>
+<hr><br>
+</div>
+
+<h3 class="section">2.9 Storage Class Specifiers</h3>
+
+<p><a name="index-storage-class-specifiers-133"></a><a name="index-specifiers_002c-storage-class-134"></a><a name="index-_0040code_007bauto_007d-storage-class-specifier-135"></a><a name="index-_0040code_007bextern_007d-storage-class-specifier-136"></a><a name="index-_0040code_007bregister_007d-storage-class-specifier-137"></a><a name="index-_0040code_007bstatic_007d-storage-class-specifier-138"></a>
+There are four storage class specifiers that you can prepend to your variable
+declarations which change how the variables are stored in memory:
+<code>auto</code>, <code>extern</code>, <code>register</code>, and <code>static</code>.
+
+   <p>You use <code>auto</code> for variables which are local to a function, and whose
+values should be discarded upon return from the function in which they are
+declared.  This is the default behavior for variables declared within functions.
+
+<pre class="example">     void foo (int value)
+     {
+       auto int x = value;
+       ...
+       return;
+     }
+</pre>
+   <p><code>register</code> is nearly identical in purpose to <code>auto</code>, except that
+it also suggests to the compiler that the variable will be heavily used, and,
+if possible, should be stored in a register in memory.  You cannot use the
+address-of operator to obtain the address of a variable declared with
+<code>register</code>.
+
+   <p><code>static</code> is essentially the opposite of <code>auto</code>: when applied to
+variables within a function or block, these variables will retain their
+value even when the function or block is finished.
+
+<pre class="example">     int sum (int x)
+     {
+       static int sumSoFar = 0;
+       sumSoFar = sumSoFar + x;
+       return x;
+     }
+</pre>
+   <p class="noindent">You can also declare variables outside of functions to be <code>static</code>; such
+variables are visible (global) to the entire source file.
+
+   <p><code>extern</code> is useful for declaring variables that you want to be visible to
+all source files that are linked into your project.  You cannot initialize a
+variable in an <code>extern</code> declaration, as no space is actually allocated
+during the declaration.  You must make both an <code>extern</code> declaration
+(typically in a header file that is included by the other source files which
+need to access the variable) and a non-<code>extern</code> declaration which is where
+space is actually allocated to store the variable.  The <code>extern</code> declaration
+may be repeated multiple times.
+
+<pre class="example">     extern int numberOfClients;
+     
+     ...
+     
+     int numberOfClients = 0;
+</pre>
+   <p>See <a href="Program-Structure-and-Scope.html#Program-Structure-and-Scope">Program Structure and Scope</a>, for related information.
+
+<!--  -->
+</body></html>
+

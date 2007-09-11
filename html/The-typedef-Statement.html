@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+<title>The typedef Statement - The GNU C Reference Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The GNU C Reference Manual">
+<meta name="generator" content="makeinfo 4.7">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Statements.html#Statements" title="Statements">
+<link rel="prev" href="The-return-Statement.html#The-return-Statement" title="The return Statement">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This is the GNU C reference manual.
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You are free to copy and modify
+     this GNU Manual.  Buying copies from GNU Press supports the FSF in
+     developing GNU and promoting software freedom.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc { font-variant:small-caps }
+  span.roman { font-family: serif; font-weight: normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="The-typedef-Statement"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="The-return-Statement.html#The-return-Statement">The return Statement</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Statements.html#Statements">Statements</a>
+<hr><br>
+</div>
+
+<h3 class="section">4.14 The <code>typedef</code> Statement</h3>
+
+<p><a name="index-_0040code_007btypedef_007d-statement-212"></a>
+You can use the <code>typedef</code> statement to create new names for data
+types.  Here is the general form of the <code>typedef</code> statement:
+
+<pre class="example">     typedef <var>old-type-name</var> <var>new-type-name</var>
+</pre>
+   <p><var>old-type-name</var> is the existing name for the type, and may consist
+of more than one token (e.g., <code>unsigned long int</code>). 
+<var>new-type-name</var> is the resulting new name for the type, and must
+be a single identifier.  Note that creating a new name for the type does
+not cause the old name to cease to exist.  Here are some examples:
+
+<pre class="example">     typedef unsigned char byteType;
+     
+     typedef double realNumberType;
+</pre>
+   <p class="noindent">In the case of custom data types, you can use <code>typedef</code> to make a
+new name for the type whilst defining the type:
+
+<pre class="example">     typedef struct fish
+     {
+       float weight;
+       float length;
+       float probabilityOfBeingCaught;
+     } fishType;
+</pre>
+   <p class="noindent">To make a type definition of an array, you first provide the type of the element, and
+then establish the number of elements at the end of the type definition:
+
+<pre class="example">     typedef char arrayOfBytes [5];
+     
+     arrayOfBytes fiveBytes = {0, 1, 2, 3, 4};
+</pre>
+   <!-- This is part of The GNU C Reference Manual -->
+<!-- Copyright (C) 2007 Free Software Foundation, Inc. -->
+<!-- See the file gnu-c-manual.texi for copying conditions. -->
+<!--  -->
+</body></html>
+

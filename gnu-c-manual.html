@@ -282,7 +282,7 @@ language features in C99.)
 <!-- Except as specified, this manual describes C89.  Language features that are -->
 <!-- available only in C99 or as a GNU extension are labelled as such. -->
 <p>Presently, this manual describes C89 only.  Descriptions of C99 and GNU extensions
-will be included in future releases, labelled as such along side the original
+will be included in future releases, labeled as such along side the original
 C89 material.  While most users of GCC are free to use the latest and greatest
 additions to the compiler, some users must continue to use older versions of
 GCC.  (For example, avionics programmers cannot switch to newer compilers on
@@ -322,7 +322,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <h2 class="chapter">1 Lexical Elements</h2>
 
 <p><a name="index-lexical-elements-2"></a>
-This chapter descibes the lexical elements that make up C source code
+This chapter describes the lexical elements that make up C source code
 after preprocessing.  These basic elements are called <dfn>tokens</dfn>, and
 there are several distinct types of tokens:  keywords, identifiers,
 constants, operators, and separators.  White space, sometimes required
@@ -368,7 +368,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <h3 class="section">1.2 Keywords</h3>
 
 <p><a name="index-keywords-4"></a>
-Keywords are special identifiers, reserved for use by the progamming
+Keywords are special identifiers, reserved for use by the programming
 language itself.  You cannot use them for any other purpose.
 
    <p>Here is a list of keywords recognized by ANSI C89:
@@ -429,7 +429,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 
 <p><a name="index-constants-5"></a>
 A constant is a literal numeric or character value, such as
-5 or `m'.  All constants are of a particulat data type; you can
+5 or `m'.  All constants are of a particular data type; you can
 use type casting to explicitly specify the type of a constant, or
 let the compiler use the default type based on the value of the
 constant.
@@ -1912,7 +1912,7 @@ string literal enclosed in double quotation marks.
 end of the string, even when not explicitly stated.   (Note that if you
 initialize a string using an array of individual characters, then the
 null character is <em>not</em> guaranteed to be present.  It might be,
-but such an occurance would be one of chance, and should not be relied
+but such an occurrence would be one of chance, and should not be relied
 upon.)
 
    <p>After initialization, you cannot assign a new string literal to an array
@@ -4780,7 +4780,7 @@ use an ellipsis: <span class="samp">...</span>.  Here is an example function pro
 <pre class="example">     int add_multiple_values (int number, ...);
 </pre>
    <p>To work with the optional parameters in the function definition, you need
-to use macro functions that are defined in the libary header file
+to use macro functions that are defined in the library header file
 <span class="samp">stdarg.h</span>.  So be sure to <code>include</code> that file.  Those functions
 are described in <cite>The GNU C Library Reference Manual</cite>, but here is
 an example of using them:
@@ -4822,7 +4822,7 @@ So, we might call the function like this:
 
    <p>Also, note that you don't actually need to use <span class="samp">va_end</span> function. 
 In fact, with GCC it doesn't do anything at all.  However, you might want
-to include it to maximumize compatibility with other compilers.
+to include it to maximize compatibility with other compilers.
 
 <!--  -->
 <div class="node">

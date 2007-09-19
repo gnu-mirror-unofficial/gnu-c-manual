@@ -172,8 +172,8 @@ Copyright (C) 2007 Free Software Foundation, Inc.
 </li></ul>
 <li><a name="toc_Statements" href="#Statements">4 Statements</a>
 <ul>
-<li><a href="#Expression-Statements">4.1 Expression Statements</a>
-<li><a href="#Labels">4.2 Labels</a>
+<li><a href="#Labels">4.1 Labels</a>
+<li><a href="#Expression-Statements">4.2 Expression Statements</a>
 <li><a href="#The-if-Statement">4.3 The <code>if</code> Statement</a>
 <li><a href="#The-switch-Statement">4.4 The <code>switch</code> Statement</a>
 <li><a href="#The-while-Statement">4.5 The <code>while</code> Statement</a>
@@ -276,7 +276,7 @@ document three of them:
    <p>By default, GCC will compile code as C89 plus GNU-specific extensions.  Much
 of C99 is supported; once full support is available, the default compilation
 dialect will be C99 plus GNU-specific extensions.  (Note that some of the
-GNU extensions to C89 found ended up, sometimes slightly modified, as standard
+GNU extensions to C89 ended up, sometimes slightly modified, as standard
 language features in C99.)
 
 <!-- Except as specified, this manual describes C89.  Language features that are -->
@@ -458,7 +458,7 @@ zero X), then the constant is considered to be hexadecimal (base 16).  Hexadecim
 values may use the digits from 0 to 9, as well as the letters <code>a</code> to
 <code>f</code>, or <code>A</code> to <code>F</code>.
 
-<pre class="example">     0x2F
+<pre class="example">     0x2f
      0x88
      0xAB43
      0x1
@@ -499,7 +499,7 @@ get a <code>long long int</code> constant; add a <code>U</code> and you have an
 <code>unsigned long long int</code> constant.
 
    <p>There is no way to force an integer constant to be interpreted
-a short integer.  In addition, an integer constant will never be
+as a short integer.  In addition, an integer constant will never be
 interpreted as a short integer by default, even if its value is
 small enough to be represented as one.
 
@@ -585,14 +585,11 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
 
 <p><a name="index-floating-point-constants-10"></a><a name="index-constants_002c-floating-point-11"></a><a name="index-real-number-constants-12"></a><a name="index-constants_002c-real-number-13"></a>
 A real number constant is a value that represents a fractional (floating
-point)
-number.  It consists of a sequence of digits which represents the
+point) number.  It consists of a sequence of digits which represents the
 integer (or &ldquo;whole&rdquo;) part of the number, a decimal point, and
 a sequence of digits which represents the fractional part.
 
-   <p>The integer part and the fractional part are not both required.  If
-you leave out the integer part, then the decimal point is necessary. 
-If you leave out the decimal part, then the decimal point is optional. 
+   <p>The integer part and the fractional part are not both required. 
 Here are some examples:
 
 <pre class="example">     double a, b, c, d, e, f;
@@ -615,8 +612,8 @@ or negative.
 
 <pre class="example">     double x, y;
      
-     x = 5e2;   /* <code>x</code><span class="roman"> is 500.0.</span> */
-     y = 5e-2;  /* <code>y</code><span class="roman"> is 0.05.</span> */
+     x = 5e2;   /* <code>x</code><span class="roman"> is 5 x (10 ^ 2), or 500.0.</span> */
+     y = 5e-2;  /* <code>y</code><span class="roman"> is 5 x (10 ^ -2), or 0.05.</span> */
 </pre>
    <p>You can append a letter to the end of a real number constant
 to cause it to be of a particular type.  If you append the letter
@@ -651,7 +648,7 @@ quotation marks are used to enclose the string.  To include
 the double quotation mark character in a string, use the <code>\"</code>
 escape sequence.  You can use any of the escape sequences that can
 be used as character constants in strings.  Here are some example
-of string strings:
+of string constants:
 
 <pre class="example">     /* <span class="roman">This is a single string constant.</span> */
      "tutti frutti ice cream"
@@ -668,7 +665,7 @@ to break it up onto separate lines.
 <pre class="example">     "Today's special is a pastrami sandwich on rye bread with /
      a potato knish and a cherry soda."
 </pre>
-   <p class="noindent">Adjacent strings are automatically concatenated, so you can also have strings
+   <p class="noindent">Adjacent strings are automatically concatenated, so you can also have string
 constants span multiple lines by writing them as separate, yet adjacent, strings. 
 For example:
 
@@ -3751,8 +3748,8 @@ programs.  You can also write statements that do not do anything at all,
 or do things that are uselessly trivial.
 
 <ul class="menu">
-<li><a accesskey="1" href="#Expression-Statements">Expression Statements</a>
-<li><a accesskey="2" href="#Labels">Labels</a>
+<li><a accesskey="1" href="#Labels">Labels</a>
+<li><a accesskey="2" href="#Expression-Statements">Expression Statements</a>
 <li><a accesskey="3" href="#The-if-Statement">The if Statement</a>
 <li><a accesskey="4" href="#The-switch-Statement">The switch Statement</a>
 <li><a accesskey="5" href="#The-while-Statement">The while Statement</a>
@@ -3769,16 +3766,43 @@ or do things that are uselessly trivial.
 
 <div class="node">
 <p><hr>
-<a name="Expression-Statements"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Labels">Labels</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Statements">Statements</a>,
+<a name="Labels"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Expression-Statements">Expression Statements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
 
-<!-- node-name, next, previous, up -->
-<h3 class="section">4.1 Expression Statements</h3>
+<h3 class="section">4.1 Labels</h3>
 
-<p><a name="index-expression-statements-194"></a><a name="index-statements_002c-expression-195"></a>
+<p><a name="index-labels-194"></a><a name="index-labeled-statements-195"></a><a name="index-statements_002c-labeled-196"></a>
+You can use labels to identify a section of source code.  A label
+consists of an identifier (such as those used for variable names)
+followed by a colon.  Here is an example:
+
+<pre class="example">     treet:
+</pre>
+   <p>You should be aware that label names do not interfere with other
+identifier names:
+
+<pre class="example">     int treet = 5;    /* <code>treet</code><span class="roman"> the variable.</span> */
+     
+     treet:            /* <code>treet</code><span class="roman"> the label.</span> */
+</pre>
+   <p>The ISO C standard mandates that a label must be followed by at
+least one statement (possibly a null statement).  GCC will compile code
+that does not meet this requirement, but be aware that if you violate it,
+your code may have portability issues.
+
+<div class="node">
+<p><hr>
+<a name="Expression-Statements"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-if-Statement">The if Statement</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Labels">Labels</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
+<br>
+</div>
+
+<h3 class="section">4.2 Expression Statements</h3>
+
+<p><a name="index-expression-statements-197"></a><a name="index-statements_002c-expression-198"></a>
 You can turn any expression into a statement by adding a semicolon to
 the end of the expression.  Here are some examples:
 
@@ -3809,37 +3833,8 @@ not a valid pointer and has been declared as <code>volatile</code>.
 <!-- reference to `volatile' -->
 <div class="node">
 <p><hr>
-<a name="Labels"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-if-Statement">The if Statement</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Expression-Statements">Expression Statements</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
-</div>
-
-<h3 class="section">4.2 Labels</h3>
-
-<p><a name="index-labels-196"></a><a name="index-labeled-statements-197"></a><a name="index-statements_002c-labeled-198"></a>
-You can use labels to identify a section of source code.  A label
-consists of an identifier (such as those used for variable names)
-followed by a colon.  Here is an example:
-
-<pre class="example">     treet:
-</pre>
-   <p>You should be aware that label names do not interfere with other
-identifier names:
-
-<pre class="example">     int treet = 5;    /* <code>treet</code><span class="roman"> the variable.</span> */
-     
-     treet:            /* <code>treet</code><span class="roman"> the label.</span> */
-</pre>
-   <p>The ANSI/ISO C standard mandates that a label must be followed by at
-least one statement (possibly a null statement).  GCC will compile code
-that does not meet this requirement, but be aware that if you violate it,
-your code may have portability issues.
-
-<div class="node">
-<p><hr>
 <a name="The-if-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-switch-Statement">The switch Statement</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="#Labels">Labels</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Expression-Statements">Expression Statements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <br>
 </div>
@@ -3919,7 +3914,7 @@ comparisons.  Here is the general form of a <code>switch</code> statement:
        }
 </pre>
    <p>The <code>switch</code> statement compares <var>test</var> to each of the
-cases of <var>compare</var> expressions, until it finds one that is
+<var>compare</var> expressions, until it finds one that is
 equal to <var>test</var>.  Then, the statements following the successful
 case are executed.
 
@@ -3963,7 +3958,7 @@ executed, but so are the statements for all following cases:
      x is 1
      x is something else
 </pre>
-   <p>This is not always desired.  Including a <code>break</code> statement at the
+   <p>This is often not desired.  Including a <code>break</code> statement at the
 end of each case redirects program flow to after the <code>switch</code> statement.
 
 <!-- GNU C Extension -->
@@ -4064,7 +4059,7 @@ modification.  It is very convenient for making counter-controlled
 loops.  Here is the general form of the <code>for</code> statement:
 
 <pre class="example">     for (<var>initialize</var>; <var>test</var>; <var>step</var>)
-       <var>statement</var>;
+       <var>statement</var>
 </pre>
    <p>The <code>for</code> statement first evaluates the expression <var>initialize</var>. 
 Then it evaluates the expression <var>test</var>.  If <var>test</var> is false, then
@@ -4106,21 +4101,21 @@ is an infinite loop (unless you put a <code>break</code> or <code>goto</code> st
 somewhere in <var>statement</var>).  This is like using <code>1</code> as
 <var>test</var>; it is never false.
 
+   <p>This <code>for</code> statement starts printing numbers at 1 and then
+continues indefinitely, always printing <code>x</code> incremented by 1:
+
 <pre class="example">     for (x = 1; ; x++)
        printf ("%d ", x);
 </pre>
-   <p class="noindent">This <code>for</code> statement starts printing numbers at 1 and then
-continues indefinitely, always printing <code>x</code> incremented by 1.
-
    <p>If you leave out the <var>step</var> expression, then no progress is made
 toward completing the loop&mdash;at least not as is normally expected with
 a <code>for</code> statement.
 
+   <p>This example prints the number 1 over and over, indefinitely:
+
 <pre class="example">     for (x = 1; x &lt;= 10;)
        printf ("%d ", x);
 </pre>
-   <p class="noindent">This example prints 1 over and over, indefinitely.
-
    <p>You can use the comma operator for monitoring and modifying multiple
 variables in a <code>for</code> statement:
 
@@ -4145,9 +4140,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
 <p><a name="index-blocks-205"></a>
 A <dfn>block</dfn> is a set of zero or more statements enclosed in
 braces.  Often, a block is used as the body of an <code>if</code>
-statement or a loop statement, to group together statements
-that should all be treated as the body of an <code>if</code> or
-loop statement.
+statement or a loop statement, to group statements together.
 
 <pre class="example">     for (x = 1; x &lt;= 10; x++)
        {
@@ -4183,7 +4176,7 @@ that block.
        int x = 5;
        printf ("%d", x);
      }
-     printf ("%d", x);   /* <span class="roman">You can't do this! </span><code>x</code><span class="roman"> exists only</span>
+     printf ("%d", x);   /* <span class="roman">Compilation error! </span><code>x</code><span class="roman"> exists only</span>
                             <span class="roman">in the preceding block.</span> */
 </pre>
    <div class="node">
@@ -4303,13 +4296,9 @@ example:
 <pre class="example">     for (x = 0; x &lt; 100; x++)
      {
        if (x % 2 == 0)
-       {
          continue;
-       }
        else
-       {
          sum_of_odd_numbers + = x;
-       }
      }
 </pre>
    <p>If you put a <code>continue</code> statement inside a loop which itself is
@@ -4391,29 +4380,27 @@ types.  Here is the general form of the <code>typedef</code> statement:
    <p><var>old-type-name</var> is the existing name for the type, and may consist
 of more than one token (e.g., <code>unsigned long int</code>). 
 <var>new-type-name</var> is the resulting new name for the type, and must
-be a single identifier.  Note that creating a new name for the type does
+be a single identifier.  Creating this new name for the type does
 not cause the old name to cease to exist.  Here are some examples:
 
-<pre class="example">     typedef unsigned char byteType;
-     
-     typedef double realNumberType;
+<pre class="example">     typedef unsigned char byte_type;
+     typedef double real_number_type;
 </pre>
    <p class="noindent">In the case of custom data types, you can use <code>typedef</code> to make a
-new name for the type whilst defining the type:
+new name for the type while defining the type:
 
 <pre class="example">     typedef struct fish
      {
        float weight;
        float length;
-       float probabilityOfBeingCaught;
-     } fishType;
+       float probability_of_being_caught;
+     } fish_type;
 </pre>
    <p class="noindent">To make a type definition of an array, you first provide the type of the element, and
 then establish the number of elements at the end of the type definition:
 
-<pre class="example">     typedef char arrayOfBytes [5];
-     
-     arrayOfBytes fiveBytes = {0, 1, 2, 3, 4};
+<pre class="example">     typedef char array_of_bytes [5];
+     array_of_bytes five_bytes = {0, 1, 2, 3, 4};
 </pre>
    <!-- This is part of The GNU C Reference Manual -->
 <!-- Copyright (C) 2007 Free Software Foundation, Inc. -->
@@ -5859,7 +5846,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-enumerations_002c-incomplete-127">enumerations, incomplete</a>: <a href="#Incomplete-Types">Incomplete Types</a></li>
 <li><a href="#index-equal_002dto-operator-170">equal-to operator</a>: <a href="#The-Equal_002dto-Operator">The Equal-to Operator</a></li>
 <li><a href="#index-evaluation_002c-order-of-190">evaluation, order of</a>: <a href="#Order-of-Evaluation">Order of Evaluation</a></li>
-<li><a href="#index-expression-statements-194">expression statements</a>: <a href="#Expression-Statements">Expression Statements</a></li>
+<li><a href="#index-expression-statements-197">expression statements</a>: <a href="#Expression-Statements">Expression Statements</a></li>
 <li><a href="#index-expressions-141">expressions</a>: <a href="#Expressions">Expressions</a></li>
 <li><a href="#index-_0040code_007bextern_007d-storage-class-specifier-136"><code>extern</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-fields_002c-bit-89">fields, bit</a>: <a href="#Bit-Fields">Bit Fields</a></li>
@@ -5900,8 +5887,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-integer-types-26">integer types</a>: <a href="#Integer-Types">Integer Types</a></li>
 <li><a href="#index-keywords-4">keywords</a>: <a href="#Keywords">Keywords</a></li>
 <li><a href="#index-knishes_002c-potato-20">knishes, potato</a>: <a href="#White-Space">White Space</a></li>
-<li><a href="#index-labeled-statements-197">labeled statements</a>: <a href="#Labels">Labels</a></li>
-<li><a href="#index-labels-196">labels</a>: <a href="#Labels">Labels</a></li>
+<li><a href="#index-labeled-statements-195">labeled statements</a>: <a href="#Labels">Labels</a></li>
+<li><a href="#index-labels-194">labels</a>: <a href="#Labels">Labels</a></li>
 <li><a href="#index-less_002dthan-operator-172">less-than operator</a>: <a href="#The-Less_002dThan-Operator">The Less-Than Operator</a></li>
 <li><a href="#index-less_002dthan_002dor_002dequal_002dto-operator-173">less-than-or-equal-to operator</a>: <a href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">The Less-Than-or-Equal-to Operator</a></li>
 <li><a href="#index-lexical-elements-2">lexical elements</a>: <a href="#Lexical-Elements">Lexical Elements</a></li>
@@ -5965,8 +5952,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-specifiers_002c-type-130">specifiers, type</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>
 <li><a href="#index-statement_002c-null-207">statement, null</a>: <a href="#The-Null-Statement">The Null Statement</a></li>
 <li><a href="#index-statements-193">statements</a>: <a href="#Statements">Statements</a></li>
-<li><a href="#index-statements_002c-expression-195">statements, expression</a>: <a href="#Expression-Statements">Expression Statements</a></li>
-<li><a href="#index-statements_002c-labeled-198">statements, labeled</a>: <a href="#Labels">Labels</a></li>
+<li><a href="#index-statements_002c-expression-198">statements, expression</a>: <a href="#Expression-Statements">Expression Statements</a></li>
+<li><a href="#index-statements_002c-labeled-196">statements, labeled</a>: <a href="#Labels">Labels</a></li>
 <li><a href="#index-_0040code_007bstatic_007d-storage-class-specifier-138"><code>static</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-storage-class-specifiers-133">storage class specifiers</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-string-arrays_002c-declaring-105">string arrays, declaring</a>: <a href="#Arrays-as-Strings">Arrays as Strings</a></li>

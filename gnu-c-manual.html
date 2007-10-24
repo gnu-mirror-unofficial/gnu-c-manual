@@ -291,18 +291,17 @@ inclusion.  Although normally described in a C language manual, the GNU C
 preprocessor has been thoroughly documented in <cite>The C Preprocessor</cite>,
 a separate manual which covers preprocessing for C, C++, and Objective C programs.
 
-   <p>Most of this manual was written by Trevis J. Rothwell, with contributions from
-Dr. Richard M. Stallman.
-
-   <p>Other people have also contributed to this manual, either by way of editing,
-proofreading, making suggestions, fixing typesetting problems, and/or
-helping with administrative details.  These individuals include:  Karl Berry,
-Robert J. Chassell, Lisa Goldstein, Robert J. Hansen, Jean-Christophe Helary,
-Joe Humphries, J. Wren Hunt, Adam Johansen, Steve Morningthunder, J. Otto Tennant,
+<!-- Most of this manual was written by Trevis J. Rothwell, with contributions from -->
+<!-- Dr. Richard M. Stallman. -->
+<!-- The bits written by RMS are from the GCC manual, and are not included -->
+<!-- in the first-release C89 edition of this manual. -->
+<p>A number of people have contributed to this manual.  Most of the text was
+written by Trevis J. Rothwell.  Other contributors, who have offered
+editing, proofreading, ideas, and/or help with typesetting or administrative
+details, include: Karl Berry, Robert J. Chassell, Lisa Goldstein, Robert J. Hansen,
+Jean-Christophe Helary, Joe Humphries, J. Wren Hunt, Adam Johansen, Steve
+Morningthunder, Richard M. Stallman, J. Otto Tennant,
 Ole J. Tetlie, and T. F. Torrey.
-
-   <p>Even with all of this assistance, there may still be errors lurking in the
-manual, but my colleagues are not to blame&mdash;my mistakes are my own.
 
    <p>[This manual is (still) in progress; please feel free to send comments
 to Trevis Rothwell via email.]
@@ -4590,7 +4589,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 
 <p><a name="index-function-parameters-220"></a><a name="index-parameters_002c-function-221"></a>
 Function parameters can be any expression&mdash;a literal value, a value stored in
-variable, an address in memory (a pointer), or a more complex expression built of
+variable, an address in memory, or a more complex expression built of
 some combination of these.
 
    <p>Within the function body, the parameter is a local copy of the value passed into
@@ -4613,6 +4612,70 @@ the original value of <code>x</code>, then you would have to incorporate the
 function call into an assignment statement:
 
 <pre class="example">     x = foo (x);
+</pre>
+   <p>If the value that you pass to a function is a memory address, then you
+can access (and change) the data stored at the memory address.  This
+achieves a similar effect as pass-by-reference function parameters in
+other languages, but is not the same: the memory address is simply a
+value, just like any other value, and cannot itself be changed.  The
+difference between passing a pointer and passing an integer lies in
+what you can do using the value within the function.
+
+   <p>Here is an example of calling a function with a memory address parameter:
+
+<pre class="example">     void
+     foo (int *x)
+     {
+       *x = *x + 42;
+     }
+     ...
+     int a = 15;
+     foo (&amp;a);
+</pre>
+   <p class="noindent">The formal parameter for the function is of type pointer-to-<code>int</code>, and we
+call the function by passing it the address of a variable of type <code>int</code>.  By
+dereferencing the pointer within the function body, we can both see and change
+the value stored in the address.
+
+   <p>Even if you don't want to change the value stored in the address, passing the
+address of a variable rather than the variable itself can be useful if the
+variable type is large and you need to conserve memory space.  For example:
+
+<pre class="example">     struct foo
+     {
+       int x;
+       float y;
+       double z;
+     };
+     
+     void
+     bar (struct foo *a);
+</pre>
+   <p class="noindent">In this case, unless you are working on a computer with very large memory
+addresses, it will take less memory to pass a pointer to the structure
+than to pass an instance of the structure.
+
+   <p>One type of parameter that is always passed as a memory address is any sort
+of array:
+
+<pre class="example">     void
+     foo (int a[]);
+     ...
+     int x[100];
+     foo (x);
+</pre>
+   <p class="noindent">In this example, calling the function <code>foo</code> with the parameter <code>a</code>
+does not copy the entire array into a new local parameter within <code>foo</code>;
+rather, it passes <code>x</code> as a pointer to the first element in <code>x</code>. 
+Be careful, though: within the function, you cannot use <code>sizeof</code> to determine
+the size of the array <code>x</code>&mdash;<code>sizeof</code> instead tells you the size of the
+pointer <code>x</code>.   Indeed, the above code is equivalent to:
+
+<pre class="example">     void
+     foo (int *a);
+     ...
+     int x[100];
+     foo (x);
 </pre>
    <!--  -->
 <div class="node">
@@ -4737,7 +4800,7 @@ parameters, and prints out what those parameters are:
        int counter;
      
        for (counter = 0; counter &lt; argc; counter++)
-           printf ("%s\n", argv[counter]);
+         printf ("%s\n", argv[counter]);
      
        return 0;
      }
@@ -4760,9 +4823,9 @@ itself.  Here is an example that computes the factorial of an integer:
      factorial (int x)
      {
        if (x &lt; 1)
-           return x;
+         return x;
        else
-           return (x * factorial (x - 1));
+         return (x * factorial (x - 1));
      }
 </pre>
    <p>Be careful that you do not write a function that is infinitely recursive.  In

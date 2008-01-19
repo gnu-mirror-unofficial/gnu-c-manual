@@ -377,43 +377,11 @@ language itself.  You cannot use them for any other purpose.
 
    <p>Here is a list of keywords recognized by ANSI C89:
 
-     <ul>
-<li><code>auto</code>
-<li><code>break</code>
-<li><code>case</code>
-<li><code>char</code>
-<li><code>const</code>
-<li><code>continue</code>
-<li><code>default</code>
-<li><code>do</code>
-<li><code>double</code>
-<li><code>else</code>
-<li><code>enum</code>
-<li><code>extern</code>
-<li><code>float</code>
-<li><code>for</code>
-<li><code>goto</code>
-<li><code>if</code>
-<li><code>int</code>
-<li><code>long</code>
-<li><code>register</code>
-<li><code>return</code>
-<li><code>short</code>
-<li><code>signed</code>
-<li><code>sizeof</code>
-<li><code>static</code>
-<li><code>struct</code>
-<li><code>switch</code>
-<li><code>typedef</code>
-<li><code>union</code>
-<li><code>unsigned</code>
-<li><code>void</code>
-<li><code>volatile</code>
-<li><code>while</code>
-
-   </ul>
-
-<!-- ISO C99 adds the following keywords: -->
+<pre class="example">     auto break case char const continue default do double else enum extern
+     float for goto if int long register return short signed sizeof static
+     struct switch typedef union unsigned void volatile while
+</pre>
+   <!-- ISO C99 adds the following keywords: -->
 <!-- @itemize -->
 <!-- @item @code{inline} -->
 <!-- @item @code{restrict} -->
@@ -462,14 +430,15 @@ An integer constant is a sequence of digits.
    <p>If the sequence of digits is preceded by <code>0x</code> or <code>0X</code> (zero x or
 zero X), then the constant is considered to be hexadecimal (base 16).  Hexadecimal
 values may use the digits from 0 to 9, as well as the letters <code>a</code> to
-<code>f</code>, or <code>A</code> to <code>F</code>.
+<code>f</code> and <code>A</code> to <code>F</code>.
 
 <pre class="example">     0x2f
      0x88
      0xAB43
+     0xAbCd
      0x1
 </pre>
-   <p>If the first digit is 0 (zero), and the second digit is not <code>x</code> or
+   <p>If the first digit is 0 (zero), and the next character is not <code>x</code> or
 <code>X</code>, then the constant is considered to be octal (base 8). 
 Octal values may only use the digits from 0 to 7; 8 and 9 are not allowed.
 
@@ -492,9 +461,9 @@ signed integers, and unsigned integers.  You can force an integer constant
 to be of a long and/or unsigned integer type by appending a sequence
 of one or more letters to the end of the constant:
      <dl>
-<dt><code>u</code><br><dt><code>U</code><dd>Unsigned integer type.
+<dt><code>u</code><dt><code>U</code><dd>Unsigned integer type.
 
-     <br><dt><code>l</code><br><dt><code>L</code><dd>Long integer type.
+     <br><dt><code>l</code><dt><code>L</code><dd>Long integer type.
 
    </dl>
 
@@ -561,7 +530,7 @@ there are several &ldquo;escape sequences&rdquo; that you can use:
    </dl>
 
    <p>To use any of these escape sequences, enclose the sequence in single
-quotes, and treat it is if it were any other character.  For example,
+quotes, and treat it as if it were any other character.  For example,
 the letter m is <code>'m'</code> and the newline character is <code>'\n'</code>.
 
    <p>The octal number escape sequence is the backslash character followed by
@@ -597,8 +566,8 @@ point) number.  It consists of a sequence of digits which represents the
 integer (or &ldquo;whole&rdquo;) part of the number, a decimal point, and
 a sequence of digits which represents the fractional part.
 
-   <p>The integer part and the fractional part are not both required. 
-Here are some examples:
+   <p>Either the integer part or the fractional part may be omitted, but not
+both.  Here are some examples:
 
 <pre class="example">     double a, b, c, d, e, f;
      
@@ -662,20 +631,20 @@ of string constants:
 <pre class="example">     /* <span class="roman">This is a single string constant.</span> */
      "tutti frutti ice cream"
      
-     /* <span class="roman">These three string constants will be concatenated.</span> */
-     "pistachio " "ice " "cream"
+     /* <span class="roman">These string constants will be concatenated, same as above.</span> */
+     "tutti " "frutti" " ice " "cream"
      
      /* <span class="roman">This one uses two escape sequences.</span> */
      "\"hello, world!\""
 </pre>
-   <p class="noindent">If a string is too long to fit on one line, you can use a slash <code>/</code>
+   <p class="noindent">If a string is too long to fit on one line, you can use a backslash <code>\</code>
 to break it up onto separate lines.
 
-<pre class="example">     "Today's special is a pastrami sandwich on rye bread with /
+<pre class="example">     "Today's special is a pastrami sandwich on rye bread with \
      a potato knish and a cherry soda."
 </pre>
    <p class="noindent">Adjacent strings are automatically concatenated, so you can also have string
-constants span multiple lines by writing them as separate, yet adjacent, strings. 
+constants span multiple lines by writing them as separate, adjacent, strings. 
 For example:
 
 <pre class="example">     "Tomorrow's special is a corned beef sandwich on "
@@ -683,10 +652,10 @@ For example:
 </pre>
    <p class="noindent">is the same as
 
-<pre class="example">     "Tomorrow's special is a corned beef sandwich on /
+<pre class="example">     "Tomorrow's special is a corned beef sandwich on \
      pumpernickel bread with a kasha knish and seltzer water."
 </pre>
-   <p>To force a newline character into the string, so that when the string
+   <p>To insert a newline character into the string, so that when the string
 is printed it will be printed on two different lines, you can use the newline
 escape sequence `<samp><span class="samp">\n</span></samp>'.
 
@@ -726,9 +695,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <h3 class="section">1.5 Separators</h3>
 
 <p><a name="index-separators-17"></a>
-A separator is a token that is used to separate other tokens. 
-White space is a separator, but it is not a token. 
-The other separators are:
+A separator separates tokens.  White space (see next section) is a
+separator, but it is not a token.  The other separators are all
+single-character tokens themselves:
 
 <pre class="example">     ( ) [ ] { } ; , . :
 </pre>
@@ -745,8 +714,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <p><a name="index-white-space-18"></a>
 White space is the collective term used for a number of characters,
 including the space character, the tab character, and the newline
-character.  In C programs, white space is ignored, and is therefore
-optional, except when it is used to separate tokens.  This means that
+character.  In C programs, white space is ignored (outside of string
+and character constants), and is therefore optional, except when it is
+used to separate tokens.  This means that
 
 <pre class="example">     #include &lt;stdio.h&gt;
      
@@ -766,7 +736,7 @@ optional, except when it is used to separate tokens.  This means that
 
    <p>Although you must use white space to separate many tokens, no
 white space is required between operators and operands, nor is
-it required between separators and that which they separate.
+it required between other separators and that which they separate.
 
 <pre class="example">     /* <span class="roman">All of these are valid.</span> */
      
@@ -779,7 +749,7 @@ it required between separators and that which they separate.
      fraction=numerator/*denominator_ptr;
      fraction = numerator / * denominator_ptr ;
 </pre>
-   <p>Furthermore, wherever one space is allowed, any white space
+   <p>Furthermore, wherever one space is allowed, any amount of white space
 is allowed.
 
 <pre class="example">     /* <span class="roman">These two statements are functionally identical.</span> */

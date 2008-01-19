@@ -3,7 +3,7 @@
 <title>The GNU C Reference Manual</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Reference Manual">
-<meta name="generator" content="makeinfo 4.7">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="top" href="#Top">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
@@ -31,11 +31,11 @@ Copyright (C) 2007 Free Software Foundation, Inc.
   pre.smallformat  { font-family:inherit; font-size:smaller }
   pre.smallexample { font-size:smaller }
   pre.smalllisp    { font-size:smaller }
-  span.sc { font-variant:small-caps }
-  span.roman { font-family: serif; font-weight: normal; } 
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
 --></style>
 </head>
-
 <body>
 <h1 class="settitle">The GNU C Reference Manual</h1>
 <div class="contents">
@@ -217,9 +217,10 @@ Copyright (C) 2007 Free Software Foundation, Inc.
 
 <div class="node">
 <p><hr>
-<a name="Top"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Preface">Preface</a>,
+<a name="Top"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Preface">Preface</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#dir">(dir)</a>
-<br>
+
 </div>
 
 <h2 class="unnumbered">The GNU C Reference Manual</h2>
@@ -244,23 +245,25 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#dir">(dir)</a>
 <!-- See the file gnu-c-manual.texi for copying conditions. -->
 <div class="node">
 <p><hr>
-<a name="Preface"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Lexical-Elements">Lexical Elements</a>,
+<a name="Preface"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Lexical-Elements">Lexical Elements</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Top">Top</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="unnumbered">Preface</h2>
 
 <p><a name="index-preface-1"></a>
 NOTE: THIS MANUAL IS CURRENTLY BEING DEVELOPED, AND MAY CONTAIN
-NON-TRIVIAL ERRORS, OMISSIONS, AND INCONSISTENCIES.
+NON-TRIVIAL ERRORS, OMISSIONS, AND INCONSISTENCIES.  Please send
+bug reports and suggestions to <a href="mailto:gnu-c-manual@gnu.org">gnu-c-manual@gnu.org</a>.
 
    <p>This is a reference manual for the GNU C programming language: the
 C programming language as implemented by the GNU C compiler.
 
-   <p>GCC supports several variants of C; this manual aims to explicitly
-document three of them:
+   <p>GCC supports several variants of C; this manual ultimately aims to
+explicitly document three of them:
 
      <ul>
 <li>The original 1989 ANSI C standard, commonly known as &ldquo;C89&rdquo;
@@ -278,7 +281,7 @@ language features in C99.)
 <!-- Except as specified, this manual describes C89.  Language features that are -->
 <!-- available only in C99 or as a GNU extension are labelled as such. -->
 <p>Presently, this manual describes C89 only.  Descriptions of C99 and GNU extensions
-will be included in future releases, labeled as such along side the original
+will be included in future releases, labeled as such alongside the original
 C89 material.  While most users of GCC are free to use the latest and greatest
 additions to the compiler, some users must continue to use older versions of
 GCC.  (For example, avionics programmers cannot switch to newer compilers on
@@ -290,32 +293,32 @@ between C dialects will be useful to our readers.
 things such as macro text replacement, conditional compilation, and file
 inclusion.  Although normally described in a C language manual, the GNU C
 preprocessor has been thoroughly documented in <cite>The C Preprocessor</cite>,
-a separate manual which covers preprocessing for C, C++, and Objective C programs.
+a separate manual which covers preprocessing for C, C++, and Objective
+C programs, so it is not included here.
 
 <!-- Most of this manual was written by Trevis J. Rothwell, with contributions from -->
 <!-- Dr. Richard M. Stallman. -->
 <!-- The bits written by RMS are from the GCC manual, and are not included -->
 <!-- in the first-release C89 edition of this manual. -->
-<p>A number of people have contributed to this manual.  Most of the text was
-written by Trevis J. Rothwell.  Other contributors, who have offered
-editing, proofreading, ideas, and/or help with typesetting or administrative
-details, include: Karl Berry, Robert J. Chassell, Lisa Goldstein, Robert J. Hansen,
-Jean-Christophe Helary, Joe Humphries, J. Wren Hunt, Adam Johansen, Steve
-Morningthunder, Richard M. Stallman, J. Otto Tennant,
-Ole J. Tetlie, and T. F. Torrey.
-
-   <p>[This manual is (still) in progress; please feel free to send comments
-to Trevis Rothwell via email.]
+<p>A number of people have contributed to this manual.  Most of the text
+was written by Trevis&nbsp;<!-- /@w -->J. Rothwell.  Other contributors, who have
+offered editing, proofreading, ideas, and/or help with typesetting or
+administrative details, include: Karl Berry, Robert&nbsp;<!-- /@w -->J. Chassell,
+Lisa Goldstein, Robert&nbsp;<!-- /@w -->J. Hansen, Jean-Christophe Helary, Joe
+Humphries, J.&nbsp;<!-- /@w -->Wren Hunt, Adam Johansen, Steve Morningthunder,
+Richard&nbsp;<!-- /@w -->M. Stallman, J.&nbsp;<!-- /@w -->Otto Tennant, Ole&nbsp;<!-- /@w -->J. Tetlie, and
+T.F. Torrey.
 
 <!-- This is part of The GNU C Reference Manual -->
 <!-- Copyright (C) 2004 Free Software Foundation, Inc. -->
 <!-- See the file gnu-c-manual.texi for copying conditions. -->
 <div class="node">
 <p><hr>
-<a name="Lexical-Elements"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Data-Types">Data Types</a>,
+<a name="Lexical-Elements"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Data-Types">Data Types</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Preface">Preface</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="chapter">1 Lexical Elements</h2>
@@ -338,9 +341,10 @@ to separate tokens, is also described in this chapter.
 
 <div class="node">
 <p><hr>
-<a name="Identifiers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Keywords">Keywords</a>,
+<a name="Identifiers"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Keywords">Keywords</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
-<br>
+
 </div>
 
 <h3 class="section">1.1 Identifiers</h3>
@@ -348,8 +352,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
 <p><a name="index-identifiers-3"></a>
 Identifiers are strings of characters used for naming variables,
 functions, new data types, and preprocessor macros.  The characters
-can be letters, decimal digits, the underscore character <span class="samp">_</span>,
-or the dollar sign character <span class="samp">$</span>.
+can be letters, decimal digits, the underscore character `<samp><span class="samp">_</span></samp>',
+or the dollar sign character `<samp><span class="samp">$</span></samp>'.
 
    <p>The first character of an identifier cannot be a digit.
 
@@ -358,10 +362,11 @@ and <code>SQUID</code> are two different identifiers.
 
 <div class="node">
 <p><hr>
-<a name="Keywords"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Constants">Constants</a>,
+<a name="Keywords"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Constants">Constants</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Identifiers">Identifiers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
-<br>
+
 </div>
 
 <h3 class="section">1.2 Keywords</h3>
@@ -418,10 +423,11 @@ language itself.  You cannot use them for any other purpose.
 <!-- @end itemize -->
 <div class="node">
 <p><hr>
-<a name="Constants"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Operators">Operators</a>,
+<a name="Constants"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Operators">Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Keywords">Keywords</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
-<br>
+
 </div>
 
 <h3 class="section">1.3 Constants</h3>
@@ -442,9 +448,10 @@ constant.
 
 <div class="node">
 <p><hr>
-<a name="Integer-Constants"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Character-Constants">Character Constants</a>,
+<a name="Integer-Constants"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Character-Constants">Character Constants</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
-<br>
+
 </div>
 
 <h4 class="subsection">1.3.1 Integer Constants</h4>
@@ -504,10 +511,11 @@ small enough to be represented as one.
 
 <div class="node">
 <p><hr>
-<a name="Character-Constants"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Real-Number-Constants">Real Number Constants</a>,
+<a name="Character-Constants"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Real-Number-Constants">Real Number Constants</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Integer-Constants">Integer Constants</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
-<br>
+
 </div>
 
 <h4 class="subsection">1.3.2 Character Constants</h4>
@@ -574,10 +582,11 @@ error.
 
 <div class="node">
 <p><hr>
-<a name="Real-Number-Constants"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#String-Constants">String Constants</a>,
+<a name="Real-Number-Constants"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#String-Constants">String Constants</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Character-Constants">Character Constants</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
-<br>
+
 </div>
 
 <h4 class="subsection">1.3.3 Real Number Constants</h4>
@@ -622,9 +631,10 @@ If you do not append any letters, then its type is <code>double</code>.
 
 <div class="node">
 <p><hr>
-<a name="String-Constants"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Real-Number-Constants">Real Number Constants</a>,
+<a name="String-Constants"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Real-Number-Constants">Real Number Constants</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Constants">Constants</a>
-<br>
+
 </div>
 
 <h4 class="subsection">1.3.4 String Constants</h4>
@@ -678,7 +688,7 @@ For example:
 </pre>
    <p>To force a newline character into the string, so that when the string
 is printed it will be printed on two different lines, you can use the newline
-escape sequence <span class="samp">\n</span>.
+escape sequence `<samp><span class="samp">\n</span></samp>'.
 
 <pre class="example">     printf ("potato\nknish");
 </pre>
@@ -689,10 +699,11 @@ escape sequence <span class="samp">\n</span>.
 </pre>
    <div class="node">
 <p><hr>
-<a name="Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Separators">Separators</a>,
+<a name="Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Separators">Separators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Constants">Constants</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
-<br>
+
 </div>
 
 <h3 class="section">1.4 Operators</h3>
@@ -705,10 +716,11 @@ chapter.  See <a href="#Expressions-and-Operators">Expressions and Operators</a>
 
 <div class="node">
 <p><hr>
-<a name="Separators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#White-Space">White Space</a>,
+<a name="Separators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#White-Space">White Space</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Operators">Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
-<br>
+
 </div>
 
 <h3 class="section">1.5 Separators</h3>
@@ -722,9 +734,10 @@ The other separators are:
 </pre>
    <div class="node">
 <p><hr>
-<a name="White-Space"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Separators">Separators</a>,
+<a name="White-Space"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Separators">Separators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Lexical-Elements">Lexical Elements</a>
-<br>
+
 </div>
 
 <h3 class="section">1.6 White Space</h3>
@@ -791,10 +804,11 @@ part of the string.  Therefore,
 <!-- author:tjr@gnu.org -->
 <div class="node">
 <p><hr>
-<a name="Data-Types"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Expressions-and-Operators">Expressions and Operators</a>,
+<a name="Data-Types"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Expressions-and-Operators">Expressions and Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Lexical-Elements">Lexical Elements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="chapter">2 Data Types</h2>
@@ -817,9 +831,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Primitive-Types"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Enumerations">Enumerations</a>,
+<a name="Primitive-Types"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Enumerations">Enumerations</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.1 Primitive Data Types</h3>
@@ -834,9 +849,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
 
 <div class="node">
 <p><hr>
-<a name="Integer-Types"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Real-Number-Types">Real Number Types</a>,
+<a name="Integer-Types"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Real-Number-Types">Real Number Types</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Primitive-Types">Primitive Types</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.1.1 Integer Types</h4>
@@ -850,58 +866,58 @@ and ranges may be larger.)
 
      <ul>
 <li><code>signed char</code>
-<a name="index-_0040code_007bsigned-char_007d-data-type-29"></a><br>
+<a name="index-g_t_0040code_007bsigned-char_007d-data-type-29"></a><br>
 The 8-bit <code>signed char</code> data type can hold integer values in
-the range of -128 to 127.
+the range of &minus;128 to 127.
 
      <li><code>unsigned char</code>
-<a name="index-_0040code_007bunsigned-char_007d-data-type-30"></a><br>
+<a name="index-g_t_0040code_007bunsigned-char_007d-data-type-30"></a><br>
 The 8-bit <code>unsigned char</code> data type can hold integer values in
 the range of 0 to 255.
 
      <li><code>char</code>
-<a name="index-_0040code_007bchar_007d-data-type-31"></a><br>
+<a name="index-g_t_0040code_007bchar_007d-data-type-31"></a><br>
 Depending on your system, the <code>char</code> data type is defined as
 equivalent to either the <code>signed char</code> or the <code>unsigned char</code>
 data type.  By convention, you should use the <code>char</code> data type
-specifically for storing ASCII characters (such as `m') or escape
+specifically for storing ASCII characters (such as `m'), including escape
 sequences (such as `\n').
 
      <li><code>short int</code>
-<a name="index-_0040code_007bshort-int_007d-data-type-32"></a><br>
+<a name="index-g_t_0040code_007bshort-int_007d-data-type-32"></a><br>
 The 16-bit <code>short int</code> data type can hold integer values in the
-range of -32,768 to 32,767.  You may also refer to this data type as
+range of &minus;32,768 to 32,767.  You may also refer to this data type as
 <code>short</code>, <code>signed short int</code>, or <code>signed short</code>.
 
      <li><code>unsigned short int</code>
-<a name="index-_0040code_007bunsigned-short-int_007d-data-type-33"></a><br>
+<a name="index-g_t_0040code_007bunsigned-short-int_007d-data-type-33"></a><br>
 The 16-bit <code>unsigned short int</code> data type can hold integer values
 in the range of 0 to 65,535.  You may also refer to this data type
 as <code>unsigned short</code>.
 
      <li><code>int</code>
-<a name="index-_0040code_007bint_007d-data-type-34"></a><br>
+<a name="index-g_t_0040code_007bint_007d-data-type-34"></a><br>
 The 32-bit <code>int</code> data type can hold integer values in the range
-of -2,147,483,648 to 2,147,483,647.  You may also refer to this data type
+of &minus;2,147,483,648 to 2,147,483,647.  You may also refer to this data type
 as <code>signed int</code> or <code>signed</code>.
 
      <li><code>unsigned int</code>
-<a name="index-_0040code_007bunsigned-int_007d-data-type-35"></a><br>
+<a name="index-g_t_0040code_007bunsigned-int_007d-data-type-35"></a><br>
 The 32-bit <code>unsigned int</code> data type can hold integer values in
 the range of 0 to 4,294,967,295.  You may also refer to this data type
 simply as <code>unsigned</code>.
 
      <li><code>long int</code>
-<a name="index-_0040code_007blong-int_007d-data-type-36"></a><br>
+<a name="index-g_t_0040code_007blong-int_007d-data-type-36"></a><br>
 The 32-bit <code>long int</code> data type can hold integer values in
-the range of at least -2,147,483,648 to 2,147,483,647.  (Depending on
+the range of at least &minus;2,147,483,648 to 2,147,483,647.  (Depending on
 your system, this data type might be 64-bit, in which case its range is
 identical to that of the <code>long long int</code> data type.)  You may also
 refer to this data type as <code>long</code>, <code>signed long int</code>,
 or <code>signed long</code>.
 
      <li><code>unsigned long int</code>
-<a name="index-_0040code_007bunsigned-long-int_007d-data-type-37"></a><br>
+<a name="index-g_t_0040code_007bunsigned-long-int_007d-data-type-37"></a><br>
 The 32-bit <code>unsigned long int</code> data type can hold integer values
 in the range of at least 0 to 4,294,967,295.  (Depending on your
 system, this data type might be 64-bit, in which case its range is
@@ -909,14 +925,14 @@ identical to that of the <code>unsigned long long int</code> data type.)  You ma
 also refer to this data type as <code>unsigned long</code>.
 
      <li><code>long long int</code>
-<a name="index-_0040code_007blong-long-int_007d-data-type-38"></a><br>
+<a name="index-g_t_0040code_007blong-long-int_007d-data-type-38"></a><br>
 The 64-bit <code>long int</code> data type can hold integer values in
 the range of -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. You
 may also refer to this data type as <code>long long</code>,
 <code>signed long long int</code> or <code>signed long long</code>.
 
      <li><code>unsigned long long int</code>
-<a name="index-_0040code_007bunsigned-long-long-int_007d-data-type-39"></a><br>
+<a name="index-g_t_0040code_007bunsigned-long-long-int_007d-data-type-39"></a><br>
 The 64-bit <code>unsigned long long int</code> data type can hold integer
 values in the range of at least 0 to 18,446,744,073,709,551,615.  You may
 also refer to this data type as <code>unsigned long long</code>.
@@ -925,9 +941,10 @@ also refer to this data type as <code>unsigned long long</code>.
 
 <div class="node">
 <p><hr>
-<a name="Real-Number-Types"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Integer-Types">Integer Types</a>,
+<a name="Real-Number-Types"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Integer-Types">Integer Types</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Primitive-Types">Primitive Types</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.1.2 Real Number Types</h4>
@@ -942,21 +959,21 @@ values:
 
      <ul>
 <li><code>float</code>
-<a name="index-_0040code_007bfloat_007d-data-type-46"></a><br>
+<a name="index-g_t_0040code_007bfloat_007d-data-type-46"></a><br>
 The <code>float</code> data type is the smallest of the three floating point
 types, if they differ in size at all.  Its minimum value is stored in
-the <code>FLT_MIN</code>, and is should  be no greater than 1e(-37). 
+the <code>FLT_MIN</code>, and is should  be no greater than 1e(&minus;37). 
 Its maximum value is stored in <code>FLT_MAX</code>, and is should be no
 less than 1e37.
 
      <li><code>double</code>
-<a name="index-_0040code_007bdouble_007d-data-type-47"></a><br>
+<a name="index-g_t_0040code_007bdouble_007d-data-type-47"></a><br>
 The <code>double</code> data type is at least as large as the <code>float</code>
 type, and it may be larger.  Its minimum value is stored in
 <code>DBL_MIN</code>, and its maximum value is stored in <code>DBL_MAX</code>.
 
      <li><code>long double</code>
-<a name="index-_0040code_007blong-double_007d-data-type-48"></a><br>
+<a name="index-g_t_0040code_007blong-double_007d-data-type-48"></a><br>
 The <code>long double</code> data type is at least as large as the
 <code>float</code> type, and it may be larger.  Its minimum value is stored in
 <code>LDBL_MIN</code>, and its maximum value is stored in <code>LDBL_MAX</code>.
@@ -1008,10 +1025,11 @@ for example, will cause a compile-time error.
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Enumerations"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Unions">Unions</a>,
+<a name="Enumerations"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Unions">Unions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Primitive-Types">Primitive Types</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.2 Enumerations</h3>
@@ -1030,9 +1048,10 @@ used instead.
 
 <div class="node">
 <p><hr>
-<a name="Defining-Enumerations"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Enumerations">Declaring Enumerations</a>,
+<a name="Defining-Enumerations"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Enumerations">Declaring Enumerations</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Enumerations">Enumerations</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.2.1 Defining Enumerations</h4>
@@ -1052,10 +1071,11 @@ You can also specify one or more of the values explicitly:
 
 <pre class="example">     enum more_fruit {banana = -17, apple, blueberry, mango};
 </pre>
-   <p>That example defines <code>banana</code> to be -17, and the remaining values are
-incremented by 1&mdash;<code>apple</code> is -16, <code>blueberry</code> is -15, and
-<code>mango</code> is -14.  Unless specified otherwise, an enumeration value is
-equal to one more than the previous value (and the first value defaults to 0).
+   <p>That example defines <code>banana</code> to be &minus;17, and the remaining
+values are incremented by 1&mdash;<code>apple</code> is &minus;16,
+<code>blueberry</code> is &minus;15, and <code>mango</code> is -14.  Unless
+specified otherwise, an enumeration value is equal to one more than
+the previous value (and the first value defaults to 0).
 
    <p>You can also refer to an enumeration value defined earlier in the same
 enumeration:
@@ -1068,27 +1088,27 @@ enumeration:
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Enumerations"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Defining-Enumerations">Defining Enumerations</a>,
+<a name="Declaring-Enumerations"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Defining-Enumerations">Defining Enumerations</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Enumerations">Enumerations</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.2.2 Declaring Enumerations</h4>
 
 <p><a name="index-declaring-enumerations-54"></a><a name="index-enumerations_002c-declaring-55"></a>
-You can declare variables of an enumeration type both when the enumeration
-is defined and afterward.
+You can declare variables of an enumeration type both when the
+enumeration is defined and afterward.  This example declares one
+variable, named <code>my_fruit</code> of type <code>enum fruit</code>:
 
 <pre class="example">     enum fruit {banana, apple, blueberry, mango} my_fruit;
 </pre>
-   <p>That example declares one variable of type <code>enum fruit</code>.
+   <p class="noindent">While this example declares the type and variable separately:
 
 <pre class="example">     enum fruit {banana, apple, blueberry, mango};
-     
      enum fruit my_fruit;
 </pre>
-   <p>That example also declares one variable of type <code>enum fruit</code>.  (Of
-course, you couldn't declare it that way if you hadn't named the
+   <p>(Of course, you couldn't declare it that way if you hadn't named the
 enumeration.)
 
    <p>Although such variables are considered to be of an enumeration type, you
@@ -1101,16 +1121,16 @@ enumeration.
 defined; they are constant values.  For example, this won't work:
 
 <pre class="example">     enum fruit {banana, apple, blueberry, mango};
-     
      banana = 15;  /* <span class="roman">You can't do this!</span> */
 </pre>
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="Unions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Structures">Structures</a>,
+<a name="Unions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Structures">Structures</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Enumerations">Enumerations</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.3 Unions</h3>
@@ -1130,9 +1150,10 @@ one of them overwrites the values in the others.
 
 <div class="node">
 <p><hr>
-<a name="Defining-Unions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Union-Variables">Declaring Union Variables</a>,
+<a name="Defining-Unions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Union-Variables">Declaring Union Variables</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.3.1 Defining Unions</h4>
@@ -1146,10 +1167,10 @@ or more variable names separated by commas, and ending with a
 semicolon.  Then end the union definition with a semicolon after
 the closing brace.
 
-   <p>You should also include a name for the union in between the
-<code>union</code> keyword and the opening brace.  This is optional, but
-if you leave it out, you can't refer to that union data type
-later on.
+   <p>You should also include a name for the union between the <code>union</code>
+keyword and the opening brace.  This is syntactically optional, but if
+you leave it out, you can't refer to that union data type later on
+(without a <code>typedef</code>, see <a href="#The-typedef-Statement">The typedef Statement</a>).
 
    <p>Here is an example of defining a simple union for holding an integer
 value and a floating point value:
@@ -1166,10 +1187,11 @@ members, <code>i</code> and <code>f</code>, which are of type <code>int</code> a
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Union-Variables"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Accessing-Union-Members">Accessing Union Members</a>,
+<a name="Declaring-Union-Variables"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Accessing-Union-Members">Accessing Union Members</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Defining-Unions">Defining Unions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.3.2 Declaring Union Variables</h4>
@@ -1187,9 +1209,10 @@ union type a name.
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Union-Variables-at-Definition"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Union-Variables-After-Definition">Declaring Union Variables After Definition</a>,
+<a name="Declaring-Union-Variables-at-Definition"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Union-Variables-After-Definition">Declaring Union Variables After Definition</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring Union Variables</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">2.3.2.1 Declaring Union Variables at Definition</h5>
@@ -1212,10 +1235,11 @@ with commas.
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Union-Variables-After-Definition"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Union-Members">Initializing Union Members</a>,
+<a name="Declaring-Union-Variables-After-Definition"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Union-Members">Initializing Union Members</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Union-Variables-at-Definition">Declaring Union Variables at Definition</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring Union Variables</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">2.3.2.2 Declaring Union Variables After Definition</h5>
@@ -1231,7 +1255,6 @@ separated by commas.
          int i;
          float f;
        };
-     
      union numbers first_number, second_number;
 </pre>
    <p>That example declares two variables of type <code>union numbers</code>,
@@ -1239,9 +1262,10 @@ separated by commas.
 
 <div class="node">
 <p><hr>
-<a name="Initializing-Union-Members"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Union-Variables-After-Definition">Declaring Union Variables After Definition</a>,
+<a name="Initializing-Union-Members"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Union-Variables-After-Definition">Declaring Union Variables After Definition</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Union-Variables">Declaring Union Variables</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">2.3.2.3 Initializing Union Members</h5>
@@ -1255,7 +1279,6 @@ declare it:
          int i;
          float f;
        };
-     
      union numbers first_number = { 5 };
 </pre>
    <p>In that example, the <code>i</code> member of <code>first_number</code> gets the
@@ -1285,17 +1308,18 @@ variable during the definition:
 </pre>
    <div class="node">
 <p><hr>
-<a name="Accessing-Union-Members"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Size-of-Unions">Size of Unions</a>,
+<a name="Accessing-Union-Members"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Size-of-Unions">Size of Unions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Union-Variables">Declaring Union Variables</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.3.3 Accessing Union Members</h4>
 
 <p><a name="index-accessing-union-members-69"></a><a name="index-union-members_002c-accessing-70"></a>
 You can access the members of a union variable using the member
-access operator <code>.</code> .  You put the name of the union
+access operator.  You put the name of the union
 variable on the left side of the operator, and the name of the
 member on the right side.
 
@@ -1304,11 +1328,8 @@ member on the right side.
          int i;
          float f;
        };
-     
      union numbers first_number;
-     
      first_number.i = 5;
-     
      first_number.f = 3.9;
 </pre>
    <p>Notice in that example that giving a value to the <code>f</code> member overrides
@@ -1316,9 +1337,10 @@ the value stored in the <code>i</code> member.
 
 <div class="node">
 <p><hr>
-<a name="Size-of-Unions"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Accessing-Union-Members">Accessing Union Members</a>,
+<a name="Size-of-Unions"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Accessing-Union-Members">Accessing Union Members</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unions">Unions</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.3.4 Size of Unions</h4>
@@ -1342,10 +1364,11 @@ just needs to be large enough to hold the largest member.
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Structures"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays">Arrays</a>,
+<a name="Structures"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays">Arrays</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Unions">Unions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.4 Structures</h3>
@@ -1364,9 +1387,10 @@ variables of other data types (possibly including other structure types).
 
 <div class="node">
 <p><hr>
-<a name="Defining-Structures"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>,
+<a name="Defining-Structures"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.4.1 Defining Structures</h4>
@@ -1381,9 +1405,9 @@ semicolon.  Then end the structure definition with a semicolon after
 the closing brace.
 
    <p>You should also include a name for the structure in between the
-<code>struct</code> keyword and the opening brace.  This is optional, but
-if you leave it out, you can't refer to that structure data type
-later on.
+<code>struct</code> keyword and the opening brace.  This is optional, but if
+you leave it out, you can't refer to that structure data type later
+on (without a <code>typedef</code>, see <a href="#The-typedef-Statement">The typedef Statement</a>).
 
    <p>Here is an example of defining a simple structure for holding the
 X and Y coordinates of a point:
@@ -1398,10 +1422,11 @@ members, <code>x</code> and <code>y</code>, both of which are of type <code>int<
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Structure-Variables"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Accessing-Structure-Members">Accessing Structure Members</a>,
+<a name="Declaring-Structure-Variables"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Accessing-Structure-Members">Accessing Structure Members</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Defining-Structures">Defining Structures</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.4.2 Declaring Structure Variables</h4>
@@ -1419,9 +1444,10 @@ structure type a name.
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Structure-Variables-at-Definition"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Structure-Variables-After-Definition">Declaring Structure Variables After Definition</a>,
+<a name="Declaring-Structure-Variables-at-Definition"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Declaring-Structure-Variables-After-Definition">Declaring Structure Variables After Definition</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">2.4.2.1 Declaring Structure Variables at Definition</h5>
@@ -1443,10 +1469,11 @@ with commas.
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Structure-Variables-After-Definition"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Structure-Members">Initializing Structure Members</a>,
+<a name="Declaring-Structure-Variables-After-Definition"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Structure-Members">Initializing Structure Members</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Structure-Variables-at-Definition">Declaring Structure Variables at Definition</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">2.4.2.2 Declaring Structure Variables After Definition</h5>
@@ -1461,7 +1488,6 @@ separated by commas.
        {
          int x, y;
        };
-     
      struct point first_point, second_point;
 </pre>
    <p>That example declares two variables of type <code>struct point</code>,
@@ -1469,9 +1495,10 @@ separated by commas.
 
 <div class="node">
 <p><hr>
-<a name="Initializing-Structure-Members"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Structure-Variables-After-Definition">Declaring Structure Variables After Definition</a>,
+<a name="Initializing-Structure-Members"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Structure-Variables-After-Definition">Declaring Structure Variables After Definition</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">2.4.2.3 Initializing Structure Members</h5>
@@ -1488,7 +1515,6 @@ members are declared in the structure in definition.
        {
          int x, y;
        };
-     
      struct point first_point = { 5, 10 };
 </pre>
    <p>In that example, the <code>x</code> member of <code>first_point</code> gets the
@@ -1515,13 +1541,12 @@ the variable during the structure definition:
          int x, y;
        } first_point = { 5, 10 };
 </pre>
-   <p>You can also initialize less than all of a structure variable's members:
+   <p>You can also initialize fewer than all of a structure variable's members:
 
 <pre class="example">     struct point
        {
          int x, y;
        };
-     
      struct point first_point = { 5 };
 </pre>
    <p>In that example, only one member, <code>x</code>, is initialized.  <code>y</code> is
@@ -1546,24 +1571,25 @@ are structure variables themselves:
    <p>That example defines the <code>rectangle</code> structure to consist of
 two <code>point</code> structure variables.  Then it declares one variable
 of type <code>struct rectangle</code> and initializes its members.  Since
-its members are structure variables, there is an extra set of braces
+its members are structure variables, we used an extra set of braces
 surrounding the members that belong to the <code>point</code> structure
 variables.  However, those extra braces are not necessary; they just
 make the code easier to read.
 
 <div class="node">
 <p><hr>
-<a name="Accessing-Structure-Members"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Bit-Fields">Bit Fields</a>,
+<a name="Accessing-Structure-Members"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Bit-Fields">Bit Fields</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Structure-Variables">Declaring Structure Variables</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.4.3 Accessing Structure Members</h4>
 
 <p><a name="index-accessing-structure-members-86"></a><a name="index-structure-members_002c-accessing-87"></a>
 You can access the members of a structure variable using the member
-access operator <span class="samp">.</span> .  You put the name of the structure
+access operator.  You put the name of the structure
 variable on the left side of the operator, and the name of the
 member on the right side.
 
@@ -1595,10 +1621,11 @@ member of a structure variable.
 </pre>
    <div class="node">
 <p><hr>
-<a name="Bit-Fields"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Size-of-Structures">Size of Structures</a>,
+<a name="Bit-Fields"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Size-of-Structures">Size of Structures</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Accessing-Structure-Members">Accessing Structure Members</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.4.4 Bit Fields</h4>
@@ -1620,18 +1647,19 @@ member's name and the semicolon.
 <code>face_value</code>, which take up 2 bits and 4 bits, respectively.  <code>suit</code>
 can hold values from 0 to 3, and <code>face_value</code> can hold values from 0 to
 15.  Notice that these bit fields were declared as <code>unsigned int</code>; had
-they been signed integers, then their ranges would have been from -2 to 1, and
-from -8 to 7, respectively.
+they been signed integers, then their ranges would have been from
+&minus;2 to 1, and from &minus;8 to 7, respectively.
 
    <p>More generally, the range of an unsigned bit field of N bits is from
-0 to 2^N - 1, and the range of a signed bit field of N bits is from
--(2^N) / 2 to ((2^N) / 2) - 1.
+0 to 2^N - 1, and the range of a signed bit field of N
+bits is from -(2^N) / 2 to ((2^N) / 2) - 1.
 
 <div class="node">
 <p><hr>
-<a name="Size-of-Structures"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Bit-Fields">Bit Fields</a>,
+<a name="Size-of-Structures"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Bit-Fields">Bit Fields</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Structures">Structures</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.4.5 Size of Structures</h4>
@@ -1641,23 +1669,24 @@ The size of a structure type is equal to the sum of the size of all of its
 members, possibly including padding to cause the structure type to align to
 a particular byte boundary.  The details vary depending on your computer
 platform, but it would not be atypical to see structures padded to align
-on four- or eight-byte boundaries, and is done in order to speed up
+on four- or eight-byte boundaries.  This is done in order to speed up
 memory accesses of instances of the structure type.
 
    <p>If you wish to explicitly omit padding from your structure types (which may,
 in turn, decrease the speed of structure memory accesses), then GCC provides
 multiple methods of turning packing off.  The quick and easy method is to
-use the <code>-fpack-struct</code> compiler option.  For more details omitting
+use the <code>-fpack-struct</code> compiler option.  For more details on omitting
 packing, please see the GCC manual which corresponds to your version of the
 compiler.
 
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Arrays"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Pointers">Pointers</a>,
+<a name="Arrays"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Pointers">Pointers</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Structures">Structures</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.5 Arrays</h3>
@@ -1681,9 +1710,10 @@ position zero, not one.
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Arrays"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Arrays">Initializing Arrays</a>,
+<a name="Declaring-Arrays"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Arrays">Initializing Arrays</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.5.1 Declaring Arrays</h4>
@@ -1732,10 +1762,11 @@ an array that can store ten integers:
 <!-- @end example -->
 <div class="node">
 <p><hr>
-<a name="Initializing-Arrays"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Accessing-Array-Elements">Accessing Array Elements</a>,
+<a name="Initializing-Arrays"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Accessing-Array-Elements">Accessing Array Elements</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Arrays">Declaring Arrays</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.5.2 Initializing Arrays</h4>
@@ -1813,10 +1844,11 @@ initializes only the first three elements:
 <!-- initialized is element number 99, so there are 100 elements. -->
 <div class="node">
 <p><hr>
-<a name="Accessing-Array-Elements"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Multidimensional-Arrays">Multidimensional Arrays</a>,
+<a name="Accessing-Array-Elements"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Multidimensional-Arrays">Multidimensional Arrays</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Initializing-Arrays">Initializing Arrays</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.5.3 Accessing Array Elements</h4>
@@ -1837,17 +1869,16 @@ of a structure data type, you can access the structure elements like this:
      {
        int x, y;
      };
-     
      struct point point_array[2] = { {4, 5}, {8, 9} };
-     
      point_array[0].x = 3;
 </pre>
    <div class="node">
 <p><hr>
-<a name="Multidimensional-Arrays"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays-as-Strings">Arrays as Strings</a>,
+<a name="Multidimensional-Arrays"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays-as-Strings">Arrays as Strings</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Accessing-Array-Elements">Accessing Array Elements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.5.4 Multidimensional Arrays</h4>
@@ -1868,10 +1899,11 @@ of both dimensions:
 </pre>
    <div class="node">
 <p><hr>
-<a name="Arrays-as-Strings"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays-of-Unions">Arrays of Unions</a>,
+<a name="Arrays-as-Strings"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays-of-Unions">Arrays of Unions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Multidimensional-Arrays">Multidimensional Arrays</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.5.5 Arrays as Strings</h4>
@@ -1895,13 +1927,9 @@ string literal enclosed in double quotation marks.
    <p>Here are some examples:
 
 <pre class="example">     char blue[26];
-     
      char yellow[26] = {'y', 'e', 'l', 'l', 'o', 'w', '\0'};
-     
      char orange[26] = "orange";
-     
      char gray[] = {'g', 'r', 'a', 'y', '\0'};
-     
      char salmon[] = "salmon";
 </pre>
    <p>In each of these cases, the null character <code>\0</code> is included at the
@@ -1916,8 +1944,7 @@ using the assignment operator.  For example, this
 <em>will not work</em>:
 
 <pre class="example">     char lemon[26] = "custard";
-     
-     lemon = "steak sauce";
+     lemon = "steak sauce";      /* <span class="roman">Fails!</span> */
 </pre>
    <p class="noindent">However, there are functions in the GNU C library that perform operations
 (including copy) on string arrays.  You can also change one character at
@@ -1925,7 +1952,6 @@ a time, by accessing individual string elements as you would any other
 array:
 
 <pre class="example">     char name[] = "bob";
-     
      name[0] = 'r';
 </pre>
    <p>It is possible for you to explicitly state the number of elements in the
@@ -1933,21 +1959,22 @@ array, and then initialize it using a string that has more characters than
 there are elements in the array.  This is not a good thing.  The larger string
 will <em>not</em> override the previously specified size of the array, and you
 will get a compile-time warning.  Since the original array size remains, any
-part of the string that exceeds that original size is being put into a memory
+part of the string that exceeds that original size is being written to a memory
 location that was not allocated for it.
 
 <div class="node">
 <p><hr>
-<a name="Arrays-of-Unions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays-of-Structures">Arrays of Structures</a>,
+<a name="Arrays-of-Unions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Arrays-of-Structures">Arrays of Structures</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Arrays-as-Strings">Arrays as Strings</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.5.6 Arrays of Unions</h4>
 
 <p><a name="index-arrays-of-unions-109"></a><a name="index-unions_002c-arrays-of-110"></a>
-You can create an array of a union type just like you can an array
+You can create an array of a union type just as you can an array
 of a primitive data type.
 
 <pre class="example">     union numbers
@@ -1955,7 +1982,6 @@ of a primitive data type.
          int i;
          float f;
        };
-     
      union numbers number_array [3];
 </pre>
    <p>That example creates a 3-element array of <code>union numbers</code>
@@ -1972,27 +1998,26 @@ element number (enclosed in brackets) to the left of the operator, and
 the member name to the right.
 
 <pre class="example">     union numbers number_array [3];
-     
      number_array[0].i = 2;
 </pre>
    <div class="node">
 <p><hr>
-<a name="Arrays-of-Structures"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Arrays-of-Unions">Arrays of Unions</a>,
+<a name="Arrays-of-Structures"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Arrays-of-Unions">Arrays of Unions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Arrays">Arrays</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.5.7 Arrays of Structures</h4>
 
 <p><a name="index-arrays-of-structures-111"></a><a name="index-structures_002c-arrays-of-112"></a>
-You can create an array of a structure type just like you can an array
+You can create an array of a structure type just as you can an array
 of a primitive data type.
 
 <pre class="example">     struct point
        {
          int x, y;
        };
-     
      struct point point_array [3];
 </pre>
    <p>That example creates a 3-element array of <code>struct point</code>
@@ -2020,17 +2045,17 @@ element number (enclosed in brackets) to the left of the operator, and
 the member name to the right.
 
 <pre class="example">     struct point point_array [3];
-     
      point_array[0].x = 2;
      point_array[0].y = 3;
 </pre>
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="Pointers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Incomplete-Types">Incomplete Types</a>,
+<a name="Pointers"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Incomplete-Types">Incomplete Types</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Arrays">Arrays</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.6 Pointers</h3>
@@ -2050,9 +2075,10 @@ that type.
 
 <div class="node">
 <p><hr>
-<a name="Declaring-Pointers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Pointers">Initializing Pointers</a>,
+<a name="Declaring-Pointers"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Initializing-Pointers">Initializing Pointers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.6.1 Declaring Pointers</h4>
@@ -2069,28 +2095,30 @@ the identifier.  Here is the general form of a pointer declaration:
 <pre class="example">     <var>data-type</var> * <var>name</var>;
 </pre>
    <p>You can also put the operator either directly next to
-<var>name</var>, or directly next <var>data-type</var>, like this:
+<var>name</var>, or directly next to <var>data-type</var>, like these:
 
 <pre class="example">     <var>data-type</var> *<var>name</var>;
      <var>data-type</var>* <var>name</var>;
 </pre>
-   <p>Any of these three is fine, and they all work the same way.  Here is an
-example of declaring a pointer to hold the address of an <code>int</code> variable:
+   <p>Any of these three is fine, and they all work the same way (white
+space is not significant, as usual).  Here is an example of declaring
+a pointer to hold the address of an <code>int</code> variable:
 
 <pre class="example">     int *ip;
 </pre>
    <p>Be careful, though:  when declaring multiple pointers in the same statement, you must
 explicitly declare each as a pointer, using the indirection operator:
 
-<pre class="example">     int *bob, *emily;  // <span class="roman">Two pointers.</span>
-     int *rob, laura;   // <span class="roman">A pointer and an integer variable.</span>
+<pre class="example">     int *bob, *emily;  /* <span class="roman">Two pointers.</span> */
+     int *rob, laura;   /* <span class="roman">A pointer and an integer variable.</span> */
 </pre>
    <div class="node">
 <p><hr>
-<a name="Initializing-Pointers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Pointers-to-Unions">Pointers to Unions</a>,
+<a name="Initializing-Pointers"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Pointers-to-Unions">Pointers to Unions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Declaring-Pointers">Declaring Pointers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.6.2 Initializing Pointers</h4>
@@ -2098,8 +2126,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
 <p><a name="index-initializing-pointers-118"></a><a name="index-pointers_002c-initializing-119"></a>
 You can initialize a pointer when you first declare it by specifying
 a variable address to store in it.  For example, the following code
-declares an <code>int</code> variable <span class="samp">i</span>, and a pointer which is
-initialized with the address of <span class="samp">i</span>:
+declares an <code>int</code> variable `<samp><span class="samp">i</span></samp>', and a pointer which is
+initialized with the address of `<samp><span class="samp">i</span></samp>':
 
 <pre class="example">     int i;
      int *ip = &amp;i;
@@ -2112,11 +2140,9 @@ to.  On the contrary, that would change the value of the variable that
 the points to, not the value of the pointer itself.  For example:
 
 <pre class="example">     int i, j;
-     int *ip = &amp;i;    // <span class="roman">ip now holds the address of i.</span>
-     
-     ip = &amp;j;         // <span class="roman">ip now holds the address of j.</span>
-     
-     *ip = &amp;i;        // <span class="roman">j now holds the address of i.</span>
+     int *ip = &amp;i;  /* <span class="roman">`<samp>ip</samp>' now holds the address of `<samp>i</samp>'.</span> */
+     ip = &amp;j;       /* <span class="roman">`<samp>ip</samp>' now holds the address of `<samp>j</samp>'.</span> */
+     *ip = &amp;i;      /* <span class="roman">`<samp>j</samp>' now holds the address of `<samp>i</samp>'.</span> */
 </pre>
    <p>The value stored in a pointer is an integral number: a location within
 the computer's memory space.  If you are so inclined, you can assign pointer
@@ -2128,16 +2154,17 @@ overwrite something that you did not intend to.
 
 <div class="node">
 <p><hr>
-<a name="Pointers-to-Unions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Pointers-to-Structures">Pointers to Structures</a>,
+<a name="Pointers-to-Unions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Pointers-to-Structures">Pointers to Structures</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Initializing-Pointers">Initializing Pointers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.6.3 Pointers to Unions</h4>
 
 <p><a name="index-pointers-to-unions-120"></a><a name="index-unions_002c-pointers-to-121"></a>
-You can create a pointer to a union type just like you can a pointer
+You can create a pointer to a union type just as you can a pointer
 to a primitive data type.
 
 <pre class="example">     union numbers
@@ -2145,9 +2172,7 @@ to a primitive data type.
          int i;
          float f;
        };
-     
      union numbers foo = {4};
-     
      union numbers *number_ptr = &amp;foo;
 </pre>
    <p>That example creates a new union type, <code>union numbers</code>, and
@@ -2155,11 +2180,11 @@ declares (and initializes the first member of) a variable of that type
 named <code>foo</code>.  Finally, it declares a pointer to the type
 <code>union numbers</code>, and gives it the address of <code>foo</code>.
 
-   <p>You can access the members of a union variable through a pointer,
-but you can't use the regular member access operator anymore.  Instead,
-you have to use the indirect member access operator <code>-&gt;</code> .  Continuing
-with the previous example, the following example will change the value
-of the first member of <code>foo</code>:
+   <p>You can access the members of a union variable through a pointer, but
+you can't use the regular member access operator anymore.  Instead,
+you have to use the indirect member access operator (see <a href="#Member-Access-Operators">Member Access Operators</a>).  Continuing with the previous example, the
+following example will change the value of the first member of
+<code>foo</code>:
 
 <pre class="example">     number_ptr -&gt; i = 450;
 </pre>
@@ -2167,24 +2192,23 @@ of the first member of <code>foo</code>:
 
 <div class="node">
 <p><hr>
-<a name="Pointers-to-Structures"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Pointers-to-Unions">Pointers to Unions</a>,
+<a name="Pointers-to-Structures"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Pointers-to-Unions">Pointers to Unions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Pointers">Pointers</a>
-<br>
+
 </div>
 
 <h4 class="subsection">2.6.4 Pointers to Structures</h4>
 
 <p><a name="index-pointers-to-structures-122"></a><a name="index-structures_002c-pointers-to-123"></a>
-You can create a pointer to a structure type just like you can a pointer
+You can create a pointer to a structure type just as you can a pointer
 to a primitive data type.
 
 <pre class="example">     struct fish
        {
          float length, weight;
        };
-     
      struct fish salmon = {4.3, 5.8};
-     
      struct fish *fish_ptr = &amp;salmon;
 </pre>
    <p>That example creates a new structure type, <code>struct fish</code>, and
@@ -2193,10 +2217,11 @@ Finally, it declares a pointer to the type <code>struct fish</code>, and
 gives it the address of <code>salmon</code>.
 
    <p>You can access the members of a structure variable through a pointer,
-but you can't use the regular member access operator anymore.  Instead,
-you have to use the indirect member access operator <span class="samp">-&gt;</span> .  Continuing
-with the previous example, the following example will change the values
-of the members of <code>salmon</code>:
+but you can't use the regular member access operator anymore. 
+Instead, you have to use the indirect member access operator
+(see <a href="#Member-Access-Operators">Member Access Operators</a>).  Continuing with the previous
+example, the following example will change the values of the members
+of <code>salmon</code>:
 
 <pre class="example">     fish_ptr -&gt; length = 5.1;
      fish_ptr -&gt; weight = 6.2;
@@ -2207,10 +2232,11 @@ of the members of <code>salmon</code>:
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Incomplete-Types"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Type-Specifiers">Type Specifiers</a>,
+<a name="Incomplete-Types"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Type-Specifiers">Type Specifiers</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Pointers">Pointers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.7 Incomplete Types</h3>
@@ -2234,15 +2260,16 @@ the type.  You do this by defining it as you usually would:
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="Type-Specifiers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Storage-Class-Specifiers">Storage Class Specifiers</a>,
+<a name="Type-Specifiers"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Storage-Class-Specifiers">Storage Class Specifiers</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Incomplete-Types">Incomplete Types</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.8 Type Specifiers</h3>
 
-<p><a name="index-type-specifiers-129"></a><a name="index-specifiers_002c-type-130"></a><a name="index-_0040code_007bconst_007d-type-specifier-131"></a><a name="index-_0040code_007bvolatile_007d-type-specifier-132"></a>
+<p><a name="index-type-specifiers-129"></a><a name="index-specifiers_002c-type-130"></a><a name="index-g_t_0040code_007bconst_007d-type-specifier-131"></a><a name="index-g_t_0040code_007bvolatile_007d-type-specifier-132"></a>
 There are two type specifiers that you can prepend to your variable declarations
 which change how the variables may be accessed:  <code>const</code> and <code>volatile</code>.
 
@@ -2264,15 +2291,16 @@ that is updated via callback functions.
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="Storage-Class-Specifiers"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Renaming-Types">Renaming Types</a>,
+<a name="Storage-Class-Specifiers"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Renaming-Types">Renaming Types</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Type-Specifiers">Type Specifiers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.9 Storage Class Specifiers</h3>
 
-<p><a name="index-storage-class-specifiers-133"></a><a name="index-specifiers_002c-storage-class-134"></a><a name="index-_0040code_007bauto_007d-storage-class-specifier-135"></a><a name="index-_0040code_007bextern_007d-storage-class-specifier-136"></a><a name="index-_0040code_007bregister_007d-storage-class-specifier-137"></a><a name="index-_0040code_007bstatic_007d-storage-class-specifier-138"></a>
+<p><a name="index-storage-class-specifiers-133"></a><a name="index-specifiers_002c-storage-class-134"></a><a name="index-g_t_0040code_007bauto_007d-storage-class-specifier-135"></a><a name="index-g_t_0040code_007bextern_007d-storage-class-specifier-136"></a><a name="index-g_t_0040code_007bregister_007d-storage-class-specifier-137"></a><a name="index-g_t_0040code_007bstatic_007d-storage-class-specifier-138"></a>
 There are four storage class specifiers that you can prepend to your variable
 declarations which change how the variables are stored in memory:
 <code>auto</code>, <code>extern</code>, <code>register</code>, and <code>static</code>.
@@ -2281,7 +2309,8 @@ declarations which change how the variables are stored in memory:
 values should be discarded upon return from the function in which they are
 declared.  This is the default behavior for variables declared within functions.
 
-<pre class="example">     void foo (int value)
+<pre class="example">     void
+     foo (int value)
      {
        auto int x = value;
        ...
@@ -2298,7 +2327,8 @@ address-of operator to obtain the address of a variable declared with
 variables within a function or block, these variables will retain their
 value even when the function or block is finished.
 
-<pre class="example">     int sum (int x)
+<pre class="example">     int
+     sum (int x)
      {
        static int sumSoFar = 0;
        sumSoFar = sumSoFar + x;
@@ -2306,7 +2336,8 @@ value even when the function or block is finished.
      }
 </pre>
    <p class="noindent">You can also declare variables outside of functions to be <code>static</code>; such
-variables are visible (global) to the entire source file.
+variables are visible (global) to the current source file (but not
+other source files).
 
    <p><code>extern</code> is useful for declaring variables that you want to be visible to
 all source files that are linked into your project.  You cannot initialize a
@@ -2328,9 +2359,10 @@ may be repeated multiple times.
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Renaming-Types"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Storage-Class-Specifiers">Storage Class Specifiers</a>,
+<a name="Renaming-Types"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Storage-Class-Specifiers">Storage Class Specifiers</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Data-Types">Data Types</a>
-<br>
+
 </div>
 
 <h3 class="section">2.10 Renaming Types</h3>
@@ -2344,10 +2376,11 @@ the <code>typedef</code> statement.  See <a href="#The-typedef-Statement">The ty
 <!-- See the file gnu-c-manual.texi for copying conditions. -->
 <div class="node">
 <p><hr>
-<a name="Expressions-and-Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Statements">Statements</a>,
+<a name="Expressions-and-Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Statements">Statements</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Data-Types">Data Types</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="chapter">3 Expressions and Operators</h2>
@@ -2363,9 +2396,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 
 <div class="node">
 <p><hr>
-<a name="Expressions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Unary-Operators">Unary Operators</a>,
+<a name="Expressions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Unary-Operators">Unary Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions and Operators</a>
-<br>
+
 </div>
 
 <h3 class="section">3.1 Expressions</h3>
@@ -2399,10 +2433,11 @@ Operators may have one, two, or three operands, depending on the operator.
 
 <div class="node">
 <p><hr>
-<a name="Unary-Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Binary-Operators">Binary Operators</a>,
+<a name="Unary-Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Binary-Operators">Binary Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Expressions">Expressions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions and Operators</a>
-<br>
+
 </div>
 
 <h3 class="section">3.2 Unary Operators</h3>
@@ -2428,9 +2463,10 @@ Unary operators perform an operation on a single operand.
 
 <div class="node">
 <p><hr>
-<a name="The-Increment-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Decrement-Operator">The Decrement Operator</a>,
+<a name="The-Increment-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Decrement-Operator">The Decrement Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.1 The Increment Operator</h4>
@@ -2471,10 +2507,11 @@ difference.  However, there are cases where it does make a difference:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Decrement-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Positive-Operator">The Positive Operator</a>,
+<a name="The-Decrement-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Positive-Operator">The Positive Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Increment-Operator">The Increment Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.2 The Decrement Operator</h4>
@@ -2515,10 +2552,11 @@ difference.  However, there are cases where it does make a difference:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Positive-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Negative-Operator">The Negative Operator</a>,
+<a name="The-Positive-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Negative-Operator">The Negative Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Decrement-Operator">The Decrement Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.3 The Positive Operator</h4>
@@ -2535,10 +2573,11 @@ visually enforce the fact that a value is positive.  Here are some examples:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Negative-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Logical-Negation-Operator">The Logical Negation Operator</a>,
+<a name="The-Negative-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Logical-Negation-Operator">The Logical Negation Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Positive-Operator">The Positive Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.4 The Negative Operator</h4>
@@ -2556,10 +2595,11 @@ maximum value of the unsigned data type, minus the value of the operand.
 
 <div class="node">
 <p><hr>
-<a name="The-Logical-Negation-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-Complement-Operator">The Bitwise Complement Operator</a>,
+<a name="The-Logical-Negation-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-Complement-Operator">The Bitwise Complement Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Negative-Operator">The Negative Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.5 The Logical Negation Operator</h4>
@@ -2579,10 +2619,11 @@ are some examples:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Bitwise-Complement-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Address-Operator">The Address Operator</a>,
+<a name="The-Bitwise-Complement-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Address-Operator">The Address Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Logical-Negation-Operator">The Logical Negation Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.6 The Bitwise Complement Operator</h4>
@@ -2604,10 +2645,11 @@ portability.
 
 <div class="node">
 <p><hr>
-<a name="The-Address-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Indirection-Operator">The Indirection Operator</a>,
+<a name="The-Address-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Indirection-Operator">The Indirection Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Bitwise-Complement-Operator">The Bitwise Complement Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.7 The Address Operator</h4>
@@ -2626,10 +2668,11 @@ address operator in pointer variables.
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Indirection-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-sizeof-Operator">The sizeof Operator</a>,
+<a name="The-Indirection-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-sizeof-Operator">The sizeof Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Address-Operator">The Address Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.8 The Indirection Operator</h4>
@@ -2649,8 +2692,7 @@ at the address specified by its operand.  This is known as
                      <span class="roman">stored in </span><code>ptr</code><span class="roman">.</span> */
 </pre>
    <p>Be sure to only use the indirection operator with pointers that have
-been initialized.  Otherwise, the value stored in those pointers probably
-won't be anything you want to use.
+been initialized.
 
 <!-- GNU C Extension - temporarily commented out for manual release 0.1, covering ANSI C89 -->
 <!-- @node The Complex Conjugation Operator -->
@@ -2672,10 +2714,11 @@ won't be anything you want to use.
 <!-- is equal to @math{25 + 289}. -->
 <div class="node">
 <p><hr>
-<a name="The-sizeof-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Type-Casts">Type Casts</a>,
+<a name="The-sizeof-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Type-Casts">Type Casts</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Indirection-Operator">The Indirection Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.9 The sizeof Operator</h4>
@@ -2687,10 +2730,10 @@ specifier (such as <code>int</code> or <code>float</code>), as well as any valid
 expression.  You must enclose the operand in parentheses after the
 operator.  Here are some examples:
 
-<pre class="example">     printf ("%d \n", sizeof (int) );
-     printf ("%d \n", sizeof (float) );
-     printf ("%d \n", sizeof (5) );
-     printf ("%d \n", sizeof (5.1) );
+<pre class="example">     size_t a = sizeof(int);
+     size_t b = sizeof(float);
+     size_t c = sizeof(5);
+     size_t d = sizeof(5.143);
 </pre>
    <p>The result of the <code>sizeof</code> operator is of a type called <code>size_t</code>,
 which is defined in the header file <code>stddef.h</code>.  <code>size_t</code> is
@@ -2699,18 +2742,19 @@ an unsigned integer type, perhaps identical to <code>unsigned int</code> or
 
 <div class="node">
 <p><hr>
-<a name="Type-Casts"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Array-Subscripts">Array Subscripts</a>,
+<a name="Type-Casts"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Array-Subscripts">Array Subscripts</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-sizeof-Operator">The sizeof Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.10 Type Casts</h4>
 
 <p><a name="index-type-casts-154"></a><a name="index-casts-155"></a>
-You can use a type cast to explicitly declare the data type of an expression. 
-A type cast consists of a type specifier enclosed in parentheses, followed
-by an expression.  To ensure proper casting, you should also enclose
+You can use a type cast to explicitly cause an expression to be of a specified
+data type.  A type cast consists of a type specifier enclosed in parentheses,
+followed by an expression.  To ensure proper casting, you should also enclose
 the expression that follows the type specifier in parentheses.  Here is
 an example:
 
@@ -2743,12 +2787,16 @@ an array of 8 bytes to a 8-byte structure type:
      
      foo = (struct fooType) byteArray;
 </pre>
-   <div class="node">
+   <p class="noindent">In practice, you should make sure to pack your structure type to ensure that the compiler
+doesn't add any padding, thereby increasing the size of the type.
+
+<div class="node">
 <p><hr>
-<a name="Array-Subscripts"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Function-Calls-as-Expressions">Function Calls as Expressions</a>,
+<a name="Array-Subscripts"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Function-Calls-as-Expressions">Function Calls as Expressions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Type-Casts">Type Casts</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.11 Array Subscripts</h4>
@@ -2762,16 +2810,16 @@ an example, using an integer array called <code>my_array</code>:
 </pre>
    <div class="node">
 <p><hr>
-<a name="Function-Calls-as-Expressions"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Array-Subscripts">Array Subscripts</a>,
+<a name="Function-Calls-as-Expressions"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Array-Subscripts">Array Subscripts</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.2.12 Function Calls as Expressions</h4>
 
 <p><a name="index-function-calls_002c-as-expressions-157"></a>
-A function call is an expression if the function returns a
-value, regardless of if the returned value is used or not.
+A call to any function which returns a value is an expression.
 
 <pre class="example">     int function( void );
      ...
@@ -2779,10 +2827,11 @@ value, regardless of if the returned value is used or not.
 </pre>
    <div class="node">
 <p><hr>
-<a name="Binary-Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Ternary-Operator">The Ternary Operator</a>,
+<a name="Binary-Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Ternary-Operator">The Ternary Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Unary-Operators">Unary Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions and Operators</a>
-<br>
+
 </div>
 
 <h3 class="section">3.3 Binary Operators</h3>
@@ -2808,9 +2857,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions
 
 <div class="node">
 <p><hr>
-<a name="The-Addition-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Subtraction-Operator">The Subtraction Operator</a>,
+<a name="The-Addition-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Subtraction-Operator">The Subtraction Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.1 The Addition Operator</h4>
@@ -2830,10 +2880,11 @@ such as in the last example, the expression is evaluated from left to right.
 
 <div class="node">
 <p><hr>
-<a name="The-Subtraction-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Multiplication-Operator">The Multiplication Operator</a>,
+<a name="The-Subtraction-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Multiplication-Operator">The Multiplication Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Addition-Operator">The Addition Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.2 The Subtraction Operator</h4>
@@ -2855,10 +2906,11 @@ right.
 
 <div class="node">
 <p><hr>
-<a name="The-Multiplication-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Division-Operator">The Division Operator</a>,
+<a name="The-Multiplication-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Division-Operator">The Division Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Subtraction-Operator">The Subtraction Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.3 The Multiplication Operator</h4>
@@ -2880,10 +2932,11 @@ left to right.
 
 <div class="node">
 <p><hr>
-<a name="The-Division-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Modulus-Operator">The Modulus Operator</a>,
+<a name="The-Division-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Modulus-Operator">The Modulus Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Multiplication-Operator">The Multiplication Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.4 The Division Operator</h4>
@@ -2904,10 +2957,11 @@ such as in the last example, the expression is evaluated from left to right.
 
 <div class="node">
 <p><hr>
-<a name="The-Modulus-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Shift-Operators">The Shift Operators</a>,
+<a name="The-Modulus-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Shift-Operators">The Shift Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Division-Operator">The Division Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.5 The Modulus Operator</h4>
@@ -2916,7 +2970,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 You use the modulus operator <code>%</code> to obtain the remainder produced
 by dividing its two operands.  You put the operands on either side of
 the operator, and it does matter which operand goes on which
-side:  <code>3 % 5</code> and <code>5 \% 3</code> do not both have the same result. 
+side:  <code>3 % 5</code> and <code>5 % 3</code> do not both have the same result. 
 The operands must be expressions of a primitive data type.
 
 <pre class="example">     x = 5 % 3;
@@ -2942,10 +2996,11 @@ remainder is zero.  Here is an example of that:
 
 <div class="node">
 <p><hr>
-<a name="The-Shift-Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-AND-Operator">The Bitwise AND Operator</a>,
+<a name="The-Shift-Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-AND-Operator">The Bitwise AND Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Modulus-Operator">The Modulus Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.6 The Shift Operators</h4>
@@ -2976,10 +3031,11 @@ whatever value was previously in the leftmost bit position.
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Bitwise-AND-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-Inclusive-OR-Operator">The Bitwise Inclusive OR Operator</a>,
+<a name="The-Bitwise-AND-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-Inclusive-OR-Operator">The Bitwise Inclusive OR Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Shift-Operators">The Shift Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.7 The Bitwise AND Operator</h4>
@@ -3002,10 +3058,11 @@ Otherwise it is set to 0.  Here is another example, this time in C:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Bitwise-Inclusive-OR-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-Exclusive-OR-Operator">The Bitwise Exclusive OR Operator</a>,
+<a name="The-Bitwise-Inclusive-OR-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Bitwise-Exclusive-OR-Operator">The Bitwise Exclusive OR Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Bitwise-AND-Operator">The Bitwise AND Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.8 The Bitwise Inclusive OR Operator</h4>
@@ -3027,10 +3084,11 @@ binary numbers:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Bitwise-Exclusive-OR-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Comparison-Operators">The Comparison Operators</a>,
+<a name="The-Bitwise-Exclusive-OR-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Comparison-Operators">The Comparison Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Bitwise-Inclusive-OR-Operator">The Bitwise Inclusive OR Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.9 The Bitwise Exclusive OR Operator</h4>
@@ -3051,10 +3109,11 @@ Here is an example of how this operator works, using binary numbers:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Comparison-Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Logical-Operators">Logical Operators</a>,
+<a name="The-Comparison-Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Logical-Operators">Logical Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Bitwise-Exclusive-OR-Operator">The Bitwise Exclusive OR Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.10 The Comparison Operators</h4>
@@ -3080,9 +3139,11 @@ for any two expressions of primitive types, or pointers.
 
 <div class="node">
 <p><hr>
-<a name="The-Equal_002dto-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Not_002dEqual_002dto-Operator">The Not-Equal-to Operator</a>,
+<a name="The-Equal-to-Operator"></a>
+<a name="The-Equal_002dto-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Not_002dEqual_002dto-Operator">The Not-Equal-to Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparison Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.10.1 The Equal-to Operator</h5>
@@ -3093,16 +3154,18 @@ equality.  It evaluates to 1 if the two operands are equal, and 0 if the
 two operands are not equal.
 
 <pre class="example">     if (x == y)
-       printf ("x is equal to y");
+       puts ("x is equal to y");
      else
-       printf ("x is not equal to y");
+       puts ("x is not equal to y");
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Not_002dEqual_002dto-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Less_002dThan-Operator">The Less-Than Operator</a>,
+<a name="The-Not-Equal-to-Operator"></a>
+<a name="The-Not_002dEqual_002dto-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Less_002dThan-Operator">The Less-Than Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Equal_002dto-Operator">The Equal-to Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparison Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.10.2 The Not-Equal-to Operator</h5>
@@ -3113,16 +3176,18 @@ inequality.  If the two operands are not equal, the result is 1.  Otherwise,
 if the two operands <em>are</em> equal, the result is 0.
 
 <pre class="example">     if (x != y)
-       printf ("x is not equal to y");
+       puts ("x is not equal to y");
      else
-       printf ("x is equal to y");
+       puts ("x is equal to y");
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Less_002dThan-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">The Less-Than-or-Equal-to Operator</a>,
+<a name="The-Less-Than-Operator"></a>
+<a name="The-Less_002dThan-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">The Less-Than-or-Equal-to Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Not_002dEqual_002dto-Operator">The Not-Equal-to Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparison Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.10.3 The Less-Than Operator</h5>
@@ -3133,16 +3198,18 @@ is less than the second operand.  If it is, the result is 1.  Otherwise, the
 result is 0.
 
 <pre class="example">     if (x &lt; y)
-       printf ("x is less than y");
+       puts ("x is less than y");
      else
-       printf ("x is not less than y");
+       puts ("x is not less than y");
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Less_002dThan_002dor_002dEqual_002dto-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Greater_002dThan-Operator">The Greater-Than Operator</a>,
+<a name="The-Less-Than-or-Equal-to-Operator"></a>
+<a name="The-Less_002dThan_002dor_002dEqual_002dto-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Greater_002dThan-Operator">The Greater-Than Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Less_002dThan-Operator">The Less-Than Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparison Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.10.4 The Less-Than-or-Equal-to Operator</h5>
@@ -3153,35 +3220,39 @@ operand is less than or equal to the second operand.  If it is, the result
 is 1.  Otherwise, the result is 0.
 
 <pre class="example">     if (x &lt;= y)
-       printf ("x is less than or equal to y");
+       puts ("x is less than or equal to y");
      else
-       printf ("x is not less than or equal to y");
+       puts ("x is not less than or equal to y");
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Greater_002dThan-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">The Greater-Than-or-Equal-to Operator</a>,
+<a name="The-Greater-Than-Operator"></a>
+<a name="The-Greater_002dThan-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">The Greater-Than-or-Equal-to Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Less_002dThan_002dor_002dEqual_002dto-Operator">The Less-Than-or-Equal-to Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparison Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.10.5 The Greater-Than Operator</h5>
 
 <p><a name="index-greater_002dthan-operator-174"></a>
-Use the  greater-than operator <code>&gt;</code> to determine if the first operand
+Use the greater-than operator <code>&gt;</code> to determine if the first operand
 is greater than the second operand.  If it is, the result is 1. Otherwise,
 the result is 0.
 
 <pre class="example">     if (x &gt; y)
-       printf ("x is greater than y");
+       puts ("x is greater than y");
      else
-       printf ("x is not greater than y");
+       puts ("x is not greater than y");
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Greater_002dThan_002dor_002dEqual_002dto-Operator"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Greater_002dThan-Operator">The Greater-Than Operator</a>,
+<a name="The-Greater-Than-or-Equal-to-Operator"></a>
+<a name="The-Greater_002dThan_002dor_002dEqual_002dto-Operator"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Greater_002dThan-Operator">The Greater-Than Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#The-Comparison-Operators">The Comparison Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.10.6 The Greater-Than-or-Equal-to Operator</h5>
@@ -3192,16 +3263,17 @@ first operand is greater than or equal to the second operand.  If it is, the
 result is 1.  Otherwise, the result is 0.
 
 <pre class="example">     if (x &gt;= y)
-       printf ("x is greater than or equal to y");
+       puts ("x is greater than or equal to y");
      else
-       printf ("x is not greater than or equal to y");
+       puts ("x is not greater than or equal to y");
 </pre>
    <div class="node">
 <p><hr>
-<a name="Logical-Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Assignment-Operators">Assignment Operators</a>,
+<a name="Logical-Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Assignment-Operators">Assignment Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Comparison-Operators">The Comparison Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.11 Logical Operators</h4>
@@ -3221,9 +3293,10 @@ expression, any nonzero expression is considered true in C.
 
 <div class="node">
 <p><hr>
-<a name="The-Logical-AND-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Logical-OR-Operator">The Logical OR Operator</a>,
+<a name="The-Logical-AND-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Logical-OR-Operator">The Logical OR Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Logical-Operators">Logical Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.11.1 The Logical AND Operator</h5>
@@ -3244,9 +3317,10 @@ and more than two operands, like this:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Logical-OR-Operator"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Logical-AND-Operator">The Logical AND Operator</a>,
+<a name="The-Logical-OR-Operator"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Logical-AND-Operator">The Logical AND Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Logical-Operators">Logical Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.11.2 The Logical OR Operator</h5>
@@ -3267,10 +3341,11 @@ more than two operands, like this:
 </pre>
    <div class="node">
 <p><hr>
-<a name="Assignment-Operators"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Comma-Operator">The Comma Operator</a>,
+<a name="Assignment-Operators"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Comma-Operator">The Comma Operator</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Logical-Operators">Logical Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.12 Assignment Operators</h4>
@@ -3290,9 +3365,10 @@ pointer.
 
 <div class="node">
 <p><hr>
-<a name="The-Assignment-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Compound-Assignment-Operators">The Compound Assignment Operators</a>,
+<a name="The-Assignment-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Compound-Assignment-Operators">The Compound Assignment Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Assignment-Operators">Assignment Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.12.1 The Assignment Operator</h5>
@@ -3309,9 +3385,10 @@ to primitive types and pointers.
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Compound-Assignment-Operators"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Assignment-Operator">The Assignment Operator</a>,
+<a name="The-Compound-Assignment-Operators"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Assignment-Operator">The Assignment Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Assignment-Operators">Assignment Operators</a>
-<br>
+
 </div>
 
 <h5 class="subsubsection">3.3.12.2 The Compound Assignment Operators</h5>
@@ -3456,22 +3533,20 @@ operands, and assigns the result of the operation to the left operand.
 <!-- @code{f}, you can simply write @code{(int *)&f}. -->
 <div class="node">
 <p><hr>
-<a name="The-Comma-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Member-Access-Operators">Member Access Operators</a>,
+<a name="The-Comma-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Member-Access-Operators">Member Access Operators</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Assignment-Operators">Assignment Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.13 The Comma Operator</h4>
 
 <p><a name="index-comma-operator-183"></a>
-You use the comma operator <code>,</code> to separate two expressions.  These
-expressions don't have to be related at all, but often the first expression
-produces a value that is used by the second expression.
+You use the comma operator <code>,</code> to separate two expressions.  For instance,
+the first expression might produce a value that is used by the second expression:
 
-<pre class="example">     int x = 5, y = 10;
-     
-     x++, y = x * x;
+<pre class="example">     x++, y = x * x;
 </pre>
    <p>More commonly, the comma operator is used in <code>for</code> statements, like
 this:
@@ -3483,6 +3558,9 @@ this:
          ...
        }
 </pre>
+   <p class="noindent">This lets you set, monitor, and modify multiple control expressions for the
+<code>for</code> statement.
+
    <p>A comma is also used to separate function parameters; however, this
 is <em>not</em> the comma operator in action.   In fact, if the comma
 operator is used as we have discussed here in a function call (without
@@ -3506,9 +3584,10 @@ expression with parentheses.
 
 <div class="node">
 <p><hr>
-<a name="Member-Access-Operators"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Comma-Operator">The Comma Operator</a>,
+<a name="Member-Access-Operators"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Comma-Operator">The Comma Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
-<br>
+
 </div>
 
 <h4 class="subsection">3.3.14 Member Access Operators</h4>
@@ -3548,10 +3627,11 @@ a pointer by using the indirect member access operator <code>-&gt;</code>.
 
 <div class="node">
 <p><hr>
-<a name="The-Ternary-Operator"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Order-of-Evaluation">Order of Evaluation</a>,
+<a name="The-Ternary-Operator"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Order-of-Evaluation">Order of Evaluation</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Binary-Operators">Binary Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions and Operators</a>
-<br>
+
 </div>
 
 <h3 class="section">3.4 The Ternary Operator</h3>
@@ -3659,9 +3739,10 @@ operands.
 <!-- Add reference to typeof typedef -->
 <div class="node">
 <p><hr>
-<a name="Order-of-Evaluation"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Ternary-Operator">The Ternary Operator</a>,
+<a name="Order-of-Evaluation"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Ternary-Operator">The Ternary Operator</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Expressions-and-Operators">Expressions and Operators</a>
-<br>
+
 </div>
 
 <h3 class="section">3.5 Order of Evaluation</h3>
@@ -3733,10 +3814,11 @@ they are evaluated right to left.
 <!-- See the file gnu-c-manual.texi for copying conditions. -->
 <div class="node">
 <p><hr>
-<a name="Statements"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Functions">Functions</a>,
+<a name="Statements"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Functions">Functions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Expressions-and-Operators">Expressions and Operators</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="chapter">4 Statements</h2>
@@ -3765,9 +3847,10 @@ or do things that are uselessly trivial.
 
 <div class="node">
 <p><hr>
-<a name="Labels"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Expression-Statements">Expression Statements</a>,
+<a name="Labels"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Expression-Statements">Expression Statements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.1 Labels</h3>
@@ -3792,10 +3875,11 @@ your code may have portability issues.
 
 <div class="node">
 <p><hr>
-<a name="Expression-Statements"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-if-Statement">The if Statement</a>,
+<a name="Expression-Statements"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-if-Statement">The if Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Labels">Labels</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.2 Expression Statements</h3>
@@ -3831,19 +3915,17 @@ not a valid pointer and has been declared as <code>volatile</code>.
 <!-- reference to `volatile' -->
 <div class="node">
 <p><hr>
-<a name="The-if-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-switch-Statement">The switch Statement</a>,
+<a name="The-if-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-switch-Statement">The switch Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Expression-Statements">Expression Statements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.3 The <code>if</code> Statement</h3>
 
-<p><a name="index-_0040code_007bif_007d-statements-199"></a><a name="index-_0040code_007belse_007d-statements-200"></a>
-You can use the <code>if</code> statement to conditionally execute a section
-of your program, based on the truth value of a given expression.
-
-   <p>You can use the <code>if</code> statement to conditionally execute part of your
+<p><a name="index-g_t_0040code_007bif_007d-statements-199"></a><a name="index-g_t_0040code_007belse_007d-statements-200"></a>
+You can use the <code>if</code> statement to conditionally execute part of your
 program, based on the truth value of a given expression.  Here is the
 general form of an <code>if</code> statement:
 
@@ -3887,15 +3969,16 @@ conditions:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-switch-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-while-Statement">The while Statement</a>,
+<a name="The-switch-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-while-Statement">The while Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-if-Statement">The if Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.4 The <code>switch</code> Statement</h3>
 
-<p><a name="index-_0040code_007bswitch_007d-statement-201"></a>
+<p><a name="index-g_t_0040code_007bswitch_007d-statement-201"></a>
 You can use the <code>switch</code> statement to compare one expression with others,
 and then execute a series of sub-statements based on the result of the
 comparisons.  Here is the general form of a <code>switch</code> statement:
@@ -3914,7 +3997,9 @@ comparisons.  Here is the general form of a <code>switch</code> statement:
    <p>The <code>switch</code> statement compares <var>test</var> to each of the
 <var>compare</var> expressions, until it finds one that is
 equal to <var>test</var>.  Then, the statements following the successful
-case are executed.
+case are executed.  All of the expressions compared must be of an integer
+type, and the <var>compare-N</var> expressions must be of a constant integer
+type (e.g., a literal integer or expression built of literal integers).
 
    <p>Optionally, you can specify a default case.  If <var>test</var> doesn't match
 any of the specific cases listed prior to the default case, then
@@ -3984,15 +4069,16 @@ end of each case redirects program flow to after the <code>switch</code> stateme
 <!-- @end example -->
 <div class="node">
 <p><hr>
-<a name="The-while-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-do-Statement">The do Statement</a>,
+<a name="The-while-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-do-Statement">The do Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-switch-Statement">The switch Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.5 The <code>while</code> Statement</h3>
 
-<p><a name="index-_0040code_007bwhile_007d-statement-202"></a>
+<p><a name="index-g_t_0040code_007bwhile_007d-statement-202"></a>
 The <code>while</code> statement is a loop statement with an exit test at
 the beginning of the loop.  Here is the general form of the <code>while</code>
 statement:
@@ -4011,15 +4097,16 @@ evaluated again.  <var>statement</var> continues to execute repeatedly as long a
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-do-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-for-Statement">The for Statement</a>,
+<a name="The-do-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-for-Statement">The for Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-while-Statement">The while Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.6 The <code>do</code> Statement</h3>
 
-<p><a name="index-_0040code_007bdo_007d-statement-203"></a>
+<p><a name="index-g_t_0040code_007bdo_007d-statement-203"></a>
 The <code>do</code> statement is a loop statement with an exit test at the end
 of the loop.  Here is the general form of the <code>do</code> statement:
 
@@ -4039,15 +4126,16 @@ executed again.  <var>statement</var> continues to execute repeatedly as long as
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-for-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Blocks">Blocks</a>,
+<a name="The-for-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Blocks">Blocks</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-do-Statement">The do Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.7 The <code>for</code> Statement</h3>
 
-<p><a name="index-_0040code_007bfor_007d-statement-204"></a>
+<p><a name="index-g_t_0040code_007bfor_007d-statement-204"></a>
 The <code>for</code> statement is a loop statement whose structure allows
 easy variable initialization, expression testing, and variable
 modification.  It is very convenient for making counter-controlled
@@ -4122,10 +4210,11 @@ than or equal to 1, and increments <code>x</code> and decrements <code>y</code>.
 
 <div class="node">
 <p><hr>
-<a name="Blocks"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-Null-Statement">The Null Statement</a>,
+<a name="Blocks"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-Null-Statement">The Null Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-for-Statement">The for Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.8 Blocks</h3>
@@ -4174,10 +4263,11 @@ that block.
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-Null-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-goto-Statement">The goto Statement</a>,
+<a name="The-Null-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-goto-Statement">The goto Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Blocks">Blocks</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.9 The Null Statement</h3>
@@ -4207,15 +4297,16 @@ of a <code>for</code> loop and also produces output:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-goto-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-break-Statement">The break Statement</a>,
+<a name="The-goto-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-break-Statement">The break Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-Null-Statement">The Null Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.10 The <code>goto</code> Statement</h3>
 
-<p><a name="index-_0040code_007bgoto_007d-statement-208"></a>
+<p><a name="index-g_t_0040code_007bgoto_007d-statement-208"></a>
 You can use the <code>goto</code> statement to unconditionally jump to a different
 place in the program.  Here is the general form of a <code>goto</code> statement:
 
@@ -4241,15 +4332,16 @@ when possible.
 
 <div class="node">
 <p><hr>
-<a name="The-break-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-continue-Statement">The continue Statement</a>,
+<a name="The-break-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-continue-Statement">The continue Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-goto-Statement">The goto Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.11 The <code>break</code> Statement</h3>
 
-<p><a name="index-_0040code_007bbreak_007d-statement-209"></a>
+<p><a name="index-g_t_0040code_007bbreak_007d-statement-209"></a>
 You can use the <code>break</code> statement to terminate a <code>while</code>, <code>do</code>,
 <code>for</code>, or <code>switch</code> statement.  Here is an example:
 
@@ -4272,41 +4364,43 @@ statement which itself is inside of a loop or <code>switch</code> statement, the
 
 <div class="node">
 <p><hr>
-<a name="The-continue-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-return-Statement">The return Statement</a>,
+<a name="The-continue-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-return-Statement">The return Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-break-Statement">The break Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.12 The <code>continue</code> Statement</h3>
 
-<p><a name="index-_0040code_007bcontinue_007d-statement-210"></a>
+<p><a name="index-g_t_0040code_007bcontinue_007d-statement-210"></a>
 You can use the <code>continue</code> statement in loops to terminate an
 iteration of the loop and begin the next iteration.  Here is an
 example:
 
 <pre class="example">     for (x = 0; x &lt; 100; x++)
-     {
-       if (x % 2 == 0)
-         continue;
-       else
-         sum_of_odd_numbers + = x;
-     }
+       {
+         if (x % 2 == 0)
+           continue;
+         else
+           sum_of_odd_numbers + = x;
+       }
 </pre>
    <p>If you put a <code>continue</code> statement inside a loop which itself is
 inside a loop, then it affects only the innermost loop.
 
 <div class="node">
 <p><hr>
-<a name="The-return-Statement"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-typedef-Statement">The typedef Statement</a>,
+<a name="The-return-Statement"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-typedef-Statement">The typedef Statement</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-continue-Statement">The continue Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.13 The <code>return</code> Statement</h3>
 
-<p><a name="index-_0040code_007breturn_007d-statement-211"></a>
+<p><a name="index-g_t_0040code_007breturn_007d-statement-211"></a>
 You can use the <code>return</code> statement to end the execution of a function
 and return program control to the function that called it.  Here is the
 general form of the <code>return</code> statement:
@@ -4356,14 +4450,15 @@ a <code>void</code> and non-<code>void</code> function:
 </pre>
    <div class="node">
 <p><hr>
-<a name="The-typedef-Statement"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-return-Statement">The return Statement</a>,
+<a name="The-typedef-Statement"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-return-Statement">The return Statement</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Statements">Statements</a>
-<br>
+
 </div>
 
 <h3 class="section">4.14 The <code>typedef</code> Statement</h3>
 
-<p><a name="index-_0040code_007btypedef_007d-statement-212"></a>
+<p><a name="index-g_t_0040code_007btypedef_007d-statement-212"></a>
 You can use the <code>typedef</code> statement to create new names for data
 types.  Here is the general form of the <code>typedef</code> statement:
 
@@ -4405,10 +4500,11 @@ type names.
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Functions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Program-Structure-and-Scope">Program Structure and Scope</a>,
+<a name="Functions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Program-Structure-and-Scope">Program Structure and Scope</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Statements">Statements</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="chapter">5 Functions</h2>
@@ -4445,9 +4541,10 @@ That is where the program's execution begins.
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Function-Declarations"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Function-Definitions">Function Definitions</a>,
+<a name="Function-Declarations"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Function-Definitions">Function Definitions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
-<br>
+
 </div>
 
 <h3 class="section">5.1 Function Declarations</h3>
@@ -4492,10 +4589,11 @@ use the function.
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Function-Definitions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Calling-Functions">Calling Functions</a>,
+<a name="Function-Definitions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Calling-Functions">Calling Functions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Function-Declarations">Function Declarations</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
-<br>
+
 </div>
 
 <h3 class="section">5.2 Function Definitions</h3>
@@ -4544,10 +4642,11 @@ the closing parentheses of the parameter list, like this:
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Calling-Functions"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Function-Parameters">Function Parameters</a>,
+<a name="Calling-Functions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Function-Parameters">Function Parameters</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Function-Definitions">Function Definitions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
-<br>
+
 </div>
 
 <h3 class="section">5.3 Calling Functions</h3>
@@ -4563,14 +4662,14 @@ subexpression.  Here is an example of a standalone function call:
 
 <pre class="example">     foo (5);
 </pre>
-   <p class="noindent">In that example, the function <span class="samp">foo</span> is called with the
+   <p class="noindent">In that example, the function `<samp><span class="samp">foo</span></samp>' is called with the
 parameter <code>5</code>.
 
    <p>Here is an example of a function call used as a subexpression:
 
 <pre class="example">     a = square (5);
 </pre>
-   <p class="noindent">Supposing that the function <span class="samp">square</span> squares its parameter, the
+   <p class="noindent">Supposing that the function `<samp><span class="samp">square</span></samp>' squares its parameter, the
 above example assigns the value 25 to <code>a</code>.
 
    <p>If a parameter takes more than one argument, you separate parameters with commas:
@@ -4580,10 +4679,11 @@ above example assigns the value 25 to <code>a</code>.
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="Function-Parameters"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Variable-Length-Parameter-Lists">Variable Length Parameter Lists</a>,
+<a name="Function-Parameters"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Variable-Length-Parameter-Lists">Variable Length Parameter Lists</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Calling-Functions">Calling Functions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
-<br>
+
 </div>
 
 <h3 class="section">5.4 Function Parameters</h3>
@@ -4607,7 +4707,7 @@ the function; you cannot change the value passed in by changing the local copy.
      }
 </pre>
    <p class="noindent">In that example, even though the parameter <code>a</code> is modified in the
-function <span class="samp">foo</span>, the variable <code>x</code> that is passed to
+function `<samp><span class="samp">foo</span></samp>', the variable <code>x</code> that is passed to
 the function does not change.  If you wish to use the function to change
 the original value of <code>x</code>, then you would have to incorporate the
 function call into an assignment statement:
@@ -4649,8 +4749,7 @@ variable type is large and you need to conserve memory space.  For example:
        double z;
      };
      
-     void
-     bar (struct foo *a);
+     void bar (struct foo *a);
 </pre>
    <p class="noindent">In this case, unless you are working on a computer with very large memory
 addresses, it will take less memory to pass a pointer to the structure
@@ -4659,8 +4758,7 @@ than to pass an instance of the structure.
    <p>One type of parameter that is always passed as a memory address is any sort
 of array:
 
-<pre class="example">     void
-     foo (int a[]);
+<pre class="example">     void foo (int a[]);
      ...
      int x[100];
      foo (x);
@@ -4672,8 +4770,7 @@ Be careful, though: within the function, you cannot use <code>sizeof</code> to d
 the size of the array <code>x</code>&mdash;<code>sizeof</code> instead tells you the size of the
 pointer <code>x</code>.   Indeed, the above code is equivalent to:
 
-<pre class="example">     void
-     foo (int *a);
+<pre class="example">     void foo (int *a);
      ...
      int x[100];
      foo (x);
@@ -4681,10 +4778,11 @@ pointer <code>x</code>.   Indeed, the above code is equivalent to:
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="Variable-Length-Parameter-Lists"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#The-main-Function">The main Function</a>,
+<a name="Variable-Length-Parameter-Lists"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#The-main-Function">The main Function</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Function-Parameters">Function Parameters</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
-<br>
+
 </div>
 
 <h3 class="section">5.5 Variable Length Parameter Lists</h3>
@@ -4696,13 +4794,13 @@ data type, but the remaining parameters are optional, and can vary in both
 quantity and data type.
 
    <p>You list the first parameter as normal, but then as the second parameter,
-use an ellipsis: <span class="samp">...</span>.  Here is an example function prototype:
+use an ellipsis: `<samp><span class="samp">...</span></samp>'.  Here is an example function prototype:
 
 <pre class="example">     int add_multiple_values (int number, ...);
 </pre>
    <p>To work with the optional parameters in the function definition, you need
 to use macro functions that are defined in the library header file
-<span class="samp">stdarg.h</span>.  So be sure to <code>#include</code> that file.  Those functions
+`<samp><span class="samp">stdarg.h</span></samp>'.  So be sure to <code>#include</code> that file.  Those functions
 are described in a separate manual, but here is an example of using them:
 
 <pre class="example">     int
@@ -4710,10 +4808,10 @@ are described in a separate manual, but here is an example of using them:
      {
        int counter, total = 0;
      
-       /* <span class="roman">Declare a variable of type va_list.</span> */
+       /* <span class="roman">Declare a variable of type `<samp>va_list</samp>'.</span> */
        va_list parameters;
      
-       /* <span class="roman">Call the va_start function.</span> */
+       /* <span class="roman">Call the `<samp>va_start</samp>' function.</span> */
        va_start (parameters, number);
      
        for (counter = 0; counter &lt; number; counter++)
@@ -4722,7 +4820,7 @@ are described in a separate manual, but here is an example of using them:
            total += va_arg (parameters, int);
          }
      
-       /* <span class="roman">End use of the parameters variable.</span> */
+       /* <span class="roman">End use of the `<samp>parameters</samp>' variable.</span> */
        va_end (parameters);
      
        return total;
@@ -4731,34 +4829,35 @@ are described in a separate manual, but here is an example of using them:
    <p>To use optional parameters, you should have a way to know how many
 there are.  This can vary, so it can't be hard-coded, but if you
 don't know how many optional parameters you have, then you could
-have difficulty knowing when to stop using the <span class="samp">va_arg</span> function. 
-In the above example, the first parameter to the <span class="samp">add_multiple_values</span>
-function, <span class="samp">number</span>, was the number of optional parameters included. 
+have difficulty knowing when to stop using the `<samp><span class="samp">va_arg</span></samp>' function. 
+In the above example, the first parameter to the `<samp><span class="samp">add_multiple_values</span></samp>'
+function, `<samp><span class="samp">number</span></samp>', was the number of optional parameters included. 
 So, we might call the function like this:
 
 <pre class="example">     sum = add_multiple_values (3, 12, 34, 190);
 </pre>
    <p>The first parameter indicates how many optional parameters follow it.
 
-   <p>Also, note that you don't actually need to use <span class="samp">va_end</span> function. 
+   <p>Also, note that you don't actually need to use `<samp><span class="samp">va_end</span></samp>' function. 
 In fact, with GCC it doesn't do anything at all.  However, you might want
 to include it to maximize compatibility with other compilers.
 
-   <p>See <a href="glibc.html#Variadic-Functions">Variadic Functions (The GNU C Library Reference Manual)</a>.
+   <p>See <a href="glibc.html#Variadic-Functions">Variadic Functions</a>.
 
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="The-main-Function"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Recursive-Functions">Recursive Functions</a>,
+<a name="The-main-Function"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Recursive-Functions">Recursive Functions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Variable-Length-Parameter-Lists">Variable Length Parameter Lists</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
-<br>
+
 </div>
 
 <h3 class="section">5.6 The <code>main</code> Function</h3>
 
 <p><a name="index-main-function-225"></a><a name="index-function_002c-main-226"></a>
-Every program requires at least one function, called <span class="samp">main</span>. 
+Every program requires at least one function, called `<samp><span class="samp">main</span></samp>'. 
 This is where the program begins executing.  You do not need to write a
 declaration or prototype for <code>main</code>, but you do need to define it.
 
@@ -4809,9 +4908,10 @@ parameters, and prints out what those parameters are:
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="Recursive-Functions"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-main-Function">The main Function</a>,
+<a name="Recursive-Functions"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-main-Function">The main Function</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
-<br>
+
 </div>
 
 <h3 class="section">5.7 Recursive Functions</h3>
@@ -4879,10 +4979,11 @@ or runs out of memory:
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="Program-Structure-and-Scope"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#A-Sample-Program">A Sample Program</a>,
+<a name="Program-Structure-and-Scope"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#A-Sample-Program">A Sample Program</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Functions">Functions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="chapter">6 Program Structure and Scope</h2>
@@ -4897,9 +4998,10 @@ to look at the big picture.
 
 <div class="node">
 <p><hr>
-<a name="Program-Structure"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Scope">Scope</a>,
+<a name="Program-Structure"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Scope">Scope</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Program-Structure-and-Scope">Program Structure and Scope</a>
-<br>
+
 </div>
 
 <h3 class="section">6.1 Program Structure</h3>
@@ -4943,9 +5045,10 @@ but do not need to know how it was implemented.
 </pre>
    <div class="node">
 <p><hr>
-<a name="Scope"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#Program-Structure">Program Structure</a>,
+<a name="Scope"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Program-Structure">Program Structure</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Program-Structure-and-Scope">Program Structure and Scope</a>
-<br>
+
 </div>
 
 <h3 class="section">6.2 Scope</h3>
@@ -4983,10 +5086,11 @@ declared objects.
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="A-Sample-Program"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>,
+<a name="A-Sample-Program"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#Program-Structure-and-Scope">Program Structure and Scope</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="chapter">7 A Sample Program</h2>
@@ -5011,9 +5115,11 @@ macros, see <cite>The C Preprocessor</cite>, available as part of the GCC docume
 <!--  -->
 <div class="node">
 <p><hr>
-<a name="hello_002ec"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#system_002eh">system.h</a>,
+<a name="hello.c"></a>
+<a name="hello_002ec"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#system_002eh">system.h</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
-<br>
+
 </div>
 
 <h3 class="section">7.1 <code>hello.c</code></h3>
@@ -5217,9 +5323,11 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
    <!--  -->
 <div class="node">
 <p><hr>
-<a name="system_002eh"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#hello_002ec">hello.c</a>,
+<a name="system.h"></a>
+<a name="system_002eh"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#hello_002ec">hello.c</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
-<br>
+
 </div>
 
 <h3 class="section">7.2 <code>system.h</code></h3>
@@ -5268,10 +5376,11 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
 </pre>
    <div class="node">
 <p><hr>
-<a name="GNU-Free-Documentation-License"></a>Next:&nbsp;<a rel="next" accesskey="n" href="#Index">Index</a>,
+<a name="GNU-Free-Documentation-License"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Index">Index</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#A-Sample-Program">A Sample Program</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="unnumbered">GNU Free Documentation License</h2>
@@ -5690,9 +5799,10 @@ to permit their use in free software.
 <!-- End: -->
 <div class="node">
 <p><hr>
-<a name="Index"></a>Previous:&nbsp;<a rel="previous" accesskey="p" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>,
+<a name="Index"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
-<br>
+
 </div>
 
 <h2 class="unnumbered">Index</h2>
@@ -5715,7 +5825,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-assignment-operator-180">assignment operator</a>: <a href="#The-Assignment-Operator">The Assignment Operator</a></li>
 <li><a href="#index-assignment-operators-179">assignment operators</a>: <a href="#Assignment-Operators">Assignment Operators</a></li>
 <li><a href="#index-assignment-operators_002c-compound-182">assignment operators, compound</a>: <a href="#The-Compound-Assignment-Operators">The Compound Assignment Operators</a></li>
-<li><a href="#index-_0040code_007bauto_007d-storage-class-specifier-135"><code>auto</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
+<li><a href="#index-g_t_0040code_007bauto_007d-storage-class-specifier-135"><code>auto</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-binary-operators-158">binary operators</a>: <a href="#Binary-Operators">Binary Operators</a></li>
 <li><a href="#index-bit-fields-88">bit fields</a>: <a href="#Bit-Fields">Bit Fields</a></li>
 <li><a href="#index-bitwise-AND-operator-166">bitwise AND operator</a>: <a href="#The-Bitwise-AND-Operator">The Bitwise AND Operator</a></li>
@@ -5723,22 +5833,22 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-bitwise-exclusive-OR-operator-168">bitwise exclusive OR operator</a>: <a href="#The-Bitwise-Exclusive-OR-Operator">The Bitwise Exclusive OR Operator</a></li>
 <li><a href="#index-bitwise-inclusive-OR-operator-167">bitwise inclusive OR operator</a>: <a href="#The-Bitwise-Inclusive-OR-Operator">The Bitwise Inclusive OR Operator</a></li>
 <li><a href="#index-blocks-205">blocks</a>: <a href="#Blocks">Blocks</a></li>
-<li><a href="#index-_0040code_007bbreak_007d-statement-209"><code>break</code> statement</a>: <a href="#The-break-Statement">The break Statement</a></li>
+<li><a href="#index-g_t_0040code_007bbreak_007d-statement-209"><code>break</code> statement</a>: <a href="#The-break-Statement">The break Statement</a></li>
 <li><a href="#index-calling-functions-218">calling functions</a>: <a href="#Calling-Functions">Calling Functions</a></li>
 <li><a href="#index-casts-155">casts</a>: <a href="#Type-Casts">Type Casts</a></li>
-<li><a href="#index-_0040code_007bchar_007d-data-type-31"><code>char</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bchar_007d-data-type-31"><code>char</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
 <li><a href="#index-character-constants-8">character constants</a>: <a href="#Character-Constants">Character Constants</a></li>
 <li><a href="#index-comma-operator-183">comma operator</a>: <a href="#The-Comma-Operator">The Comma Operator</a></li>
 <li><a href="#index-comparison-operators-169">comparison operators</a>: <a href="#The-Comparison-Operators">The Comparison Operators</a></li>
 <li><a href="#index-compound-assignment-operators-181">compound assignment operators</a>: <a href="#The-Compound-Assignment-Operators">The Compound Assignment Operators</a></li>
 <li><a href="#index-conditional-operator-188">conditional operator</a>: <a href="#The-Ternary-Operator">The Ternary Operator</a></li>
-<li><a href="#index-_0040code_007bconst_007d-type-specifier-131"><code>const</code> type specifier</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>
+<li><a href="#index-g_t_0040code_007bconst_007d-type-specifier-131"><code>const</code> type specifier</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>
 <li><a href="#index-constants-5">constants</a>: <a href="#Constants">Constants</a></li>
 <li><a href="#index-constants_002c-character-9">constants, character</a>: <a href="#Character-Constants">Character Constants</a></li>
 <li><a href="#index-constants_002c-floating-point-11">constants, floating point</a>: <a href="#Real-Number-Constants">Real Number Constants</a></li>
 <li><a href="#index-constants_002c-integer-7">constants, integer</a>: <a href="#Integer-Constants">Integer Constants</a></li>
 <li><a href="#index-constants_002c-real-number-13">constants, real number</a>: <a href="#Real-Number-Constants">Real Number Constants</a></li>
-<li><a href="#index-_0040code_007bcontinue_007d-statement-210"><code>continue</code> statement</a>: <a href="#The-continue-Statement">The continue Statement</a></li>
+<li><a href="#index-g_t_0040code_007bcontinue_007d-statement-210"><code>continue</code> statement</a>: <a href="#The-continue-Statement">The continue Statement</a></li>
 <li><a href="#index-data-types-21">data types</a>: <a href="#Data-Types">Data Types</a></li>
 <li><a href="#index-data-types_002c-array-94">data types, array</a>: <a href="#Arrays">Arrays</a></li>
 <li><a href="#index-data-types_002c-enumeration-51">data types, enumeration</a>: <a href="#Enumerations">Enumerations</a></li>
@@ -5766,9 +5876,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-defining-unions-59">defining unions</a>: <a href="#Defining-Unions">Defining Unions</a></li>
 <li><a href="#index-definitions_002c-function-217">definitions, function</a>: <a href="#Function-Definitions">Function Definitions</a></li>
 <li><a href="#index-division-operator-163">division operator</a>: <a href="#The-Division-Operator">The Division Operator</a></li>
-<li><a href="#index-_0040code_007bdo_007d-statement-203"><code>do</code> statement</a>: <a href="#The-do-Statement">The do Statement</a></li>
-<li><a href="#index-_0040code_007bdouble_007d-data-type-47"><code>double</code> data type</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
-<li><a href="#index-_0040code_007belse_007d-statements-200"><code>else</code> statements</a>: <a href="#The-if-Statement">The if Statement</a></li>
+<li><a href="#index-g_t_0040code_007bdo_007d-statement-203"><code>do</code> statement</a>: <a href="#The-do-Statement">The do Statement</a></li>
+<li><a href="#index-g_t_0040code_007bdouble_007d-data-type-47"><code>double</code> data type</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
+<li><a href="#index-g_t_0040code_007belse_007d-statements-200"><code>else</code> statements</a>: <a href="#The-if-Statement">The if Statement</a></li>
 <li><a href="#index-enumerations-49">enumerations</a>: <a href="#Enumerations">Enumerations</a></li>
 <li><a href="#index-enumerations_002c-declaring-55">enumerations, declaring</a>: <a href="#Declaring-Enumerations">Declaring Enumerations</a></li>
 <li><a href="#index-enumerations_002c-defining-53">enumerations, defining</a>: <a href="#Defining-Enumerations">Defining Enumerations</a></li>
@@ -5777,12 +5887,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-evaluation_002c-order-of-190">evaluation, order of</a>: <a href="#Order-of-Evaluation">Order of Evaluation</a></li>
 <li><a href="#index-expression-statements-197">expression statements</a>: <a href="#Expression-Statements">Expression Statements</a></li>
 <li><a href="#index-expressions-141">expressions</a>: <a href="#Expressions">Expressions</a></li>
-<li><a href="#index-_0040code_007bextern_007d-storage-class-specifier-136"><code>extern</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
+<li><a href="#index-g_t_0040code_007bextern_007d-storage-class-specifier-136"><code>extern</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-fields_002c-bit-89">fields, bit</a>: <a href="#Bit-Fields">Bit Fields</a></li>
-<li><a href="#index-_0040code_007bfloat_007d-data-type-46"><code>float</code> data type</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
+<li><a href="#index-g_t_0040code_007bfloat_007d-data-type-46"><code>float</code> data type</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
 <li><a href="#index-floating-point-constants-10">floating point constants</a>: <a href="#Real-Number-Constants">Real Number Constants</a></li>
 <li><a href="#index-floating-point-types-41">floating point types</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
-<li><a href="#index-_0040code_007bfor_007d-statement-204"><code>for</code> statement</a>: <a href="#The-for-Statement">The for Statement</a></li>
+<li><a href="#index-g_t_0040code_007bfor_007d-statement-204"><code>for</code> statement</a>: <a href="#The-for-Statement">The for Statement</a></li>
 <li><a href="#index-function-calls_002c-as-expressions-157">function calls, as expressions</a>: <a href="#Function-Calls-as-Expressions">Function Calls as Expressions</a></li>
 <li><a href="#index-function-declarations-214">function declarations</a>: <a href="#Function-Declarations">Function Declarations</a></li>
 <li><a href="#index-function-definitions-216">function definitions</a>: <a href="#Function-Definitions">Function Definitions</a></li>
@@ -5792,13 +5902,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-functions-213">functions</a>: <a href="#Functions">Functions</a></li>
 <li><a href="#index-functions_002c-calling-219">functions, calling</a>: <a href="#Calling-Functions">Calling Functions</a></li>
 <li><a href="#index-functions_002c-recursive-228">functions, recursive</a>: <a href="#Recursive-Functions">Recursive Functions</a></li>
-<li><a href="#index-_0040code_007bgoto_007d-statement-208"><code>goto</code> statement</a>: <a href="#The-goto-Statement">The goto Statement</a></li>
+<li><a href="#index-g_t_0040code_007bgoto_007d-statement-208"><code>goto</code> statement</a>: <a href="#The-goto-Statement">The goto Statement</a></li>
 <li><a href="#index-greater_002dthan-operator-174">greater-than operator</a>: <a href="#The-Greater_002dThan-Operator">The Greater-Than Operator</a></li>
 <li><a href="#index-greater_002dthan_002dor_002dequal_002dto-operator-175">greater-than-or-equal-to operator</a>: <a href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">The Greater-Than-or-Equal-to Operator</a></li>
 <li><a href="#index-hello-program-233">hello program</a>: <a href="#A-Sample-Program">A Sample Program</a></li>
 <li><a href="#index-hello_002ec-234">hello.c</a>: <a href="#hello_002ec">hello.c</a></li>
 <li><a href="#index-identifiers-3">identifiers</a>: <a href="#Identifiers">Identifiers</a></li>
-<li><a href="#index-_0040code_007bif_007d-statements-199"><code>if</code> statements</a>: <a href="#The-if-Statement">The if Statement</a></li>
+<li><a href="#index-g_t_0040code_007bif_007d-statements-199"><code>if</code> statements</a>: <a href="#The-if-Statement">The if Statement</a></li>
 <li><a href="#index-incomplete-types-124">incomplete types</a>: <a href="#Incomplete-Types">Incomplete Types</a></li>
 <li><a href="#index-increment-operator-145">increment operator</a>: <a href="#The-Increment-Operator">The Increment Operator</a></li>
 <li><a href="#index-indirect-member-access-operator-185">indirect member access operator</a>: <a href="#Member-Access-Operators">Member Access Operators</a></li>
@@ -5808,7 +5918,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-initializing-string-arrays-108">initializing string arrays</a>: <a href="#Arrays-as-Strings">Arrays as Strings</a></li>
 <li><a href="#index-initializing-structure-members-84">initializing structure members</a>: <a href="#Initializing-Structure-Members">Initializing Structure Members</a></li>
 <li><a href="#index-initializing-union-members-67">initializing union members</a>: <a href="#Initializing-Union-Members">Initializing Union Members</a></li>
-<li><a href="#index-_0040code_007bint_007d-data-type-34"><code>int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bint_007d-data-type-34"><code>int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
 <li><a href="#index-integer-constants-6">integer constants</a>: <a href="#Integer-Constants">Integer Constants</a></li>
 <li><a href="#index-integer-types-26">integer types</a>: <a href="#Integer-Types">Integer Types</a></li>
 <li><a href="#index-keywords-4">keywords</a>: <a href="#Keywords">Keywords</a></li>
@@ -5822,9 +5932,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-logical-negation-operator-149">logical negation operator</a>: <a href="#The-Logical-Negation-Operator">The Logical Negation Operator</a></li>
 <li><a href="#index-logical-operators-176">logical operators</a>: <a href="#Logical-Operators">Logical Operators</a></li>
 <li><a href="#index-logical-OR-operator-178">logical OR operator</a>: <a href="#The-Logical-OR-Operator">The Logical OR Operator</a></li>
-<li><a href="#index-_0040code_007blong-double_007d-data-type-48"><code>long double</code> data type</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
-<li><a href="#index-_0040code_007blong-int_007d-data-type-36"><code>long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
-<li><a href="#index-_0040code_007blong-long-int_007d-data-type-38"><code>long long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007blong-double_007d-data-type-48"><code>long double</code> data type</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
+<li><a href="#index-g_t_0040code_007blong-int_007d-data-type-36"><code>long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007blong-long-int_007d-data-type-38"><code>long long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
 <li><a href="#index-main-function-225">main function</a>: <a href="#The-main-Function">The main Function</a></li>
 <li><a href="#index-member-access-operators-184">member access operators</a>: <a href="#Member-Access-Operators">Member Access Operators</a></li>
 <li><a href="#index-modulus-operator-164">modulus operator</a>: <a href="#The-Modulus-Operator">The Modulus Operator</a></li>
@@ -5856,15 +5966,15 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-real-number-constants-12">real number constants</a>: <a href="#Real-Number-Constants">Real Number Constants</a></li>
 <li><a href="#index-real-number-types-40">real number types</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
 <li><a href="#index-recursive-functions-227">recursive functions</a>: <a href="#Recursive-Functions">Recursive Functions</a></li>
-<li><a href="#index-_0040code_007bregister_007d-storage-class-specifier-137"><code>register</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
+<li><a href="#index-g_t_0040code_007bregister_007d-storage-class-specifier-137"><code>register</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-renaming-types-139">renaming types</a>: <a href="#Renaming-Types">Renaming Types</a></li>
-<li><a href="#index-_0040code_007breturn_007d-statement-211"><code>return</code> statement</a>: <a href="#The-return-Statement">The return Statement</a></li>
+<li><a href="#index-g_t_0040code_007breturn_007d-statement-211"><code>return</code> statement</a>: <a href="#The-return-Statement">The return Statement</a></li>
 <li><a href="#index-sample-program-232">sample program</a>: <a href="#A-Sample-Program">A Sample Program</a></li>
 <li><a href="#index-scope-231">scope</a>: <a href="#Scope">Scope</a></li>
 <li><a href="#index-separators-17">separators</a>: <a href="#Separators">Separators</a></li>
 <li><a href="#index-shift-operators-165">shift operators</a>: <a href="#The-Shift-Operators">The Shift Operators</a></li>
-<li><a href="#index-_0040code_007bshort-int_007d-data-type-32"><code>short int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
-<li><a href="#index-_0040code_007bsigned-char_007d-data-type-29"><code>signed char</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bshort-int_007d-data-type-32"><code>short int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bsigned-char_007d-data-type-29"><code>signed char</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
 <li><a href="#index-size-of-structures-90">size of structures</a>: <a href="#Size-of-Structures">Size of Structures</a></li>
 <li><a href="#index-size-of-unions-71">size of unions</a>: <a href="#Size-of-Unions">Size of Unions</a></li>
 <li><a href="#index-sizeof-operator-153">sizeof operator</a>: <a href="#The-sizeof-Operator">The sizeof Operator</a></li>
@@ -5874,7 +5984,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-statements-193">statements</a>: <a href="#Statements">Statements</a></li>
 <li><a href="#index-statements_002c-expression-198">statements, expression</a>: <a href="#Expression-Statements">Expression Statements</a></li>
 <li><a href="#index-statements_002c-labeled-196">statements, labeled</a>: <a href="#Labels">Labels</a></li>
-<li><a href="#index-_0040code_007bstatic_007d-storage-class-specifier-138"><code>static</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
+<li><a href="#index-g_t_0040code_007bstatic_007d-storage-class-specifier-138"><code>static</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-storage-class-specifiers-133">storage class specifiers</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-string-arrays_002c-declaring-105">string arrays, declaring</a>: <a href="#Arrays-as-Strings">Arrays as Strings</a></li>
 <li><a href="#index-string-arrays_002c-initializing-107">string arrays, initializing</a>: <a href="#Arrays-as-Strings">Arrays as Strings</a></li>
@@ -5894,12 +6004,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-structures_002c-pointers-to-123">structures, pointers to</a>: <a href="#Pointers-to-Structures">Pointers to Structures</a></li>
 <li><a href="#index-structures_002c-size-of-91">structures, size of</a>: <a href="#Size-of-Structures">Size of Structures</a></li>
 <li><a href="#index-subtraction-operator-161">subtraction operator</a>: <a href="#The-Subtraction-Operator">The Subtraction Operator</a></li>
-<li><a href="#index-_0040code_007bswitch_007d-statement-201"><code>switch</code> statement</a>: <a href="#The-switch-Statement">The switch Statement</a></li>
+<li><a href="#index-g_t_0040code_007bswitch_007d-statement-201"><code>switch</code> statement</a>: <a href="#The-switch-Statement">The switch Statement</a></li>
 <li><a href="#index-system_002eh-235">system.h</a>: <a href="#system_002eh">system.h</a></li>
 <li><a href="#index-ternary-operator_002c-the-186">ternary operator, the</a>: <a href="#The-Ternary-Operator">The Ternary Operator</a></li>
 <li><a href="#index-type-casts-154">type casts</a>: <a href="#Type-Casts">Type Casts</a></li>
 <li><a href="#index-type-specifiers-129">type specifiers</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>
-<li><a href="#index-_0040code_007btypedef_007d-statement-212"><code>typedef</code> statement</a>: <a href="#The-typedef-Statement">The typedef Statement</a></li>
+<li><a href="#index-g_t_0040code_007btypedef_007d-statement-212"><code>typedef</code> statement</a>: <a href="#The-typedef-Statement">The typedef Statement</a></li>
 <li><a href="#index-types-22">types</a>: <a href="#Data-Types">Data Types</a></li>
 <li><a href="#index-types_002c-array-93">types, array</a>: <a href="#Arrays">Arrays</a></li>
 <li><a href="#index-types_002c-enumeration-50">types, enumeration</a>: <a href="#Enumerations">Enumerations</a></li>
@@ -5924,14 +6034,14 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-unions_002c-incomplete-128">unions, incomplete</a>: <a href="#Incomplete-Types">Incomplete Types</a></li>
 <li><a href="#index-unions_002c-pointers-to-121">unions, pointers to</a>: <a href="#Pointers-to-Unions">Pointers to Unions</a></li>
 <li><a href="#index-unions_002c-size-of-72">unions, size of</a>: <a href="#Size-of-Unions">Size of Unions</a></li>
-<li><a href="#index-_0040code_007bunsigned-char_007d-data-type-30"><code>unsigned char</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
-<li><a href="#index-_0040code_007bunsigned-int_007d-data-type-35"><code>unsigned int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
-<li><a href="#index-_0040code_007bunsigned-long-int_007d-data-type-37"><code>unsigned long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
-<li><a href="#index-_0040code_007bunsigned-long-long-int_007d-data-type-39"><code>unsigned long long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
-<li><a href="#index-_0040code_007bunsigned-short-int_007d-data-type-33"><code>unsigned short int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bunsigned-char_007d-data-type-30"><code>unsigned char</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bunsigned-int_007d-data-type-35"><code>unsigned int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bunsigned-long-int_007d-data-type-37"><code>unsigned long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bunsigned-long-long-int_007d-data-type-39"><code>unsigned long long int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
+<li><a href="#index-g_t_0040code_007bunsigned-short-int_007d-data-type-33"><code>unsigned short int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
 <li><a href="#index-variable-length-parameter-lists-222">variable length parameter lists</a>: <a href="#Variable-Length-Parameter-Lists">Variable Length Parameter Lists</a></li>
-<li><a href="#index-_0040code_007bvolatile_007d-type-specifier-132"><code>volatile</code> type specifier</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>
-<li><a href="#index-_0040code_007bwhile_007d-statement-202"><code>while</code> statement</a>: <a href="#The-while-Statement">The while Statement</a></li>
+<li><a href="#index-g_t_0040code_007bvolatile_007d-type-specifier-132"><code>volatile</code> type specifier</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>
+<li><a href="#index-g_t_0040code_007bwhile_007d-statement-202"><code>while</code> statement</a>: <a href="#The-while-Statement">The while Statement</a></li>
 <li><a href="#index-white-space-18">white space</a>: <a href="#White-Space">White Space</a></li>
    </ul></body></html>
 

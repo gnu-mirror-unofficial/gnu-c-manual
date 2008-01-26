@@ -197,6 +197,7 @@ Copyright (C) 2007 Free Software Foundation, Inc.
 <li><a href="#Variable-Length-Parameter-Lists">5.5 Variable Length Parameter Lists</a>
 <li><a href="#The-main-Function">5.6 The <code>main</code> Function</a>
 <li><a href="#Recursive-Functions">5.7 Recursive Functions</a>
+<li><a href="#Static-Functions">5.8 Static Functions</a>
 </li></ul>
 <li><a name="toc_Program-Structure-and-Scope" href="#Program-Structure-and-Scope">6 Program Structure and Scope</a>
 <ul>
@@ -255,11 +256,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <h2 class="unnumbered">Preface</h2>
 
 <p><a name="index-preface-1"></a>
-NOTE: THIS MANUAL IS CURRENTLY BEING DEVELOPED, AND MAY CONTAIN
-NON-TRIVIAL ERRORS, OMISSIONS, AND INCONSISTENCIES.  Please send
-bug reports and suggestions to <a href="mailto:gnu-c-manual@gnu.org">gnu-c-manual@gnu.org</a>.
-
-   <p>This is a reference manual for the GNU C programming language: the
+This is a reference manual for the GNU C programming language: the
 C programming language as implemented by the GNU C compiler.
 
    <p>GCC supports several variants of C; this manual ultimately aims to
@@ -296,18 +293,16 @@ preprocessor has been thoroughly documented in <cite>The C Preprocessor</cite>,
 a separate manual which covers preprocessing for C, C++, and Objective
 C programs, so it is not included here.
 
-<!-- Most of this manual was written by Trevis J. Rothwell, with contributions from -->
-<!-- Dr. Richard M. Stallman. -->
-<!-- The bits written by RMS are from the GCC manual, and are not included -->
-<!-- in the first-release C89 edition of this manual. -->
-<p>A number of people have contributed to this manual.  Most of the text
-was written by Trevis&nbsp;<!-- /@w -->J. Rothwell.  Other contributors, who have
+   <p>A number of people have contributed to this manual.  Most of the text
+was written by Trevis Rothwell.  Other contributors, who have
 offered editing, proofreading, ideas, and/or help with typesetting or
-administrative details, include: Karl Berry, Robert&nbsp;<!-- /@w -->J. Chassell,
-Lisa Goldstein, Robert&nbsp;<!-- /@w -->J. Hansen, Jean-Christophe Helary, Joe
+administrative details, include: Karl Berry, Robert  Chassell,
+Lisa Goldstein, Robert Hansen, Jean-Christophe Helary, Joe
 Humphries, J.&nbsp;<!-- /@w -->Wren Hunt, Adam Johansen, Steve Morningthunder,
-Richard&nbsp;<!-- /@w -->M. Stallman, J.&nbsp;<!-- /@w -->Otto Tennant, Ole&nbsp;<!-- /@w -->J. Tetlie, and
+Richard Stallman, J.&nbsp;<!-- /@w -->Otto Tennant, Ole Tetlie, and
 T.F. Torrey.
+
+   <p>Please send bug reports and suggestions to <a href="mailto:gnu-c-manual@gnu.org">gnu-c-manual@gnu.org</a>.
 
 <!-- This is part of The GNU C Reference Manual -->
 <!-- Copyright (C) 2004 Free Software Foundation, Inc. -->
@@ -4438,7 +4433,7 @@ POSIX standard reserves use of the <code>_t</code> suffix for standard library
 type names.
 
 <!-- This is part of The GNU C Reference Manual -->
-<!-- Copyright (C) 2007 Free Software Foundation, Inc. -->
+<!-- Copyright (C) 2008 Free Software Foundation, Inc. -->
 <!-- See the file gnu-c-manual.texi for copying conditions. -->
 <!--  -->
 <div class="node">
@@ -4471,14 +4466,7 @@ That is where the program's execution begins.
 <li><a accesskey="5" href="#Variable-Length-Parameter-Lists">Variable Length Parameter Lists</a>
 <li><a accesskey="6" href="#The-main-Function">The main Function</a>
 <li><a accesskey="7" href="#Recursive-Functions">Recursive Functions</a>
-<!-- * Nested Functions:: -->
-<!-- The rest of these sections should be copied afresh from -->
-<!-- a more recent version of the GCC manual.  -TJR, sept2003 -->
-<!-- * Inline Functions:: -->
-<!-- * Function Names as Strings:: -->
-<!-- * Function Attributes:: -->
-<!-- * Getting the Return or Frame Address of a Function:: -->
-<!-- * Constructing Function Calls:: -->
+<li><a accesskey="8" href="#Static-Functions">Static Functions</a>
 </ul>
 
 <!--  -->
@@ -4860,6 +4848,7 @@ parameters, and prints out what those parameters are:
 <div class="node">
 <p><hr>
 <a name="Recursive-Functions"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="#Static-Functions">Static Functions</a>,
 Previous:&nbsp;<a rel="previous" accesskey="p" href="#The-main-Function">The main Function</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
 
@@ -4892,6 +4881,30 @@ or runs out of memory:
      }
 </pre>
    <!--  -->
+<div class="node">
+<p><hr>
+<a name="Static-Functions"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="#Recursive-Functions">Recursive Functions</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="#Functions">Functions</a>
+
+</div>
+
+<h3 class="section">5.8 Static Functions</h3>
+
+<p><a name="index-static-functions-232"></a><a name="index-functions_002c-static-233"></a>
+You can define a function to be static if you want it to be callable only
+within the source file where it is defined:
+
+<pre class="example">     static int
+     foo (int x)
+     {
+       return x + 42;
+     }
+</pre>
+   <p class="noindent">This is useful if you are building a reusable library of functions and need to
+include some subroutines that should not be callable by the end user.
+
+<!--  -->
 <!-- GNU C Extension -->
 <!-- @node Nested Functions -->
 <!-- @cindex nested functions -->
@@ -4957,7 +4970,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Program-Structure-and-Scope">Program S
 
 <h3 class="section">6.1 Program Structure</h3>
 
-<p><a name="index-program-structure-232"></a><a name="index-structure_002c-program-233"></a>
+<p><a name="index-program-structure-234"></a><a name="index-structure_002c-program-235"></a>
 A C program may exist entirely within a single source file, but more commonly, any non-trivial
 program will consist of several custom header files and source files, and will also include
 and link with files from existing libraries.
@@ -5004,7 +5017,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Program-Structure-and-Scope">Program S
 
 <h3 class="section">6.2 Scope</h3>
 
-<p><a name="index-scope-234"></a>
+<p><a name="index-scope-236"></a>
 Scope refers to what parts of the program can &ldquo;see&rdquo; a declared object.  A declared
 object can be visible only within a particular function, or within a particular file,
 or may be visible to an entire set of files by way of including header files and
@@ -5046,7 +5059,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 
 <h2 class="chapter">7 A Sample Program</h2>
 
-<p><a name="index-sample-program-235"></a><a name="index-hello-program-236"></a>
+<p><a name="index-sample-program-237"></a><a name="index-hello-program-238"></a>
 To conclude our description of C, here is a complete program written in C,
 consisting of both a C source file and a header file.  This
 program is an expanded version of the quintessential &ldquo;hello world&rdquo; program, and
@@ -5075,7 +5088,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
 
 <h3 class="section">7.1 <code>hello.c</code></h3>
 
-<p><a name="index-hello_002ec-237"></a>
+<p><a name="index-hello_002ec-239"></a>
 <pre class="smallexample">     /* hello.c -- print a greeting message and exit.
      
         Copyright (C) 1992, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002,
@@ -5283,7 +5296,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#A-Sample-Program">A Sample Program</a>
 
 <h3 class="section">7.2 <code>system.h</code></h3>
 
-<p><a name="index-system_002eh-238"></a>
+<p><a name="index-system_002eh-240"></a>
 <pre class="smallexample">     /* system.h: system-dependent declarations; include this first.
         Copyright (C) 1996, 2005, 2006, 2007 Free Software Foundation, Inc.
      
@@ -5856,11 +5869,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-functions-213">functions</a>: <a href="#Functions">Functions</a></li>
 <li><a href="#index-functions_002c-calling-219">functions, calling</a>: <a href="#Calling-Functions">Calling Functions</a></li>
 <li><a href="#index-functions_002c-recursive-231">functions, recursive</a>: <a href="#Recursive-Functions">Recursive Functions</a></li>
+<li><a href="#index-functions_002c-static-233">functions, static</a>: <a href="#Static-Functions">Static Functions</a></li>
 <li><a href="#index-g_t_0040code_007bgoto_007d-statement-208"><code>goto</code> statement</a>: <a href="#The-goto-Statement">The goto Statement</a></li>
 <li><a href="#index-greater_002dthan-operator-174">greater-than operator</a>: <a href="#The-Greater_002dThan-Operator">The Greater-Than Operator</a></li>
 <li><a href="#index-greater_002dthan_002dor_002dequal_002dto-operator-175">greater-than-or-equal-to operator</a>: <a href="#The-Greater_002dThan_002dor_002dEqual_002dto-Operator">The Greater-Than-or-Equal-to Operator</a></li>
-<li><a href="#index-hello-program-236">hello program</a>: <a href="#A-Sample-Program">A Sample Program</a></li>
-<li><a href="#index-hello_002ec-237">hello.c</a>: <a href="#hello_002ec">hello.c</a></li>
+<li><a href="#index-hello-program-238">hello program</a>: <a href="#A-Sample-Program">A Sample Program</a></li>
+<li><a href="#index-hello_002ec-239">hello.c</a>: <a href="#hello_002ec">hello.c</a></li>
 <li><a href="#index-identifiers-3">identifiers</a>: <a href="#Identifiers">Identifiers</a></li>
 <li><a href="#index-g_t_0040code_007bif_007d-statements-199"><code>if</code> statements</a>: <a href="#The-if-Statement">The if Statement</a></li>
 <li><a href="#index-incomplete-types-124">incomplete types</a>: <a href="#Incomplete-Types">Incomplete Types</a></li>
@@ -5916,15 +5930,15 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-precedence_002c-operator-192">precedence, operator</a>: <a href="#Order-of-Evaluation">Order of Evaluation</a></li>
 <li><a href="#index-preface-1">preface</a>: <a href="#Preface">Preface</a></li>
 <li><a href="#index-primitive-data-types-23">primitive data types</a>: <a href="#Primitive-Types">Primitive Types</a></li>
-<li><a href="#index-program-structure-232">program structure</a>: <a href="#Program-Structure">Program Structure</a></li>
+<li><a href="#index-program-structure-234">program structure</a>: <a href="#Program-Structure">Program Structure</a></li>
 <li><a href="#index-real-number-constants-12">real number constants</a>: <a href="#Real-Number-Constants">Real Number Constants</a></li>
 <li><a href="#index-real-number-types-40">real number types</a>: <a href="#Real-Number-Types">Real Number Types</a></li>
 <li><a href="#index-recursive-functions-230">recursive functions</a>: <a href="#Recursive-Functions">Recursive Functions</a></li>
 <li><a href="#index-g_t_0040code_007bregister_007d-storage-class-specifier-137"><code>register</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-renaming-types-139">renaming types</a>: <a href="#Renaming-Types">Renaming Types</a></li>
 <li><a href="#index-g_t_0040code_007breturn_007d-statement-211"><code>return</code> statement</a>: <a href="#The-return-Statement">The return Statement</a></li>
-<li><a href="#index-sample-program-235">sample program</a>: <a href="#A-Sample-Program">A Sample Program</a></li>
-<li><a href="#index-scope-234">scope</a>: <a href="#Scope">Scope</a></li>
+<li><a href="#index-sample-program-237">sample program</a>: <a href="#A-Sample-Program">A Sample Program</a></li>
+<li><a href="#index-scope-236">scope</a>: <a href="#Scope">Scope</a></li>
 <li><a href="#index-separators-17">separators</a>: <a href="#Separators">Separators</a></li>
 <li><a href="#index-shift-operators-165">shift operators</a>: <a href="#The-Shift-Operators">The Shift Operators</a></li>
 <li><a href="#index-g_t_0040code_007bshort-int_007d-data-type-32"><code>short int</code> data type</a>: <a href="#Integer-Types">Integer Types</a></li>
@@ -5938,6 +5952,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-statements-193">statements</a>: <a href="#Statements">Statements</a></li>
 <li><a href="#index-statements_002c-expression-198">statements, expression</a>: <a href="#Expression-Statements">Expression Statements</a></li>
 <li><a href="#index-statements_002c-labeled-196">statements, labeled</a>: <a href="#Labels">Labels</a></li>
+<li><a href="#index-static-functions-232">static functions</a>: <a href="#Static-Functions">Static Functions</a></li>
 <li><a href="#index-g_t_0040code_007bstatic_007d-storage-class-specifier-138"><code>static</code> storage class specifier</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-storage-class-specifiers-133">storage class specifiers</a>: <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a></li>
 <li><a href="#index-string-arrays_002c-declaring-105">string arrays, declaring</a>: <a href="#Arrays-as-Strings">Arrays as Strings</a></li>
@@ -5950,7 +5965,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-structure-variables_002c-declaring-79">structure variables, declaring</a>: <a href="#Declaring-Structure-Variables">Declaring Structure Variables</a></li>
 <li><a href="#index-structure-variables_002c-declaring-after-definition-83">structure variables, declaring after definition</a>: <a href="#Declaring-Structure-Variables-After-Definition">Declaring Structure Variables After Definition</a></li>
 <li><a href="#index-structure-variables_002c-declaring-at-definition-81">structure variables, declaring at definition</a>: <a href="#Declaring-Structure-Variables-at-Definition">Declaring Structure Variables at Definition</a></li>
-<li><a href="#index-structure_002c-program-233">structure, program</a>: <a href="#Program-Structure">Program Structure</a></li>
+<li><a href="#index-structure_002c-program-235">structure, program</a>: <a href="#Program-Structure">Program Structure</a></li>
 <li><a href="#index-structures-73">structures</a>: <a href="#Structures">Structures</a></li>
 <li><a href="#index-structures_002c-arrays-of-112">structures, arrays of</a>: <a href="#Arrays-of-Structures">Arrays of Structures</a></li>
 <li><a href="#index-structures_002c-defining-77">structures, defining</a>: <a href="#Defining-Structures">Defining Structures</a></li>
@@ -5959,7 +5974,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <li><a href="#index-structures_002c-size-of-91">structures, size of</a>: <a href="#Size-of-Structures">Size of Structures</a></li>
 <li><a href="#index-subtraction-operator-161">subtraction operator</a>: <a href="#The-Subtraction-Operator">The Subtraction Operator</a></li>
 <li><a href="#index-g_t_0040code_007bswitch_007d-statement-201"><code>switch</code> statement</a>: <a href="#The-switch-Statement">The switch Statement</a></li>
-<li><a href="#index-system_002eh-238">system.h</a>: <a href="#system_002eh">system.h</a></li>
+<li><a href="#index-system_002eh-240">system.h</a>: <a href="#system_002eh">system.h</a></li>
 <li><a href="#index-ternary-operator_002c-the-186">ternary operator, the</a>: <a href="#The-Ternary-Operator">The Ternary Operator</a></li>
 <li><a href="#index-type-casts-154">type casts</a>: <a href="#Type-Casts">Type Casts</a></li>
 <li><a href="#index-type-specifiers-129">type specifiers</a>: <a href="#Type-Specifiers">Type Specifiers</a></li>

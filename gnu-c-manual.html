@@ -2383,10 +2383,10 @@ and function calls that return values.  Here are some examples:
      2 + 2
      function()
 </pre>
-   <p class="noindent">The last of those expressions, <code>function()</code>, is only an expression
-if <code>function()</code> has a return type other than <code>void</code>.
+   <p class="noindent">The last of those, <code>function()</code>, is only an expression if
+<code>function()</code> has a return type other than <code>void</code>.
 
-   <p>You can use parentheses to group subexpressions.
+   <p>You can use parentheses to group subexpressions:
 
 <pre class="example">     ( 2 * ( ( 3 + 10 ) - ( 2 * 6 ) ) )
 </pre>
@@ -2463,11 +2463,8 @@ evaluated.  In the previous examples, that wouldn't have made any
 difference.  However, there are cases where it does make a difference:
 
 <pre class="example">     int x = 5;
-     
      printf ("%d \n", x++);    /* <span class="roman">Print </span><code>x</code><span class="roman"> and then increment it.</span> */
-     
      /* <code>x</code><span class="roman"> is now equal to 6.</span> */
-     
      printf ("%d \n", ++x);    /* <span class="roman">Increment </span><code>x</code><span class="roman"> and then print it.</span> */
 </pre>
    <p>The output of the above example is:
@@ -2508,11 +2505,8 @@ evaluated.  In the previous examples, that wouldn't have made any
 difference.  However, there are cases where it does make a difference:
 
 <pre class="example">     int x = 5;
-     
      printf ("%d \n", x--);   /* <span class="roman">Print </span><code>x</code><span class="roman"> and then decrement it.</span> */
-     
      /* x is now 4 */
-     
      printf ("%d \n", --x);   /* <span class="roman">Decrement </span><code>x</code><span class="roman"> and then print it.</span> */
 </pre>
    <p>The output of the above example is:
@@ -2536,7 +2530,7 @@ You can use the positive operator <code>+</code> on numeric values
 to indicate that their value is positive.  By default, values are positive
 unless explicitly stated to be negative, so there is no need to use this
 operator as far as the compiler is concerned.  However, you can use it to
-visually enforce the fact that a value is positive.  Here are some examples:
+visually reinforce the fact that a value is positive.  Here are some examples:
 
 <pre class="example">     int x = +5;
      float y = +3.14159;
@@ -2560,7 +2554,7 @@ to indicate that their value is negative.  Here are some examples:
      float y = -3.14159;
 </pre>
    <p>If the operand you use with the negative operator is of an unsigned data
-type, then the result is not negative, but rather it is the
+type, then the result is not negative, but rather the
 maximum value of the unsigned data type, minus the value of the operand.
 
 <div class="node">
@@ -2583,7 +2577,6 @@ negation operator is 0.  In any case, the result is an integer value.  Here
 are some examples:
 
 <pre class="example">     int x = !5;   /* <code>x</code><span class="roman"> is 0.</span> */
-     
      if (!x)
        printf ("x is 0");
 </pre>
@@ -2599,18 +2592,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <h4 class="subsection">3.2.6 The Bitwise Complement Operator</h4>
 
 <p><a name="index-bitwise-complement-operator-150"></a>
-You can use the bitwise complement operator <code>~</code> to find the one's
+You can use the bitwise complement operator <code>~</code> to get the one's
 complement of its operand.  The operand must be an integer or character type. 
 The bitwise complement operator examines its operand's bits, and
 changes all 0 bits to 1 and all 1 bits to 0.  Here is an example:
 
 <pre class="example">     unsigned int x = 500;
      unsigned int y;
-     
      y = ~x;
 </pre>
    <p>Using signed data types with the bitwise complement operator may cause
-portability problems.  You should use unsigned data types for maximum
+portability problems, so use unsigned data types for maximum
 portability.
 
 <div class="node">
@@ -2632,9 +2624,7 @@ use it with literal values.  You should only store the result of the
 address operator in pointer variables.
 
 <pre class="example">     int x = 5;
-     int *ptr;
-     
-     ptr = &amp;x;
+     int *ptr = &amp;x;
 </pre>
    <div class="node">
 <p><hr>
@@ -2661,8 +2651,8 @@ at the address specified by its operand.  This is known as
      y = *ptr;    /* <code>y</code><span class="roman"> gets the value stored at the address</span>
                      <span class="roman">stored in </span><code>ptr</code><span class="roman">.</span> */
 </pre>
-   <p>Be sure to only use the indirection operator with pointers that have
-been initialized.
+   <p>The result of using the indirection operator with pointers that have
+not been initialized is unspecified; usually the program will crash.
 
 <!-- GNU C Extension - temporarily commented out for manual release 0.1, covering ANSI C89 -->
 <!-- @node The Complex Conjugation Operator -->
@@ -2706,9 +2696,9 @@ operator.  Here are some examples:
      size_t d = sizeof(5.143);
 </pre>
    <p>The result of the <code>sizeof</code> operator is of a type called <code>size_t</code>,
-which is defined in the header file <code>stddef.h</code>.  <code>size_t</code> is
+which is defined in the header file <code>&lt;stddef.h&gt;</code>.  <code>size_t</code> is
 an unsigned integer type, perhaps identical to <code>unsigned int</code> or
-<code>unsigned long int</code>.  This can vary from system to system.
+<code>unsigned long int</code>; it varies from system to system.
 
 <div class="node">
 <p><hr>
@@ -2731,14 +2721,13 @@ an example:
 <pre class="example">     float x;
      int y = 7;
      int z = 3;
-     
-     x = (float)(y / z);
+     x = (float) (y / z);
 </pre>
    <p>In that example, since <code>y</code> and <code>z</code> are both integers, integer
 division is performed, and even though <code>x</code> is a floating-point
 variable, it receives the value 2.  By explicitly casting the result
 of the division to <code>float</code>, the floating-point value 2.333<small class="dots">...</small>
-can be retained and assigned to <code>x</code>.
+is retained and assigned to <code>x</code>.
 
    <p>Type casting also works with custom data types.  Here is an example of converting
 an array of 8 bytes to a 8-byte structure type:
@@ -2753,12 +2742,12 @@ an array of 8 bytes to a 8-byte structure type:
      struct fooType foo;
      unsigned char byteArray[8];
      
-     ...
-     
      foo = (struct fooType) byteArray;
 </pre>
-   <p class="noindent">In practice, you should make sure to pack your structure type to ensure that the compiler
-doesn't add any padding, thereby increasing the size of the type.
+   <p class="noindent">In practice, you should also pack your structure type to ensure that
+the compiler doesn't add any padding, thereby increasing the size of
+the type.  In general, different compilers may use different
+representations for data types, so such constructs are not portable.
 
 <div class="node">
 <p><hr>
@@ -2774,7 +2763,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <p><a name="index-array-subscripts-156"></a>
 You can access array elements by specifying the name of the array, and the
 array subscript (or index, or element number) enclosed in brackets.  Here is
-an example, using an integer array called <code>my_array</code>:
+an example, supposing an integer array called <code>my_array</code>:
 
 <pre class="example">     my_array[0] = 5;
 </pre>
@@ -2791,7 +2780,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Unary-Operators">Unary Operators</a>
 <p><a name="index-function-calls_002c-as-expressions-157"></a>
 A call to any function which returns a value is an expression.
 
-<pre class="example">     int function( void );
+<pre class="example">     int function(void);
      ...
      a = 10 + function();
 </pre>
@@ -2836,10 +2825,11 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 <h4 class="subsection">3.3.1 The Addition Operator</h4>
 
 <p><a name="index-addition-operator-160"></a>
-You use the addition operator <code>+</code> to add two operands.  You put the
-operands on either side of the operator, and it does not matter which operand
-is goes on which side:  <code>3 + 5</code> and <code>5 + 3</code> both result in 8. 
-The operands must be either expressions of a primitive data type or pointers.
+You use the addition operator <code>+</code> to add two operands.  You put
+the operands on either side of the operator, and it does not matter
+which operand goes on which side (in the absence of side effects):
+<code>3 + 5</code> and <code>5 + 3</code> both result in 8.  The operands must be
+either expressions of a primitive data type or pointers.
 
 <pre class="example">     x = 5 + 3;
      y = 10 + 37;
@@ -2863,7 +2853,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 You use the subtraction operator <code>-</code> to subtract its second operand
 from its first operand.  You put the operands on either side of the operator,
 and it does matter which operand goes on which side:  <code>3 - 5</code> and
-<code>5 - 3</code> do not both have the same result.  The operands must be either
+<code>5 - 3</code> do not have the same result.  The operands must be either
 expressions of a primitive data type or pointers.
 
 <pre class="example">     x = 5 - 3;
@@ -2915,7 +2905,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 You use the division operator <code>/</code> to divide its first operand
 by its second operand.  You put the operands on either side of the
 operator, and it does matter which operand goes on which side:  <code>3 / 5</code>
-and <code>5 / 3</code> do not both have the same result.  The operands must be
+and <code>5 / 3</code> do not have the same result.  The operands must be
 expressions of a primitive data type.
 
 <pre class="example">     x = 5 / 3;
@@ -2940,7 +2930,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 You use the modulus operator <code>%</code> to obtain the remainder produced
 by dividing its two operands.  You put the operands on either side of
 the operator, and it does matter which operand goes on which
-side:  <code>3 % 5</code> and <code>5 % 3</code> do not both have the same result. 
+side:  <code>3 % 5</code> and <code>5 % 3</code> do not have the same result. 
 The operands must be expressions of a primitive data type.
 
 <pre class="example">     x = 5 % 3;
@@ -2955,11 +2945,10 @@ number is divisible by another number.  If it is divisible, then the
 remainder is zero.  Here is an example of that:
 
 <pre class="example">     int counter;
-     
-     for( counter = 0; counter &lt;= 100; counter++ )
+     for (counter = 0; counter &lt;= 100; counter++)
        {
-         if( counter % 5 == 0 )
-           printf("%d\n", counter);
+         if (counter % 5 == 0)
+           printf ("%d\n", counter);
        }
 </pre>
    <p>That prints all of the integers from 0 to 100 that are divisible by 5.
@@ -2982,9 +2971,7 @@ operand.  If there is a 1 bit in the leftmost bit position, it will be
 discarded.  New bits that are added to the rightmost bit position will all
 be 0.
 
-<pre class="example">     
-     x = 47;    /* <span class="roman">47 is 00101111 in binary.</span> */
-     
+<pre class="example">     x = 47;    /* <span class="roman">47 is 00101111 in binary.</span> */
      x &lt;&lt; 1;    /* <span class="roman">00101111 &lt;&lt; 1 is 01011110.</span> */
 </pre>
    <p>You use the right-shift operator <code>&gt;&gt;</code> to shift its first operand's bits
@@ -2996,7 +2983,6 @@ bits will be 0.  If it is signed, the added bits will be either 0 <em>or</em>
 whatever value was previously in the leftmost bit position.
 
 <pre class="example">     x = 47;   /* <span class="roman">47 is 00101111 in binary.</span> */
-     
      x &gt;&gt; 1;   /* <span class="roman">00101111 &gt;&gt; 1 is 00010111.</span> */
 </pre>
    <div class="node">
@@ -3023,7 +3009,6 @@ in both operands, the corresponding bit in the result is set to 1.
 Otherwise it is set to 0.  Here is another example, this time in C:
 
 <pre class="example">     char x = 149, y = 34, z;
-     
      z = x &amp; y;
 </pre>
    <div class="node">
@@ -3049,7 +3034,6 @@ binary numbers:
    <p>Here is another example, this time in C:
 
 <pre class="example">     char x = 149, y = 34, z;
-     
      z = x | y;
 </pre>
    <div class="node">
@@ -3074,7 +3058,6 @@ Here is an example of how this operator works, using binary numbers:
    <p>Here is another example, this time in C.
 
 <pre class="example">     char x = 149, y = 34, z;
-     
      z = x ^ y;
 </pre>
    <div class="node">
@@ -3090,7 +3073,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 
 <p><a name="index-comparison-operators-169"></a>
 You use the comparison operators to determine how two operands relate to
-each other&mdash;are they equal to each other, is one larger than the other,
+each other: are they equal to each other, is one larger than the other,
 is one smaller than the other, and so on.   When you use any of the
 comparison operators, the result is either 1 or 0, meaning true or false,
 respectively.
@@ -3273,7 +3256,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Logical-Operators">Logical Operators</
 
 <p><a name="index-logical-AND-operator-177"></a>
 Use the logical AND operator <code>&amp;&amp;</code> to test if two expressions are
-both true.  If the first one is not true, then the second one is not
+both true.  If the first one is false, then the second one is not
 evaluated.
 
 <pre class="example">     if ((x == 5) &amp;&amp; (y == 10))
@@ -3322,8 +3305,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Binary-Operators">Binary Operators</a>
 
 <p><a name="index-assignment-operators-179"></a>
 You use the assignment operators to give values to variables.  The first
-operand &mdash; the operand to which a value is being assigned, also known as the
-&ldquo;lvalue&rdquo; &mdash; cannot be a literal value or any other constant value. 
+operand&mdash;the operand to which a value is being assigned, also known as the
+&ldquo;lvalue&rdquo;&mdash;cannot be a literal value or any other constant value. 
 Except as noted, the operands must be of a primitive data type, or a
 pointer.
 
@@ -3430,7 +3413,8 @@ operands, and assigns the result of the operation to the left operand.
 
 <pre class="example">     x += y;
 </pre>
-   <p class="noindent">That produces the same result as:
+   <p class="noindent">That produces the same result (since there no side effects in the
+simple variable <code>x</code> as an lvalue) as:
 
 <pre class="example">     x = x + y;
 </pre>
@@ -3528,8 +3512,8 @@ this:
          ...
        }
 </pre>
-   <p class="noindent">This lets you set, monitor, and modify multiple control expressions for the
-<code>for</code> statement.
+   <p class="noindent">This lets you conveniently set, monitor, and modify multiple control
+expressions for the <code>for</code> statement.
 
    <p>A comma is also used to separate function parameters; however, this
 is <em>not</em> the comma operator in action.   In fact, if the comma
@@ -3579,7 +3563,8 @@ member on the right side.
      first_point.y = 5;
 </pre>
    <p><a name="index-indirect-member-access-operator-185"></a>You can also access the members of a structure or union variable via
-a pointer by using the indirect member access operator <code>-&gt;</code>.
+a pointer by using the indirect member access operator <code>-&gt;</code>. 
+<code>x-&gt;y</code> is equivalent to <code>(*x).y</code>.
 
 <pre class="example">     struct fish
        {
@@ -3590,8 +3575,8 @@ a pointer by using the indirect member access operator <code>-&gt;</code>.
      
      struct fish *fish_pointer = &amp;salmon;
      
-     fish_pointer -&gt; length = 3;
-     fish_pointer -&gt; weight = 9;
+     fish_pointer-&gt;length = 3;
+     fish_pointer-&gt;weight = 9;
 </pre>
    <p>See <a href="#Pointers">Pointers</a>.
 
@@ -3626,11 +3611,11 @@ is an example
 </pre>
    <p>In that example, if <code>x</code> equals 5, then <code>a</code> will receive
 the value <code>y</code>.  Otherwise, <code>a</code> will receive the value
-<code>z</code>.  Really, this is a shorthand method for writing a simple
-<code>if</code><small class="dots">...</small><code>else</code> statement.  The previous example will
-accomplish the same task as the following example:
+<code>z</code>.  This can be considered a shorthand method for writing a simple
+<code>if</code><small class="dots">...</small><code>else</code> statement.  The following example will
+accomplish the same task as the previous one:
 
-<pre class="example">     if( x != 0)
+<pre class="example">     if (x != 0)
          a = y;
      else
          a = z;
@@ -3639,22 +3624,6 @@ accomplish the same task as the following example:
 operand is never evaluated.  Similarly, if the first operand is false,
 then the second operand is never evaluated.  The first operand is always
 evaluated.
-
-   <p>You can also leave out the second operand &mdash; this is similar to using the
-first operand as both the first operand <em>and</em> the second operand.  For
-example, the expression
-
-<pre class="example">     x ? : y
-</pre>
-   <p class="noindent">has the same value as
-
-<pre class="example">     x ? x : y
-</pre>
-   <p>In simple examples like that one, there is no point to leaving out the
-second operand.  However, if the first operand had a side effect, such
-as incrementing a variable, then you might not want that side effect to
-happen twice, so you shouldn't include it as both the first and second
-operands.
 
 <!-- GNU C Extension -->
 <!-- @node Statements and Declarations in Expressions -->
@@ -3753,7 +3722,7 @@ right to left.
 
      <li>Bitwise shifting expressions.
 
-     <li>Greater-than, less-than, greater-than-or-equal-to, and less-than-or-equal-to
+     <li>Greater-than, less-than, greater-than-or-equal-to, and less-than-or-equal-to<br>
 expressions.
 
      <li>Equal-to and not-equal-to expressions.
@@ -3953,7 +3922,7 @@ You can use the <code>switch</code> statement to compare one expression with oth
 and then execute a series of sub-statements based on the result of the
 comparisons.  Here is the general form of a <code>switch</code> statement:
 
-<pre class="example">     switch(<var>test</var>)
+<pre class="example">     switch (<var>test</var>)
        {
          case <var>compare-1</var>:
            <var>if-equal-statement-1</var>
@@ -3969,12 +3938,12 @@ comparisons.  Here is the general form of a <code>switch</code> statement:
 equal to <var>test</var>.  Then, the statements following the successful
 case are executed.  All of the expressions compared must be of an integer
 type, and the <var>compare-N</var> expressions must be of a constant integer
-type (e.g., a literal integer or expression built of literal integers).
+type (e.g., a literal integer or an expression built of literal integers).
 
    <p>Optionally, you can specify a default case.  If <var>test</var> doesn't match
 any of the specific cases listed prior to the default case, then
 the statements for the default case are executed.  Traditionally, the
-default case goes after the specific cases, but that isn't required.
+default case is put after the specific cases, but that isn't required.
 
 <pre class="example">     switch (x)
        {
@@ -4061,6 +4030,8 @@ evaluates to true, <var>statement</var> is executed, and then <var>test</var> is
 evaluated again.  <var>statement</var> continues to execute repeatedly as long as
 <var>test</var> is true after each execution of <var>statement</var>.
 
+   <p>This example prints the integers from zero through nine:
+
 <pre class="example">     int counter = 0;
      while (counter &lt; 10)
        printf ("%d ", counter++);
@@ -4084,10 +4055,12 @@ of the loop.  Here is the general form of the <code>do</code> statement:
        <var>statement</var>
      while (<var>test</var>);
 </pre>
-   <p>The <code>do</code> statement first executes <var>statement</var> once.  After that,
+   <p>The <code>do</code> statement first executes <var>statement</var>.  After that,
 it evaluates <var>test</var>.  If <var>test</var> is true, then <var>statement</var> is
 executed again.  <var>statement</var> continues to execute repeatedly as long as
 <var>test</var> is true after each execution of <var>statement</var>.
+
+   <p>This example also prints the integers from zero through nine:
 
 <pre class="example">     int x = 0;
      do
@@ -4124,16 +4097,17 @@ evaluating <var>test</var> again.
    <p>Most often, <var>initialize</var> assigns values to one or more variables,
 which are generally used as counters,  <var>test</var> compares those
 variables to a predefined expression, and <var>step</var> modifies those
-variables' values.  Here is an example:
+variables' values.  Here is another example that prints the integers
+from zero through nine:
 
 <pre class="example">     int x;
-     for (x = 1; x &lt;= 10; x++)
+     for (x = 0; x &lt; 10; x++)
        printf ("%d ", x);
 </pre>
-   <p>This example prints the integers from 1 to 10, inclusive.  First, it evaluates
-<var>initialize</var>, which assigns <code>x</code> the value 1.  Then, as long as
-<code>x</code> is less than or equal to 10, the value of <code>x</code> is printed and
-incremented.
+   <p>First, it evaluates <var>initialize</var>, which assigns <code>x</code> the value
+0.  Then, as long as <code>x</code> is less than 10, the value of <code>x</code>
+is printed (in the body of the loop).  Then <code>x</code> is incremented in
+the <var>step</var> clause and the test re-evaluated.
 
    <p>All three of the expressions in a <code>for</code> statement are optional, and any
 combination of the three is valid.  Since the first expression is evaluated
@@ -4167,10 +4141,9 @@ a <code>for</code> statement.
 <pre class="example">     for (x = 1; x &lt;= 10;)
        printf ("%d ", x);
 </pre>
-   <p>You can use the comma operator for monitoring and modifying multiple
-variables in a <code>for</code> statement:
+   <p>You can use the comma operator (see <a href="#The-Comma-Operator">The Comma Operator</a>) for
+monitoring and modifying multiple variables in a <code>for</code> statement:
 
-<!-- Comma operator reference -->
 <pre class="example">     for (x = 1, y = 10; x &lt;= 10, y &gt;= 1; x++, y--)
        printf ("%d %d ", x, y);
 </pre>
@@ -4196,7 +4169,7 @@ statement or a loop statement, to group statements together.
 
 <pre class="example">     for (x = 1; x &lt;= 10; x++)
        {
-         printf("x is %d\n", x);
+         printf ("x is %d\n", x);
      
          if ((x % 2) == 0)
            printf ("%d is even\n", x);
@@ -4329,7 +4302,7 @@ to 8, <code>x == 8</code> is true, so the <code>break</code> statement is execut
 terminating the <code>for</code> loop prematurely.
 
    <p>If you put a <code>break</code> statement inside of a loop or <code>switch</code>
-statement which itself is inside of a loop or <code>switch</code> statement, then
+statement which itself is inside of a loop or <code>switch</code> statement, the
 <code>break</code> only terminates the innermost loop or <code>switch</code> statement.
 
 <div class="node">
@@ -4399,7 +4372,7 @@ required a return value, so the value could be assigned to <code>x</code>.
 
    <p>Even in contexts where a return value is not required, it is a bad idea
 for a non-<code>void</code> function to omit the return value.  With GCC, you
-can use the command line option <code>-Wreturn-type</code> to issue a warning
+can use the command line option <code>-Wreturn<!-- /@w -->-type</code> to issue a warning
 if you omit the return value in such functions.
 
    <p>Here are some examples of using the <code>return</code> statement, in both
@@ -4461,7 +4434,7 @@ then establish the number of elements at the end of the type definition:
 </pre>
    <p>When selecting names for types, you should avoid ending your type names with
 a <code>_t</code> suffix.  The compiler will allow you to do this, but the
-<span class="sc">posix</span> standard reserves use of the <code>_t</code> suffix for standard library
+POSIX standard reserves use of the <code>_t</code> suffix for standard library
 type names.
 
 <!-- This is part of The GNU C Reference Manual -->

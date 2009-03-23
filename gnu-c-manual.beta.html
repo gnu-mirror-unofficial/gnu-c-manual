@@ -288,13 +288,13 @@ language features in C99.)
 
 <!-- Except as specified, this manual describes C89.  Language features that are -->
 <!-- available only in C99 or as a GNU extension are labelled as such. -->
-<p>Presently, this manual describes C89 only.  Descriptions of C99 and GNU extensions
-will be included in future releases, labeled as such alongside the original
-C89 material.  While most users of GCC are free to use the latest and greatest
+<p>This manual describes mainly C89.  Some descriptions of C99 features and
+GNU extensions are included (with more coming in future releases), and are
+labeled as such.  While most users of GCC are free to use the latest and greatest
 additions to the compiler, some users must continue to use older versions of
-GCC.  (For example, avionics programmers cannot switch to newer compilers on
-a whim, and indeed often use the same compiler for years until a new version
-is approved for use.)  For this reason, we feel that a clear distinction
+GCC.  (For example, avionics programmers typically cannot switch to newer compiler
+versions without the compiler being verified for their use, a time-consuming process
+infrequently completed.) For this reason, we feel that a clear distinction
 between C dialects will be useful to our readers.
 
    <p>The C language includes a set of preprocessor directives, which are used for
@@ -311,8 +311,8 @@ administrative details, include: Nelson H.&nbsp;<!-- /@w -->F.&nbsp;<!-- /@w -->
 Robert Chassell, Denver Gingerich, Lisa Goldstein, Robert Hansen
 Jean-Christophe Helary, Teddy Hogeborn, Joe Humphries, J.&nbsp;<!-- /@w -->Wren Hunt,
 Adam Johansen, Steve Morningthunder,
-Richard Stallman, J.&nbsp;<!-- /@w -->Otto Tennant, Ole Tetlie, and
-T.F. Torrey.
+Richard Stallman, J.&nbsp;<!-- /@w -->Otto Tennant, Ole Tetlie, T.F. Torrey, and
+James Youngman.
 
    <p>Please send bug reports and suggestions to <a href="mailto:gnu-c-manual@gnu.org">gnu-c-manual@gnu.org</a>.
 
@@ -1132,11 +1132,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Enumerations">Enumerations</a>
 <p><a name="index-declaring-enumerations-57"></a><a name="index-enumerations_002c-declaring-58"></a>
 You can declare variables of an enumeration type both when the
 enumeration is defined and afterward.  This example declares one
-variable, named <code>my_fruit</code> of type <code>enum fruit</code>:
+variable, named <code>my_fruit</code> of type <code>enum fruit</code>, all in
+a single statement:
 
 <pre class="example">     enum fruit {banana, apple, blueberry, mango} my_fruit;
 </pre>
-   <p class="noindent">While this example declares the type and variable separately:
+   <p class="noindent">while this example declares the type and variable separately:
 
 <pre class="example">     enum fruit {banana, apple, blueberry, mango};
      enum fruit my_fruit;

@@ -7,7 +7,7 @@
 <link title="Top" rel="top" href="#Top">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 2007-2011 Free Software Foundation, Inc.
+Copyright (C) 2007-2015 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -271,16 +271,18 @@ programs, so it is not included here.
 
 <h3 class="section">Credits</h3>
 
-<p>Contributors who have helped with writing, editing, proofreading,
-ideas, typesetting, or administrative details include: Diego Andres
-Alvarez Marin, Nelson H.&nbsp;F.&nbsp;Beebe, Karl Berry, Robert
-Chassell, Antonio Diaz Diaz, Andreas Foerster, Denver Gingerich, Lisa
+<p>Thanks to everyone who has helped with editing, proofreading, ideas,
+typesetting, and administrivia, including: Diego Andres Alvarez Marin,
+Nelson H.&nbsp;F.&nbsp;Beebe, Karl Berry, Robert Chassell, Hanfeng
+Chen, Antonio Diaz Diaz, Andreas Foerster, Denver Gingerich, Lisa
 Goldstein, Robert Hansen, Jean-Christophe Helary, Mogens Hetsholm,
 Teddy Hogeborn, Joe Humphries, J.&nbsp;Wren Hunt, Adam Johansen,
-Vladimir Kadlec, Benjamin Kagia, Bjorn Liencres, Steve Morningthunder,
-Aljosha Papsch, Matthew Plant, Richard Stallman, J.&nbsp;Otto Tennant,
-Ole Tetlie, Keith Thompson, T.F. Torrey, and James Youngman. Trevis
-Rothwell wrote most of the text and serves as project maintainer.
+Vladimir Kadlec, Benjamin Kagia, Dright Kayorent, Sugun Kedambadi,
+Felix Lee, Bjorn Liencres, Steve Morningthunder, Aljosha Papsch,
+Matthew Plant, Richard Stallman, J.&nbsp;Otto Tennant, Ole Tetlie,
+Keith Thompson, T.F. Torrey, James Youngman, and Steve Zachar. Trevis
+Rothwell serves as project maintainer and, along with James Youngman,
+wrote the bulk of the text.
 
    <p>Some example programs are based on algorithms in Donald Knuth's <cite>The Art
 of Computer Programming</cite>.
@@ -376,7 +378,7 @@ programming language itself.  You cannot use them for any other purpose.
      __volatile __volatile__
 </pre>
    <p class="noindent">In both ISO C99 and C89 with GNU extensions, the following is also
-recogized as a keyword:
+recognized as a keyword:
 <pre class="example">     restrict
 </pre>
    <div class="node">
@@ -579,7 +581,7 @@ or negative.
 <pre class="example">     double x, y;
      
      x = 5e2;   /* <code>x</code><span class="roman"> is 5 * 100, or 500.0.</span> */
-     y = 5e-2;  /* <code>y</code><span class="roman"> is 5 * (1/100, or 0.05.</span> */
+     y = 5e-2;  /* <code>y</code><span class="roman"> is 5 * (1/100), or 0.05.</span> */
 </pre>
    <p>You can append a letter to the end of a real number constant
 to cause it to be of a particular type.  If you append the letter
@@ -922,7 +924,7 @@ not part of C89, but is both part of C99 and a GNU C extension.
      char quux = 'a';
 </pre>
    <p class="noindent">The first line declares an integer named <code>foo</code> but does not define
-its value; it is left unintialized, and its value should not be assumed
+its value; it is left uninitialized, and its value should not be assumed
 to be anything in particular.
 
 <div class="node">
@@ -977,7 +979,7 @@ for example, will cause a compile-time error.
      double bar = 114.3943;
 </pre>
    <p class="noindent">The first line declares a float named <code>foo</code> but does not define
-its value; it is left unintialized, and its value should not be assumed
+its value; it is left uninitialized, and its value should not be assumed
 to be anything in particular.
 
    <p>The real number types provided in C are of finite precision, and
@@ -1630,7 +1632,7 @@ You can initialize the members of a structure type to have certain
 values when you declare structure variables.
 
    <p>If you do not initialize a structure variable, the effect depends on
-whether it is has static storage (see <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a>) or
+whether it has static storage (see <a href="#Storage-Class-Specifiers">Storage Class Specifiers</a>) or
 not.  If it is, members with integral types are initialized with 0 and
 pointer members are initialized to NULL; otherwise, the value of the
 structure's members is indeterminate.
@@ -2637,7 +2639,7 @@ all assignment operators, the left operand (commonly referred to as the
      struct foo {
        int bar;
        int baz;
-     } quux = {3, 4, 5};
+     } quux = {3, 4};
 </pre>
    <p class="noindent">Note that, unlike the other assignment operators described below, you
 can use the plain assignment operator to store values of a structure
@@ -3152,7 +3154,7 @@ other resulting bits are 1.
 two corresponding bits are different, the resulting bit is 1.  All other resulting
 bits are 0.
 
-<pre class="example">     11001001 ^ 10011011 = 01010000
+<pre class="example">     11001001 ^ 10011011 = 01010010
 </pre>
    <p>Bitwise negation reverses each bit in its operand:
 
@@ -3195,7 +3197,7 @@ a function, although you can:
 
 <pre class="example">     extern int foo (void);
      int (*fp1) (void) = foo; /* fp1 points to foo */
-     int (*fp2) (void) = &amp;foo; /* fp1 also points to foo */
+     int (*fp2) (void) = &amp;foo; /* fp2 also points to foo */
 </pre>
    <p>Function pointers and data pointers are not compatible, in the sense
 that you cannot expect to store the address of a function into a data
@@ -5236,7 +5238,7 @@ itself.  Here is an example that computes the factorial of an integer:
      factorial (int x)
      {
        if (x &lt; 1)
-         return x;
+         return 1;
        else
          return (x * factorial (x - 1));
      }
